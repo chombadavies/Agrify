@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['prefix'=>'sAdmin','middleware' => ['auth']],function(){
+Route::group(['prefix'=>'sadmin','middleware' => ['auth']],function(){
 
 Route::any('/',[App\Http\Controllers\AdminController::class, 'admin'])->name('portal');
 Route::resource('orders',App\Http\Controllers\ordersController::class);
@@ -36,10 +36,18 @@ Route::any('/fetchusers',[\App\Http\Controllers\UserController::class,'fetchUser
 
 
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/clear-cache', function() {
+    $exitCode = Artisan::call('cache:clear');
+    return 'Application cache cleared';
+});
+Route::get('/optimize', function() {
+    $exitCode = Artisan::call('optimize');
+    return 'Application optimized';
+});
 
 // frontend routes
 

@@ -6,24 +6,19 @@
                 <div class="collapse dont-collapse-sm links" id="collapse_1">
                     <ul>
                         <li><a href="about.html">About us</a></li>
-                        <li><a href="help.html">Faq</a></li>
-                        <li><a href="help.html">Help</a></li>
-                        <li><a href="account.html">My account</a></li>
-                        <li><a href="blog.html">Blog</a></li>
+                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="contacts.html">Contacts</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
-                <h3 data-bs-target="#collapse_2">Categories</h3>
+                <h3 data-bs-target="#collapse_2">Value Chains</h3>
                 <div class="collapse dont-collapse-sm links" id="collapse_2">
                     <ul>
-                        <li><a href="listing-grid-1-full.html">Clothes</a></li>
-                        <li><a href="listing-grid-2-full.html">Electronics</a></li>
-                        <li><a href="listing-grid-1-full.html">Furniture</a></li>
-                        <li><a href="listing-grid-3.html">Glasses</a></li>
-                        <li><a href="listing-grid-1-full.html">Shoes</a></li>
-                        <li><a href="listing-grid-1-full.html">Watches</a></li>
+                        <li><a href="listing-grid-1-full.html">Millet</a></li>
+                        <li><a href="listing-grid-2-full.html">Mangoes</a></li>
+                        <li><a href="listing-grid-1-full.html">Grain Amaranth</a></li>
+                      
                     </ul>
                 </div>
             </div>
@@ -31,9 +26,9 @@
                     <h3 data-bs-target="#collapse_3">Contacts</h3>
                 <div class="collapse dont-collapse-sm contacts" id="collapse_3">
                     <ul>
-                        <li><i class="ti-home"></i>97845 Baker st. 567<br>Los Angeles - US</li>
+                        <li><i class="ti-home"></i>Kaptagat road<br>Loresho</li>
                         <li><i class="ti-headphone-alt"></i>+94 423-23-221</li>
-                        <li><i class="ti-email"></i><a href="#0">info@allaia.com</a></li>
+                        <li><i class="ti-email"></i><a href="#0">info@agrifi.com</a></li>
                     </ul>
                 </div>
             </div>
