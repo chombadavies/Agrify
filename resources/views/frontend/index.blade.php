@@ -143,8 +143,8 @@
                 <div class="col-md-4">
                     <div class="box">
                         <div class="our-services settings">
-                            <div class="icon"> <img src=""> </div>
-                            <h4>Settings</h4>
+                            <div class="icon"> <img src="{{asset('frontend/img/amaranth.jpg')}}" width="100" height="50"> </div>
+                            <h4>Timps Branchures</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                         </div>
                     </div>
@@ -152,8 +152,8 @@
                 <div class="col-md-4">
                     <div class="box">
                         <div class="our-services speedup">
-                            <div class="icon"> <img src="https://i.imgur.com/KMbnpFF.png"> </div>
-                            <h4>Speedup</h4>
+                            <div class="icon"> <img src="{{asset('frontend/img/amaranth.jpg')}}" width="100" height="50"> </div>
+                            <h4>Reports</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                         </div>
                     </div>
@@ -161,8 +161,8 @@
                 <div class="col-md-4">
                     <div class="box">
                         <div class="our-services privacy">
-                            <div class="icon"> <img src="https://i.imgur.com/AgyneKA.png"> </div>
-                            <h4>Privacy</h4>
+                            <div class="icon"> <img src="{{asset('frontend/img/amaranth.jpg')}}" width="100" height="50"> </div>
+                            <h4>Mobile Apps</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
                         </div>
                     </div>
@@ -172,7 +172,7 @@
                 <div class="col-md-4">
                     <div class="box">
                         <div class="our-services backups">
-                            <div class="icon"> <img src="https://i.imgur.com/vdH9LKi.png"> </div>
+                            <div class="icon"> <img src="{{asset('frontend/img/amaranth.jpg')}}" width="100" height="50"> </div>
                             <h4>Backups</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
                         </div>
@@ -181,8 +181,8 @@
                 <div class="col-md-4">
                     <div class="box">
                         <div class="our-services ssl">
-                            <div class="icon"> <img src="https://i.imgur.com/v6OnUqu.png"> </div>
-                            <h4>SSL secured</h4>
+                            <div class="icon"> <img src="{{asset('frontend/img/amaranth.jpg')}}" width="100" height="50"></div>
+                            <h4>Media</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                         </div>
                     </div>
@@ -190,7 +190,7 @@
                 <div class="col-md-4">
                     <div class="box">
                         <div class="our-services database">
-                            <div class="icon"> <img src="https://i.imgur.com/VzjZw9M.png"> </div>
+                            <div class="icon"> <img src="{{asset('frontend/img/amaranth.jpg')}}" width="100" height="50"></div>
                             <h4>Database</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                         </div>
