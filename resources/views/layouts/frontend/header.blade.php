@@ -5,7 +5,7 @@
             <div class="row small-gutters">
                 <div class="col-xl-2 col-lg-3 d-lg-flex align-items-center">
                     <div id="logo">
-                        <a href="index.html"><img src="img/logo.svg" alt="" width="100" height="35"></a>
+                        <a href="{{route('home')}}"><img src="img/logo.svg" alt="" width="100" height="35"></a>
                     </div>
                 </div>
                 <nav class="col-xl-10 col-lg-7">

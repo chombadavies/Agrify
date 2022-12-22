@@ -41,7 +41,7 @@
                 </div>
             </div>
             <!--/owl-slide-->
-            <div class="owl-slide cover" style="background-image: url(frontend/img/slides/fullone.jpg);">
+            <div class="owl-slide cover" style="background-image: url(frontend/img/slides/smallruminants.jpg);">
                 <div class="opacity-mask d-flex align-items-center" data-opacity-mask="rgba(255, 255, 255, 0.5)">
                     <div class="container">
                         <div class="row justify-content-center justify-content-md-start">
@@ -132,133 +132,74 @@
   
 
     <div class="container margin_60_35">
-        <div class="main_title mb-4">
-            <h2>Our Resources</h2>
-            <span>Resources</span>
-            <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+       
+        <div class="container-fluid mb-5">
+            <div class="main_title mb-4">
+                <h2>Our Resources</h2>
+                <span>Resources</span>
+                <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="our-services settings">
+                            <div class="icon"> <img src=""> </div>
+                            <h4>Settings</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="our-services speedup">
+                            <div class="icon"> <img src="https://i.imgur.com/KMbnpFF.png"> </div>
+                            <h4>Speedup</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="our-services privacy">
+                            <div class="icon"> <img src="https://i.imgur.com/AgyneKA.png"> </div>
+                            <h4>Privacy</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="our-services backups">
+                            <div class="icon"> <img src="https://i.imgur.com/vdH9LKi.png"> </div>
+                            <h4>Backups</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="our-services ssl">
+                            <div class="icon"> <img src="https://i.imgur.com/v6OnUqu.png"> </div>
+                            <h4>SSL secured</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="our-services database">
+                            <div class="icon"> <img src="https://i.imgur.com/VzjZw9M.png"> </div>
+                            <h4>Database</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
       
-        <div class="isotope-wrapper">
-            <div class="row small-gutters">
-                <div class="col-6 col-md-4 col-xl-3 isotope-item sale">
-                    <div class="grid_item">
-                       
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="{{asset('frontend/img/products/shoes/2.jpg')}}" alt="Card image cap">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a class="btn btn-outline-success" role="button" aria-disabled="true">Primary link</a>
-
-
-                            </div>
-                          </div>
-                    </div>
-                    <!-- /grid_item -->
-                </div>
-                <!-- /col -->
-                <div class="col-6 col-md-4 col-xl-3 isotope-item sale">
-                    <div class="grid_item">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="{{asset('frontend/img/products/shoes/2.jpg')}}" alt="Card image cap">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                          </div>
-                    </div>
-                    <!-- /grid_item -->
-                </div>
-                <!-- /col -->
-                <div class="col-6 col-md-4 col-xl-3 isotope-item sale">
-                    <div class="grid_item">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="{{asset('frontend/img/products/shoes/2.jpg')}}" alt="Card image cap">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                          </div>
-                    </div>
-                    <!-- /grid_item -->
-                </div>
-                <!-- /col -->
-                <div class="col-6 col-md-4 col-xl-3 isotope-item sale">
-                    <div class="grid_item">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="{{asset('frontend/img/products/shoes/2.jpg')}}" alt="Card image cap">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                          </div>
-                    </div>
-                    <!-- /grid_item -->
-                </div>
-                <!-- /col -->
-                <div class="col-6 col-md-4 col-xl-3 isotope-item sale">
-                    <div class="grid_item">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="{{asset('frontend/img/products/shoes/2.jpg')}}" alt="Card image cap">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                          </div>
-                    </div>
-                    <!-- /grid_item -->
-                </div>
-                <!-- /col -->
-                <div class="col-6 col-md-4 col-xl-3 isotope-item sale">
-                    <div class="grid_item">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="{{asset('frontend/img/products/shoes/2.jpg')}}" alt="Card image cap">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                          </div>
-                    </div>
-                    <!-- /grid_item -->
-                </div>
-                <!-- /col -->
-                <div class="col-6 col-md-4 col-xl-3 isotope-item sale">
-                    <div class="grid_item">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="{{asset('frontend/img/products/shoes/2.jpg')}}" alt="Card image cap">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                          </div>
-                    </div>
-                    <!-- /grid_item -->
-                </div>
-                <!-- /col -->
-                <div class="col-6 col-md-4 col-xl-3 isotope-item sale">
-                    <div class="grid_item">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="{{asset('frontend/img/products/shoes/2.jpg')}}" alt="Card image cap">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                          </div>
-                    </div>
-                    <!-- /grid_item -->
-                </div>
-                <!-- /col -->
-            </div>
-            <!-- /row -->
-        </div>
-        <!-- /isotope-wrapper -->
+       
     </div>
 
 
