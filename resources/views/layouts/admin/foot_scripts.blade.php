@@ -1,37 +1,40 @@
 <!-- REQUIRED SCRIPTS -->
 <!-- jQuery -->
-<script src="{{asset('admin/plugins/jquery/jquery.min.js')}}"></script>
+<script src="{{asset('backend/plugins/jquery/jquery.min.js')}}"></script>
 <!-- Bootstrap -->
-<script src="{{asset('admin/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('backend/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <!-- overlayScrollbars -->
-<script src="{{asset('admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
+<script src="{{asset('backend/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
 <!-- AdminLTE App -->
-<script src="{{asset('admin/dist/js/adminlte.js')}}"></script>
+<script src="{{asset('backend/dist/js/adminlte.js')}}"></script>
 
 <!-- OPTIONAL SCRIPTS -->
-<script src="{{asset('admin/dist/js/demo.js')}}"></script>
+<script src="{{asset('backend/dist/js/demo.js')}}"></script>
 
 <!-- PAGE PLUGINS -->
 <!-- jQuery Mapael -->
-<script src="{{asset('admin/plugins/jquery-mousewheel/jquery.mousewheel.js')}}"></script>
-<script src="{{asset('admin/plugins/raphael/raphael.min.js')}}"></script>
-<script src="{{asset('admin/plugins/jquery-mapael/jquery.mapael.min.js')}}"></script>
-<script src="{{asset('admin/plugins/jquery-mapael/maps/usa_states.min.js')}}"></script>
+<script src="{{asset('backend/plugins/jquery-mousewheel/jquery.mousewheel.js')}}"></script>
+<script src="{{asset('backend/plugins/raphael/raphael.min.js')}}"></script>
+<script src="{{asset('backend/plugins/jquery-mapael/jquery.mapael.min.js')}}"></script>
+<script src="{{asset('backend/plugins/jquery-mapael/maps/usa_states.min.js')}}"></script>
 <!-- ChartJS -->
-<script src="{{asset('admin/plugins/chart.js/Chart.min.js')}}"></script>
+<script src="{{asset('backend/plugins/chart.js/Chart.min.js')}}"></script>
 
 	// {{-- batatables --}}
-  <script src="{{asset('admin/plugins/datatables/jquery.dataTables.min.js')}}"></script>
-  <script src="{{asset('admin/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
-  <script src="{{asset('admin/plugins/datatables-responsive/js/dataTables.responsive.min.js')}}"></script>
-  <script src="{{asset('admin/plugins/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>
-  <script src="{{asset('admin/vendor/datatables/media/js/jquery.dataTables.min.js')}}"></script>		
-  <script src="{{asset('admin/vendor/datatables/media/js/dataTables.bootstrap4.min.js')}}"></script>
-  <script src="{{ asset('admin/extras/TableTools/Buttons-1.4.2/js/dataTables.buttons.min.js') }}"></script> 
-<script src="{{asset('admin/extras/TableTools/Buttons-1.4.2/js/buttons.bootstrap4.min.js') }}"></script>   
-<script src="{{asset('admin/extras/TableTools/Buttons-1.4.2/js/buttons.html5.min.js') }}"></script>    
-<script src="{{asset('admin/extras/TableTools/Buttons-1.4.2/js/buttons.print.min.js') }}"></script>    
-<script src="{{asset('admin/extras/TableTools/JSZip-2.5.0/jszip.min.js') }}"></script>
+  <script src="{{asset('backend/plugins/datatables/jquery.dataTables.min.js')}}"></script>
+  <script src="{{asset('backend/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
+  <script src="{{asset('backend/plugins/datatables-responsive/js/dataTables.responsive.min.js')}}"></script>
+  <script src="{{asset('backend/plugins/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>
+  <script src="{{asset('backend/vendor/datatables/media/js/jquery.dataTables.min.js')}}"></script>		
+  <script src="{{asset('backend/vendor/datatables/media/js/dataTables.bootstrap4.min.js')}}"></script>
+  <script src="{{ asset('backend/extras/TableTools/Buttons-1.4.2/js/dataTables.buttons.min.js') }}"></script> 
+<script src="{{asset('backend/extras/TableTools/Buttons-1.4.2/js/buttons.bootstrap4.min.js') }}"></script>   
+<script src="{{asset('backend/extras/TableTools/Buttons-1.4.2/js/buttons.html5.min.js') }}"></script>    
+<script src="{{asset('backend/extras/TableTools/Buttons-1.4.2/js/buttons.print.min.js') }}"></script>    
+<script src="{{asset('backend/extras/TableTools/JSZip-2.5.0/jszip.min.js') }}"></script>
+
+
+<script src="{{asset('backend/summernote/summernote.js') }}"></script>
 
   <script>
     $(function () {
@@ -70,4 +73,4 @@
    </script>
 
 <!-- PAGE SCRIPTS -->
-<script src="{{asset('admin/dist/js/pages/dashboard2.js')}}"></script>
+<script src="{{asset('backend/dist/js/pages/dashboard2.js')}}"></script>

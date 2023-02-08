@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\Models\Branch;
+
 use Auth;
 use DB;
 use App\Helpers\SystemAudit;
@@ -37,9 +37,9 @@ class UserController extends Controller
 
         $data['page_title']='users';
     $roles=Role::all();
-    $branches=Branch::all();
+ 
     // dd($branches);
-        return view('admin.users.create',$data)->with(compact('roles','branches'));
+        return view('admin.users.create',$data)->with(compact('roles'));
     }
 
     /**

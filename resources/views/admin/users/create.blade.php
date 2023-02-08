@@ -7,7 +7,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <a href="<?=route('categories.index')?>" class="btn btn-sm btn-info"><span class="fa fa-bars">View List </span></a>
+            <a href="<?=route('users.index')?>" class="btn btn-sm btn-info"><span class="fa fa-bars">View List </span></a>
             <a href="" class="btn btn-sm btn-danger"><span class="fa fa-download"><span>Upload Data</a>
           </div>
           <div class="col-sm-6">
@@ -63,15 +63,7 @@
                   
                 
                   </div>
-                  <div class="form-group col-md-4">
-                    <label for="email">Branch</label>
-                   <select name="branch_id" id="" class="form-control">
-                    <option value="" selected disabled>Select Branxh</option>
-                    @foreach ($branches as $branch)
-                    <option value="{{$branch->id}}">{{$branch->name}}</option> 
-                    @endforeach
-                   </select>
-                  </div>
+                 
                       <div class="form-group col-md-4">
                     <label for="password">Password </label>
                     <input type="password" name="password" class="form-control" id="" @error('password') is-invalid @enderror placeholder="Enter Password " required value="123456" readonly>

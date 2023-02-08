@@ -13,22 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['prefix'=>'sadmin','middleware' => ['auth']],function(){
+Route::group(['prefix'=>'admin','middleware' => ['auth']],function(){
 
 Route::any('/',[App\Http\Controllers\AdminController::class, 'admin'])->name('portal');
-Route::resource('orders',App\Http\Controllers\ordersController::class);
-Route::resource('branches',App\Http\Controllers\BranchController::class);
-Route::resource('companies',App\Http\Controllers\CompanyController::class);
-Route::resource('categories',App\Http\Controllers\CategoryController::class);
-Route::any('/fethcategories',[\App\Http\Controllers\CategoryController::class,'fetchCategory']);
-Route::any('/getProducts/{id}',[\App\Http\Controllers\CategoryController::class,'cascadeProducts']);
-Route::resource('ordersdetails',App\Http\Controllers\OrdersDetailController::class);
-Route::resource('products',App\Http\Controllers\ProductController::class);
-Route::any('/fetchproducts',[\App\Http\Controllers\ProductController::class,'fetchProducts']);
-Route::resource('suppliers',App\Http\Controllers\SupplierController::class);
-Route::resource('users',App\Http\Controllers\UserController::class);
-Route::resource('transactions',App\Http\Controllers\TransactionController::class);
 Route::any('/fetchusers',[\App\Http\Controllers\UserController::class,'fetchUsers']);
+Route::resource('users',App\Http\Controllers\UserController::class);
+Route::resource('valuechains',App\Http\Controllers\backend\ValueChainController::class);
+Route::resource('news',App\Http\Controllers\backend\NewsController::class);
+
 
 
 });

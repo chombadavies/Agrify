@@ -1,8 +1,8 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-           style="opacity: .8">
+      <img src="dist/img/AdminLTELogo.png" alt="Agrify Logo" class="brand-image img-circle elevation-5"
+           style="opacity: .7">
       <span class="brand-text font-weight-light"></span>
     </a>
 
@@ -10,9 +10,9 @@
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
+        {{-- <div class="image">
           <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-        </div>
+        </div> --}}
         <div class="info">
           <a href="#" class="d-block">{{Auth()->user()->name}}</a>
         </div>
@@ -47,23 +47,23 @@
             <a href="" class="nav-link">
               <i class="nav-icon fas fa-bars"></i>
               <p>
-                Categories
+                Value Chains
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="{{route('valuechains.create')}}" class="nav-link">
                   <i class="fas fa-edit nav-icon"></i>
-                  <p>create Category
+                  <p>create Value Chain
 
                   </p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="{{route('valuechains.index')}}" class="nav-link">
                   <i class="fas fa-table nav-icon"></i>
-                  <p>Category List  
+                  <p>Value Chains
 
                     <span class="right badge badge-info"></span>
                   </p>
@@ -76,23 +76,23 @@
             <a href="" class="nav-link">
               <i class="nav-icon fas fa-bars"></i>
               <p>
-               Products
+               Blogs/News
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="{{route('news.create')}}" class="nav-link">
                   <i class="fas fa-edit nav-icon"></i>
-                  <p>Create Product
+                  <p>Create Blog
 
                   </p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="{{route('news.index')}}" class="nav-link">
                   <i class="fas fa-table nav-icon"></i>
-                  <p>Product List  
+                  <p>Blogs List  
 
                     <span class="right badge badge-info"></span>
                   </p>
@@ -111,7 +111,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('users.create')}}" class="nav-link">
+                <a href="" class="nav-link">
                   <i class="fas fa-edit nav-icon"></i>
                   <p>Create User
 
@@ -119,7 +119,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('products.index')}}" class="nav-link">
+                <a href="" class="nav-link">
                   <i class="fas fa-table nav-icon"></i>
                   <p>Internal Users List  
 
