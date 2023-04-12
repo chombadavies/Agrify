@@ -19,6 +19,7 @@ Route::any('/',[App\Http\Controllers\AdminController::class, 'admin'])->name('po
 Route::any('/fetchusers',[\App\Http\Controllers\UserController::class,'fetchUsers']);
 Route::resource('users',App\Http\Controllers\UserController::class);
 Route::resource('valuechains',App\Http\Controllers\backend\ValueChainController::class);
+Route::any('/fetch_valuechains',[\App\Http\Controllers\backend\ValueChainController::class,'fetchValuechains']);
 Route::resource('news',App\Http\Controllers\backend\NewsController::class);
 
 
@@ -47,3 +48,5 @@ Route::any('/',[\App\Http\Controllers\Frontend\IndexController::class,'home'])->
 Route::any('/contact_us',[\App\Http\Controllers\Frontend\IndexController::class,'contactUs'])->name('contact_us');
 Route::any('/about_us',[\App\Http\Controllers\Frontend\IndexController::class,'aboutUs'])->name('about_us');
 Route::any('/blog',[\App\Http\Controllers\Frontend\IndexController::class,'blog'])->name('blog');
+Route::any('/valuechains',[\App\Http\Controllers\Frontend\IndexController::class,'valuechains'])->name('valuechains');
+Route::any('/valuechain/{id}',[\App\Http\Controllers\Frontend\IndexController::class,'valuechain'])->name('valuechain.show');

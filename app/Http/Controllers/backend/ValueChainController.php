@@ -4,6 +4,10 @@ namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\ValueChain;
+use Intervention\Image\Facades\Image;
+use Yajra\Datatables\Datatables;
+use Illuminate\Support\Str;
 
 class ValueChainController extends Controller
 {
@@ -14,7 +18,8 @@ class ValueChainController extends Controller
      */
     public function index()
     {
-        return 'this is the vallue chains index';
+        $data['page_title']='Value Chains';
+        return view('admin.valuechains.index',$data);
     }
 
     /**
@@ -24,7 +29,6 @@ class ValueChainController extends Controller
      */
     public function create()
     {
-       
 
        $data['page_title']='create Value Chain';
         return view('admin.valuechains.create',$data);
@@ -38,6 +42,9 @@ class ValueChainController extends Controller
      */
     public function store(Request $request)
     {
+
+        $data=$request->all();
+       
         if ($request->hasFile('image')) {
 
             $image_tmp = $request->file('image');
@@ -58,14 +65,13 @@ class ValueChainController extends Controller
 
         $data=$request->all();
         $data['image']=$image;
-        $data['publish_date']=new DateTime('now');
-        $data['user_id']= Auth()->user()->id;
+      
        
-        $status=Blog::create($data);
+        $status=ValueChain::create($data);
 
         if($status){
          
-            return redirect()->route('blogs.index')->with('success','');
+            return redirect()->route('valuechains.index')->with('success','');
         }else{
             return back()->with('error','failed try again');
         }
@@ -90,7 +96,7 @@ class ValueChainController extends Controller
      */
     public function edit($id)
     {
-        //
+        return $id;
     }
 
     /**
@@ -115,4 +121,43 @@ class ValueChainController extends Controller
     {
         //
     }
+
+
+public function fetchValuechains()
+    {
+   $models=ValueChain::all();
+        return Datatables::of($models)
+        ->rawColumns(['action','image','introduction','description'])
+        ->editColumn('image',function($model){
+         $name=$model->image;
+         $path=asset('backend/uploads/'.$name);
+        return '<img src="'.$path.'" width="70px;" height="70px;"  alt="category image" >';
+        })
+        ->editColumn('introduction',function($model){
+         $text=$model->introduction;
+         $introduction=str_limit(strip_tags($text), $limit = 50, $end = '...');
+          return $introduction;
+        })
+        ->editColumn('description',function($model){
+            $text=$model->description;
+            $description=str_limit(strip_tags($text),$limit=50,$end='...');
+             return $description;
+           })
+            ->addColumn('action', function ($model) {
+                $edit_url = route('valuechains.edit',$model->id);
+                
+             return '<div class="dropdown ">
+        <button class="btn btn-pink btn btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Action
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+        <li><a style="cursor:pointer;" class="reject-modal"  data-title="Edit" data-url="' . $edit_url . '">Edit Details</a></li>
+
+        </ul>
+        </div> ';
+
+            })
+            ->make(true);
+    }
+
+  
 }

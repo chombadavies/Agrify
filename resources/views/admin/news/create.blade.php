@@ -56,13 +56,6 @@
 
                 <div class="row">
                     <div class="col-md-12" class="form-control">
-                        <label for="">Blog Summery</label>
-                        <textarea id="summernote" name="summery"  required></textarea>
-                    </div>
-                </div>
-<br>
-                <div class="row">
-                    <div class="col-md-12" class="form-control">
                         <label for="">Blog Description</label>
                         <textarea id="meme" name="description" required></textarea>
                     </div>

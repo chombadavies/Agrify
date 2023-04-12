@@ -33,7 +33,7 @@
         <div class="row">
          
           <div class="col-12">
-            <a style="cursor:pointer;color:white" href="{{route('blogs.create')}}" class="btn btn-sm btn-info"><span class="fa fa-plus"><span>Create Blog</a>
+            <a style="cursor:pointer;color:white" href="{{route('valuechains.create')}}" class="btn btn-sm btn-info"><span class="fa fa-plus"><span>Create ValueChain</a>
                                        
  </div>
 
@@ -56,9 +56,8 @@
                                         <th>Action</th>
                                         <th>Title</th>
                                         <th>Photo</th>
-                                        <th>summery</th>
-                                        <th>Publish Date</th>
-                                        <th>Owner</th>
+                                        <th>introduction</th>
+                                        <th>description</th>
                                         <th>Status</th>
                                   
                    
@@ -103,17 +102,15 @@
          "lengthMenu": [[25, 50, 100, -1], [25, 50, 100, "All"]],
         "order": [[1, "desc" ]],
      
-           ajax:'<?=url("/portal/fethblogs")?>',
+           ajax:'<?=url("/admin/fetch_valuechains")?>',
             columns: [
             {data: 'action', name: 'action',searchable:false,orderable:false}, 
            {data: 'title', name: 'title'},
            {data: 'image', name: 'image'},
-           {data: 'summery', name: 'sumery'},
-           {data: 'publish_date', name: 'publish_date'},
-            {data: 'owner', name: 'owner'},
+           {data: 'introduction', name: 'introduction'},
+           {data: 'description', name: 'description'},
            {data: 'status', name: 'status'},
-              
-            ],
+                        ],
           
 
 

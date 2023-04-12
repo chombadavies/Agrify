@@ -41,7 +41,7 @@
                 <div class="card-body">
                     <div class="row">
                   <div class="form-group col-md-6">
-                    <label for="exampleInputEmail1">Blog Title</label>
+                    <label for="exampleInputEmail1">ValueChain Title</label>
                     <input type="text" name="title" class="form-control" id="" @error('title') is-invalid @enderror placeholder="Enter Category Name" required value="{{old('title')}}">
                     <span style="color: red" >{{$errors->first('title')}}</span>
                   
@@ -56,14 +56,14 @@
 
                 <div class="row">
                     <div class="col-md-12" class="form-control">
-                        <label for="">Blog Summery</label>
-                        <textarea id="summernote" name="summery"  required></textarea>
+                        <label for="">ValueChain Introduction</label>
+                        <textarea id="summernote" name="introduction"  required></textarea>
                     </div>
                 </div>
 <br>
                 <div class="row">
                     <div class="col-md-12" class="form-control">
-                        <label for="">Blog Description</label>
+                        <label for="">ValueChain Description</label>
                         <textarea id="meme" name="description" required></textarea>
                     </div>
                 </div>

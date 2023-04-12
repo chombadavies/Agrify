@@ -81,7 +81,7 @@
                             </li>
                            
                             <li>
-                                <a href="blog.html">Value Chains</a>
+                                <a href="{{route('valuechains')}}">Value Chains</a>
                             </li>
                             <li class="submenu">
                                 

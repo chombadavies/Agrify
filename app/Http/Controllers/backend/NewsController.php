@@ -4,6 +4,9 @@ namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image;
+use DateTime;
+use App\Models\News;
 
 class NewsController extends Controller
 {
@@ -58,12 +61,12 @@ class NewsController extends Controller
         $data['image']=$image;
         $data['publish_date']=new DateTime('now');
         $data['user_id']= Auth()->user()->id;
-       
-        $status=Blog::create($data);
+     
+        $status=News::create($data);
 
         if($status){
          
-            return redirect()->route('blogs.index')->with('success','');
+            return redirect()->route('news.index')->with('success','blog saved Successfully');
         }else{
             return back()->with('error','failed try again');
         }
@@ -112,5 +115,45 @@ class NewsController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function fetchBlogs()
+    {
+      $models = DB::table('blogs')
+                    ->join('users', 'blogs.user_id', '=', 'users.id')
+                    ->select('blogs.id', 'users.name as owner','blogs.status', 'blogs.title','blogs.summery','blogs.image','blogs.publish_date')
+                    ->where('blogs.status','active')
+                    ->orderBy('id','ASC')
+                    ->get();
+                 
+               
+        return Datatables::of($models)
+           ->rawColumns(['action','image','summery'])
+           ->editColumn('image',function($model){
+            $name=$model->image;
+            $path=asset('backend/uploads/'.$name);
+           return '<img src="'.$path.'" width="70px;" height="70px;"  alt="category image" >';
+           })
+           ->editColumn('summery',function($model){
+            $text=$model->summery;
+            $summery=strip_tags($text);
+             return $summery;
+           })
+            ->addColumn('action', function ($model) {
+                $edit_url = route('blogs.edit',$model->id);
+             
+              return '<div class="dropdown ">
+        <button class="btn btn-pink btn btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Action
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+        <li><a style="cursor:pointer;"   data-title="Edit Details" href="' . $edit_url . '">Edit Blog </a></li>
+        <li><div class="dropdown-divider"></div></li>
+      
+    
+        </ul>
+        </div> ';
+    
+            })
+            ->make(true);
     }
 }

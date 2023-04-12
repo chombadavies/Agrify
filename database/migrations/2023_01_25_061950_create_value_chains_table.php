@@ -19,7 +19,7 @@ class CreateValueChainsTable extends Migration
             $table->string('image');
             $table->string('introduction');
             $table->string('description');
-            $table->emum('status',['active','inactive'])->default('active');
+            $table->enum('status',['active','inactive'])->default('active');
             $table->timestamps();
         });
     }
