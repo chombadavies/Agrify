@@ -19,6 +19,9 @@ class Kernel extends ConsoleKernel
     }
 
     /**
+     * 
+     * <VirtualHost *:80>
+
      * Register the commands for the application.
      *
      * @return void

@@ -5,7 +5,7 @@
             <div class="row small-gutters">
                 <div class="col-xl-2 col-lg-3 d-lg-flex align-items-center">
                     <div id="logo">
-                        <a href="{{route('home')}}"><img src="img/logo.svg" alt="" width="100" height="35"></a>
+                        <a href="{{route('home')}}"><img src="{{asset('frontend/img/amaranth.jpg')}}" alt="" width="100" height="35"></a>
                     </div>
                 </div>
                 <nav class="col-xl-10 col-lg-7">
@@ -19,15 +19,15 @@
                     <!-- Mobile menu button -->
                     <div class="main-menu">
                         <div id="header_menu">
-                            <a href="index.html"><img src="img/logo_black.svg" alt="" width="100" height="35"></a>
+                            <a href="#"><img src="img/logo_black.svg" alt="" width="100" height="35"></a>
                             <a href="#" class="open_close" id="close_in"><i class="ti-close"></i></a>
                         </div>
                         <ul>
                             <li>
-                                <a href="blog.html">Dashboards</a>
+                                <a href="#">Dashboards</a>
                             </li>
                             <li>
-                                <a href="blog.html">About Us</a>
+                                <a href="#">About Us</a>
                             </li>
                             <li class="megamenu submenu">
                                 <a href="javascript:void(0);" class="show-submenu-mega">Components</a>
@@ -36,34 +36,34 @@
                                         <div class="col-lg-3">
                                             <h3>Listing grid</h3>
                                             <ul>
-                                                <li><a href="cart.html">link to Content</a></li>
-                                                <li><a href="checkout.html">link to Content</a></li>
-                                                <li><a href="confirm.html">link to Content</a></li>
-                                                <li><a href="cart.html">link to Content</a></li>
-                                                <li><a href="checkout.html">link to Content</a></li>
-                                                <li><a href="confirm.html">link to Content</a></li>
+                                                <li><a href="#">link to Content</a></li>
+                                                <li><a href="#">link to Content</a></li>
+                                                <li><a href="#">link to Content</a></li>
+                                                <li><a href="#">link to Content</a></li>
+                                                <li><a href="#">link to Content</a></li>
+                                                <li><a href="#">link to Content</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-lg-3">
                                             <h3>Listing row &amp; Product</h3>
                                             <ul>
-                                                <li><a href="cart.html">link to Content</a></li>
-                                                <li><a href="checkout.html">link to Content</a></li>
-                                                <li><a href="confirm.html">link to Content</a></li>
-                                                <li><a href="cart.html">link to Content</a></li>
-                                                <li><a href="checkout.html">link to Content</a></li>
-                                                <li><a href="confirm.html">link to Content</a></li>
+                                                <li><a href="#">link to Content</a></li>
+                                                <li><a href="#">link to Content</a></li>
+                                                <li><a href="#">link to Content</a></li>
+                                                <li><a href="#">link to Content</a></li>
+                                                <li><a href="#">link to Content</a></li>
+                                                <li><a href="#">link to Content</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-lg-3">
                                             <h3>More Contents</h3>
                                             <ul>
-                                                <li><a href="cart.html">link to Content</a></li>
-                                                <li><a href="checkout.html">link to Content</a></li>
-                                                <li><a href="confirm.html">link to Content</a></li>
-                                                <li><a href="cart.html">link to Content</a></li>
-                                                <li><a href="checkout.html">link to Content</a></li>
-                                                <li><a href="confirm.html">link to Content</a></li>
+                                                <li><a href="#">link to Content</a></li>
+                                                <li><a href="#">link to Content</a></li>
+                                                <li><a href="#">link to Content</a></li>
+                                                <li><a href="#">link to Content</a></li>
+                                                <li><a href="#">link to Content</a></li>
+                                                <li><a href="#">link to Content</a></li>
                                                
                                             </ul>
                                         </div>
@@ -87,18 +87,18 @@
                                 
                                 <a href="javascript:void(0);" class="show-submenu">Media</a>
                                 <ul>
-                                    <li><a href="header-2.html">Header Style 2</a></li>
-                                    <li><a href="header-3.html">Header Style 3</a></li>
-                                    <li><a href="header-4.html">Header Style 4</a></li>
-                                    <li><a href="header-5.html">Header Style 5</a></li>
+                                    <li><a href="#">Header Style 2</a></li>
+                                    <li><a href="#">Header Style 3</a></li>
+                                    <li><a href="#">Header Style 4</a></li>
+                                    <li><a href="#">Header Style 5</a></li>
                                   
                                 </ul>
                             </li>
                             <li>
-                                <a href="blog.html">Directory</a>
+                                <a href="#">Directory</a>
                             </li>
                             <li>
-                                <a href="blog.html">Resourses</a>
+                                <a href="#">Resourses</a>
                             </li>
                             <li>
                                 <a href="{{route('contact_us')}}">Contact Us</a>

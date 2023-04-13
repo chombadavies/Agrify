@@ -9,7 +9,9 @@ use App\Models\ValueChain;
 class IndexController extends Controller
 {
     public function home(){
-        return view('frontend.index');
+        $valuechains=ValueChain::all();
+        
+        return view('frontend.index',compact('valuechains'));
     }
 
     public function aboutUs(){

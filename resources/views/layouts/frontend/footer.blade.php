@@ -5,9 +5,9 @@
                 <h3 data-bs-target="#collapse_1">Quick Links</h3>
                 <div class="collapse dont-collapse-sm links" id="collapse_1">
                     <ul>
-                        <li><a href="about.html">About us</a></li>
-                         <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contacts.html">Contacts</a></li>
+                        <li><a href="">About us</a></li>
+                         <li><a href="">Blog</a></li>
+                        <li><a href="{{route('contact_us')}}">Contacts</a></li>
                     </ul>
                 </div>
             </div>
@@ -15,9 +15,14 @@
                 <h3 data-bs-target="#collapse_2">Value Chains</h3>
                 <div class="collapse dont-collapse-sm links" id="collapse_2">
                     <ul>
-                        <li><a href="listing-grid-1-full.html">Millet</a></li>
-                        <li><a href="listing-grid-2-full.html">Mangoes</a></li>
-                        <li><a href="listing-grid-1-full.html">Grain Amaranth</a></li>
+                        @php
+                            $valuechains = App\Models\ValueChain::all();
+                        @endphp
+                        @foreach ($valuechains as $item)
+                        <li><a href="#">{{$item->title}}</a></li>
+                        @endforeach
+                    
+                        
                       
                     </ul>
                 </div>
@@ -44,10 +49,10 @@
                     <div class="follow_us">
                         <h5>Follow Us</h5>
                         <ul>
-                            <li><a href="#0"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="img/twitter_icon.svg" alt="" class="lazy"></a></li>
-                            <li><a href="#0"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="img/facebook_icon.svg" alt="" class="lazy"></a></li>
-                            <li><a href="#0"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="img/instagram_icon.svg" alt="" class="lazy"></a></li>
-                            <li><a href="#0"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="img/youtube_icon.svg" alt="" class="lazy"></a></li>
+                            <li><a href="#0"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="{{asset('frontend/img/twitter_icon.svg')}}" alt="" class="lazy"></a></li>
+                            <li><a href="#0"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="{{asset('frontend/img/facebook_icon.svg')}}" alt="" class="lazy"></a></li>
+                            <li><a href="#0"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="{{asset('frontend/img/instagram_icon.svg')}}" alt="" class="lazy"></a></li>
+                            <li><a href="#0"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="{{asset('frontend/img/youtube_icon.svg')}}" alt="" class="lazy"></a></li>
                         </ul>
                     </div>
                 </div>
@@ -76,14 +81,14 @@
                             </select>
                         </div>
                     </li>
-                    <li><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="img/cards_all.svg" alt="" width="198" height="30" class="lazy"></li>
+                    <li><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="{{asset('frontend/img/cards_all.svg')}}" alt="" width="198" height="30" class="lazy"></li>
                 </ul>
             </div>
             <div class="col-lg-6">
                 <ul class="additional_links">
                     <li><a href="#0">Terms and conditions</a></li>
                     <li><a href="#0">Privacy</a></li>
-                    <li><span>© 2021 Allaia</span></li>
+                    <li><span>© 2023 AgriFi CS APP</span></li>
                 </ul>
             </div>
         </div>
