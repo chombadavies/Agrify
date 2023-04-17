@@ -3,12 +3,12 @@
     <div class="main_header Sticky">
         <div class="container">
             <div class="row small-gutters">
-                <div class="col-xl-2 col-lg-3 d-lg-flex align-items-center">
+                <div class="col-xl-1 col-lg-3 d-lg-flex align-items-center">
                     <div id="logo">
                         <a href="{{route('home')}}"><img src="{{asset('frontend/img/amaranth.jpg')}}" alt="" width="100" height="35"></a>
                     </div>
                 </div>
-                <nav class="col-xl-10 col-lg-7">
+                <nav class="col-xl-11 col-lg-7">
                     <a class="open_close" href="javascript:void(0);">
                         <div class="hamburger hamburger--spin">
                             <div class="hamburger-box">
@@ -24,7 +24,7 @@
                         </div>
                         <ul>
                             <li>
-                                <a href="#">Dashboards</a>
+                                <a href="#">Dashboard</a>
                             </li>
                             <li>
                                 <a href="#">About Us</a>
@@ -85,12 +85,16 @@
                             </li>
                             <li class="submenu">
                                 
-                                <a href="javascript:void(0);" class="show-submenu">Media</a>
+                                <a href="javascript:void(0);" class="show-submenu">Market Place</a>
                                 <ul>
-                                    <li><a href="#">Header Style 2</a></li>
-                                    <li><a href="#">Header Style 3</a></li>
-                                    <li><a href="#">Header Style 4</a></li>
-                                    <li><a href="#">Header Style 5</a></li>
+                                    @php
+                                        $valuechains=App\Models\ValueChain::all();
+                                    @endphp
+                                    @foreach ($valuechains as $item)
+                                    <li><a href="#">{{$item->title}}</a></li>
+                                    @endforeach
+                                 
+                                   
                                   
                                 </ul>
                             </li>
