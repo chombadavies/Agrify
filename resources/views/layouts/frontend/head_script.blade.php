@@ -27,6 +27,8 @@
     <link href="{{asset('frontend/css/contact.css')}}" rel="stylesheet">
 	<link href="{{asset('frontend/css/about.css')}}" rel="stylesheet">
     <link href="{{asset('frontend/css/blog.css')}}" rel="stylesheet">
+    <link href="{{asset('frontend/css/listing.css')}}" rel="stylesheet">
+    <link href="{{asset("frontend/css/product_page.css")}}" rel="stylesheet">
 
     <!-- YOUR CUSTOM CSS -->
     <link href="{{asset('frontend/css/custom.css')}}" rel="stylesheet>

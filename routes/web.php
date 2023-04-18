@@ -21,6 +21,10 @@ Route::resource('users',App\Http\Controllers\UserController::class);
 Route::resource('valuechains',App\Http\Controllers\backend\ValueChainController::class);
 Route::any('/fetch_valuechains',[\App\Http\Controllers\backend\ValueChainController::class,'fetchValuechains']);
 Route::resource('news',App\Http\Controllers\backend\NewsController::class);
+Route::resource('partners',App\Http\Controllers\backend\PartnersController::class);
+Route::resource('projects',App\Http\Controllers\backend\ProjectsController::class);
+Route::any('/fetchpartners',[App\Http\Controllers\backend\PartnersController::class, 'fetchPartners']);
+Route::any('/fetchprojects',[App\Http\Controllers\backend\ProjectsController::class, 'fetchProjects']);
 
 
 
@@ -50,3 +54,5 @@ Route::any('/about_us',[\App\Http\Controllers\Frontend\IndexController::class,'a
 Route::any('/blog',[\App\Http\Controllers\Frontend\IndexController::class,'blog'])->name('blog');
 Route::any('/valuechains',[\App\Http\Controllers\Frontend\IndexController::class,'valuechains'])->name('valuechains');
 Route::any('/valuechain/{id}',[\App\Http\Controllers\Frontend\IndexController::class,'valuechain'])->name('valuechain.show');
+Route::any('/projects/{id}',[\App\Http\Controllers\Frontend\IndexController::class,'Project'])->name('meme');
+Route::any('/project_details/{id}',[\App\Http\Controllers\Frontend\IndexController::class,'projectDetails'])->name('project.details');

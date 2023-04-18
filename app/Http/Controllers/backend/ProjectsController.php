@@ -4,12 +4,15 @@ namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\ValueChain;
+use App\Models\Partner;
+use App\Models\Project;
+use Session;
+use DB;
 use Intervention\Image\Facades\Image;
 use Yajra\Datatables\Datatables;
 use Illuminate\Support\Str;
 
-class ValueChainController extends Controller
+class ProjectsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,8 +21,8 @@ class ValueChainController extends Controller
      */
     public function index()
     {
-        $data['page_title']='Value Chains';
-        return view('admin.valuechains.index',$data);
+        $data['page_title']='Projects';
+        return view('admin.projects.index',$data);
     }
 
     /**
@@ -29,9 +32,9 @@ class ValueChainController extends Controller
      */
     public function create()
     {
-
-       $data['page_title']='create Value Chain';
-        return view('admin.valuechains.create',$data);
+        $data['page_title']='Create Project';
+        $partners=Partner::all();
+        return view('admin.projects.create',$data)->with(compact('partners'));
     }
 
     /**
@@ -42,9 +45,8 @@ class ValueChainController extends Controller
      */
     public function store(Request $request)
     {
-        $data =$request->all();
-dd($data);
-       
+        $data=$request->all();
+     
         if ($request->hasFile('image')) {
 
             $image_tmp = $request->file('image');
@@ -58,23 +60,15 @@ dd($data);
                 Image::make($image_tmp)->save($ImagePath);
             }
         } else {
-            $image = "";
-            $ImagePath= "";
+            $image= "";
+            $ImagePath = "";
             
         }
+      $data['image']=$image;
+     $partner=Project::create($data);
 
-        $data=$request->all();
-        $data['image']=$image;
-      
-       
-        $status=ValueChain::create($data);
-
-        if($status){
-         
-            return redirect()->route('partners.index')->with('success','Partner created successfully');
-        }else{
-            return back()->with('error','failed try again');
-        }
+      Session::flash('success_message', 'project added successfully');
+        return redirect()->route('projects.index');
     }
 
     /**
@@ -96,7 +90,7 @@ dd($data);
      */
     public function edit($id)
     {
-        return $id;
+        //
     }
 
     /**
@@ -122,42 +116,38 @@ dd($data);
         //
     }
 
-
-public function fetchValuechains()
+    public function fetchProjects()
     {
-   $models=ValueChain::all();
+      
+        $models = DB::table('projects')
+        ->join('partners', 'projects.partner_id', '=', 'projects.id')
+        ->select('projects.id', 'partners.title', 'projects.title as meme','projects.description','projects.image')
+        ->get();
+
+      
         return Datatables::of($models)
-        ->rawColumns(['action','image','introduction','description'])
-        ->editColumn('image',function($model){
-         $name=$model->image;
-         $path=asset('backend/uploads/'.$name);
-        return '<img src="'.$path.'" width="70px;" height="70px;"  alt="category image" >';
-        })
-        ->editColumn('introduction',function($model){
-         $text=$model->introduction;
-         $introduction=str_limit(strip_tags($text), $limit = 50, $end = '...');
-          return $introduction;
-        })
-        ->editColumn('description',function($model){
-            $text=$model->description;
-            $description=str_limit(strip_tags($text),$limit=50,$end='...');
-             return $description;
+           ->rawColumns(['action','photo'])
+        
+           ->editColumn('photo',function($model){
+               $name=$model->image;
+               $path=asset('backend/uploads/'.$name);
+               return '<img src="'.$path.'" width="70px;" height="70px;"  alt="Service image" >';
            })
             ->addColumn('action', function ($model) {
-                $edit_url = route('valuechains.edit',$model->id);
-                
-             return '<div class="dropdown ">
+                $edit_url = route('projects.edit',$model->id);
+                $view_url = route('projects.show',$model->id);
+             
+              
+
+                return '<div class="dropdown ">
         <button class="btn btn-pink btn btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Action
         <span class="caret"></span></button>
         <ul class="dropdown-menu">
-        <li><a style="cursor:pointer;" class="reject-modal"  data-title="Edit" data-url="' . $edit_url . '">Edit Details</a></li>
-
+        <li><a style="cursor:pointer;" data-title="Edit" class="reject-modal" data-url="' . $edit_url . '">Edit Partner</a></li>
         </ul>
         </div> ';
 
             })
             ->make(true);
     }
-
-  
 }

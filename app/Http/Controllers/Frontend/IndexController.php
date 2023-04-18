@@ -5,13 +5,15 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\ValueChain;
+use App\Models\Partner;
+use App\Models\Project;
 
 class IndexController extends Controller
 {
     public function home(){
         $valuechains=ValueChain::all();
-        
-        return view('frontend.index',compact('valuechains'));
+        $partners=Partner::all();
+        return view('frontend.index',compact('valuechains','partners'));
     }
 
     public function aboutUs(){
@@ -35,5 +37,16 @@ return view('frontend.pages.contactus');
 
         // dd($valuechain);
         return view('frontend.pages.valuechain_details',compact('valuechain'));
+    }
+
+    public function projectDetails($id){
+      $project=Project::findOrFail($id);
+        return view('frontend.pages.project_details',compact('project'));
+    }
+    public function Project($id){
+
+        $partner=Partner::findOrFail($id);
+        // dd($partner->projects);
+       return view('frontend.pages.projects',compact('partner'));
     }
 }

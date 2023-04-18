@@ -3,12 +3,12 @@
     <div class="main_header Sticky">
         <div class="container">
             <div class="row small-gutters">
-                <div class="col-xl-1 col-lg-3 d-lg-flex align-items-center">
+                <div class="col-xl-2 col-lg-3 d-lg-flex align-items-center">
                     <div id="logo">
-                        <a href="{{route('home')}}"><img src="{{asset('frontend/img/amaranth.jpg')}}" alt="" width="100" height="35"></a>
+                        <a href="{{route('home')}}"><img src="{{asset('frontend/img/AgriFI-CS-APP-Logo_2019.png')}}" alt="" width="100" height="50"></a>
                     </div>
                 </div>
-                <nav class="col-xl-11 col-lg-7">
+                <nav class="col-xl-10 col-lg-7">
                     <a class="open_close" href="javascript:void(0);">
                         <div class="hamburger hamburger--spin">
                             <div class="hamburger-box">
@@ -29,55 +29,8 @@
                             <li>
                                 <a href="#">About Us</a>
                             </li>
-                            <li class="megamenu submenu">
-                                <a href="javascript:void(0);" class="show-submenu-mega">Components</a>
-                                <div class="menu-wrapper">
-                                    <div class="row small-gutters">
-                                        <div class="col-lg-3">
-                                            <h3>Listing grid</h3>
-                                            <ul>
-                                                <li><a href="#">link to Content</a></li>
-                                                <li><a href="#">link to Content</a></li>
-                                                <li><a href="#">link to Content</a></li>
-                                                <li><a href="#">link to Content</a></li>
-                                                <li><a href="#">link to Content</a></li>
-                                                <li><a href="#">link to Content</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <h3>Listing row &amp; Product</h3>
-                                            <ul>
-                                                <li><a href="#">link to Content</a></li>
-                                                <li><a href="#">link to Content</a></li>
-                                                <li><a href="#">link to Content</a></li>
-                                                <li><a href="#">link to Content</a></li>
-                                                <li><a href="#">link to Content</a></li>
-                                                <li><a href="#">link to Content</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <h3>More Contents</h3>
-                                            <ul>
-                                                <li><a href="#">link to Content</a></li>
-                                                <li><a href="#">link to Content</a></li>
-                                                <li><a href="#">link to Content</a></li>
-                                                <li><a href="#">link to Content</a></li>
-                                                <li><a href="#">link to Content</a></li>
-                                                <li><a href="#">link to Content</a></li>
-                                               
-                                            </ul>
-                                        </div>
-                                        <div class="col-lg-3 d-xl-block d-lg-block d-md-none d-sm-none d-none">
-                                            <div class="banner_menu">
-                                                <a href="#0">
-                                            <img src="data:image/gif;bas" data-src="{{asset('frontend/img/amaranth.jpg')}}" width="400" height="550" alt="" class="img-fluid lazy">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- /row -->
-                                </div>
-                                <!-- /menu-wrapper -->
+                            <li>
+                                <a href="">Components</a>
                             </li>
                            
                             <li>
@@ -101,9 +54,9 @@
                             <li>
                                 <a href="#">Directory</a>
                             </li>
-                            <li>
+                            {{-- <li>
                                 <a href="#">Resourses</a>
-                            </li>
+                            </li> --}}
                             <li>
                                 <a href="{{route('contact_us')}}">Contact Us</a>
                             </li>

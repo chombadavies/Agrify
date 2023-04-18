@@ -101,9 +101,9 @@
     
     <div class="container margin_60_35" style="background-color: bisque">
         <div class="main_title">
-            <h2>our History</h2>
-            <span>About Agrify Project</span>
-            <p>Cum doctus civibus efficiantur in imperdiet deterruisset</p>
+            {{-- <h2>our History</h2>
+            <span>About AgriFi Project</span> --}}
+            <p>About AgriFi Project</p>
         </div>
             <div class="row" >
                 <div class="col-md-1"></div>
@@ -121,7 +121,7 @@
                         </p>
                 </div>
                 <div class="col-md-4">
-                    <img src="{{asset('frontend/img/products/product_placeholder_square_medium.jpg')}}" alt="" height="280px" width="100%">
+                    <img src="{{asset('frontend/img/products/kalroabout.jpg')}}" alt="" height="280px" width="100%">
                 </div>
             </div>
         
@@ -206,7 +206,7 @@
     
     <!-- /container -->
 
-    <div class="featured lazy" data-bg="url(frontend/img/slides/fullone.webp)">
+    <div class="featured lazy" data-bg="url(asset(frontend/img/slides/fullone.webp))">
         <div class="opacity-mask d-flex align-items-center" data-opacity-mask="rgba(0, 0, 0, 0.5)">
             <div class="container margin_60">
                 <div class="row justify-content-center justify-content-md-start">
@@ -228,24 +228,11 @@
                
             </div>
             <div id="brands" class="owl-carousel owl-theme">
+                @foreach ($partners as $partner)
                 <div class="item">
-                    <a href="#0"><img src="{{asset('frontend/img/brands/placeholder_brands.png')}}" data-src="{{asset('frontend/img/brands/logo_1.png')}}" alt="" class="owl-lazy"></a>
+                    <a href="{{route('meme',$partner->id)}}"><img src="{{asset('backend/uploads/'.$partner->image)}}" data-src='{{asset('backend/uploads/'.$partner->image)}}' alt="" class="owl-lazy"></a>
                 </div><!-- /item -->
-                <div class="item">
-                    <a href="#0"><img src="{{asset('frontend/img/brands/placeholder_brands.png')}}" data-src="{{asset('frontend/img/brands/logo_2.png')}}" alt="" class="owl-lazy"></a>
-                </div><!-- /item -->
-                <div class="item">
-                    <a href="#0"><img src="{{asset('frontend/img/brands/placeholder_brands.png')}}" data-src="{{asset('frontend/img/brands/logo_3.png')}}" alt="" class="owl-lazy"></a>
-                </div><!-- /item -->
-                <div class="item">
-                    <a href="#0"><img src="{{asset('frontend/img/brands/placeholder_brands.png')}}" data-src="{{asset('frontend/img/brands/logo_4.png')}}" alt="" class="owl-lazy"></a>
-                </div><!-- /item -->
-                <div class="item">
-                    <a href="#0"><img src="{{asset('frontend/img/brands/placeholder_brands.png')}}" data-src="{{asset('frontend/img/brands/logo_5.png')}}" alt="" class="owl-lazy"></a>
-                </div><!-- /item -->
-                <div class="item">
-                    <a href="#0"><img src="{{asset('frontend/img/brands/placeholder_brands.png')}}" data-src="{{asset('frontend/img/brands/logo_6.png')}}" alt="" class="owl-lazy"></a>
-                </div><!-- /item --> 
+                @endforeach
             </div><!-- /carousel -->
         </div><!-- /container -->
     </div>

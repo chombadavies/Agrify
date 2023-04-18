@@ -47,6 +47,64 @@
             <a href="" class="nav-link">
               <i class="nav-icon fas fa-bars"></i>
               <p>
+                AgriFI Partners
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('partners.create')}}" class="nav-link">
+                  <i class="fas fa-edit nav-icon"></i>
+                  <p>create a Partner
+
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('partners.index')}}" class="nav-link">
+                  <i class="fas fa-table nav-icon"></i>
+                  <p>Partners
+
+                    <span class="right badge badge-info"></span>
+                  </p>
+                </a>
+              </li>
+            
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="" class="nav-link">
+              <i class="nav-icon fas fa-bars"></i>
+              <p>
+               Projects
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('projects.create')}}" class="nav-link">
+                  <i class="fas fa-edit nav-icon"></i>
+                  <p>create Project
+
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('projects.index')}}" class="nav-link">
+                  <i class="fas fa-table nav-icon"></i>
+                  <p>Projects
+
+                    <span class="right badge badge-info"></span>
+                  </p>
+                </a>
+              </li>
+            
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="" class="nav-link">
+              <i class="nav-icon fas fa-bars"></i>
+              <p>
                 Value Chains
                 <i class="right fas fa-angle-left"></i>
               </p>

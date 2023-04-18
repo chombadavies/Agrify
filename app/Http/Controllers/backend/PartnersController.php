@@ -4,12 +4,15 @@ namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\ValueChain;
+use App\Models\Project;
+use App\Models\Partner;
+use Session;
+use DB;
 use Intervention\Image\Facades\Image;
 use Yajra\Datatables\Datatables;
 use Illuminate\Support\Str;
 
-class ValueChainController extends Controller
+class PartnersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,8 +21,8 @@ class ValueChainController extends Controller
      */
     public function index()
     {
-        $data['page_title']='Value Chains';
-        return view('admin.valuechains.index',$data);
+        $data['page_title']='AgrFi Partners';
+        return view('admin.partners.index',$data);
     }
 
     /**
@@ -29,9 +32,8 @@ class ValueChainController extends Controller
      */
     public function create()
     {
-
-       $data['page_title']='create Value Chain';
-        return view('admin.valuechains.create',$data);
+        $data['page_title']='create Partner';
+        return view('admin.partners.create',$data);
     }
 
     /**
@@ -42,9 +44,8 @@ class ValueChainController extends Controller
      */
     public function store(Request $request)
     {
-        $data =$request->all();
-dd($data);
-       
+        $data=$request->all();
+   
         if ($request->hasFile('image')) {
 
             $image_tmp = $request->file('image');
@@ -58,23 +59,15 @@ dd($data);
                 Image::make($image_tmp)->save($ImagePath);
             }
         } else {
-            $image = "";
-            $ImagePath= "";
+            $image= "";
+            $ImagePath = "";
             
         }
+      $data['image']=$image;
+     $partner=Partner::create($data);
 
-        $data=$request->all();
-        $data['image']=$image;
-      
-       
-        $status=ValueChain::create($data);
-
-        if($status){
-         
-            return redirect()->route('partners.index')->with('success','Partner created successfully');
-        }else{
-            return back()->with('error','failed try again');
-        }
+      Session::flash('success_message', 'service added successfully');
+        return redirect()->route('partners.index');
     }
 
     /**
@@ -85,7 +78,7 @@ dd($data);
      */
     public function show($id)
     {
-        //
+       
     }
 
     /**
@@ -96,7 +89,7 @@ dd($data);
      */
     public function edit($id)
     {
-        return $id;
+        //
     }
 
     /**
@@ -122,35 +115,38 @@ dd($data);
         //
     }
 
-
-public function fetchValuechains()
+    public function fetchPartners()
     {
-   $models=ValueChain::all();
+       
+        $models = DB::select('SELECT * FROM `partners`');
+        
+        
+        // $models = Service::whereNotNull('parent_id')->orderBy('id','asc')->get();
+      
         return Datatables::of($models)
-        ->rawColumns(['action','image','introduction','description'])
-        ->editColumn('image',function($model){
-         $name=$model->image;
-         $path=asset('backend/uploads/'.$name);
-        return '<img src="'.$path.'" width="70px;" height="70px;"  alt="category image" >';
-        })
-        ->editColumn('introduction',function($model){
-         $text=$model->introduction;
-         $introduction=str_limit(strip_tags($text), $limit = 50, $end = '...');
-          return $introduction;
-        })
-        ->editColumn('description',function($model){
-            $text=$model->description;
-            $description=str_limit(strip_tags($text),$limit=50,$end='...');
-             return $description;
+           ->rawColumns(['action','photo'])
+           ->editColumn('photo',function($model){
+               $name=$model->image;
+               $path=asset('backend/uploads/'.$name);
+               return '<img src="'.$path.'" width="70px;" height="70px;"  alt="Service image" >';
            })
+
+           ->editColumn('description',function($model){
+            $description=strip_tags($model->description);
+            
+            return $description;
+        })
             ->addColumn('action', function ($model) {
-                $edit_url = route('valuechains.edit',$model->id);
-                
-             return '<div class="dropdown ">
+                $edit_url = route('partners.edit',$model->id);
+                $view_url = route('partners.show',$model->id);
+             
+              
+
+                return '<div class="dropdown ">
         <button class="btn btn-pink btn btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Action
         <span class="caret"></span></button>
         <ul class="dropdown-menu">
-        <li><a style="cursor:pointer;" class="reject-modal"  data-title="Edit" data-url="' . $edit_url . '">Edit Details</a></li>
+        <li><a style="cursor:pointer;" class="reject-modal" data-title="Edit" data-url="' . $edit_url . '">Edit Partner</a></li>
 
         </ul>
         </div> ';
@@ -158,6 +154,4 @@ public function fetchValuechains()
             })
             ->make(true);
     }
-
-  
 }
