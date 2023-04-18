@@ -120,19 +120,25 @@ class ProjectsController extends Controller
     {
       
         $models = DB::table('projects')
-        ->join('partners', 'projects.partner_id', '=', 'projects.id')
-        ->select('projects.id', 'partners.title', 'projects.title as meme','projects.description','projects.image')
+        ->join('partners', 'projects.partner_id', '=', 'partners.id')
+        ->select('projects.id', 'partners.title', 'projects.title as meme','projects.description','projects.image as photo')
         ->get();
 
-      
+
         return Datatables::of($models)
            ->rawColumns(['action','photo'])
         
            ->editColumn('photo',function($model){
-               $name=$model->image;
+               $name=$model->photo;
                $path=asset('backend/uploads/'.$name);
-               return '<img src="'.$path.'" width="70px;" height="70px;"  alt="Service image" >';
+               return '<img src="'.$path.'" width="70px;" height="70px;"  alt="Project image" >';
            })
+
+           ->editColumn('description',function($model){
+            $description=strip_tags($model->description);
+            
+            return $description;
+        })
             ->addColumn('action', function ($model) {
                 $edit_url = route('projects.edit',$model->id);
                 $view_url = route('projects.show',$model->id);

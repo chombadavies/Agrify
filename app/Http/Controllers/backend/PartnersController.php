@@ -66,8 +66,14 @@ class PartnersController extends Controller
       $data['image']=$image;
      $partner=Partner::create($data);
 
-      Session::flash('success_message', 'service added successfully');
+     if($partner){
+        Session::flash('success_message', 'service added successfully');
         return redirect()->route('partners.index');
+     }else{
+        return back()->with('error','operation failed,lease try again.');
+     }
+
+     
     }
 
     /**

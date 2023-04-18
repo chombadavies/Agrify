@@ -33,7 +33,7 @@
 
           <div class="col-12">
 
-            <a href="<?=route('partners.create')?>" class="btn btn-sm btn-success" data-title="Add Item "><span class="fa fa-plus"><span> Add New Partner</a>
+            <a href="<?=route('projects.create')?>" class="btn btn-sm btn-success" data-title="Add Item "><span class="fa fa-plus"><span> Add New Project</a>
                                        
  </div>
 
@@ -58,8 +58,9 @@
                                         <th>Action</th>
                                         <th>Client Title</th>
                                         <th>Logo</th>
+                                        <th>project Owner</th>
                                          <th>Service Description</th>
-                                         <th>project Owner</th>
+                                        
                     </tr>
                   </thead>
                   <tbody>
@@ -97,8 +98,9 @@
             {data: 'action', name: 'action',searchable:false,orderable:false},
            {data: 'meme', name: 'meme'},
            {data: 'photo', name: 'photo'},
-           {data: 'description', name: 'description'},
            {data: 'title', name: 'title'},
+           {data: 'description', name: 'description'},
+          
            
          
             ],

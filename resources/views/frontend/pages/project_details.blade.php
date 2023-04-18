@@ -26,12 +26,16 @@
                     </ul>
                 </div>
                 <!-- /page_header -->
-                <div class="prod_info">
+                
+                <div class="prod_info" style="display: flex;justify-content:centre">
                     <h1>{{$project->title}}</h1>
-                    
-                    <p><br>{{strip_tags($project->description)}}</p>
 
                 </div>
+                <div class="prod_info" style="display: flex;justify-content:centre">
+                   
+                    <p><br>{{strip_tags($project->description)}}</p>
+                </div>
+               
               
                 <!-- /product_actions -->
             </div>
