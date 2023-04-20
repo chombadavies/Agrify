@@ -56,10 +56,10 @@
                   <tr>
                     
                                         <th>Action</th>
-                                        <th>Client Title</th>
-                                        <th>Logo</th>
+                                        <th>ProjectTitle</th>
+                                        <th>Image</th>
                                         <th>project Owner</th>
-                                         <th>Service Description</th>
+                                         <th>Project Description</th>
                                         
                     </tr>
                   </thead>

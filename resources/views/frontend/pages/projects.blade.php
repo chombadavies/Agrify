@@ -4,23 +4,41 @@
 <main>
     <br>
     <div class="" style="display:flex;justify-content:center">
-       
-        <img src="{{asset('backend/uploads/'.$partner->image)}}" class="img-fluid" alt="" height="100" width="100"><br>
-        <div>
-            <span>{{$partner->title}}</span>
+       <a href="https://bluecrossnyatike.org" target="blank"> 
+        <img src="{{asset('backend/uploads/'.$partner->image)}}" class="img-fluid" alt="" height="100" width="100"><br></div>
+        <div style="display:flex;justify-content:center">
+            <span>{{$partner->title}}</span></a>
+            
         </div>
-    </div>
+    
     <br>
-    <div class="row">
+    <div class="row container " >
        
-    <div  class="container col-md-6">
+    {{-- <div  class="container col-md-6">
        <h2> About{{$partner->title}} </h2>
-        <p>{{strip_tags($partner->description)}}</p></div>
-  
+        <p>{{strip_tags($partner->description)}}</p></div> --}}
+        <div  class=" col-md-6">  
+        <div class="prod_info" style="display: flex;justify-content:centre">
+            <span> <b> About {{$partner->title}}</b></span>
 
-    <div class="container col-md-6">
-      <h2>{{$partner->title}} project Overview </h2>
-        <p>{{strip_tags($partner->project_overview)}}</p></div>
+        </div>
+        <div class="" style="display: flex;justify-content:centre">
+           
+            
+            <p>{{strip_tags($partner->description)}}</p></div>
+        </div>
+
+
+    <div  class=" col-md-6">  
+        <div class="prod_info" style="display: flex;justify-content:centre">
+            <span> <b>{{$partner->title}} project Overview</b></span>
+
+        </div>
+        <div class="" style="display: flex;justify-content:centre">
+           
+            
+            <p>{{strip_tags($partner->project_overview)}}</p></div>
+        </div>
 </div>
      
        <div class="container margin_30">

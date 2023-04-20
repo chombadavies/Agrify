@@ -18,8 +18,9 @@ class ValueChainController extends Controller
      */
     public function index()
     {
+        $valuechains =ValueChain::all();
         $data['page_title']='Value Chains';
-        return view('admin.valuechains.index',$data);
+        return view('admin.valuechains.index',$data)->with(cmpact('valuechains'));
     }
 
     /**
@@ -29,7 +30,7 @@ class ValueChainController extends Controller
      */
     public function create()
     {
-
+    
        $data['page_title']='create Value Chain';
         return view('admin.valuechains.create',$data);
     }
@@ -43,7 +44,7 @@ class ValueChainController extends Controller
     public function store(Request $request)
     {
         $data =$request->all();
-dd($data);
+
        
         if ($request->hasFile('image')) {
 
@@ -71,7 +72,7 @@ dd($data);
 
         if($status){
          
-            return redirect()->route('partners.index')->with('success','Partner created successfully');
+            return redirect()->route('valuechains.index')->with('success','Value chain Added successfully');
         }else{
             return back()->with('error','failed try again');
         }

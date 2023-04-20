@@ -17,6 +17,7 @@ class CreatePartnersTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('image');
+            $table->string('url')->nullable();
             $table->enum('status',['active','inactive']);
             $table->text('description');
             $table->text('project_overview');
