@@ -5,8 +5,8 @@
 <main>
     <div id="carousel-home" class="add_top_5">
         <div class="owl-carousel owl-theme">
-            <div class="owl-slide cover" style="background-image: url(frontend/img/slides/farming.jpg);">
-                <div class="opacity-mask d-flex align-items-center" data-opacity-mask="rgba(0, 0, 0, 0.5)">
+            <div class="owl-slide" style="background-image: url(frontend/img/slides/agrific.jpg);">
+                <div class="opacity-mask d-flex ">
                     <div class="container">
                         <div class="row justify-content-center justify-content-md-end">
                             <div class="col-lg-6 static">
@@ -23,8 +23,8 @@
                 </div>
             </div>
             <!--/owl-slide-->
-            <div class="owl-slide cover" style="background-image: url(frontend/img/slides/full2.jpg);">
-                <div class="opacity-mask d-flex align-items-center" data-opacity-mask="rgba(0, 0, 0, 0.5)">
+            <div class="owl-slide " style="background-image: url(frontend/img/slides/full4.jpeg);">
+                <div class="opacity-mask d-flex align-items-center" >
                     <div class="container">
                         <div class="row justify-content-center justify-content-md-start">
                             <div class="col-lg-6 static">
@@ -41,8 +41,10 @@
                 </div>
             </div>
             <!--/owl-slide-->
-            <div class="owl-slide cover" style="background-image: url(frontend/img/slides/smallruminants.jpg);">
-                <div class="opacity-mask d-flex align-items-center" data-opacity-mask="rgba(255, 255, 255, 0.5)">
+            <div class="owl-slide cover" style="background-image: url(frontend/img/slides/full6.jpeg);">
+                <div class="opacity-mask d-flex align-items-center" 
+                {{-- data-opacity-mask="rgba(255, 255, 255, 0.5)" --}}
+                >
                     <div class="container">
                         <div class="row justify-content-center justify-content-md-start">
                             <div class="col-lg-12 static">
@@ -101,9 +103,9 @@
     
     <div class="container margin_60_35" style="background-color: bisque">
         <div class="main_title">
-            {{-- <h2>our History</h2>
-            <span>About AgriFi Project</span> --}}
-            <p>About AgriFi Project</p>
+            <h2>About AgriFI CS APP project</h2>
+           
+            {{-- <p>Cum doctus civibus efficiantur in imperdiet deterruisset</p> --}}
         </div>
             <div class="row" >
                 <div class="col-md-1"></div>
@@ -206,7 +208,7 @@
     
     <!-- /container -->
 
-    <div class="featured lazy" data-bg="url(asset(frontend/img/slides/fullone.webp))">
+    <div class="featured lazy" data-bg="url(frontend/img/slides/full3.jpeg)">
         <div class="opacity-mask d-flex align-items-center" data-opacity-mask="rgba(0, 0, 0, 0.5)">
             <div class="container margin_60">
                 <div class="row justify-content-center justify-content-md-start">
@@ -237,6 +239,38 @@
         </div><!-- /container -->
     </div>
     <!-- /bg_gray -->
+
+
+
+    {{-- <div class="bg_gray">
+        <div class="container margin_30">
+            <div class="main_title mb-4">
+                <h2> <u> Agrify Partners</u></h2>
+                
+               
+            </div>
+            <div id="brands" class="owl-carousel owl-theme">
+                <div class="item">
+                    <a href="#0"><img src="{{asset("frontend/img/brands/placeholder_brands.png")}}" data-src="{{asset("frontend/img/brands/logo_1.png")}}" alt="" class="owl-lazy"></a>
+                </div><!-- /item -->
+                <div class="item">
+                    <a href="#0"><img src="{{asset("frontend/img/brands/placeholder_brands.png")}}" data-src="{{asset("frontend/img/brands/logo_2.png")}}" alt="" class="owl-lazy"></a>
+                </div><!-- /item -->
+                <div class="item">
+                    <a href="#0"><img src="{{asset("frontend/img/brands/placeholder_brands.png")}}" data-src="{{asset("frontend/img/brands/logo_3.png")}}" alt="" class="owl-lazy"></a>
+                </div><!-- /item -->
+                <div class="item">
+                    <a href="#0"><img src="{{asset("frontend/img/brands/placeholder_brands.png")}}" data-src="{{asset("frontend/img/brands/logo_4.png")}}" alt="" class="owl-lazy"></a>
+                </div><!-- /item -->
+                <div class="item">
+                    <a href="#0"><img src="{{asset("frontend/img/brands/placeholder_brands.png")}}" data-src="{{asset("frontend/img/brands/logo_5.png")}}" alt="" class="owl-lazy"></a>
+                </div><!-- /item -->
+                <div class="item">
+                    <a href="#0"><img src="{{asset("frontend/img/brands/placeholder_brands.png")}}" data-src="{{asset("frontend/img/brands/logo_6.png")}}" alt="" class="owl-lazy"></a>
+                </div><!-- /item --> 
+            </div><!-- /carousel -->
+        </div><!-- /container -->
+    </div> --}}
 
     <div class="container margin_60_35" style="background-color: #009688 !important">
         <div class="main_title">

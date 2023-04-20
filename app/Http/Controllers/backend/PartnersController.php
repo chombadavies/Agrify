@@ -153,7 +153,8 @@ class PartnersController extends Controller
         <span class="caret"></span></button>
         <ul class="dropdown-menu">
         <li><a style="cursor:pointer;" class="reject-modal" data-title="Edit" data-url="' . $edit_url . '">Edit Partner</a></li>
-
+        <li><div class="dropdown-divider"></div></li>
+        <li><a style="cursor:pointer;" class="reject-modal" data-title="Show projects" data-url="' . $view_url . '">View Partner</a></li>
         </ul>
         </div> ';
 

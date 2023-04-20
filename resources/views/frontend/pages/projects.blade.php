@@ -5,11 +5,23 @@
     <br>
     <div class="" style="display:flex;justify-content:center">
        
-        <img src="{{asset('backend/uploads/'.$partner->image)}}" class="img-fluid" alt="" height="50" width="50"><br>
-        <span>{{$partner->title}}</span>
+        <img src="{{asset('backend/uploads/'.$partner->image)}}" class="img-fluid" alt="" height="100" width="100"><br>
+        <div>
+            <span>{{$partner->title}}</span>
+        </div>
     </div>
-    <div style="display:flex;justify-content:center"><span>{{strip_tags($partner->project_overview)}}</span></div>
-    <!-- /top_banner -->
+    <br>
+    <div class="row">
+       
+    <div  class="container col-md-6">
+       <h2> About{{$partner->title}} </h2>
+        <p>{{strip_tags($partner->description)}}</p></div>
+  
+
+    <div class="container col-md-6">
+      <h2>{{$partner->title}} project Overview </h2>
+        <p>{{strip_tags($partner->project_overview)}}</p></div>
+</div>
      
        <div class="container margin_30">
         
