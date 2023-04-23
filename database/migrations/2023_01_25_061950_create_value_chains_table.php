@@ -19,6 +19,7 @@ class CreateValueChainsTable extends Migration
             $table->string('image');
             $table->string('introduction');
             $table->string('description');
+            $table->enum('category',['crops','livestock','aquaculture','apiculture']);
             $table->enum('status',['active','inactive'])->default('active');
             $table->timestamps();
         });

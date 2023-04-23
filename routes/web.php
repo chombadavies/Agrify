@@ -25,6 +25,7 @@ Route::resource('partners',App\Http\Controllers\backend\PartnersController::clas
 Route::resource('projects',App\Http\Controllers\backend\ProjectsController::class);
 Route::any('/fetchpartners',[App\Http\Controllers\backend\PartnersController::class, 'fetchPartners']);
 Route::any('/fetchprojects',[App\Http\Controllers\backend\ProjectsController::class, 'fetchProjects']);
+Route::resource('materials',App\Http\Controllers\backend\MaterialsController::class);
 
 
 
@@ -53,6 +54,10 @@ Route::any('/contact_us',[\App\Http\Controllers\Frontend\IndexController::class,
 Route::any('/about_us',[\App\Http\Controllers\Frontend\IndexController::class,'aboutUs'])->name('about_us');
 Route::any('/blog',[\App\Http\Controllers\Frontend\IndexController::class,'blog'])->name('blog');
 Route::any('/valuechains',[\App\Http\Controllers\Frontend\IndexController::class,'valuechains'])->name('valuechains');
-Route::any('/valuechain/{id}',[\App\Http\Controllers\Frontend\IndexController::class,'valuechain'])->name('valuechain.show');
+Route::any('/valuechain/{id}',[\App\Http\Controllers\Frontend\IndexController::class,'valuechain'])->name('valuechain.details');
 Route::any('/projects/{id}',[\App\Http\Controllers\Frontend\IndexController::class,'Project'])->name('meme');
 Route::any('/project_details/{id}',[\App\Http\Controllers\Frontend\IndexController::class,'projectDetails'])->name('project.details');
+Route::any('/media',[\App\Http\Controllers\Frontend\IndexController::class,'Media'])->name('media');
+Route::any('/resources',[\App\Http\Controllers\Frontend\IndexController::class,'Resources'])->name('resources');
+Route::any('/crops',[\App\Http\Controllers\Frontend\IndexController::class,'crops'])->name('upscalling.crops');
+

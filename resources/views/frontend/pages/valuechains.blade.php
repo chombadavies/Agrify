@@ -1,50 +1,49 @@
-@extends('layouts.frontend.master')
+@extends('layouts.frontend.innermaster')
+
 
 @section('content')
+<main id="main">
 
-<main>
+  <!-- ======= Breadcrumbs Section ======= -->
+  <section class="breadcrumbs">
+    <div class="container">
 
-<div class="container margin_60_35">
-       
-    <div class="container-fluid mb-5">
-        <div class="main_title mb-4">
-            <h2>Value Chains</h2>
-            <span>Value Chains</span>
-        
-        </div>
-        <div class="row">
+      <div class="d-flex justify-content-between align-items-center">
+      <h1>Valuechains</h1>
+        <ol>
+          <li><a href="index.php">Home</a></li>
+          <li>valuechains</li>
+        </ol>
+      </div>
 
-            @foreach ($valuechains as $valuechain)
-            <div class="col-md-4">
-                <div class="box">
-                    <div class="our-services settings">
-                        <div class="icon"> <img src="{{asset('backend/uploads/'.$valuechain->image)}}" width="100" height="50"> </div>
-                        <h4><a href="{{route('valuechain.show', $valuechain->id)}}">{{$valuechain->title}}</a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                    </div>
-                </div>
-            
-
-
-                {{-- <div class="card bg-dark text-white">
-                    <img src="..." class="card-img" alt="...">
-                    <div class="card-img-overlay">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p class="card-text">Last updated 3 mins ago</p>
-                    </div>
-                  </div> --}}
-            </div>
-             
-            @endforeach
-           
-         
-        </div>
-       
     </div>
-  
-   
-</div> 
+  </section><!-- End Breadcrumbs Section -->
 
-</main>
+  <section class="" style="margin-top:0">
+
+    <div class="container">
+                  <div class="content">
+                      <div class="grid">
+                        @foreach ($valuechains as $valuechain)
+                     <a href="{{route('valuechain.details',$valuechain->id)}}">  
+                        <figure class="effect-sarah" style="border-radius: 12px;">
+                          
+                          <img alt="logo" src="{{('backend/uploads/'.$valuechain->image)}}" style="border-radius: 12px;"/>
+                       
+                              <figcaption>
+                                  <h2>{{$valuechain->title}}<span></span></h2>
+                                  <p>{{str_limit(strip_tags($valuechain->introduction),$limit=100,$end='...');}}</p>
+                                   
+                              </figcaption>
+                          </figure>
+                           </a>
+                        @endforeach
+                     
+                        </div>
+                  </div>
+                  <!-- /container -->
+</div> <!-- end grid---->
+  </section>
+
+</main><!-- End #main -->
 @endsection

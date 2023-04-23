@@ -20,7 +20,7 @@ class ValueChainController extends Controller
     {
         $valuechains =ValueChain::all();
         $data['page_title']='Value Chains';
-        return view('admin.valuechains.index',$data)->with(cmpact('valuechains'));
+        return view('admin.valuechains.index',$data)->with(compact('valuechains'));
     }
 
     /**
@@ -56,7 +56,8 @@ class ValueChainController extends Controller
                 $image = rand(111, 99999) . '.' . $extension;
                 $ImagePath = 'backend/uploads/'.$image;
                 // Upload the Image
-                Image::make($image_tmp)->save($ImagePath);
+                Image::make($image_tmp)->resize(300,280)->save($ImagePath);
+               
             }
         } else {
             $image = "";

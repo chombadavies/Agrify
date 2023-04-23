@@ -29,6 +29,7 @@ return view('frontend.pages.contactus');
 
     public function valuechains(){
         $valuechains=ValueChain::all();
+       
         return view('frontend.pages.valuechains',compact('valuechains'));
     }
 
@@ -43,10 +44,27 @@ return view('frontend.pages.contactus');
       $project=Project::findOrFail($id);
         return view('frontend.pages.project_details',compact('project'));
     }
-    public function Project($id){
+    public function partners($id){
 
         $partner=Partner::findOrFail($id);
         // dd($partner->projects);
        return view('frontend.pages.projects',compact('partner'));
+    }
+
+    public function Media(){
+
+        return view('frontend.pages.media');
+    }
+
+    public function Resources(){
+        return view('frontend.pages.resources');
+    }
+
+    public function crops(){
+        $data['page_title']='Value Chains';
+    $valuechains=Valuechain::where('category', 'crops')->get();
+
+    return view('frontend.pages.valuechains',$data)->with(compact('valuechains'));
+
     }
 }

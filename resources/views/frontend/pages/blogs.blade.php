@@ -1,4 +1,4 @@
-@extends('layouts.frontend.master')
+@extends('layouts.frontend.innermaster')
 
 @section('content')
 <main class="bg_gray">

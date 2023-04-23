@@ -130,6 +130,36 @@
             
             </ul>
           </li>
+
+          <li class="nav-item has-treeview">
+            <a href="" class="nav-link">
+              <i class="nav-icon fas fa-bars"></i>
+              <p>
+               Dissemination Materials
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('materials.create')}}" class="nav-link">
+                  <i class="fas fa-edit nav-icon"></i>
+                  <p>Add Dissemination Material
+
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('materials.index')}}" class="nav-link">
+                  <i class="fas fa-table nav-icon"></i>
+                  <p>Dissemination Materials
+
+                    <span class="right badge badge-info"></span>
+                  </p>
+                </a>
+              </li>
+            
+            </ul>
+          </li>
           <li class="nav-item has-treeview">
             <a href="" class="nav-link">
               <i class="nav-icon fas fa-bars"></i>

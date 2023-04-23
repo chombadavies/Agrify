@@ -1,96 +1,83 @@
-<footer class="revealed">
-    <div class="container">
+<footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
         <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <h3 data-bs-target="#collapse_1">Quick Links</h3>
-                <div class="collapse dont-collapse-sm links" id="collapse_1">
-                    <ul>
-                        <li><a href="">About us</a></li>
-                         <li><a href="">Blog</a></li>
-                        <li><a href="{{route('contact_us')}}">Contacts</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h3 data-bs-target="#collapse_2">Value Chains</h3>
-                <div class="collapse dont-collapse-sm links" id="collapse_2">
-                    <ul>
-                        @php
-                            $valuechains = App\Models\ValueChain::all();
-                        @endphp
-                        @foreach ($valuechains as $item)
-                        <li><a href="#">{{$item->title}}</a></li>
-                        @endforeach
-                    
-                        
-                      
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                    <h3 data-bs-target="#collapse_3">Contacts</h3>
-                <div class="collapse dont-collapse-sm contacts" id="collapse_3">
-                    <ul>
-                        <li><i class="ti-home"></i>Kaptagat road<br>Loresho</li>
-                        <li><i class="ti-headphone-alt"></i>+94 423-23-221</li>
-                        <li><i class="ti-email"></i><a href="#0">info@agrifi.com</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                    <h3 data-bs-target="#collapse_4">Keep in touch</h3>
-                <div class="collapse dont-collapse-sm" id="collapse_4">
-                    <div id="newsletter">
-                        <div class="form-group">
-                            <input type="email" name="email_newsletter" id="email_newsletter" class="form-control" placeholder="Your email">
-                            <button type="submit" id="submit-newsletter"><i class="ti-angle-double-right"></i></button>
-                        </div>
-                    </div>
-                    <div class="follow_us">
-                        <h5>Follow Us</h5>
-                        <ul>
-                            <li><a href="#0"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="{{asset('frontend/img/twitter_icon.svg')}}" alt="" class="lazy"></a></li>
-                            <li><a href="#0"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="{{asset('frontend/img/facebook_icon.svg')}}" alt="" class="lazy"></a></li>
-                            <li><a href="#0"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="{{asset('frontend/img/instagram_icon.svg')}}" alt="" class="lazy"></a></li>
-                            <li><a href="#0"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="{{asset('frontend/img/youtube_icon.svg')}}" alt="" class="lazy"></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>KALRO</h3>
+            Kaptagat Road, Loresho,<br>
+            P.O. Box 57811-00200, Nairobi Kenya<br>
+            Safaricom: +254 722206986/722206988<br>
+            Airtel: +254 733-333-223<br>
+            Fibre Lines:  0709 104000-60 (Safaricom)<br>
+            0730 707000-60 (Airtel)<br>
+            <strong>Email:</strong> KALROCSAPP@kalro.org<br>
+            <strong> web:</strong> http://www.kalro.org/csapp<br>
+            <p>
+          </div>
+    
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Contact Us</a></li>
+    
+            </ul>
+          </div>
+    
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Resources</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Valuechains</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Publications</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Reports</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Mobile Apps</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Media</a></li>
+            </ul>
+          </div>
+    
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+           xx
+          </div>
+    
         </div>
-        <!-- /row-->
-        <hr>
-        <div class="row add_bottom_25">
-            <div class="col-lg-6">
-                <ul class="footer-selector clearfix">
-                    <li>
-                        <div class="styled-select lang-selector">
-                            <select>
-                                <option value="English" selected>English</option>
-                                <option value="French">French</option>
-                                <option value="Spanish">Spanish</option>
-                                <option value="Russian">Russian</option>
-                            </select>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="styled-select currency-selector">
-                            <select>
-                                <option value="US Dollars" selected>US Dollars</option>
-                                <option value="Euro">Euro</option>
-                            </select>
-                        </div>
-                    </li>
-                    <li><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="{{asset('frontend/img/cards_all.svg')}}" alt="" width="198" height="30" class="lazy"></li>
-                </ul>
-            </div>
-            <div class="col-lg-6">
-                <ul class="additional_links">
-                    <li><a href="#0">Terms and conditions</a></li>
-                    <li><a href="#0">Privacy</a></li>
-                    <li><span>© 2023 AgriFi CS APP</span></li>
-                </ul>
-            </div>
-        </div>
+      </div>
     </div>
-</footer>
+    
+    <div class="container d-md-flex py-4">
+    
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>KALRO AgriFI</span></strong>. All Rights Reserved . Designed by <a href="https://www.kalro.org/">KALRO ICT</a>
+        </div>
+    
+    
+       
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+    </footer><!-- End Footer -->
+    
+   
+    
+    <div id="preloader"></div>
+      <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    
+      <!-- Vendor JS Files -->
+      <script src="{{asset('frontend/vendor/purecounter/purecounter_vanilla.js')}}"></script>
+      <script src="{{asset('frontend/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+      <script src="{{asset('frontend/vendor/glightbox/js/glightbox.min.js')}}"></script>
+      <script src="{{asset('frontend/vendor/swiper/swiper-bundle.min.js')}}"></script>
+      <script src="{{asset('frontend/vendor/php-email-form/validate.js')}}"></script>
+	 
+    
+      <!-- Template Main JS File -->
+      <script src="{{asset('frontend/js/main.js')}}"></script>

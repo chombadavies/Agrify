@@ -9,4 +9,8 @@ class ValueChain extends Model
 {
     use HasFactory;
     protected $guarded=[];
+
+    public function materials(){
+        return $this->hasMany('App\Models\Material');
+    }
 }
