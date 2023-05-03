@@ -19,7 +19,7 @@
     </div>
   </section><!-- End Breadcrumbs Section -->
 
-  <section class="inner-page">
+  <section >
     <div class="container">
 
 

@@ -33,7 +33,7 @@
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-briefcase"></i>
       
-                    <a href="project-components.php"><h4>Project Components</h4></a>
+                    <a href=""><h4>Project Components</h4></a>
                   
                   </div>
                 </div>
@@ -49,7 +49,7 @@
                 <div class="col-xl-2 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-info-circle"></i>
-                    <a href="resources.php"><h4>Resources</h4></a>
+                    <a href="{{route('resources')}}"><h4>Resources</h4></a>
                     
                   </div>
                 </div>
@@ -57,7 +57,7 @@
                 <div class="col-xl-2 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-video-recording"></i>
-                    <a href="media.php"><h4>Media</h4></a>
+                    <a href="{{route('media')}}"><h4>Media</h4></a>
                  
                   </div>
                 </div>
@@ -65,7 +65,7 @@
                 <div class="col-xl-2 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-phone-call"></i>
-                    <a href="contact.php"><h4>Contact us</h4></a>
+                    <a href=""><h4>Contact us</h4></a>
                   </div>
                 </div>
               </div>
@@ -191,7 +191,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-hospital-user"></i></div>
-              <h4><a href="">Medias </a></h4>
+              <h4><a href="{{route('media')}}">Medias </a></h4>
               <p> Access a wide range of multimedia content, including images, videos, and press releases, showcasing our KALRO's latest news, updates, and events.</p>
             </div>
           </div>
