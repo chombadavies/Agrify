@@ -40,21 +40,14 @@
     
                 <div class="card-body">
                     <div class="row">
-                  <div class="form-group col-md-4">
-                    <label for="exampleInputEmail1">File Title</label>
-                    <input type="text" name="title" class="form-control" id="" @error('title') is-invalid @enderror placeholder="Enter Category Name" required value="{{old('title')}}">
-                    <span style="color: red" >{{$errors->first('title')}}</span>
-                  
-                
-                  </div>
 
-                  <div class="form-group col-md-4">
+                  <div class="form-group col-md-6">
                     <label for="exampleInputEmail1">PDF file</label>
-                  <input type="file" name="pdf[]" id="" class="form-control" multiple>
+                  <input type="file" name="pdf[]" id="" class="form-control" multiple required>
                   </div>
-                  <div class="form-group col-md-4">
+                  <div class="form-group col-md-6">
                     <label for="">Value Chain Category</label>
-                  <select name="valuechain_id" class="form-control">
+                  <select name="valuechain_id" class="form-control" required>
 
                     <option selected disabled>Select Value Chain</option>
 

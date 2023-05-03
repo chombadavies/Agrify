@@ -1,84 +1,101 @@
+
+
 @extends('layouts.frontend.innermaster')
 
+
 @section('content')
-<main>
-    <div class="container margin_30">
-       
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="all">
-                    <div class="slider">
-                        <div class="" style="">
-                            <img src="{{asset('backend/uploads/'.$project->image)}}" alt="" height="80%" width="90%">
+<main id="main">
 
+  <!-- ======= Breadcrumbs Section ======= -->
+  <section class="breadcrumbs">
+    <div class="container">
+
+      <div class="d-flex justify-content-between align-items-center">
+      <h1>{{$project->title}}</h1>
+        <ol>
+          <li><a href="{{route('home')}}">Home</a></li>
+          
+        </ol>
+      </div>
+
+    </div>
+  </section><!-- End Breadcrumbs Section -->
+
+  
+    <div class="container">
+
+
+    <div class="grid">
+    <div class="container">
+                  <div class="content">
+                      <div class="row">
+                     
+                     <div class="col-md-6">
+                      <div style="display: flex;justify-content:center;border-radius: 12px;">
+                        <img src="{{asset('backend/uploads/'.$project->image)}}" alt="" height="350" width="100%" style="border-radius: 12px;">
+                      </div>
+                      <br>
+                      
+                      <div class="container">
+                        <p>{{$project->title}}</p>
+                      </div> 
+                      
                         </div>
-                    </div>
-                 
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="breadcrumbs">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Projects</a></li>
-                       
-                    </ul>
-                </div>
-                <!-- /page_header -->
+
+                        {{-- <span class="vl"></span> --}}
+                         <div class="col-md-6">
+                          <div class="container">
+                            <p><b>Upscalling $ Implemetation Details : </b>{!!$project->description!!}</p>
+                          </div> 
+
+                          {{-- <div class="container">
+                            <input type="button" value="{{$valuechain->title }} dissemination materials" class="btn btn-block" style="background-color: #85AE46;color:whitesmoke">
+                          
+                            <br> <br>
+                            @if ($valuechain->title=="Mangoes-IPM" 
+                             || $valuechain->title=="KALRO improved indigenous chicken (KIIC)"
+                             || $valuechain->title=="Sorghum" )
+
+                             @foreach ($valuechain->materials as $material)
+                              <div class="row">
+                            <div class="col-md-6">
+                              <img src="{{asset('frontend/img/Untitled.png')}}" alt="" height="60">
+                            </div>
+                            <div class="col-md-6">
+                              <a href ="{{asset('file uploads/'.$material->title)}}" download = "{{$material->title}}"> {{$material->title}} </a> 
+                              
+                            </div>
+                           
+                          </div>
+                          <hr>
+                      
+                      @endforeach
+                          @else
+                              
+                            @foreach ($valuechain->materials as $material)
+                                 <div>
+                              <img src="{{asset('frontend/img/Untitled.png')}}" alt="" height="80">
+                            </div>
+                            <div>
+                              <a href ="{{asset('file uploads/'.$material->title)}}" download = "{{$material->title}}"> {{$material->title}} </a> 
+                              
+                            </div>
+                            <hr>
+                            <br>
+                            @endforeach
+                            @endif
+                         
+                           
+                          </div> --}}
                 
-                <div class="prod_info" style="display: flex;justify-content:centre">
-                    <h1>{{$project->title}}</h1>
-
-                </div>
-                <div class="prod_info" style="display: flex;justify-content:centre">
-                   
-                    <p><br>{{strip_tags($project->description)}}</p>
-                </div>
-               
-              
-                <!-- /product_actions -->
-            </div>
-        </div>
-        <!-- /row -->
-    </div>
-    <!-- /container -->
-    
-    <div class="tabs_product">
-        <div class="container">
-            <ul class="nav nav-tabs" role="tablist">
-                <li class="nav-item">
-                    <a id="tab-A" href="#pane-A" class="nav-link active" data-bs-toggle="tab" role="tab"></a>
-                </li>
-                <li class="nav-item">
-                    <a id="tab-B" href="#pane-B" class="nav-link" data-bs-toggle="tab" role="tab"></a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <!-- /tabs_product -->
-    <div class="tab_content_wrapper">
-        <div class="container">
-            <div class="tab-content" role="tablist">
-                <div id="pane-A" class="card tab-pane fade active show" role="tabpanel" aria-labelledby="tab-A">
-                   
-                   
-                </div>
-                <!-- /TAB A -->
-                <div id="pane-B" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-B">
-                   
-                   
-                </div>
-                <!-- /tab B -->
-            </div>
-            <!-- /tab-content -->
-        </div>
-        <!-- /container -->
-    </div>
-    <!-- /tab_content_wrapper -->
-
-
+                        </div>
+                        </div>
+                  </div>
+                  <!-- /container -->
+</div> <!-- end grid---->
  
 
-</main>
+
+
+</main><!-- End #main -->
 @endsection

@@ -56,7 +56,7 @@
                    <input type="text" class="form-control" name="url" required placeholder="partner's website url">
                   </div>
                 </div>
-                </div>
+               
 
                 <div class="row">
                     <div class="col-md-12" class="form-control">
@@ -77,6 +77,7 @@
                 </div>
               </form>
             </div>
+          </div>
             <!-- /.card -->
             </div>
           <!--/.col (left) -->

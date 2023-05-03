@@ -7,17 +7,20 @@ use Illuminate\Http\Request;
 use App\Models\ValueChain;
 use App\Models\Partner;
 use App\Models\Project;
+use App\Models\Research;
+use App\Models\Category;
 
 class IndexController extends Controller
 {
     public function home(){
         $valuechains=ValueChain::all();
         $partners=Partner::all();
+       
         return view('frontend.index',compact('valuechains','partners'));
     }
 
-    public function aboutUs(){
-return view('frontend.pages.aboutus');
+    public function about(){
+return view('frontend.pages.about');
     }
 
     public function contactUs(){
@@ -44,11 +47,11 @@ return view('frontend.pages.contactus');
       $project=Project::findOrFail($id);
         return view('frontend.pages.project_details',compact('project'));
     }
-    public function partners($id){
+    public function Partner($id){
 
         $partner=Partner::findOrFail($id);
         // dd($partner->projects);
-       return view('frontend.pages.projects',compact('partner'));
+       return view('frontend.pages.partner_profile',compact('partner'));
     }
 
     public function Media(){
@@ -57,7 +60,8 @@ return view('frontend.pages.contactus');
     }
 
     public function Resources(){
-        return view('frontend.pages.resources');
+        $data['page_title']='Resources';
+        return view('frontend.pages.resources',$data);
     }
 
     public function crops(){
@@ -66,5 +70,22 @@ return view('frontend.pages.contactus');
 
     return view('frontend.pages.valuechains',$data)->with(compact('valuechains'));
 
+    }
+    public function achievements(){
+        $data['page_title']='Achievements';
+        return view('frontend.pages.achievements',$data);
+    }
+
+    public function dashboard(){
+        $data['page_title']='Dashboard';
+        return view('frontend.pages.dashboard',$data);
+    }
+    public function Research($id){
+
+       $category=Category::findOrFail($id);
+     
+        $data['page_title']='Research Models';
+        
+        return view('frontend.pages.research',$data)->with(compact('category'));
     }
 }

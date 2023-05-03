@@ -25,7 +25,7 @@
                 <div class="col-xl-2 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-store-alt"></i>
-                   <a href="market-information.php"><h4>About us</h4></a>
+                   <a href="{{route('about')}}"><h4>About us</h4></a>
                     
                   </div>
                 </div>
@@ -80,18 +80,22 @@
       <div class="container-fluid">
 
         <div class="row">
-          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
+          <div class="col-xl-6 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
           
           </div>
 
-          <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+          <div class="col-xl-6 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+            <h3>Project Implementation</h3>
+            <p> The Kenya Agricultural and Livestock Research Organization (KALRO) is the premier research organization, charged with the main mandate of promoting, streamlining, coordinating, and regulating research in crops, livestock, genetic resources, and biotechnology in Kenya. </p>
+            <p>KALRO received a funding grant from the European Union (EUR 5m) and Government of Kenya (EUR 1.5m) to implement the AgriFI Kenya support to KALRO for Climate Smart Agricultural Productivity Project (AgriFI Kenya CS APP) at a tune of EUR 6.5m, a five-year project under the AgriFI Development Programme. </p>
             <h3>AgriFi Program Steering Committee</h3>
-            <p> The CS-APP reports to  the overall Kenya AgriFI Steering Committee. The KALRO Director-General and the Coordinator will attend on behalf of the CS-APP. CS-APP  periodically reports to the AKSC
+            <p> The CS-APP reports to  the overall Kenya AgriFI Steering Committee. The KALRO Director-General and the Coordinator will attend on behalf of the CS-APP. CS-APP  periodically reports to the AKSC</p>
             <h3>Project Implementation Committee</h3>
-            <p>A PIC chaired by the Director- General KALRO is made up of the PCU, one Deputy Director General, a representative of implementing partners (on rotating basis), representative of relevant local University, MOAI AgriFI Focal Point (Coordinator), and Private sector representative.  
+            <p>A PIC chaired by the Director- General KALRO is made up of the PCU, one Deputy Director General, a representative of implementing partners (on rotating basis), representative of relevant
+               local University, MOAI AgriFI Focal Point (Coordinator), and Private sector representative.  
             The EC Delegation and the National Treasury will have representative(s) as observers. PIC  provide oversight and guidance to the PCU in implementing the project. PIC meet once a year. </p>
             
-            <h3>Project Coordination Unit</h3>
+            {{-- <h3>Project Coordination Unit</h3>
 
              <p>CS APP have a project coordination unit, which is responsible for the day to day operation of the project. The unit is lean with the following full time dedicated staff;</p>
 
@@ -106,8 +110,9 @@
                   <li>Driver</li>
                 </ul>
             </div>
-          <p>At the institutional level, the National Project Coordinator  reports to the KALRO Director General. The project draws support from the technical domain managers at KALRO. CS APP hired officers with agribusiness and M & E expertise to support the project.</p>
-
+          <p>At the institutional level, the National Project Coordinator  reports to the KALRO Director General. The project draws support from the technical domain managers at KALRO. CS APP hired officers with agribusiness and M & E expertise to support the project.</p> --}}
+      <br>
+      <div><a href="{{route('about')}}"><input type="button" value="Read More" class="btn btn-block btn-success"></a></div>
           </div>
         </div>
 
@@ -158,7 +163,7 @@
     </section><!-- End Counts Section -->
 
     <!-- ======= Services Section ======= -->
-    <section id="resources" class="services">
+    <div id="resources" class="services">
       <div class="container">
 
         <div class="section-title">
@@ -166,13 +171,7 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="icon-box">
-              <div class="icon"><i class="fas fa-heartbeat"></i></div>
-              <h4><a href="">Brochures </a></h4>
-              <p>Get valuable information about farming practices, livestock management, crop cultivation, and sustainable agricultural techniques</p>
-            </div>
-          </div>
+         
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
             <div class="icon-box">
@@ -185,42 +184,60 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-hospital-user"></i></div>
-              <h4><a href="">Partner Profiles</a></h4>
-              <p> Here you can explore our esteemed partners who share our vision and collaborate with us in delivering exceptional products and services to our valued stakeholders.</p>
+              <h4><a href="">Project publications </a></h4>
+              <p> Here you can explore the  projects dissemination materials.</p>
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
             <div class="icon-box">
-              <div class="icon"><i class="fas fa-dna"></i></div>
-              <h4><a href="">Mobile Apps</a></h4>
-              <p>Whether you're using a smartphone or tablet, our mobile apps provide a seamless experience, allowing you to access our content and services with ease.</p>
+              <div class="icon"><i class="fas fa-hospital-user"></i></div>
+              <h4><a href="">Medias </a></h4>
+              <p> Access a wide range of multimedia content, including images, videos, and press releases, showcasing our KALRO's latest news, updates, and events.</p>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+         
+
+          {{-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-wheelchair"></i></div>
-              <h4><a href="">Media</a></h4>
+              <h4><a href=""></a></h4>
               <p>Access a wide range of multimedia content, including images, videos, and press releases, showcasing our KALRO's latest news, updates, and events.  </p>
             </div>
-          </div>
+          </div> --}}
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          {{-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-notes-medical"></i></div>
               <h4><a href="">Reports</a></h4>
               <p> From market trends to crop forecasts, our comprehensive reports are meticulously curated to provide you with valuable information for informed decision-making.</p>
             </div>
-          </div>
+          </div> --}}
 
         </div>
 
       </div>
-    </section><!-- End Services Section -->
+    </div><!-- End Services Section -->
+<br>
+  <!-- ======= Partners Section ======= -->
 
-    
-  
+
+  <div id="partners" class="partners">    
+    <h2 style="display:flex;justify-content:center"><u> AgriFi CS APP Partners </u></h2>
+    <br>
+    <div class="container">
+
+      <div class="owl-carousel owl-theme" id="brands">
+        @foreach ($partners as $partner)
+        <div class="item">
+          <a href="{{route('partner',$partner->id)}}"><img src="{{asset('backend/uploads/'.$partner->image)}}" data-src="{{asset('backend/uploads/'.$partner->image)}}" alt="" class="owl-lazy" height="100" width="30"></a>
+        </div><!-- /item -->
+        @endforeach
+
+      </div>
+
+    </div>
+  </div><!-- End partners Section -->
 
   </main><!-- End #main -->
 @endsection

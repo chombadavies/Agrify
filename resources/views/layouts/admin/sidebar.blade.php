@@ -164,6 +164,35 @@
             <a href="" class="nav-link">
               <i class="nav-icon fas fa-bars"></i>
               <p>
+               Research Models
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('research.create')}}" class="nav-link">
+                  <i class="fas fa-edit nav-icon"></i>
+                  <p>Add Research Model
+
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('research.index')}}" class="nav-link">
+                  <i class="fas fa-table nav-icon"></i>
+                  <p>Research Models
+
+                    <span class="right badge badge-info"></span>
+                  </p>
+                </a>
+              </li>
+            
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="" class="nav-link">
+              <i class="nav-icon fas fa-bars"></i>
+              <p>
                Blogs/News
                 <i class="right fas fa-angle-left"></i>
               </p>

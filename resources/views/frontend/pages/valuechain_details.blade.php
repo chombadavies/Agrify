@@ -5,22 +5,16 @@
 
 @section('content')
 <main id="main">
-   @php
-            $intro = $valuechain->introduction; 
-            $intro = strip_tags($intro); 
 
-            $desc =$valuechain->description; 
-            $desc = strip_tags($desc); 
-        @endphp
   <!-- ======= Breadcrumbs Section ======= -->
   <section class="breadcrumbs">
     <div class="container">
 
-      <div class="d-flex">
+      <div class="d-flex justify-content-between align-items-center">
       <h1>{{$valuechain->title}}</h1>
         <ol>
-          <li><a href="index.php">Home</a></li>
-          <li></li>
+          <li><a href="{{route('home')}}">Home</a></li>
+          <li><a href="{{route('valuechains')}}">valuechains</a></li>
         </ol>
       </div>
 
@@ -42,30 +36,53 @@
                       </div>
                       <br>
                       <div class="container">
-                        <p><b> Introduction : </b>{{$intro}}</p>
+                        <p><b> Introduction : </b>{!!$valuechain->introduction!!}</p>
                         
                       </div>
                       <div class="container">
-                        <p><b>  Implemetation Details : </b>{{$desc}}</p>
+                        <p><b>  Implemetation Details : </b>{!!$valuechain->description!!}</p>
                       </div> 
-                
+                      
                         </div>
+
+                        {{-- <span class="vl"></span> --}}
                          <div class="col-md-4">
                           <div class="container">
-                            <input type="button" value="{{$valuechain->title}} dissemination materials" class="btn btn-block btn-success">
+                            <input type="button" value="{{$valuechain->title }} dissemination materials" class="btn btn-block" style="background-color: #85AE46;color:whitesmoke">
                           
                             <br> <br>
+                            @if ($valuechain->title=="Mangoes-IPM" 
+                             || $valuechain->title=="KALRO improved indigenous chicken (KIIC)"
+                             || $valuechain->title=="Sorghum" )
+
+                             @foreach ($valuechain->materials as $material)
+                              <div class="row">
+                            <div class="col-md-6">
+                              <img src="{{asset('frontend/img/Untitled.png')}}" alt="" height="60">
+                            </div>
+                            <div class="col-md-6">
+                              <a href ="{{asset('file uploads/'.$material->title)}}" download = "{{$material->title}}"> {{$material->title}} </a> 
+                              
+                            </div>
+                           
+                          </div>
+                          <hr>
+                      
+                      @endforeach
+                          @else
+                              
                             @foreach ($valuechain->materials as $material)
                                  <div>
-                              <img src="{{asset('frontend/img/Untitled.png')}}" alt="">
+                              <img src="{{asset('frontend/img/Untitled.png')}}" alt="" height="80">
                             </div>
                             <div>
                               <a href ="{{asset('file uploads/'.$material->title)}}" download = "{{$material->title}}"> {{$material->title}} </a> 
                               
                             </div>
+                            <hr>
                             <br>
                             @endforeach
-                           
+                            @endif
                          
                            
                           </div>
@@ -76,6 +93,8 @@
                   <!-- /container -->
 </div> <!-- end grid---->
   </section>
+
+
 
 </main><!-- End #main -->
 @endsection

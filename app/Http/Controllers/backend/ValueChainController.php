@@ -8,6 +8,7 @@ use App\Models\ValueChain;
 use Intervention\Image\Facades\Image;
 use Yajra\Datatables\Datatables;
 use Illuminate\Support\Str;
+use Session;
 
 class ValueChainController extends Controller
 {
@@ -98,7 +99,9 @@ class ValueChainController extends Controller
      */
     public function edit($id)
     {
-        return $id;
+        $valuechain=ValueChain::findOrFail($id);
+        $data['page_title']='Edit Value Chain';
+     return view('admin.valuechains.edit',$data)->with(compact('valuechain'));
     }
 
     /**
@@ -110,7 +113,37 @@ class ValueChainController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data=$request->all();
+   
+        if ($request->hasFile('image')) {
+
+            $image_tmp = $request->file('image');
+            if ($image_tmp->isValid()) {
+                // Get Image Extension
+                $extension = $image_tmp->getClientOriginalExtension();
+                // Generate New Image Name
+                $image = rand(111, 99999) . '.' . $extension;
+                $ImagePath = 'backend/uploads/'.$image;
+                // Upload the Image
+                Image::make($image_tmp)->resize(300,280)->save($ImagePath);
+               
+            }
+        } else {
+            $image= "";
+            $ImagePath = "";
+            
+        }
+      $data['image']=$image;
+      $valuechain = ValueChain::findOrFail($id);
+      $status=$valuechain->fill($data)->save();
+
+     if($status){
+        Session::flash('success_message', 'ValueChain updated successfully');
+        return redirect()->route('valuechains.index');
+     }else{
+        return back()->with('error','operation failed,lease try again.');
+     }
+
     }
 
     /**
@@ -152,8 +185,7 @@ public function fetchValuechains()
         <button class="btn btn-pink btn btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Action
         <span class="caret"></span></button>
         <ul class="dropdown-menu">
-        <li><a style="cursor:pointer;" class="reject-modal"  data-title="Edit" data-url="' . $edit_url . '">Edit Details</a></li>
-
+        <li><a style="cursor:pointer;" data-title="Edit" href="' . $edit_url . '">Edit Value Chain</a></li>
         </ul>
         </div> ';
 

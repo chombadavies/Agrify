@@ -7,8 +7,8 @@
     <meta content="" name="keywords">
   
     <!-- Favicons -->
-    <link href="{{asset('frontend/img/favicon.png')}}" rel="icon">
-    <link href="{{asset('frotend/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+    <link href="{{asset('frontend/img/agriFilogo.png')}}" rel="icon">
+    {{-- <link href="{{asset('frotend/img/apple-touch-icon.png')}}" rel="apple-touch-icon"> --}}
   
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -55,14 +55,16 @@
       
         <nav id="navbar" class="navbar order-last order-lg-0">
           <ul>
-            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-            <li><a class="nav-link scrollto" href="#about">About</a></li>
+            <li><a class="nav-link scrollto active" href="#">Home</a></li>
+            <li><a class="" href="{{route('about')}}">About</a></li>
             <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
-                <li><a class="nav-link" href="#">crops</a></li>
-                <li><a class="nav-link" href="#">Livestock</a></li>
-                <li><a class="nav-link" href="#">Aquaculture</a></li>
-                <li><a class="nav-link" href="#">Apiculture</a></li>
+                @php
+                    $categories=App\Models\Category::all();
+                @endphp
+                @foreach($categories as $category)
+                <li><a class="nav-link" href="{{route('research',$category->id)}}" >{{$category->title}}</a></li>
+              @endforeach
               </ul>
            </li>
            
@@ -70,29 +72,15 @@
             <li class="dropdown"><a href="#"><span>Upscalling</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
   
-                <li><a class="nav-link" href="">crops</a></li>
-                <li><a class="nav-link" href="#">Livestock</a></li>
-                <li><a class="nav-link" href="#">Aquaculture</a></li>
-                <li><a class="nav-link" href="#">Apiculture</a></li>
-                <li><a class="nav-link" href="#">Technology and commercialization</a></li>
-                <li><a class="nav-link" href="#">Achievement</a></li>
+                
+                <li><a class="nav-link" href="{{route('achievements')}}">Achievement,Technology and commercialization</a></li>
                 <li><a class="nav-link" href="#">Impact stories </a></li>
                   
                  
                  </ul>
            </li>
             
-            <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down"></i></a>
-              <ul>
-  
-                <li><a class="nav-link" href="#">project publication</a></li>
-                <li><a class="nav-link" href="#">Upscaling</a></li>
-                <li><a class="nav-link" href="#">Upscaling</a></li>
-                <li><a class="nav-link" href="#">Upscaling</a></li>
-                  
-                 
-                 </ul>
-           </li>
+           <li><a class="nav-link" href="{{route('resources')}}">Resources</a></li>
             <li class="dropdown"><a href="#"><span>Valuechains</span> <i class="bi bi-chevron-down"></i></a>
                <ul>
   
@@ -107,7 +95,7 @@
                   
                   </ul>
             </li>
-            <li><a class="nav-link" href="#">Dashboard</a></li>
+            <li><a class="nav-link" href="{{route('dashboard')}}">Dashboard</a></li>
            
   
           </ul>

@@ -17,6 +17,7 @@ class CreateMaterialsTable extends Migration
             $table->id();
             $table->string('title');
             $table->foreignId('valuechain_id');
+            $table->foreignId('project_id')->nullable();
             $table->string('pdf');
             $table->enum('status',['active','inactive'])->detault('active');
             $table->timestamps();

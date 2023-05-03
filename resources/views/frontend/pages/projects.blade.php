@@ -13,7 +13,9 @@
     
     <br>
     <div class="row container " >
-       
+       <div>
+        <br><br><br>
+       </div>
     {{-- <div  class="container col-md-6">
        <h2> About{{$partner->title}} </h2>
         <p>{{strip_tags($partner->description)}}</p></div> --}}

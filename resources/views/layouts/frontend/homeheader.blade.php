@@ -7,8 +7,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{{asset('frontend/img/favicon.png')}}" rel="icon">
-  <link href="{{asset('frotend/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+  <link href="{{asset('frontend/img/agriFilogo.png')}}" rel="icon">
+ 
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -25,6 +25,8 @@
 
   <!-- Template Main CSS File -->
   <link href="{{asset('frontend/css/style.css')}}" rel="stylesheet">
+
+  <link href="{{asset('frontend/css/stylen.css')}}" rel="stylesheet">
 
  
 </head>
@@ -60,10 +62,12 @@
           
           <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a class="nav-link" href="#">crops</a></li>
-              <li><a class="nav-link" href="#">Livestock</a></li>
-              <li><a class="nav-link" href="#">Aquaculture</a></li>
-              <li><a class="nav-link" href="#">Apiculture</a></li>
+              @php
+                  $categories=App\Models\Category::all();
+              @endphp
+              @foreach($categories as $category)
+              <li><a class="nav-link" href="{{route('research',$category->id)}}" >{{$category->title}}</a></li>
+            @endforeach
             </ul>
          </li>
          
@@ -71,29 +75,31 @@
           <li class="dropdown"><a href="#"><span>Upscalling</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
 
-              <li><a class="nav-link" href="{{route('upscalling.crops')}}">crops</a></li>
-              <li><a class="nav-link" href="#">Livestock</a></li>
-              <li><a class="nav-link" href="#">Aquaculture</a></li>
-              <li><a class="nav-link" href="#">Apiculture</a></li>
-              <li><a class="nav-link" href="#">Technology and commercialization</a></li>
-              <li><a class="nav-link" href="#">Achievement</a></li>
+              <li><a class="nav-link" href="#partners">Partner profiles</a></li>
+           
+              <li><a class="nav-link" href="{{route('achievements')}}">Achievement,Technology and commercialization</a></li>
+              
               <li><a class="nav-link" href="#">Impact stories </a></li>
                </ul>
          </li>
-          
-          <li class="dropdown"><a href="#resources"><span>Resources</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
+        
+         <li><a class="nav-link" href="#resources">Resources</a></li>
+         <li class="dropdown"><a href="#"><span>Valuechains</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
 
-              <li><a class="nav-link" href="#">project publication</a></li>
-              <li><a class="nav-link" href="#">Project reports</a></li>
-              <li><a class="nav-link" href="#">Value chains information materials</a></li>
+          @php
+              $valuechains=App\Models\ValueChain::all()
+ 
+          @endphp
+               @foreach ($valuechains as $valuechain)
+                    <li><a href="{{route('valuechain.details',$valuechain->id)}}">{{$valuechain->title}}</a></li>
+               @endforeach
               
-                
-               
-               </ul>
-         </li>
+             
+             </ul>
+       </li>
          <li><a class="nav-link" href="#">Media</a></li>
-          <li><a class="nav-link" href="#">Dashboard</a></li>
+          <li><a class="nav-link" href="{{route('dashboard')}}">Dashboard</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

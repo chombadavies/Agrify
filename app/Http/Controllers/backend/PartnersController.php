@@ -56,7 +56,8 @@ class PartnersController extends Controller
                 $image = rand(111, 99999) . '.' . $extension;
                 $ImagePath = 'backend/uploads/'.$image;
                 // Upload the Image
-                Image::make($image_tmp)->save($ImagePath);
+                Image::make($image_tmp)->resize(300,280)->save($ImagePath);
+               
             }
         } else {
             $image= "";
@@ -95,7 +96,10 @@ class PartnersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data['page_title']="Edit Partner details";
+        $partner=Partner::findOrFail($id);
+
+        return view('admin.partners.edit',$data)->with(compact('partner'));
     }
 
     /**
@@ -107,7 +111,40 @@ class PartnersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
+
+        $data=$request->all();
+   
+        if ($request->hasFile('image')) {
+
+            $image_tmp = $request->file('image');
+            if ($image_tmp->isValid()) {
+                // Get Image Extension
+                $extension = $image_tmp->getClientOriginalExtension();
+                // Generate New Image Name
+                $image = rand(111, 99999) . '.' . $extension;
+                $ImagePath = 'backend/uploads/'.$image;
+                // Upload the Image
+                Image::make($image_tmp)->resize(150,130)->save($ImagePath);
+               
+            }
+        } else {
+            $image= "";
+            $ImagePath = "";
+            
+        }
+      $data['image']=$image;
+      $partner = Partner::findOrFail($id);
+      $status=$partner->fill($data)->save();
+
+     if($status){
+        Session::flash('success_message', 'Partner updated successfully');
+        return redirect()->route('partners.index');
+     }else{
+        return back()->with('error','operation failed,lease try again.');
+     }
+
+     
     }
 
     /**
@@ -152,9 +189,9 @@ class PartnersController extends Controller
         <button class="btn btn-pink btn btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Action
         <span class="caret"></span></button>
         <ul class="dropdown-menu">
-        <li><a style="cursor:pointer;" class="reject-modal" data-title="Edit" data-url="' . $edit_url . '">Edit Partner</a></li>
+        <li><a style="cursor:pointer;" data-title="Edit" href="' . $edit_url . '">Edit Partner</a></li>
         <li><div class="dropdown-divider"></div></li>
-        <li><a style="cursor:pointer;" class="reject-modal" data-title="Show projects" data-url="' . $view_url . '">View Partner</a></li>
+        <li><a  style="cursor:pointer;" class="reject-modal" data-title="Show projects" data-url="' . $view_url . '">View Partner</a></li>
         </ul>
         </div> ';
 

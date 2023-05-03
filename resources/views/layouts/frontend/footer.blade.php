@@ -38,8 +38,17 @@
             </ul>
           </div>
     
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-           xx
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>KALRO</h3>
+            Kaptagat Road, Loresho,<br>
+            P.O. Box 57811-00200, Nairobi Kenya<br>
+            Safaricom: +254 722206986/722206988<br>
+            Airtel: +254 733-333-223<br>
+            Fibre Lines:  0709 104000-60 (Safaricom)<br>
+            0730 707000-60 (Airtel)<br>
+            <strong>Email:</strong> KALROCSAPP@kalro.org<br>
+            <strong> web:</strong> http://www.kalro.org/csapp<br>
+            <p>
           </div>
     
         </div>
@@ -81,3 +90,9 @@
     
       <!-- Template Main JS File -->
       <script src="{{asset('frontend/js/main.js')}}"></script>
+
+      <script src="{{asset('frontend/jss/js/common_scripts.min.js')}}"></script>
+      <script src="{{asset('frontend/jss/js/main.js')}}"></script>
+    
+    <!-- SPECIFIC SCRIPTS -->
+    <script src="{{asset('frontend/jss/js/carousel-home.min.js')}}"></script>
