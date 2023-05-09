@@ -84,7 +84,7 @@ return view('frontend.pages.contactus');
 
        $category=Category::findOrFail($id);
      
-        $data['page_title']='Research Models';
+        $data['page_title']='Research Activities';
         
         return view('frontend.pages.research',$data)->with(compact('category'));
     }

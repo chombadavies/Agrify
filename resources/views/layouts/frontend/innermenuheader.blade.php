@@ -63,7 +63,7 @@
                     $categories=App\Models\Category::all();
                 @endphp
                 @foreach($categories as $category)
-                <li><a class="nav-link" href="{{route('research',$category->id)}}" >{{$category->title}}</a></li>
+                <li><a class="nav-link" href="{{route('research',$category->id)}}" >{{ ucfirst($category->title) }} </a></li>
               @endforeach
               </ul>
            </li>
