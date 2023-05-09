@@ -87,12 +87,24 @@
       <script src="{{asset('frontend/vendor/swiper/swiper-bundle.min.js')}}"></script>
       <script src="{{asset('frontend/vendor/php-email-form/validate.js')}}"></script>
 	 
-    
+      @yield('scripts')
       <!-- Template Main JS File -->
       <script src="{{asset('frontend/js/main.js')}}"></script>
+      
 
       <script src="{{asset('frontend/jss/js/common_scripts.min.js')}}"></script>
       <script src="{{asset('frontend/jss/js/main.js')}}"></script>
     
     <!-- SPECIFIC SCRIPTS -->
     <script src="{{asset('frontend/jss/js/carousel-home.min.js')}}"></script>
+    {{-- media --}}
+    <script src="{{asset('frontend/media/js/main.js')}}"></script>
+    <script src="{{asset('frontend/media/vendor/purecounter/purecounter_vanilla.js')}}"></script>
+  <script src="{{asset('frontend/media/vendor/aos/aos.js')}}"></script>
+  <script src="{{asset('frontend/media/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{asset('frontend/media/vendor/glightbox/js/glightbox.min.js')}}"></script>
+  <script src="{{asset('frontend/media/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src="{{asset('frontend/media/vendor/swiper/swiper-bundle.min.js')}}"></script>
+  <script src="{{asset('frontend/media/vendor/typed.js/typed.min.js')}}"></script>
+  <script src="{{asset('frontend/media/vendor/waypoints/noframework.waypoints.js')}}"></script>
+  <script src="{{asset('frontend/media/vendor/php-email-form/validate.js')}}"></script>

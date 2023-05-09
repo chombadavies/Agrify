@@ -98,7 +98,7 @@
              
              </ul>
        </li>
-         <li><a class="nav-link" href="#">Media</a></li>
+         <li><a class="nav-link" href="{{route('media')}}">Media</a></li>
           <li><a class="nav-link" href="{{route('dashboard')}}">Dashboard</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

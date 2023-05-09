@@ -28,7 +28,7 @@
                      <a href="{{route('valuechain.details',$valuechain->id)}}">  
                         <figure class="effect-sarah" style="border-radius: 12px;">
                           
-                          <img alt="logo" src="{{('backend/uploads/'.$valuechain->image)}}" style="border-radius: 12px;"/>
+                          <img alt="logo" src="{{asset('backend/uploads/'.$valuechain->image)}}" style="border-radius: 12px;"/>
                        
                               <figcaption>
                                   <h2>{{$valuechain->title}}<span></span></h2>

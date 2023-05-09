@@ -29,7 +29,7 @@
         @foreach($category->models as $model)
         <div class="accordion-item">
           <div class="card">
-          <h2 class="card-header" id="flush-h-{{$model->id}}">
+          <h2 class="card-header" id="flush-h-{{$model->id}}" >
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-{{$model->id}}" aria-expanded="false" aria-controls="flush-{{$model->id}}">
            {{$model->title}}
             </button>
