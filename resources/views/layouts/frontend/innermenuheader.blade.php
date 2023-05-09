@@ -81,7 +81,7 @@
            </li>
             
            <li><a class="nav-link" href="{{route('resources')}}">Resources</a></li>
-            <li class="dropdown"><a href="#"><span>Valuechains</span> <i class="bi bi-chevron-down"></i></a>
+            <li class="dropdown"><a href="{{route('valuechains')}}"><span>Valuechains</span> <i class="bi bi-chevron-down"></i></a>
                <ul>
   
                @php
