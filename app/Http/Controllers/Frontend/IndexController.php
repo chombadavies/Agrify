@@ -10,6 +10,7 @@ use App\Models\Partner;
 use App\Models\Project;
 use App\Models\Research;
 use App\Models\Category;
+use Illuminate\Support\Facades\DB;
 
 class IndexController extends Controller
 {
@@ -88,5 +89,93 @@ return view('frontend.pages.contactus');
         $data['page_title']='Research Activities';
         
         return view('frontend.pages.research',$data)->with(compact('category'));
+    }
+
+    public function FarmerGroups(){
+        $models = DB::select("SELECT COUNT(id) AS Totalsc, year_started  FROM dash WHERE year_started !=0000 GROUP BY year_started ;");
+
+        $data = array();
+
+        foreach ($models as $model) {
+            $data[] = array('name' => $model->year_started, 'y' => intval($model->Totalsc));
+        }
+        return $data;
+    }
+
+   
+
+    public function FarmersCounty(){
+        $models = DB::select("SELECT COUNT(id) AS Totalsc, county  FROM dash  GROUP BY county ;");
+        // dd($models);
+
+        $data = array();
+
+        foreach ($models as $model) {
+            $data[] = array('name' => $model->county, 'y' => intval($model->Totalsc));
+        }
+        return $data;
+    }
+    public function Distance(){
+        $models = DB::select(" SELECT COUNT(id) AS Totalsc, distance_to_market  FROM dash WHERE distance_to_market !=0000 GROUP BY distance_to_market ;");
+        // dd($models);
+
+        $data = array();
+
+        foreach ($models as $model) {
+            $data[] = array('name' => $model->distance_to_market, 'y' => intval($model->Totalsc));
+        }
+        return $data;
+    }
+    public function Gender(){
+        $models = DB::select("SELECT COUNT(id) AS Totalsc, adult_male FROM dash GROUP BY adult_male ORDER BY COUNT(id) DESC");
+        
+
+        $data = array();
+
+        foreach ($models as $model) {
+            $data[] = array('name' => $model->adult_male, 'y' => intval($model->Totalsc));
+        }
+        return $data;
+    }
+    public function groupActivity(){
+        $models = DB::select("SELECT COUNT(id) AS Totalsc, group_activities  FROM dash  GROUP BY group_activities ;");        
+//   dd($models);
+        $data = array();
+
+        foreach ($models as $model) {
+            $data[] = array('name' => $model->group_activities, 'y' => intval($model->Totalsc));
+        }
+        return $data;
+    }
+
+    public function Registration(){
+        $models = DB::select("SELECT COUNT(id) AS Totalsc, registration_status FROM dash GROUP BY registration_status ORDER BY COUNT(id) DESC");        
+//   dd($models);
+        $data = array();
+
+        foreach ($models as $model) {
+            $data[] = array('name' => $model->registration_status, 'y' => intval($model->Totalsc));
+        }
+        return $data;
+    }
+    public function farmersByWard(){
+        $models = DB::select("SELECT COUNT(id) AS Totalsc, ward  FROM dash  GROUP BY ward ;");        
+ 
+        $data = array();
+
+        foreach ($models as $model) {
+            $data[] = array('name' => $model->ward, 'y' => intval($model->Totalsc));
+        }
+        return $data;
+    }
+    public function farmersByValueChain(){
+        $models = DB::select("SELECT COUNT(id) AS Totalsc, valuechain  FROM dash  GROUP BY valuechain ;");        
+
+        $data = array();
+
+        foreach ($models as $model) {
+            $data[] = array('name' => $model->valuechain, 'y' => intval($model->Totalsc));
+        }
+        return $data;
     }
 }

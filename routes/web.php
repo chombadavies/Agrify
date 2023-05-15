@@ -27,6 +27,8 @@ Route::any('/fetchpartners',[App\Http\Controllers\backend\PartnersController::cl
 Route::any('/fetchprojects',[App\Http\Controllers\backend\ProjectsController::class, 'fetchProjects']);
 Route::resource('materials',App\Http\Controllers\backend\MaterialsController::class);
 Route::resource('research',App\Http\Controllers\backend\ResearchController::class);
+Route::any('/Dashboard','App\Http\Controllers\HomeController@Dashboard');
+Route::any('/departments','App\Http\Controllers\HomeController@Departments');
 
 
 
@@ -62,7 +64,15 @@ Route::any('/media',[\App\Http\Controllers\Frontend\IndexController::class,'Medi
 Route::any('/resources',[\App\Http\Controllers\Frontend\IndexController::class,'Resources'])->name('resources');
 Route::any('/achievements',[\App\Http\Controllers\Frontend\IndexController::class,'achievements'])->name('achievements');
 Route::any('/about',[\App\Http\Controllers\Frontend\IndexController::class,'about'])->name('about');
-Route::any('/dashboard',[\App\Http\Controllers\Frontend\IndexController::class,'dashboard'])->name('dashboard');
 Route::any('/research/{id}',[\App\Http\Controllers\Frontend\IndexController::class,'Research'])->name('research');
+Route::any('/dashboard',[\App\Http\Controllers\Frontend\IndexController::class,'dashboard'])->name('dashboard');
+Route::any('/farmersingroups',[\App\Http\Controllers\Frontend\IndexController::class,'FarmerGroups'])->name('farmers.groups');
+Route::any('/farmerspercounty',[\App\Http\Controllers\Frontend\IndexController::class,'FarmersCounty'])->name('farmers.county');
+Route::any('/bydistance',[\App\Http\Controllers\Frontend\IndexController::class,'Distance'])->name('market.distance');
+Route::any('/bygender',[\App\Http\Controllers\Frontend\IndexController::class,'Gender'])->name('farmers.gender');
+Route::any('/groupactivities',[\App\Http\Controllers\Frontend\IndexController::class,'groupActivity']);
+Route::any('/farmersregistration',[\App\Http\Controllers\Frontend\IndexController::class,'Registration']);
+Route::any('/farmersbyward',[\App\Http\Controllers\Frontend\IndexController::class,'farmersByWard']);
+Route::any('/farmersbyvaluechain',[\App\Http\Controllers\Frontend\IndexController::class,'farmersByValueChain']);
 
 

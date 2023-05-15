@@ -32,7 +32,11 @@
                        
                               <figcaption>
                                   <h2>{{$valuechain->title}}<span></span></h2>
-                                  <p>{{str_limit(strip_tags($valuechain->introduction),$limit=100,$end='...');}}</p>
+                                  {{-- @php
+                                      $limit=str_limit($valuechain->introduction,$limit=110,$end='...');
+                                  @endphp
+
+                                  <p>{!!$limit!!}</p> --}}
                                    
                               </figcaption>
                           </figure>
