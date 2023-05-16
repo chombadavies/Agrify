@@ -33,7 +33,7 @@
                     <img src="{{asset('frontend/img/lounch.jpg')}}" alt="" class="img-fluid" width="400" height="350" style="border-radius:14px">
             </div>
             <div class="col-lg-7">
-                <div class="box_about">
+                <div class="box_about" style="text-align: justify;">
                     <p class="lead"> <b>Project Implementation:</b></p>
                     <p>The Kenya Agricultural and Livestock Research Organization (KALRO) is the premier research organization, charged with the main mandate of promoting, 
                         streamlining, coordinating, and regulating research in crops, livestock, genetic resources, and biotechnology in Kenya. </p> <p>It is also mandated to expedite
@@ -43,7 +43,7 @@
             </div>
         </div>
         <br>
-        <div class="row justify-content-center align-items-center">
+        <div class="row justify-content-center align-items-center" style="text-align: justify;">
             <p> KALRO works directly with farmers,
                 livestock keepers, the private sector, development partners,
                and other stakeholders involved in the agricultural research and development space </p>
@@ -56,7 +56,7 @@
         <br>
         <div class="row justify-content-center align-items-center" style="background-color: #f1f7fd;border-radius:14pt">
             <div class="col-lg-7">
-                <div class="box_about">
+                <div class="box_about" style="text-align: justify;">
                     <h5>The project implementation is steered at the following levels:</h5>
                     <p class="lead"> <b>a.	AgriFI Program Steering Committee </b></p>
                     <p>The CS APP reports to the overall Kenya AgriFI Steering Committee (AKSC). AKSC is chaired by the Cabinet Secretary Ministry of Agriculture and Livestock Development (MoALF) with membership drawn from MoALF, 
@@ -76,7 +76,7 @@
                     <img src="{{asset('frontend/img/about.jpg')}}" alt="" class="img-fluid" width="400" height="350" style="border-radius:14px">
             </div>
             <div class="col-lg-5">
-                <div class="box_about">
+                <div class="box_about" style="text-align: justify;">
                     <p class="lead"> <b> b.	Project Implementation Committee (PIC)</b></p>
                     <p>A PIC chaired by the Director- General KALRO is made up of the PCU, one Deputy Director General, a representative of implementing partners (on rotating basis), 
                         representative of relevant local University, MoALF, AgriFI Focal Point (Coordinator), 
@@ -89,7 +89,7 @@
         <!-- /row -->
         <div class="row justify-content-center align-items-center" style="background-color: #f1f7fd;border-radius:14pt">
             <div class="col-lg-5">
-                <div class="box_about">
+                <div class="box_about" style="text-align: justify;">
                   
                     <p class="lead">c.	Project Coordination Unit.</p>
                     <p>CS APP has a project coordination unit, which is responsible for the day to day operation of the project. The unit is lean with the following full time dedicated staff; 
@@ -116,7 +116,7 @@
                         <img src="{{asset('frontend/img/mne.png')}}" alt="" class="img-fluid" width="400" height="350" style="border-radius:14px">
                 </div>
                 <div class="col-lg-7">
-                    <div class="box_about">
+                    <div class="box_about" style="text-align: justify;">
                         <br>
                         <h5><u> Oversight, Monitoring, Management Information and Reporting </u></h5>
                         <p class="lead"> <b> Implementation:For a period of five years.</b></p>
@@ -131,7 +131,7 @@
                 </div>
             </div>
             <!-- /row -->
-            <div class="row justify-content-center align-items-center" style="background-color: #f1f7fd;border-radius:14pt">
+            <div class="row justify-content-center align-items-center" style="background-color: #f1f7fd;border-radius:14pt;text-align: justify;">
                 <p><b>Monitoring and knowledge sharing :</b> Monitoring of project progress is carried out by the PCU and the KALRO management teams against indicators identified in the project logical framework.</p> 
                    <p> An Annual Project Planning and Review (APR) Meeting is held each year where work plans are agreed upon among project implementers and partners.
                      All implementing teams and partners submit quarterly progress reports to the PCU. The report includes a summary financial report. 
@@ -152,23 +152,32 @@
               </div>
 
               <div class="row justify-content-center align-items-center" >
-                {{-- <div class="col-lg-5">
-                    <div class="box_about">
-                        
-                        <p class="lead"> <b>a.	Kenya 	Marine 	and 	Fisheries 	Research 
-                            Institute (KMFRI) 
-                             </b></p>
-                         <p>The CS APP reports to the overall Kenya AgriFI Steering Committee (AKSC). AKSC is chaired by the Cabinet Secretary Ministry of Agriculture and Livestock Development (MoALF) with membership drawn from MoALF, 
-                            Kenya Plant Health Inspectorate Service (KEPHIS), Kenya Private Sector Alliance (KEPSA); Ministry of Forestry and Environment; Kenya National Farmers Federation (KENAFF) and Ministry of Industry and Trade, 
-                            All the four AgriFI components implementing organizations (Danish Embassy, Self Help Africa, KALRO and German Corporation for International Cooperation (GIZ)). The Delegation of the European Union to Kenya has observer status to the AKSC.
-                         AKSC provide oversight and guidance to the AgriFI implementing partners and meets biannually. KALRO Director-General and the Coordinator attend on behalf of the CS APP. </p>
-                        <img src="" alt="" h  class="">
-                    </div>
-                </div> --}}
-                {{-- <div class="col-lg-5 pl-lg-5 text-center d-none d-lg-block">
+             
+                @foreach ($coapplicants as $coapplicant)
+              
+                <div class="col-lg-4 pl-lg-5 text-center d-none d-lg-block">
+                  <a href="{{route('coapplicants',$coapplicant->id)}}">
+                  <img src="{{asset('backend/uploads/'.$coapplicant->image)}}" alt="" class="img-fluid" style="border-radius:14px;border:5px solid #000000; padding:3px; margin:5px" height="30">
+                  <span>{{$coapplicant->title}}</span></a>
+          </div>
+                @endforeach
+           
+          
+             
+                {{-- <div class="col-lg-4 pl-lg-5 text-center d-none d-lg-block">
                         <img src="{{asset('frontend/img/20230316_125420.jpg')}}" alt="" class="img-fluid" width="400" height="350" style="border-radius:14px">
+                        <span>icipe</span>
+                </div>
+           
+            
+             
+                <div class="col-lg-4 pl-lg-5 text-center d-none d-lg-block">
+                        <img src="{{asset('frontend/img/20230316_125420.jpg')}}" alt="" class="img-fluid" width="400" height="350" style="border-radius:14px">
+                        <span>icipe</span>
                 </div> --}}
+
             </div>
+           
             <!-- /row -->
 
 

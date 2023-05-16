@@ -56,7 +56,16 @@
         <nav id="navbar" class="navbar order-last order-lg-0">
           <ul>
             <li><a class="nav-link scrollto active" href="#">Home</a></li>
-            <li><a class="" href="{{route('about')}}">About</a></li>
+            {{-- <li><a class="" href="{{route('about')}}">About</a></li> --}}
+            <li class="dropdown"><a href="{{route('about')}}"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+              <ul>
+               
+               
+                <li><a class="nav-link" href="{{route('project_profile')}}" >Project Profile</a></li>
+                <li><a class="nav-link" href="{{route('project_governance')}}" >Project Gorvernance </a></li>
+                <li><a class="nav-link" href="{{route('co_applicants')}}" >Co-Applicants </a></li>
+              </ul>
+           </li>
             <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
                 @php

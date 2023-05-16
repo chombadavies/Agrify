@@ -10,6 +10,7 @@ use App\Models\Partner;
 use App\Models\Project;
 use App\Models\Research;
 use App\Models\Category;
+use App\Models\Coapplicant;
 use Illuminate\Support\Facades\DB;
 
 class IndexController extends Controller
@@ -22,7 +23,9 @@ class IndexController extends Controller
     }
 
     public function about(){
-return view('frontend.pages.about');
+        $coapplicants=Coapplicant::all();
+
+  return view('frontend.pages.about')->with(compact('coapplicants'));
     }
 
     public function contactUs(){
@@ -54,6 +57,12 @@ return view('frontend.pages.contactus');
         $partner=Partner::findOrFail($id);
         // dd($partner->projects);
        return view('frontend.pages.partner_profile',compact('partner'));
+    }
+    public function CoApplicant($id){
+
+        $coapplicant=Coapplicant::findOrFail($id);
+        // dd($coapplicant);
+       return view('frontend.pages.coapplicant_profile',compact('coapplicant'));
     }
 
     public function Media(){
@@ -177,5 +186,15 @@ return view('frontend.pages.contactus');
             $data[] = array('name' => $model->valuechain, 'y' => intval($model->Totalsc));
         }
         return $data;
+    }
+
+    public function projectProfile(){
+        return "project profile";
+    }
+    public function projectGovernance(){
+        return "project governance";
+    }
+    public function coApplicants(){
+        return "project Co Applicants";
     }
 }

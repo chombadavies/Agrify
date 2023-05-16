@@ -27,6 +27,7 @@ Route::any('/fetchpartners',[App\Http\Controllers\backend\PartnersController::cl
 Route::any('/fetchprojects',[App\Http\Controllers\backend\ProjectsController::class, 'fetchProjects']);
 Route::resource('materials',App\Http\Controllers\backend\MaterialsController::class);
 Route::resource('research',App\Http\Controllers\backend\ResearchController::class);
+Route::resource('coapplicants',App\Http\Controllers\backend\CoapplicantsController::class);
 Route::any('/Dashboard','App\Http\Controllers\HomeController@Dashboard');
 Route::any('/departments','App\Http\Controllers\HomeController@Departments');
 
@@ -59,6 +60,7 @@ Route::any('/blog',[\App\Http\Controllers\Frontend\IndexController::class,'blog'
 Route::any('/valuechains',[\App\Http\Controllers\Frontend\IndexController::class,'valuechains'])->name('valuechains');
 Route::any('/valuechain/{id}',[\App\Http\Controllers\Frontend\IndexController::class,'valuechain'])->name('valuechain.details');
 Route::any('/partners/{id}',[\App\Http\Controllers\Frontend\IndexController::class,'Partner'])->name('partner');
+Route::any('/co-applicants/{id}',[\App\Http\Controllers\Frontend\IndexController::class,'CoApplicant'])->name('coapplicants');
 Route::any('/project_details/{id}',[\App\Http\Controllers\Frontend\IndexController::class,'projectDetails'])->name('project.details');
 Route::any('/media',[\App\Http\Controllers\Frontend\IndexController::class,'Media'])->name('media');
 Route::any('/resources',[\App\Http\Controllers\Frontend\IndexController::class,'Resources'])->name('resources');
@@ -74,5 +76,8 @@ Route::any('/groupactivities',[\App\Http\Controllers\Frontend\IndexController::c
 Route::any('/farmersregistration',[\App\Http\Controllers\Frontend\IndexController::class,'Registration']);
 Route::any('/farmersbyward',[\App\Http\Controllers\Frontend\IndexController::class,'farmersByWard']);
 Route::any('/farmersbyvaluechain',[\App\Http\Controllers\Frontend\IndexController::class,'farmersByValueChain']);
+Route::any('/project_profile',[\App\Http\Controllers\Frontend\IndexController::class,'projectProfile'])->name('project_profile');
+Route::any('/project_governance',[\App\Http\Controllers\Frontend\IndexController::class,'projectGovernance'])->name('project_governance');
+Route::any('/co_applicants',[\App\Http\Controllers\Frontend\IndexController::class,'coApplicants'])->name('co_applicants');
 
 

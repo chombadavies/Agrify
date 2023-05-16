@@ -189,6 +189,36 @@
             
             </ul>
           </li>
+
+          <li class="nav-item has-treeview">
+            <a href="" class="nav-link">
+              <i class="nav-icon fas fa-bars"></i>
+              <p>
+               Co-Applicants
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('coapplicants.create')}}" class="nav-link">
+                  <i class="fas fa-edit nav-icon"></i>
+                  <p>Add Co-Applicant
+
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fas fa-table nav-icon"></i>
+                  <p>Co-Applicants
+
+                    <span class="right badge badge-info"></span>
+                  </p>
+                </a>
+              </li>
+            
+            </ul>
+          </li>
           <li class="nav-item has-treeview">
             <a href="" class="nav-link">
               <i class="nav-icon fas fa-bars"></i>
