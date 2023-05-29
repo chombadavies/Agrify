@@ -2808,9 +2808,10 @@ nav a.open_close#close_in > i:hover {
   }
 
   .main-menu ul li.megamenu .menu-wrapper {
-    width: 1110px;
+    width: 600px;
     left: 50%;
     margin-left: -555px;
+    margin-right: -555px;
     padding: 30px !important;
   }
 
@@ -2927,19 +2928,19 @@ nav a.open_close#close_in > i:hover {
     transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   }
 
-  .main-menu.show {
+  .navbar.show {
     transform: translateX(0);
     left: 0;
   }
 
-  .main-menu .show-submenu + ul,
+  .navbar .show-submenu + ul,
   a.show-submenu-mega + .menu-wrapper {
     display: none;
     visibility: hidden;
   }
 
   a.show-submenu-mega + .menu-wrapper.show_mega,
-  .main-menu a.show-submenu + ul.show_normal {
+  .navbar a.show-submenu + ul.show_normal {
     display: block;
     visibility: visible;
   }

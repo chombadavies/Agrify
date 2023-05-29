@@ -69,7 +69,7 @@ class ValueChainController extends Controller
         $data=$request->all();
         $data['image']=$image;
       
-       
+    //    dd($data);
         $status=ValueChain::create($data);
 
         if($status){

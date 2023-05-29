@@ -11,10 +11,10 @@
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
-      <h1>{{$partner->title}}</h1>
+      <h4>{{$partner->title}}</h4>
         <ol>
           <li><a href="{{route('home')}}">Home</a></li>
-          
+          <li><a href="{{route('partners')}}">Partners</a></li>
         </ol>
       </div>
 
@@ -34,7 +34,7 @@
 
                       <div class="" style="display:flex;justify-content:center">
                         <a href="{{$partner->url}}" target="blank"> 
-                         <img src="{{asset('backend/uploads/'.$partner->image)}}" class="img-fluid" alt="" height="100" width="100"><br></div>
+                         <img src="{{asset('backend/uploads/'.$partner->image)}}" class="img-fluid" alt="" height="80"><br></div>
                          <div style="display:flex;justify-content:center">
                              <span>{{$partner->title}}</span></a>
                              

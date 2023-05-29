@@ -15,6 +15,7 @@
       <h3>{{$coapplicant->title}}</h3>
         <ol>
           <li><a href="{{route('home')}}">Home</a></li>
+          <li><a href="{{route('co_applicants')}}">Co-Applicants</a></li>
           
         </ol>
       </div>
@@ -37,7 +38,7 @@
 
                       <div class="" style="display:flex;justify-content:center">
                         <a href="{{$coapplicant->url}}" target="blank"> 
-                         <img src="{{asset('backend/uploads/'.$coapplicant->image)}}" class="img-fluid" alt="" height="100" width="100">
+                         <img src="{{asset('backend/uploads/'.$coapplicant->image)}}" class="img-fluid" alt="" height="130" width="100">
                          <br></div>
 
                          <div style="display:flex;justify-content:center">
@@ -47,7 +48,7 @@
                       <br>
                       <div class="container meme card-success card-outline" style="background-color:#f1f7fd;">
                         <br>
-                        <p><b><input type="button" value="Introduction"></b>  {!!$coapplicant->description!!}</p>
+                        <p><b><input type="button" value="About {{$coapplicant->title}}" style="cursor:e-resize"></b>  {!!$coapplicant->description!!}</p>
                         <br>
                       </div>
 

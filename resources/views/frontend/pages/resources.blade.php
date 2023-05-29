@@ -43,41 +43,39 @@
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
           <div class="icon-box">
             <div class="icon"><i class="fas fa-hospital-user"></i></div>
-            <h4><a href="">Project publications </a></h4>
-            <p> Here you can explore the  projects dissemination materials.</p>
+            <h4><a href="https://www.kaop.co.ke/" target="blank">Climate Information Advisories</a></h4>
+            <p></p>
+            <p style="text-align: justify">Proper planning using up to date climate information could minimize negative impact of climate change on people's livelihoods and economy. Accurate & decision-relevant climate
+               information is critical to plan & minimize negative impact of climate variability.</p>
+           
           </div>
         </div>
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
           <div class="icon-box">
-            <div class="icon"><i class="fas fa-hospital-user"></i></div>
-            <h4><a href="{{route('media')}}">Media </a></h4>
-            <p> Access a wide range of multimedia content, including images, videos, and press releases, showcasing our KALRO's latest news, updates, and events..</p>
+            <div class="icon"><i class="fas fa-cart"></i></div>
+
+            <h4><a href="https://amis.co.ke/" target="blank">Market place</a></h4>
+            <p style="text-align: justify">Access a wide range of multimedia content, including images, videos, and press releases,
+               showcasing our KALRO's latest news, updates, and events.  </p>
+
           </div>
         </div>
-
-        {{-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
           <div class="icon-box">
             <div class="icon"><i class="fas fa-dna"></i></div>
-            <h4><a href="">Mobile Apps</a></h4>
-            <p>Whether you're using a smartphone or tablet, our mobile apps provide a seamless experience, allowing you to access our content and services with ease.</p>
+            <h4><a href="">Project publications </a></h4>
+            <p> Here you can explore the  projects dissemination materials.</p>
           </div>
-        </div> --}}
+        </div> 
 
-        {{-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
           <div class="icon-box">
             <div class="icon"><i class="fas fa-wheelchair"></i></div>
-            <h4><a href="">Media</a></h4>
-            <p>Access a wide range of multimedia content, including images, videos, and press releases, showcasing our KALRO's latest news, updates, and events.  </p>
+            <h4><a href="{{route('media')}}">Medias </a></h4>
+            <p style="text-align: justify"> Access a wide range of multimedia content, 
+              including images, videos, and press releases, showcasing our KALRO's latest news, updates, and events.</p>
           </div>
-        </div> --}}
-
-        {{-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-          <div class="icon-box">
-            <div class="icon"><i class="fas fa-notes-medical"></i></div>
-            <h4><a href="">Reports</a></h4>
-            <p> From market trends to crop forecasts, our comprehensive reports are meticulously curated to provide you with valuable information for informed decision-making.</p>
-          </div>
-        </div> --}}
+        </div>
 
       </div>
 

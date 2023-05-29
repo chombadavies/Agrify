@@ -17,24 +17,25 @@
             <p>
           </div>
     
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Contact Us</a></li>
+       
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Useful Links</h3>
+            <ul style="text-decoration: none">
+              <li style="text-decoration:none"><a href="#" style="color:white">Home</a></li>
+              <li> <a href="{{route('about_us')}}" style="color:white">About us</a></li>
+              <li><a href="{{route('contact_us')}}" style="color:white">Contact Us</a></li>
     
             </ul>
           </div>
     
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Resources</h4>
+         
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Our Resources</h3>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Valuechains</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Publications</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Reports</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Mobile Apps</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Media</a></li>
+              <li> <a href="{{route('valuechains')}}" style="color:white">Valuechains</a></li>
+              <li> <a href="{{route('resources')}}" style="color:white">Resources</a></li>
+              <li> <a href="{{route('media')}}" style="color:white">Media</a></li>
             </ul>
           </div>
     

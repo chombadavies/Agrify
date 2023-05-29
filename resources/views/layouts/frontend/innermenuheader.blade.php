@@ -55,7 +55,7 @@
       
         <nav id="navbar" class="navbar order-last order-lg-0">
           <ul>
-            <li><a class="nav-link scrollto active" href="#">Home</a></li>
+            <li><a class="nav-link scrollto active" href="{{route('home')}}">Home</a></li>
             {{-- <li><a class="" href="{{route('about')}}">About</a></li> --}}
             <li class="dropdown"><a href="{{route('about')}}"><span>About</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
@@ -81,11 +81,10 @@
             <li class="dropdown"><a href="#"><span>Upscalling</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
   
-                
-                <li><a class="nav-link" href="{{route('achievements')}}">Achievement,Technology and commercialization</a></li>
+                <li><a class="nav-link" href="{{route('partners')}}">Partner profiles</a></
+                <li><a class="nav-link" href="{{route('achievements')}}">Achievement</a></li>
+                <li><a class="nav-link" href="{{route('achievements')}}">Technology and commercialization</a></li>
                 <li><a class="nav-link" href="#">Impact stories </a></li>
-                  
-                 
                  </ul>
            </li>
             
@@ -112,7 +111,7 @@
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
   
-        <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span> Contact Us</a>
+        <a href="{{route('contact_us')}}" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span> Contact Us</a>
   
       </div>
     </header><!-- End Header -->

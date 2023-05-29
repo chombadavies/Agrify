@@ -1,5 +1,5 @@
 @extends('layouts.frontend.innermaster')
-
+{{-- <link href="{{asset('frontend/css/stylen.css')}}" rel="stylesheet"> --}}
 
 @section('content')
     

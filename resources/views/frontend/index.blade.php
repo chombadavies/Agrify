@@ -127,7 +127,8 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="count-box">
-              <i class="fas fa-user-md"></i>
+              <i class="fas fa-handshake"></i>
+
               <span data-purecounter-start="0" data-purecounter-end="{{App\Models\Partner::count()}}" data-purecounter-duration="1" class="purecounter"></span>
               <p>Partners</p>
             </div>
@@ -135,7 +136,7 @@
 
           <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
             <div class="count-box">
-              <i class="far fa-hospital"></i>
+              <i class="bx bx-leaf"></i>
               <span data-purecounter-start="0" data-purecounter-end="{{App\Models\ValueChain::count()}}" data-purecounter-duration="1" class="purecounter"></span>
               <p>Valuechains</p>
             </div>
@@ -143,7 +144,7 @@
 
           <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
             <div class="count-box">
-              <i class="fas fa-flask"></i>
+              <i class="bi bi-book"></i>
               <span data-purecounter-start="0" data-purecounter-end="{{App\Models\Research::count()}}" data-purecounter-duration="1" class="purecounter"></span>
               <p>Research models</p>
             </div>
@@ -175,7 +176,7 @@
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
             <div class="icon-box">
-              <div class="icon"><i class="fas fa-pills"></i></div>
+              <div class="icon"><i class="bx bx-leaf"></i></div>
               <h4><a href="{{route('valuechains')}}">Valuechains</a></h4>
               <p>Get understanding in optimizing agricultural valuechins and improving productivity, efficiency, and sustainability.</p>
             </div>
@@ -183,36 +184,40 @@
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
             <div class="icon-box">
-              <div class="icon"><i class="fas fa-hospital-user"></i></div>
-              <h4><a href="">Project publications </a></h4>
-              <p> Here you can explore the  projects dissemination materials.</p>
+              <div class="icon"><i class="fas fa-cloud-sun-rain"></i></div>
+              <h4><a href="https://www.kaop.co.ke/" target="blank">Climate Information Advisories</a></h4>
+              <p></p>
+              <p style="text-align: justify">Proper planning using up to date climate information could minimize negative impact of climate change on people's livelihoods and economy. Accurate & decision-relevant climate
+                 information is critical to plan & minimize negative impact of climate variability.</p>
+             
             </div>
           </div>
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
             <div class="icon-box">
-              <div class="icon"><i class="fas fa-hospital-user"></i></div>
-              <h4><a href="{{route('media')}}">Medias </a></h4>
-              <p> Access a wide range of multimedia content, including images, videos, and press releases, showcasing our KALRO's latest news, updates, and events.</p>
+              <div class="icon"><i class="bi bi-cart"></i></div>
+
+              <h4><a href="https://amis.co.ke/" target="blank">Market place</a></h4>
+              <p style="text-align: justify">Access a wide range of multimedia content, including images, videos, and press releases,
+                 showcasing our KALRO's latest news, updates, and events.  </p>
+
             </div>
           </div>
-
-         
-
-          {{-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
-              <div class="icon"><i class="fas fa-wheelchair"></i></div>
-              <h4><a href=""></a></h4>
-              <p>Access a wide range of multimedia content, including images, videos, and press releases, showcasing our KALRO's latest news, updates, and events.  </p>
+              <div class="icon"><i class="fas fa-book"></i></div>
+              <h4><a href="">Project publications </a></h4>
+              <p> Here you can explore the  projects dissemination materials.</p>
             </div>
-          </div> --}}
-
-          {{-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          </div> 
+  
+           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
-              <div class="icon"><i class="fas fa-notes-medical"></i></div>
-              <h4><a href="">Reports</a></h4>
-              <p> From market trends to crop forecasts, our comprehensive reports are meticulously curated to provide you with valuable information for informed decision-making.</p>
+              <div class="icon"> <i class="bx bx-video-recording"></i></div>
+              <h4><a href="{{route('media')}}">Medias </a></h4>
+              <p style="text-align: justify"> Access a wide range of multimedia content, 
+                including images, videos, and press releases, showcasing our KALRO's latest news, updates, and events.</p>
             </div>
-          </div> --}}
+          </div>
 
         </div>
 
@@ -222,7 +227,33 @@
   <!-- ======= Partners Section ======= -->
 
 
-  <div id="partners" class="partners">    
+  {{-- <div class="bg_gray">
+    <div class="container margin_30">
+      <div id="brands" class="owl-carousel owl-theme">
+        <div class="item">
+          <a href="#0"><img src="img/brands/placeholder_brands.png" data-src="{{asset('frontend/img/brands/logo_1.png')}}" alt="" class="owl-lazy"></a>
+        </div><!-- /item -->
+        <div class="item">
+          <a href="#0"><img src="img/brands/placeholder_brands.png" data-src="{{asset('frontend/img/brands/logo_2.png')}}" alt="" class="owl-lazy"></a>
+        </div><!-- /item -->
+        <div class="item">
+          <a href="#0"><img src="img/brands/placeholder_brands.png" data-src="img/brands/logo_3.png" alt="" class="owl-lazy"></a>
+        </div><!-- /item -->
+        <div class="item">
+          <a href="#0"><img src="img/brands/placeholder_brands.png" data-src="img/brands/logo_4.png" alt="" class="owl-lazy"></a>
+        </div><!-- /item -->
+        <div class="item">
+          <a href="#0"><img src="img/brands/placeholder_brands.png" data-src="img/brands/logo_5.png" alt="" class="owl-lazy"></a>
+        </div><!-- /item -->
+        <div class="item">
+          <a href="#0"><img src="img/brands/placeholder_brands.png" data-src="img/brands/logo_6.png" alt="" class="owl-lazy"></a>
+        </div><!-- /item --> 
+      </div><!-- /carousel -->
+    </div><!-- /container -->
+  </div> --}}
+  <!-- /bg_gray -->
+
+  {{-- <div id="partners" class="partners">    
     <h2 style="display:flex;justify-content:center"><u> AgriFi CS APP Partners </u></h2>
     <br>
     <div class="container">
@@ -237,7 +268,11 @@
       </div>
 
     </div>
-  </div><!-- End partners Section -->
+  </div><!-- End partners Section --> --}}
 
   </main><!-- End #main -->
 @endsection
+
+<style>
+
+</style>

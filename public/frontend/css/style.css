@@ -2092,9 +2092,12 @@ table {
 --------------------------------------------------------------*/
 
 #footer {
-    color: #444444;
+    color: WHITE;
     font-size: 14px;
     background: #f4a460;
+}
+p{
+    text-align: justify;
 }
 
 #footer .footer-top {

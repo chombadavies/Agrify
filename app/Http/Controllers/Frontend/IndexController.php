@@ -10,6 +10,7 @@ use App\Models\Partner;
 use App\Models\Project;
 use App\Models\Research;
 use App\Models\Category;
+use App\Models\Media;
 use App\Models\Coapplicant;
 use Illuminate\Support\Facades\DB;
 
@@ -66,8 +67,10 @@ return view('frontend.pages.contactus');
     }
 
     public function Media(){
-
-        return view('frontend.pages.media');
+      $videos=Media::where('type' ,'video')->get();
+      $images=Media::where('type' ,'image')->get();
+            // dd($images);
+        return view('frontend.pages.media')->with(compact('videos','images'));
     }
 
     public function Resources(){
@@ -189,12 +192,22 @@ return view('frontend.pages.contactus');
     }
 
     public function projectProfile(){
-        return "project profile";
+        return view ("frontend.pages.project_profile");
     }
     public function projectGovernance(){
-        return "project governance";
+        return view ("frontend.pages.gorvanance");
     }
     public function coApplicants(){
-        return "project Co Applicants";
+        $coapplicants=Coapplicant::all();
+
+        return view('frontend.pages.co-applicants')->with(compact('coapplicants'));
+    
+    }
+
+    public function partners(){
+        $partners=Partner::all();
+
+        return view('frontend.pages.partners')->with(compact('partners'));
+    
     }
 }
