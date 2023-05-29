@@ -203,11 +203,23 @@ return view('frontend.pages.contactus');
         return view('frontend.pages.co-applicants')->with(compact('coapplicants'));
     
     }
+  
 
     public function partners(){
         $partners=Partner::all();
 
         return view('frontend.pages.partners')->with(compact('partners'));
     
+    }
+
+    public function valuechainsapi(){
+        $valuechains=ValueChain::all();
+        return response()->json( [
+            'status'=>200,
+            'valuechains'=>$valuechains
+            ] );
+    }
+    public function map(){
+        return view('frontend.pages.map');
     }
 }

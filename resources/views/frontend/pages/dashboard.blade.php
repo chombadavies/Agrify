@@ -140,7 +140,7 @@
           <div class="card-header">
             <h3 class="card-title">
               <i class="fas fa-users"></i>
-              Farmmers Regisration Status
+              Farmers Regisration Status
             </h3>
           
           </div><!-- /.card-header -->
@@ -603,7 +603,7 @@
         type: 'column'
         },
         title: {
-        text: ' Farmmers Regisration Status '
+        text: ' Farmers Regisration Status '
         },
 
         accessibility: {

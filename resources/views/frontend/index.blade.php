@@ -202,7 +202,7 @@
 
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" >
             <div class="icon-box">
               <div class="icon"><i class="fas fa-book"></i></div>
               <h4><a href="">Project publications </a></h4>
@@ -219,6 +219,13 @@
             </div>
           </div>
 
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"> <i class="bx bx-video-recording"></i></div>
+              <h4><a href="{{route('map')}}">Analytics Map </a></h4>
+              <p style="text-align: justify"> The map provides an overview of the results achieved.Data contained in the map has been quality assesed and aligns with project objectives.</p>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -253,7 +260,7 @@
   </div> --}}
   <!-- /bg_gray -->
 
-  {{-- <div id="partners" class="partners">    
+  <div id="partners" class="partners">    
     <h2 style="display:flex;justify-content:center"><u> AgriFi CS APP Partners </u></h2>
     <br>
     <div class="container">
@@ -268,7 +275,7 @@
       </div>
 
     </div>
-  </div><!-- End partners Section --> --}}
+  </div><!-- End partners Section -->
 
   </main><!-- End #main -->
 @endsection

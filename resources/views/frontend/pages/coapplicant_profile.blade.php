@@ -15,7 +15,7 @@
       <h3>{{$coapplicant->title}}</h3>
         <ol>
           <li><a href="{{route('home')}}">Home</a></li>
-          <li><a href="{{route('co_applicants')}}">Co-Applicants</a></li>
+          <li><a href="{{route('coapplicants')}}">Co-Applicants</a></li>
           
         </ol>
       </div>

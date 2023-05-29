@@ -30,11 +30,11 @@
       </div>
 
       <div class="row">
-       
+         
 
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
           <div class="icon-box">
-            <div class="icon"><i class="fas fa-pills"></i></div>
+            <div class="icon"><i class="bx bx-leaf"></i></div>
             <h4><a href="{{route('valuechains')}}">Valuechains</a></h4>
             <p>Get understanding in optimizing agricultural valuechins and improving productivity, efficiency, and sustainability.</p>
           </div>
@@ -42,7 +42,7 @@
 
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
           <div class="icon-box">
-            <div class="icon"><i class="fas fa-hospital-user"></i></div>
+            <div class="icon"><i class="fas fa-cloud-sun-rain"></i></div>
             <h4><a href="https://www.kaop.co.ke/" target="blank">Climate Information Advisories</a></h4>
             <p></p>
             <p style="text-align: justify">Proper planning using up to date climate information could minimize negative impact of climate change on people's livelihoods and economy. Accurate & decision-relevant climate
@@ -52,7 +52,7 @@
         </div>
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
           <div class="icon-box">
-            <div class="icon"><i class="fas fa-cart"></i></div>
+            <div class="icon"><i class="bi bi-cart"></i></div>
 
             <h4><a href="https://amis.co.ke/" target="blank">Market place</a></h4>
             <p style="text-align: justify">Access a wide range of multimedia content, including images, videos, and press releases,
@@ -60,9 +60,9 @@
 
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" >
           <div class="icon-box">
-            <div class="icon"><i class="fas fa-dna"></i></div>
+            <div class="icon"><i class="fas fa-book"></i></div>
             <h4><a href="">Project publications </a></h4>
             <p> Here you can explore the  projects dissemination materials.</p>
           </div>
@@ -70,13 +70,20 @@
 
          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
           <div class="icon-box">
-            <div class="icon"><i class="fas fa-wheelchair"></i></div>
+            <div class="icon"> <i class="bx bx-video-recording"></i></div>
             <h4><a href="{{route('media')}}">Medias </a></h4>
             <p style="text-align: justify"> Access a wide range of multimedia content, 
               including images, videos, and press releases, showcasing our KALRO's latest news, updates, and events.</p>
           </div>
         </div>
 
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box">
+            <div class="icon"> <i class="bx bx-video-recording"></i></div>
+            <h4><a href="{{route('map')}}">Analytics Map </a></h4>
+            <p style="text-align: justify"> The map provides an overview of the results achieved.Data contained in the map has been quality assesed and aligns with project objectives.</p>
+          </div>
+        </div>
       </div>
 
     </div>

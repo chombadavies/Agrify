@@ -10,7 +10,7 @@
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
-      <h1>About AgrFi CS APP</h1>
+      <h1>About AgriFi CS APP</h1>
         <ol>
           <li><a href="{{route('home')}}">Home</a></li>
          

@@ -35,11 +35,12 @@
         <div class="contact-info d-flex align-items-center">
           <strong><i class="bi bi-envelope"></i> <a href="mailto:uttp@kalro.org">uttp@kalro.org</a></strong> <i class="bi bi-phone"></i> <a href="+254722206986">+254 722 206986</a> </strong>
         </div>
-        <div class="d-none d-lg-flex social-links align-items-center">
-          <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        <div class="d-none d-lg-flex contact-info align-items-center ">
+          {{-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a> --}}
+  
+          <div><a href="https://www.kaop.co.ke/" target="blank"><i class="fas fa-sun"></i> Climate Advisories</a></div>
+        <div><a href="https://amis.co.ke/" target="blank"><i class="bi bi-cart"></i> Market Place</a></div>
+       
         </div>
       </div>
     </div>
@@ -55,7 +56,7 @@
       
         <nav id="navbar" class="navbar order-last order-lg-0">
           <ul>
-            <li><a class="nav-link scrollto active" href="{{route('home')}}">Home</a></li>
+            {{-- <li><a class="nav-link scrollto active" href="{{route('home')}}">Home</a></li> --}}
             {{-- <li><a class="" href="{{route('about')}}">About</a></li> --}}
             <li class="dropdown"><a href="{{route('about')}}"><span>About</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
@@ -63,7 +64,7 @@
                
                 <li><a class="nav-link" href="{{route('project_profile')}}" >Project Profile</a></li>
                 <li><a class="nav-link" href="{{route('project_governance')}}" >Project Gorvernance </a></li>
-                <li><a class="nav-link" href="{{route('co_applicants')}}" >Co-Applicants </a></li>
+                <li><a class="nav-link" href="{{route('coapplicants')}}" >Co-Applicants </a></li>
               </ul>
            </li>
             <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
@@ -81,10 +82,10 @@
             <li class="dropdown"><a href="#"><span>Upscalling</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
   
-                <li><a class="nav-link" href="{{route('partners')}}">Partner profiles</a></
+                <li><a class="nav-link" href="{{route('partners')}}">Partner Profiles</a></
                 <li><a class="nav-link" href="{{route('achievements')}}">Achievement</a></li>
-                <li><a class="nav-link" href="{{route('achievements')}}">Technology and commercialization</a></li>
-                <li><a class="nav-link" href="#">Impact stories </a></li>
+                <li><a class="nav-link" href="{{route('achievements')}}">Technology and Commercialization</a></li>
+                <li><a class="nav-link" href="#">Impact Stories </a></li>
                  </ul>
            </li>
             
@@ -104,8 +105,15 @@
                   </ul>
             </li>
             <li><a class="nav-link" href="{{route('media')}}">Media</a></li>
-            <li><a class="nav-link" href="{{route('dashboard')}}">Dashboard</a></li>
-           
+            {{-- <li><a class="nav-link" href="{{route('dashboard')}}">Dashboard</a></li> --}}
+            <li class="dropdown"><a href="{{route('dashboard')}}"><span>Dashboard</span> <i class="bi bi-chevron-down"></i></a>
+              <ul>
+                <li><a class="nav-link" href="">Results Dashboard</a></li>
+                  <li><a class="nav-link" href="">Financial Dashboards</a></li>
+                  <li><a class="nav-link" href="">Gender,Diversity Inclusion Dashboard</a></li>
+                  
+                 </ul>
+           </li>
   
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>

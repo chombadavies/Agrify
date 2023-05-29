@@ -62,7 +62,8 @@ Route::any('/valuechains',[\App\Http\Controllers\Frontend\IndexController::class
 Route::any('/valuechain/{id}',[\App\Http\Controllers\Frontend\IndexController::class,'valuechain'])->name('valuechain.details');
 Route::any('/partners',[\App\Http\Controllers\Frontend\IndexController::class,'Partners'])->name('partners');
 Route::any('/partners/{id}',[\App\Http\Controllers\Frontend\IndexController::class,'Partner'])->name('partner');
-Route::any('/co-applicants/{id}',[\App\Http\Controllers\Frontend\IndexController::class,'CoApplicant'])->name('coapplicants');
+Route::any('/co-applicants/{id}',[\App\Http\Controllers\Frontend\IndexController::class,'CoApplicant'])->name('coapplicant');
+Route::any('/co-applicants',[\App\Http\Controllers\Frontend\IndexController::class,'CoApplicants'])->name('coapplicants');
 Route::any('/project_details/{id}',[\App\Http\Controllers\Frontend\IndexController::class,'projectDetails'])->name('project.details');
 Route::any('/media',[\App\Http\Controllers\Frontend\IndexController::class,'Media'])->name('media');
 Route::any('/resources',[\App\Http\Controllers\Frontend\IndexController::class,'Resources'])->name('resources');
@@ -80,6 +81,6 @@ Route::any('/farmersbyward',[\App\Http\Controllers\Frontend\IndexController::cla
 Route::any('/farmersbyvaluechain',[\App\Http\Controllers\Frontend\IndexController::class,'farmersByValueChain']);
 Route::any('/project_profile',[\App\Http\Controllers\Frontend\IndexController::class,'projectProfile'])->name('project_profile');
 Route::any('/project_governance',[\App\Http\Controllers\Frontend\IndexController::class,'projectGovernance'])->name('project_governance');
-Route::any('/co_applicants',[\App\Http\Controllers\Frontend\IndexController::class,'coApplicants'])->name('co_applicants');
+Route::any('/map',[\App\Http\Controllers\Frontend\IndexController::class,'map'])->name('map');
 
 
