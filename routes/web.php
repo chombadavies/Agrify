@@ -69,8 +69,10 @@ Route::any('/media',[\App\Http\Controllers\Frontend\IndexController::class,'Medi
 Route::any('/resources',[\App\Http\Controllers\Frontend\IndexController::class,'Resources'])->name('resources');
 Route::any('/achievements',[\App\Http\Controllers\Frontend\IndexController::class,'achievements'])->name('achievements');
 Route::any('/about',[\App\Http\Controllers\Frontend\IndexController::class,'about'])->name('about');
-Route::any('/research/{id}',[\App\Http\Controllers\Frontend\IndexController::class,'Research'])->name('research');
+Route::any('/research/{id}',[\App\Http\Controllers\Frontend\IndexController::class,'research_Details'])->name('reseach_details');
+Route::any('/reseach_details/{id}',[\App\Http\Controllers\Frontend\IndexController::class,'Research'])->name('research');
 Route::any('/dashboard',[\App\Http\Controllers\Frontend\IndexController::class,'dashboard'])->name('dashboard');
+Route::any('/result_dashboard',[\App\Http\Controllers\Frontend\IndexController::class,'resultDashboard'])->name('results.dashboard');
 Route::any('/farmersingroups',[\App\Http\Controllers\Frontend\IndexController::class,'FarmerGroups'])->name('farmers.groups');
 Route::any('/farmerspercounty',[\App\Http\Controllers\Frontend\IndexController::class,'FarmersCounty'])->name('farmers.county');
 Route::any('/bydistance',[\App\Http\Controllers\Frontend\IndexController::class,'Distance'])->name('market.distance');

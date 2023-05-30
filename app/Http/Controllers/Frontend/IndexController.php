@@ -222,4 +222,12 @@ return view('frontend.pages.contactus');
     public function map(){
         return view('frontend.pages.map');
     }
+
+    public function research_Details($id){
+
+        $research_activity=Research::findOrFail($id);
+        $related=Research::where('category_id',$research_activity->category_id)->get();
+       
+     return view("frontend.pages.research_details")->with(compact('research_activity','related'));
+    }
 }

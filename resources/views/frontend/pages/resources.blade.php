@@ -43,7 +43,7 @@
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
           <div class="icon-box">
             <div class="icon"><i class="fas fa-cloud-sun-rain"></i></div>
-            <h4><a href="https://www.kaop.co.ke/" target="blank">Climate Information Advisories</a></h4>
+            <h4><a href="https://www.kaop.co.ke/">Climate Information Advisories</a></h4>
             <p></p>
             <p style="text-align: justify">Proper planning using up to date climate information could minimize negative impact of climate change on people's livelihoods and economy. Accurate & decision-relevant climate
                information is critical to plan & minimize negative impact of climate variability.</p>

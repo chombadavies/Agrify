@@ -260,7 +260,7 @@
   </div> --}}
   <!-- /bg_gray -->
 
-  <div id="partners" class="partners">    
+  {{-- <div id="partners" class="partners">    
     <h2 style="display:flex;justify-content:center"><u> AgriFi CS APP Partners </u></h2>
     <br>
     <div class="container">
@@ -275,7 +275,8 @@
       </div>
 
     </div>
-  </div><!-- End partners Section -->
+  </div> --}}
+  <!-- End partners Section -->
 
   </main><!-- End #main -->
 @endsection

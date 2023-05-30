@@ -74,7 +74,7 @@
 
 
  
-{{--   
+  
   <div class="row">
     <!-- Left col -->
     <section class="col-lg-12 connectedSortable">
@@ -103,7 +103,7 @@
       <!-- /.card -->
     </section>
   
-  </div> --}}
+  </div>
 
   <div class="row">
     <!-- Left col -->

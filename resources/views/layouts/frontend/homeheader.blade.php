@@ -69,7 +69,7 @@
             </ul>
          </li>
           
-          <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
+          {{-- <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               @php
                   $categories=App\Models\Category::all();
@@ -77,20 +77,28 @@
               @foreach($categories as $category)
               <li><a class="nav-link" href="{{route('research',$category->id)}}" >{{ ucfirst($category->title) }} </a></li>
             @endforeach
+            
             </ul>
-         </li>
-         
+         </li> --}}
 
-          <li class="dropdown"><span>Upscalling</span> <i class="bi bi-chevron-down"></i>
-            <ul>
-              <li><a class="nav-link" href="{{route('partners')}}">Partner Profiles</a></li>
-                <li><a class="nav-link" href="{{route('achievements')}}">Achievement</a></li>
-                <li><a class="nav-link" href="{{route('achievements')}}">Technology and Commercialization</a></li>
-                <li><a class="nav-link" href="#">Impact Stories </a></li>
-               </ul>
-         </li>
-    
-        
+         <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+          @php
+              $categories=App\Models\Category::all(); 
+          @endphp
+
+        @foreach($categories as $category)
+        <li class="dropdown"><a href=""><span>{{ ucfirst($category->title) }}</span> <i class="bi bi-chevron-right"></i></a>
+          <ul>
+            @foreach ($category->models as $model)
+            <li><a href="{{route('reseach_details',$model->id)}}">{{$model->alias}}</a></li>
+            @endforeach
+            </ul>
+          </li>
+          @endforeach
+          </ul>
+        </li>
+          
          <li><a class="nav-link" href="#resources">Resources</a></li>
          <li class="dropdown"><a href="{{route('valuechains')}}"><span>Valuechains</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
