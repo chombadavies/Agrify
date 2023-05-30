@@ -25,6 +25,28 @@
   
     <!-- Template Main CSS File -->
     <link href="{{asset('frontend/css/style.css')}}" rel="stylesheet">
+
+
+    {{-- utmap --}}
+
+     <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{asset('utmap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{asset('utmap/css/icofont.min.css')}}" rel="stylesheet">
+  <link href="{{asset('utmap/css/animate.min.css')}}" rel="stylesheet">
+  <link href="{{asset('utmap/css/font-awesome.min.css')}}" rel="stylesheet">
+  <link href="{{asset('utmap/css/nivo-slider.css')}}" rel="stylesheet">
+  <link href="{{asset('utmap/css/owl.carousel.min.css')}}" rel="stylesheet">
+  <link href="{{asset('utmap/css/venobox.css')}}" rel="stylesheet">
+  <link href="{{asset('utmap/css/faq.css')}}" rel="stylesheet">
+  <!-- <link href="/Resource/https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> -->
+
+
+  <!-- Template Main CSS File -->
+  <link href="{{asset('utmap/css/style.css')}}" rel="stylesheet">
+  <link href="{{asset('utmap/css/partners.css')}}" rel="stylesheet">
   
    
   </head>
@@ -92,7 +114,7 @@
   
                 <li><a class="nav-link" href="{{route('partners')}}">Partner Profiles</a></
                 <li><a class="nav-link" href="{{route('achievements')}}">Achievement</a></li>
-                <li><a class="nav-link" href="{{route('achievements')}}">Technology and Commercialization</a></li>
+                <li><a class="nav-link" href="{{route('technology_models')}}">Technology and Commercialization</a></li>
                 <li><a class="nav-link" href="#">Impact Stories </a></li>
                  </ul>
            </li>
@@ -127,7 +149,7 @@
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
   
-        <a href="{{route('contact_us')}}" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span> Contact Us</a>
+        {{-- <a href="{{route('contact_us')}}" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span> Contact Us</a> --}}
   
       </div>
     </header><!-- End Header -->

@@ -26,6 +26,8 @@ Route::resource('partners',App\Http\Controllers\backend\PartnersController::clas
 Route::resource('projects',App\Http\Controllers\backend\ProjectsController::class);
 Route::any('/fetchpartners',[App\Http\Controllers\backend\PartnersController::class, 'fetchPartners']);
 Route::any('/fetchprojects',[App\Http\Controllers\backend\ProjectsController::class, 'fetchProjects']);
+Route::any('/impact-area',[App\Http\Controllers\backend\ResearchController::class, 'impactArea'])->name('impactarea.create');
+Route::any('/impactarea_store',[App\Http\Controllers\backend\ResearchController::class, 'impactAreaStore'])->name('impactarea.store');
 Route::resource('materials',App\Http\Controllers\backend\MaterialsController::class);
 Route::resource('research',App\Http\Controllers\backend\ResearchController::class);
 Route::resource('coapplicants',App\Http\Controllers\backend\CoapplicantsController::class);
@@ -68,6 +70,7 @@ Route::any('/project_details/{id}',[\App\Http\Controllers\Frontend\IndexControll
 Route::any('/media',[\App\Http\Controllers\Frontend\IndexController::class,'Media'])->name('media');
 Route::any('/resources',[\App\Http\Controllers\Frontend\IndexController::class,'Resources'])->name('resources');
 Route::any('/achievements',[\App\Http\Controllers\Frontend\IndexController::class,'achievements'])->name('achievements');
+Route::any('/technology-models',[\App\Http\Controllers\Frontend\IndexController::class,'technologyModel'])->name('technology_models');
 Route::any('/about',[\App\Http\Controllers\Frontend\IndexController::class,'about'])->name('about');
 Route::any('/research/{id}',[\App\Http\Controllers\Frontend\IndexController::class,'research_Details'])->name('reseach_details');
 Route::any('/reseach_details/{id}',[\App\Http\Controllers\Frontend\IndexController::class,'Research'])->name('research');
@@ -84,5 +87,7 @@ Route::any('/farmersbyvaluechain',[\App\Http\Controllers\Frontend\IndexControlle
 Route::any('/project_profile',[\App\Http\Controllers\Frontend\IndexController::class,'projectProfile'])->name('project_profile');
 Route::any('/project_governance',[\App\Http\Controllers\Frontend\IndexController::class,'projectGovernance'])->name('project_governance');
 Route::any('/map',[\App\Http\Controllers\Frontend\IndexController::class,'map'])->name('map');
+Route::any('/impact-areas',[\App\Http\Controllers\Frontend\IndexController::class,'impactAreas'])->name('impact.areas');
+
 
 

@@ -42,13 +42,13 @@
                 </div>
             </div>
             <div class="col-lg-5 pl-lg-5 text-center d-none d-lg-block">
-                    <img src="{{asset('frontend/img/20230316_125420.jpg')}}" alt="" class="img-fluid" width="400" height="350" style="border-radius:14px">
+                    <img src="{{asset('frontend/img/0V2A8553.jpg')}}" alt="" class="img-fluid" width="400" height="350" style="border-radius:14px">
             </div>
         </div>
         <!-- /row -->
         <div class="row justify-content-center align-items-center">
             <div class="col-lg-5 pr-lg-5 text-center d-none d-lg-block">
-                    <img src="{{asset('frontend/img/about.jpg')}}" alt="" class="img-fluid" width="400" height="350" style="border-radius:14px">
+                    <img src="{{asset('frontend/img/20221206_093848.jpg')}}" alt="" class="img-fluid" width="400" height="350" style="border-radius:14px">
             </div>
             <div class="col-lg-5">
                 <div class="box_about" style="text-align: justify;">

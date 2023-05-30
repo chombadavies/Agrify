@@ -230,4 +230,13 @@ return view('frontend.pages.contactus');
        
      return view("frontend.pages.research_details")->with(compact('research_activity','related'));
     }
+
+    public function technologyModel(){
+        $data['page_title']='Technology and commercialization Models';
+return view('frontend.pages.technology_model',$data);
+    }
+
+    public function impactAreas(){
+        return view('frontend.pages.impact_areas ');
+    }
 }

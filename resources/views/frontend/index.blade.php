@@ -126,35 +126,35 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6">
-            <div class="count-box">
+            <div class="count-box meme">
               <i class="fas fa-handshake"></i>
 
               <span data-purecounter-start="0" data-purecounter-end="{{App\Models\Partner::count()}}" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Partners</p>
+              <p><strong> Partners</strong> </p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-            <div class="count-box">
+            <div class="count-box meme">
               <i class="bx bx-leaf"></i>
               <span data-purecounter-start="0" data-purecounter-end="{{App\Models\ValueChain::count()}}" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Valuechains</p>
+              <p><strong> Valuechains</strong> </p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
+            <div class="count-box meme">
               <i class="bi bi-book"></i>
               <span data-purecounter-start="0" data-purecounter-end="{{App\Models\Research::count()}}" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Research models</p>
+              <p><strong> Research Models</strong> </p>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0" >
+            <div class="count-box meme">
               <i class="fas fa-award"></i>
               <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Awardees</p>
+              <p><strong>Impact Areas</strong> </p>
             </div>
           </div>
 
@@ -282,5 +282,13 @@
 @endsection
 
 <style>
-
+ .meme{
+  box-shadow: 
+   5px 5px 10px 5px rgba(126,126,126),
+   -5px 0px  rgb(158, 158, 158);
+      border-radius: 12px; 
+     }
+     .card-title{
+      color: aliceblue;
+     }
 </style>

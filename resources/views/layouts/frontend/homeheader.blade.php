@@ -98,6 +98,17 @@
           @endforeach
           </ul>
         </li>
+
+        <li class="dropdown"><a href="#"><span>Upscalling</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+
+            <li><a class="nav-link" href="{{route('partners')}}">Partner Profiles</a></
+            <li><a class="nav-link" href="{{route('achievements')}}">Achievement</a></li>
+            <li><a class="nav-link" href="{{route('technology_models')}}">Technology and Commercialization</a></li>
+            <li><a class="nav-link" href="{{route('impact.areas')}}">Impact Stories </a></li>
+             </ul>
+       </li>
+
           
          <li><a class="nav-link" href="#resources">Resources</a></li>
          <li class="dropdown"><a href="{{route('valuechains')}}"><span>Valuechains</span> <i class="bi bi-chevron-down"></i></a>
@@ -132,7 +143,7 @@
      
         
 
-      <a href="{{route('contact_us')}}" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span> Contact Us</a>
+      {{-- <a href="{{route('contact_us')}}" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span> Contact Us</a> --}}
 
     </div>
   </header><!-- End Header -->

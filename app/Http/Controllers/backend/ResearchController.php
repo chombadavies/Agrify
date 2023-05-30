@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Research;
 use App\Models\Category;
+use App\Models\ImpactArea;
+
 
 class ResearchController extends Controller
 {
@@ -26,7 +28,7 @@ class ResearchController extends Controller
      */
     public function create()
     {
-        $data['page_title']='Rsearch Models';
+        $data['page_title']='Research Models';
         $categories=Category::all();
       
         return view('admin.research.create',$data)->with(compact('categories'));
@@ -44,7 +46,7 @@ class ResearchController extends Controller
     {
         $data=$request->all();
         $question=Research::create($data);
-        return redirect()->route('research.index')->with('success','question added successfully');
+        return redirect()->route('research.index')->with('success','research added successfully');
     }
 
     /**
@@ -90,5 +92,16 @@ class ResearchController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function impactArea(){
+        $data['page_title']='Research Models';
+        return view('admin.research.impactarea',$data);
+    }
+    public function impactAreaStore(){
+        $data=$request->all();
+        dd($data);
+        $question=ImpactArea::create($data);
+        return redirect()->route('research.index')->with('success','research added successfully');
     }
 }

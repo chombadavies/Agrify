@@ -111,7 +111,7 @@
                           <div class="container">
                         
                             <div class="section-title">
-                                <h2>Related rsearch Activities</h2>
+                                <h2>Related Research Activities</h2>
                               </div>
                               {{-- @php
                                   $related=App\Models\Research::where('category_id',$research_activity->id)->get();

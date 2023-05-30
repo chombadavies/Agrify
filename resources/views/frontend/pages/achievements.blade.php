@@ -30,7 +30,7 @@
       <div class="container margin_60_35 add_bottom_30">
         <div class="row justify-content-center align-items-center" style="background-color: #f1f7fd;border-radius:14pt">
             <div class="col-lg-5 pr-lg-5 text-center d-none d-lg-block">
-                    <img src="{{asset('frontend/img/Technology Transfer Model_page-0001.jpg')}}" alt="" class="img-fluid" width="400" height="450" style="border-radius:14px">
+                    <img src="{{asset('frontend/img/Capture.png')}}" alt="" class="img-fluid" width="400" height="450" style="border-radius:14px">
             </div>
             <div class="col-lg-7">
                 <div class="box_about">
@@ -58,7 +58,7 @@
                 </div>
             </div>
             <div class="col-lg-5 pl-lg-5 text-center d-none d-lg-block">
-                    <img src="{{asset('frontend/img/Commercialization Model_page-0001.jpg')}}" alt="" class="img-fluid" width="400" height="350" style="border-radius:14px">
+                    <img src="{{asset('frontend/img/Capture1.png')}}" alt="" class="img-fluid" width="400" height="350" style="border-radius:14px">
             </div>
         </div>
         <!-- /row -->
