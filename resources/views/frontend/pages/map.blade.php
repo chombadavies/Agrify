@@ -5,6 +5,25 @@
 @section('content')
 <main id="main">
 
+    <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{asset('utmap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{asset('utmap/css/icofont.min.css')}}" rel="stylesheet">
+  <link href="{{asset('utmap/css/animate.min.css')}}" rel="stylesheet">
+  <link href="{{asset('utmap/css/font-awesome.min.css')}}" rel="stylesheet">
+  <link href="{{asset('utmap/css/nivo-slider.css')}}" rel="stylesheet">
+  <link href="{{asset('utmap/css/owl.carousel.min.css')}}" rel="stylesheet">
+  <link href="{{asset('utmap/css/venobox.css')}}" rel="stylesheet">
+  <link href="{{asset('utmap/css/faq.css')}}" rel="stylesheet">
+  <link href="/Resource/https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <!-- Template Main CSS File -->
+  <link href="{{asset('utmap/css/style.css')}}" rel="stylesheet">
+  <link href="{{asset('utmap/css/partners.css')}}" rel="stylesheet">
+
   <!-- ======= Breadcrumbs Section ======= -->
   <section class="breadcrumbs">
     <div class="container">
@@ -184,23 +203,23 @@
 
 @section('name')
     <!-- Vendor JS Files -->
-  {{-- <script src="{{asset('utmap/js/jquery.min.js')}}"></script>
-  <script src="{{asset('utmap/js/bootstrap.bundle.min.js')}}"></script>
-  <script src="{{asset('utmap/js/jquery.easing.min.js')}}"></script>
-  <script src="{{asset('utmap/js/validate.js')}}"></script>
-  <script src="{{asset('utmap/js/jquery.appear.js')}}"></script>
-  <script src="{{asset('utmap/js/jquery.knob.js')}}"></script>
-  <script src="{{asset('utmap/js/jquery.validate.min.js')}}"></script>
-  <script src="{{asset('utmap/js/parallax.js')}}"></script>
-  <script src="{{asset('utmap/js/wow.min.js')}}"></script>
-  <script src="{{asset('utmap/js/isotope.pkgd.min.js')}}"></script>
-  <script src="{{asset('utmap/js/jquery.nivo.slider.js')}}"></script>
-  <script src="{{asset('utmap/js/owl.carousel.min.js')}}"></script>
-  <script src="{{asset('utmap/js/venobox.min.js')}}"></script>
-
-  <!-- Template Main JS File -->
-  <script src="{{asset('utmap/js/main.js')}}"></script>
-  <script src="../../cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script> --}}
+    <script src="{{asset('utmap/js/jquery.min.js')}}"></script>
+    <script src="{{asset('utmap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('utmap/js/jquery.easing.min.js')}}"></script>
+    <script src="{{asset('utmap/js/validate.js')}}"></script>
+    <script src="{{asset('utmap/js/jquery.appear.js')}}"></script>
+    <script src="{{asset('utmap/js/jquery.knob.js')}}"></script>
+    <script src="{{asset('utmap/js/jquery.validate.min.js')}}"></script>
+    <script src="{{asset('utmap/js/parallax.js')}}"></script>
+    <script src="{{asset('utmap/js/wow.min.js')}}"></script>
+    <script src="{{asset('utmap/js/isotope.pkgd.min.js')}}"></script>
+    <script src="{{asset('utmap/js/jquery.nivo.slider.js')}}"></script>
+    <script src="{{asset('utmap/js/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('utmap/js/venobox.min.js')}}"></script>
+  
+    <!-- Template Main JS File -->
+    <script src="{{asset('utmap/js/main.js')}}"></script>
+    <script src="../../cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
   <script>
       $(document).ready(function(){
           $('.customer-logos').slick({

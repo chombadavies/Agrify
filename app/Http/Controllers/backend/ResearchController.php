@@ -32,8 +32,7 @@ class ResearchController extends Controller
         $categories=Category::all();
       
         return view('admin.research.create',$data)->with(compact('categories'));
-        
-       
+ 
     }
 
     /**
@@ -98,9 +97,9 @@ class ResearchController extends Controller
         $data['page_title']='Research Models';
         return view('admin.research.impactarea',$data);
     }
-    public function impactAreaStore(){
+    public function impactAreaStore(Request $request){
         $data=$request->all();
-        dd($data);
+        // dd($data);
         $question=ImpactArea::create($data);
         return redirect()->route('research.index')->with('success','research added successfully');
     }

@@ -29,7 +29,7 @@
 
     {{-- utmap --}}
 
-     <!-- Google Fonts -->
+     {{-- <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
@@ -46,7 +46,7 @@
 
   <!-- Template Main CSS File -->
   <link href="{{asset('utmap/css/style.css')}}" rel="stylesheet">
-  <link href="{{asset('utmap/css/partners.css')}}" rel="stylesheet">
+  <link href="{{asset('utmap/css/partners.css')}}" rel="stylesheet"> --}}
   
    
   </head>

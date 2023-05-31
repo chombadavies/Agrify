@@ -11,6 +11,7 @@ use App\Models\Project;
 use App\Models\Research;
 use App\Models\Category;
 use App\Models\Media;
+use App\Models\ImpactArea;
 use App\Models\Coapplicant;
 use Illuminate\Support\Facades\DB;
 
@@ -237,6 +238,8 @@ return view('frontend.pages.technology_model',$data);
     }
 
     public function impactAreas(){
-        return view('frontend.pages.impact_areas ');
+        $impactareas=ImpactArea::all();
+        $data['page_title']='Impact Stories';
+        return view('frontend.pages.impact_areas',$data)->with(compact('impactareas'));
     }
 }
