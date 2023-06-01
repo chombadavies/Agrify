@@ -138,13 +138,14 @@
          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
+        
       </nav>
       <!-- .navbar -->
 
      
         
 
-      {{-- <a href="{{route('contact_us')}}" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span> Contact Us</a> --}}
+      <a href="{{route('contact_us')}}" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span> Contact Us</a>
 
     </div>
   </header><!-- End Header -->

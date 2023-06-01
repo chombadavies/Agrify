@@ -12,7 +12,7 @@ body {
     float: right
 }
 
-he .alignleft {
+.alignleft {
     float: left;
     margin-right: 15px;
     margin-bottom: 15px
@@ -46,7 +46,6 @@ p {
     margin: 0 0 15px;
     color: #444
 }
-
 h1,
 h2,
 h3,
@@ -221,7 +220,7 @@ div#preloader {
     margin-bottom: 30px;
     position: relative;
     text-transform: capitalize;
-    color: #3393a7
+    color: #85AE46;
 }
 
 .section-headline h3::after {
@@ -3331,7 +3330,7 @@ form .error {
     max-width: 560px;
     max-height: 380px;
     width: 23%;
-    background: #3085a3;
+    background: #85AE46;
     text-align: center;
     cursor: pointer
 }

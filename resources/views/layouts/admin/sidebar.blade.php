@@ -238,7 +238,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{route('coapplicants.index')}}" class="nav-link">
                   <i class="fas fa-table nav-icon"></i>
                   <p>Co-Applicants
 

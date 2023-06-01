@@ -112,7 +112,6 @@ class PartnersController extends Controller
     public function update(Request $request, $id)
     {
         
-
         $data=$request->all();
    
         if ($request->hasFile('image')) {
@@ -125,7 +124,7 @@ class PartnersController extends Controller
                 $image = rand(111, 99999) . '.' . $extension;
                 $ImagePath = 'backend/uploads/'.$image;
                 // Upload the Image
-                Image::make($image_tmp)->resize(150,130)->save($ImagePath);
+                Image::make($image_tmp)->save($ImagePath);
                
             }
         } else {

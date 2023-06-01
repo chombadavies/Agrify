@@ -124,12 +124,14 @@
                                 <img alt="logo" src="{{asset('backend/uploads/'.$item->image)}}" style="border-radius: 12px;"/>
                              
                                     <figcaption>
-                                        <h2>{{$item->alias}}<span></span></h2>
-                                        {{-- @php
-                                            $limit=str_limit($valuechain->introduction,$limit=110,$end='...');
+                                        
+                                        @php
+                                            $limit=str_limit($item->alias,$limit=110,$end='...');
                                         @endphp
+
+                                <h5><span>{{$item->alias}}</span></h5>
       
-                                        <p>{!!$limit!!}</p> --}}
+                                        {{-- <p>{!!$limit!!}</p> --}}
                                          
                                     </figcaption>
                                 </figure>

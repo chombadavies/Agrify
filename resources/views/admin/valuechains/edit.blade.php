@@ -36,13 +36,14 @@
               <!-- form start -->
              
               
-              <form action="{{route('valuechains.store')}}" method="post" enctype="multipart/form-data">@csrf
+              <form action="{{route('valuechains.update',$valuechain->id)}}" method="post" enctype="multipart/form-data">@csrf
+                @method('put')
     
                 <div class="card-body">
                     <div class="row">
                   <div class="form-group col-md-4">
                     <label for="exampleInputEmail1">ValueChain Title</label>
-                    <input type="text" name="title" class="form-control" id="" @error('title') is-invalid @enderror placeholder="Enter Category Name" required value="{{old('title')}}">
+                    <input type="text" name="title" class="form-control" id="" @error('title') is-invalid @enderror placeholder="Enter Category Name" required value="{{$valuechain->title}}">
                     <span style="color: red" >{{$errors->first('title')}}</span>
                   
                 
@@ -67,19 +68,19 @@
                 <div class="row">
                     <div class="col-md-12" class="form-control">
                         <label for="">ValueChain Introduction</label>
-                        <textarea id="summernote" name="introduction"  required></textarea>
+                        <textarea id="summernote" name="introduction"  required>{{$valuechain->introduction}}</textarea>
                     </div>
                 </div>
 <br>
                 <div class="row">
                     <div class="col-md-12" class="form-control">
                         <label for="">ValueChain Description</label>
-                        <textarea id="meme" name="description" required></textarea>
+                        <textarea id="meme" name="description" required>{{$valuechain->description}}</textarea>
                     </div>
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-info">Submit</button>
+                  <button type="submit" class="btn btn-info">Update</button>
                 </div>
               </form>
             </div>

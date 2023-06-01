@@ -32,8 +32,9 @@
                     <br>
                     <div style="padding: 40px;background-color:#f1f7fd;border-radius:24px">
                   {{-- <input type="button" value="Partners Mandate" style="cursor:ew-resize"> --}}
-                      <p >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                        software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                      <p >Technologies for upscaling were identified by KALRO and other NARS institutions. The upscaling component is implemented through a competitive call for proposals.  
+                        The Call for Proposals (CfP) for Sub-Grants Guidelines provided the manner in which KALRO selected 21 organizations  competitively for 38 subgrants. Part of the 38 Sub-grantees work plans target capacity building of the beneficiaries, 
+                        linkage to markets, financial service providers, and input suppliers. Each subgrants successful subgrant was awarded Euros 60,000.00 (KES 6,813,000). </p>
                         <div  style="margin-left: 40% ">
                           <input type="button" value="List Of AgriFI CS APP Kenya Partners" style="cursor:ew-resize;margin-right:50%" >
                         </div>

@@ -36,10 +36,8 @@
                       </div>
                       <br>
                       
-                      <div class="container">
-                        <p>{{$project->title}}</p>
-                      </div> 
-                      
+                        <div> <span ><i>{{$project->title}}</i> </span></div>
+                        
                         </div>
 
                         {{-- <span class="vl"></span> --}}

@@ -33,6 +33,7 @@ Route::resource('materials',App\Http\Controllers\backend\MaterialsController::cl
 Route::resource('research',App\Http\Controllers\backend\ResearchController::class);
 Route::any('/fetch_research',[App\Http\Controllers\backend\ResearchController::class, 'fetchResearch']);
 Route::resource('coapplicants',App\Http\Controllers\backend\CoapplicantsController::class);
+Route::any('/fetch_coapplicants',[App\Http\Controllers\backend\CoapplicantsController::class, 'fetchCoapplicants']);
 Route::any('/Dashboard','App\Http\Controllers\HomeController@Dashboard');
 Route::any('/departments','App\Http\Controllers\HomeController@Departments');
 

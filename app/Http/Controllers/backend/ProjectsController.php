@@ -90,7 +90,10 @@ class ProjectsController extends Controller
      */
     public function edit($id)
     {
-        
+        $data['page_title']="Edit Project details";
+        $project=Project::findOrFail($id);
+        $partners=Partner::all();
+        return view('admin.projects.edit',$data)->with(compact('project','partners'));
     }
 
     /**
@@ -102,7 +105,36 @@ class ProjectsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data=$request->all();
+   
+        if ($request->hasFile('image')) {
+
+            $image_tmp = $request->file('image');
+            if ($image_tmp->isValid()) {
+                // Get Image Extension
+                $extension = $image_tmp->getClientOriginalExtension();
+                // Generate New Image Name
+                $image = rand(111, 99999) . '.' . $extension;
+                $ImagePath = 'backend/uploads/'.$image;
+                // Upload the Image
+                Image::make($image_tmp)->save($ImagePath);
+               
+            }
+        } else {
+            $image= "";
+            $ImagePath = "";
+            
+        }
+      $data['image']=$image;
+      $partner = Project::findOrFail($id);
+      $status=$partner->fill($data)->save();
+
+     if($status){
+        Session::flash('success_message', 'Project updated successfully');
+        return redirect()->route('projects.index');
+     }else{
+        return back()->with('error','operation failed,lease try again.');
+     }
     }
 
     /**
@@ -149,7 +181,9 @@ class ProjectsController extends Controller
         <button class="btn btn-pink btn btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Action
         <span class="caret"></span></button>
         <ul class="dropdown-menu">
-        <li><a style="cursor:pointer;" data-title="Edit" class="reject-modal" data-url="' . $edit_url . '">Edit Partner</a></li>
+        <li><a style="cursor:pointer;" data-title="Edit" href="' . $edit_url . '">Edit Project</a></li>
+        <li><div class="dropdown-divider"></div></li>
+        <li><a  style="cursor:pointer;" class="reject-modal" data-title="Show projects" data-url="' . $view_url . '">View Partner</a></li>
         </ul>
         </div> ';
 

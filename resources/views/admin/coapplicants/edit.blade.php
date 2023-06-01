@@ -7,7 +7,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <a href="<?=route('partners.index')?>" class="btn btn-sm btn-info"><span class="fa fa-bars">View List </span></a>
+            <a href="<?=route('valuechains.index')?>" class="btn btn-sm btn-info"><span class="fa fa-bars">View List </span></a>
             <a href="" class="btn btn-sm btn-danger"><span class="fa fa-download"><span>Upload Data</a>
           </div>
           <div class="col-sm-6">
@@ -36,13 +36,14 @@
               <!-- form start -->
              
               
-              <form action="{{route('coapplicats.update',$coapplicant->id)}}" method="post" enctype="multipart/form-data">@csrf
-               @method('put')
+              <form action="{{route('coapplicants.update',$coapplicant->id)}}" method="post" enctype="multipart/form-data">@csrf
+                @method('put')
+    
                 <div class="card-body">
                     <div class="row">
                   <div class="form-group col-md-4">
-                    <label for="">Partners Name</label>
-                    <input type="text" name="title" class="form-control" id="" @error('title') is-invalid @enderror placeholder="Enter Category Name" required value="{{$partner->title}}">
+                    <label for="">Co-Applicant Name</label>
+                    <input type="text" name="title" class="form-control" id="" @error('title') is-invalid @enderror placeholder="Enter Category Name" required value="{{$coapplicant->title}}">
                     <span style="color: red" >{{$errors->first('title')}}</span>
                   
                 
@@ -53,27 +54,35 @@
                   </div>
                   <div class="form-group col-md-4">
                     <label for="">website Url</label>
-                   <input type="text" class="form-control" name="url" required placeholder="partner's website url" value="{{$partner->url}}">
+                   <input type="text" class="form-control" name="url" required placeholder="partner's website url" value="{{$coapplicant->url}}">
                   </div>
                 </div>
                
 
                 <div class="row">
                     <div class="col-md-12" class="form-control">
-                        <label for="">Partners Description</label>
-                        <textarea id="summernote" name="description"  required>{{$partner->description}}</textarea>
+                        <label for="">Co-Applicant Description</label>
+                        <textarea id="summernote" name="description"  required>{{$coapplicant->description}}</textarea>
                     </div>
                 </div>
 <br>
                 <div class="row">
                     <div class="col-md-12" class="form-control">
-                        <label for="">Projects Overview</label>
-                        <textarea id="meme" name="project_overview" required>{{$partner->project_overview}}</textarea>
+                        <label for="">Co-Applicant Mandate</label>
+                        <textarea id="meme" name="mandate" required>{{$coapplicant->mandate}}</textarea>
                     </div>
                 </div>
+                <br>
+                <div class="row">
+                  <div class="col-md-12" class="form-control">
+                      <label for="">Co-Applicant Relationship to AgriFi CS APP</label>
+                      <textarea id="relationship" name="relationship"  required>{{$coapplicant->relationship}}</textarea>
+                  </div>
+              </div>
+
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-info">Update </button>
+                  <button type="submit" class="btn btn-info">Update</button>
                 </div>
               </form>
             </div>
@@ -99,6 +108,7 @@
     $(document).ready(function() {
   $('#summernote').summernote();
   $('#meme').summernote();
+  $('#relationship').summernote();
 });
 </script>
 @endpush

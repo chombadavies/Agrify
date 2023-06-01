@@ -48,7 +48,7 @@
                       <br>
                       <div class="container meme card-success card-outline" style="background-color:#f1f7fd;">
                         <br>
-                        <p><b><input type="button" value="About {{$coapplicant->title}}" style="cursor:e-resize"></b>  {!!$coapplicant->description!!}</p>
+                        <p><b><input type="button" value="{{$coapplicant->title}}" style="cursor:e-resize"></b>  {!!$coapplicant->description!!}</p>
                         <br>
                       </div>
 
@@ -67,7 +67,7 @@
                    <div class="col-md-6">
                       <div class="container meme card-success card-outline" >
                         <br>
-                        <p><b> <input type="button" value="Role of :"> </b>{!!$coapplicant->relationship!!}</p>
+                        <p><b> <input type="button" value="Mandate :"> </b>{!!$coapplicant->relationship!!}</p>
                       </div> 
                     </div>
                     </div>

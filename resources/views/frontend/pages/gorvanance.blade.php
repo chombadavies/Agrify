@@ -43,14 +43,18 @@
             </div>
             <div class="col-lg-5 pl-lg-5 text-center d-none d-lg-block">
                     <img src="{{asset('frontend/img/0V2A8553.jpg')}}" alt="" class="img-fluid" width="400" height="350" style="border-radius:14px">
+                   <div> <span ><i>members of Program Steering Committee</i> </span></div>
             </div>
         </div>
+        <br>
         <!-- /row -->
-        <div class="row justify-content-center align-items-center">
+        <div class="row justify-content-center ">
             <div class="col-lg-5 pr-lg-5 text-center d-none d-lg-block">
-                    <img src="{{asset('frontend/img/20221206_093848.jpg')}}" alt="" class="img-fluid" width="400" height="350" style="border-radius:14px">
+                    <img src="{{asset('frontend/img/20221206_093848.jpg')}}" alt="" class="img-fluid" width="380" height="280"  style="border-radius:14px">
+                    <div> <span ><i>members of Program Steering Committee</i> </span></div>
+                    
             </div>
-            <div class="col-lg-5">
+            <div class="col-lg-6">
                 <div class="box_about" style="text-align: justify;">
                     <p class="lead"> <b> <strong>b.	Project Implementation Committee (PIC)</strong></b></p>
                     <p>A PIC chaired by the Director- General KALRO is made up of the PCU, one Deputy Director General, a representative of implementing partners (on rotating basis), 
@@ -61,9 +65,11 @@
                 </div>
             </div>
         </div>
+        <br>
         <!-- /row -->
         <div class="row justify-content-center align-items-center" style="background-color: #f1f7fd;border-radius:14pt">
-            <div class="col-lg-5">
+          <br>
+            <div class="col-lg-7">
                 <div class="box_about" style="text-align: justify;">
                   
                     <p class="lead"><b><strong>c.Project Coordination Unit</strong></b></p>
@@ -81,8 +87,11 @@
                 </div>
 
             </div>
+            <br>
             <div class="col-lg-5 pl-lg-5 text-center d-none d-lg-block">
                     <img src="{{asset('frontend/img/20230316_125323.jpg')}}" alt="" class="img-fluid" width="380" height="318" style="border-radius:14px">
+                    <div> <span ><i>Members of Project Coordination Unit (PCU)</i> </span></div>
+                   
             </div>
         </div>
               <!-- /row -->

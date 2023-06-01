@@ -35,13 +35,13 @@
                       <div class="" style="display:flex;justify-content:center">
                         <a href="{{$partner->url}}" target="blank"> 
                          <img src="{{asset('backend/uploads/'.$partner->image)}}" class="img-fluid" alt="" height="80"><br></div>
-                         <div style="display:flex;justify-content:center">
+                         <div >
                              <span>{{$partner->title}}</span></a>
                              
                          </div>
                       <br>
                       <div class="container">
-                        <p><b> Introduction : </b>{!!$partner->description!!}</p>
+                        <p>{!!$partner->description!!}</p>
                         
                       </div>
                       <div class="container">

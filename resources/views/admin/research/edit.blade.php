@@ -80,7 +80,7 @@
 
                       <div class="form-group col-md-4">
                         <label for="exampleInputEmail1">Principal Researcher</label>
-                       <input type="text" class="form-control" name="principal_reseacher" required>
+                       <input type="text" class="form-control" name="principal_researcher" required>
                       </div>
 
                   </div>
