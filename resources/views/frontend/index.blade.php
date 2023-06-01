@@ -213,7 +213,7 @@
            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
               <div class="icon"> <i class="bx bx-video-recording"></i></div>
-              <h4><a href="{{route('media')}}">Medias </a></h4>
+              <h4><a href="{{route('media')}}">Media </a></h4>
               <p style="text-align: justify"> Access a wide range of multimedia content, 
                 including images, videos, and press releases, showcasing our KALRO's latest news, updates, and events.</p>
             </div>

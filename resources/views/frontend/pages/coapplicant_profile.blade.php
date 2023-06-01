@@ -60,14 +60,14 @@
                   <div class="col-md-6">
                       <div class="container meme card-success card-outline">
                         <br>
-                        <p><b> <input type="button" value=" Co-Applicants Mandate :" style="margin-left: 0"></b>{!!$coapplicant->mandate!!}</p>
+                        <p><b> </b>{!!$coapplicant->mandate!!}</p>
                       </div> 
 
                     </div>
                    <div class="col-md-6">
                       <div class="container meme card-success card-outline" >
                         <br>
-                        <p><b> <input type="button" value="Relationship To AgriFI CS APP Project :"> </b>{!!$coapplicant->relationship!!}</p>
+                        <p><b> <input type="button" value="Role of :"> </b>{!!$coapplicant->relationship!!}</p>
                       </div> 
                     </div>
                     </div>

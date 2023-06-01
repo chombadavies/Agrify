@@ -35,8 +35,9 @@
               
                 <div class="col-lg-4 pl-lg-5 text-center d-none d-lg-block">
                   <a href="{{route('coapplicant',$coapplicant->id)}}">
-                  <img src="{{asset('backend/uploads/'.$coapplicant->image)}}" alt="" class="img-fluid" style="border-radius:14px;border:5px solid #000000; padding:3px; margin:5px" height="30">
-                  <span>{{$coapplicant->title}}</span>
+                  <img src="{{asset('backend/uploads/'.$coapplicant->image)}}" alt="" class="img-fluid"  height="30">
+                  <div> <span>{{$coapplicant->title}}</span></div>
+                 
                 {{-- <div>{{strip_tags(str_limit($coapplicant->title,$limit=110,$end='...'))}}</div> --}}
                 </a>
                   

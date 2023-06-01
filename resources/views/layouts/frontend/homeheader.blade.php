@@ -99,12 +99,13 @@
           </ul>
         </li>
 
-        <li class="dropdown"><a href="#"><span>Upscalling</span> <i class="bi bi-chevron-down"></i></a>
+        <li class="dropdown"><a href="#"><span>Technology Transfer</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
 
-            <li><a class="nav-link" href="{{route('partners')}}">Partner Profiles</a></
+            <li><a class="nav-link" href="{{route('partners')}}">Partner Profiles</a></li>
+              <li><a class="nav-link" href="{{route('technology_models')}}">Technology and Commercialization</a></li>
             <li><a class="nav-link" href="{{route('achievements')}}">Achievement</a></li>
-            <li><a class="nav-link" href="{{route('technology_models')}}">Technology and Commercialization</a></li>
+
             <li><a class="nav-link" href="{{route('impact.areas')}}">Impact Stories </a></li>
              </ul>
        </li>

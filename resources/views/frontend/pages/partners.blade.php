@@ -31,7 +31,7 @@
       <div class="meme card-success card-outline">
                     <br>
                     <div style="padding: 40px;background-color:#f1f7fd;border-radius:24px">
-                  <input type="button" value="Partners Mandate" style="cursor:ew-resize">
+                  {{-- <input type="button" value="Partners Mandate" style="cursor:ew-resize"> --}}
                       <p >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
                         software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                         <div  style="margin-left: 40% ">
@@ -46,7 +46,7 @@
               
                 <div class="col-lg-4 pl-lg-5 text-center d-none d-lg-block">
                   <a href="{{route('partner',$partner->id)}}">
-                  <img src="{{asset('backend/uploads/'.$partner->image)}}" alt="" class="img-fluid" style="border-radius:14px;border:5px solid #000000; padding:3px; margin:5px;height:120" >
+                  <img src="{{asset('backend/uploads/'.$partner->image)}}" alt="" class="img-fluid"  >
                   <div>
                     <span>{{$partner->title}}</span></a>
                   </div>

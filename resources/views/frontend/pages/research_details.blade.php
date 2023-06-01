@@ -34,22 +34,22 @@
 
                       
                       <div style="display: flex;justify-content:center;border-radius: 12px;">
-                        <img src="{{asset('frontend/img/hero-bg.jpg')}}" alt="" height="350" width="100%" style="border-radius: 12px;">
+                        <img src="{{asset('backend/uploads/'.$research_activity->image)}}" alt="" height="350" width="100%" style="border-radius: 12px;">
                       </div>
                       <br>
                       <div class="container">
-                        <p><b>Research Details $ Objectives: </b>{!!$research_activity->description!!}</p>
+                        <p><b>Research Centre: </b>{!!$research_activity->center!!}</p>
+                        <p><b> principal Researcher : </b>{!!$research_activity->principal_researcher!!}</p> <br>
+                        <p><b>Research Background: </b>{!!$research_activity->description!!}</p>
                         
                       </div>
 
                       <div class="container">
-                        <p><b>Research Activities : </b>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-                           </p><p> The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, 
-                             as opposed to using 'Content here, content here', making it look like readable English.</p>
+                        <p><b>Research Objectives: </b>{!!$research_activity->objectives!!}</p>
                         
                       </div>
                       <div class="container">
-                        <p><b>Innovations : </b></p>
+                        <p><strong><b>Achievements:</b></strong></p>
                         
                         <div class="row">
                             <figure class="effect-sarah" style="border-radius: 12px;height:182px!important">
@@ -121,7 +121,7 @@
                                   <a href="{{route('reseach_details',$item->id)}}">
                               <figure class="effect-sarah" style="border-radius: 12px;height:182px!important">
                           
-                                <img alt="logo" src="{{asset('frontend/img/hero-bg.jpg')}}" style="border-radius: 12px;"/>
+                                <img alt="logo" src="{{asset('backend/uploads/'.$item->image)}}" style="border-radius: 12px;"/>
                              
                                     <figcaption>
                                         <h2>{{$item->alias}}<span></span></h2>

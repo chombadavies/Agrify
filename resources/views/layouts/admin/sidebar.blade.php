@@ -164,7 +164,7 @@
             <a href="" class="nav-link">
               <i class="nav-icon fas fa-bars"></i>
               <p>
-               Research Models
+               Research Activities
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
@@ -172,7 +172,7 @@
               <li class="nav-item">
                 <a href="{{route('research.create')}}" class="nav-link">
                   <i class="fas fa-edit nav-icon"></i>
-                  <p>Add Research Model
+                  <p>Add Research Activity
 
                   </p>
                 </a>
@@ -180,7 +180,7 @@
               <li class="nav-item">
                 <a href="{{route('research.index')}}" class="nav-link">
                   <i class="fas fa-table nav-icon"></i>
-                  <p>Research Models
+                  <p>Research Activities
 
                     <span class="right badge badge-info"></span>
                   </p>

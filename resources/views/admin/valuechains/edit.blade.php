@@ -36,29 +36,29 @@
               <!-- form start -->
              
               
-              <form action="{{route('valuechains.update',$valuechain->id)}}" method="post" enctype="multipart/form-data">@csrf
-               @method('put')
+              <form action="{{route('valuechains.store')}}" method="post" enctype="multipart/form-data">@csrf
+    
                 <div class="card-body">
                     <div class="row">
                   <div class="form-group col-md-4">
                     <label for="exampleInputEmail1">ValueChain Title</label>
-                    <input type="text" name="title" class="form-control" id="" @error('title') is-invalid @enderror placeholder="Enter Category Name" required value="{{$valuechain->title}}">
+                    <input type="text" name="title" class="form-control" id="" @error('title') is-invalid @enderror placeholder="Enter Category Name" required value="{{old('title')}}">
                     <span style="color: red" >{{$errors->first('title')}}</span>
                   
                 
                   </div>
                   <div class="form-group col-md-4">
                     <label for="exampleInputEmail1">Image</label>
-                   <input type="file" class="form-control" name="image" required value="{{$valuechain->image}}">
+                   <input type="file" class="form-control" name="image" required>
                   </div>
                   <div class="form-group col-md-4">
                     <label for="">Value Chain Category</label>
                   <select name="category" class="form-control">
                     <option selected disabled>Select Category</option>
-                    <option value="crops"  {{$valuechain->category =='crops'?'selected': ''}}>Crops</option>
-                    <option value="livestock"{{$valuechain->category =='livestock'?'selected': ''}}>Livestock</option>
-                    <option value="aquaculture"{{$valuechain->category =='aquaculture'?'selected': ''}}>Aquaculture</option>
-                    <option value="apiculture"{{$valuechain->category =='apiculture'?'selected': ''}}>Apiculture</option>
+                    <option value="crops">Crops</option>
+                    <option value="livestock">Livestock</option>
+                    <option value="aquaculture">Aquaculture</option>
+                    <option value="apiculture">Apiculture</option>
                   </select>
                   </div>
                 </div>
@@ -67,23 +67,23 @@
                 <div class="row">
                     <div class="col-md-12" class="form-control">
                         <label for="">ValueChain Introduction</label>
-                        <textarea id="summernote" name="introduction"  required>{{$valuechain->introduction}}</textarea>
+                        <textarea id="summernote" name="introduction"  required></textarea>
                     </div>
                 </div>
 <br>
                 <div class="row">
                     <div class="col-md-12" class="form-control">
                         <label for="">ValueChain Description</label>
-                        <textarea id="meme" name="description" required>{{$valuechain->description}}</textarea>
+                        <textarea id="meme" name="description" required></textarea>
                     </div>
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-info">Update</button>
+                  <button type="submit" class="btn btn-info">Submit</button>
                 </div>
               </form>
             </div>
-          </div>
+            </div>
             <!-- /.card -->
             </div>
           <!--/.col (left) -->

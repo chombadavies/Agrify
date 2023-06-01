@@ -113,109 +113,166 @@
                                   </svg>
                               </div>
                               <div class="col-md-6 col-sm-6 col-xs-12">
-                                  <div class="section-headline text-center">
-                                      <h3>Select a county</h3>
-                                  </div>
-                                  <div style="text-align: center;margin: 10px;">
-                                      <select id="CountySelect" style="font-size: large; width: 100%; border-radius: 5px; height: 45px;" onchange="CountyChange()">
-                                          <option value="">Please select...</option>
-                                          <optgroup label="LOCAL">
-                                              <option value="Kiambu">Kiambu</option>
-                                              <option value="Kirinyaga">Kirinyaga</option>
-          
-                                          </optgroup>
-                                      </select>
-                                  </div>
-          
-                                  <div id="info-Kiambu" class="county-item" style="display:none">
-                                      <div class="county-head">Kiambu</div>
-                                      <p>Project: AgriFI CS AP Project</p>
-                                      <div class="county-head">Partner (s)</div>
-                                      <p>Anglican Development Services (ADS) - Mt. Kenya</p>
-                                      <div class="county-head">Project Value Chains</div>
-                                      <div class="county-body">
-                                          <div class="row">
-                                              <div class="col-12">
-                                                  <div class="county-box">
-                                                      <img src="{{asset('utmap/images/chicken.gif')}}" />
-                                                      Local Chicken    
-                                                  </div>
-          
-                                              </div>
-                                          </div>
-                                      </div>
-                                      
-                                  </div>
-          
-                                  <div id="info-Kirinyaga" class="county-item" style="display:none">
-                                      <div class="county-head">Kirinyaga</div>
-                                      <p>Project: AgriFI CS AP Project</p>
-                                      <div class="county-head">Partner (s)</div>
-                                      <p>Catholic Diocese of Murang'a - Caritas</p>
-                                      <div class="county-head">Project Value Chains</div>
-                                      <div class="county-body">
-                                          <div class="row">
-                                              <div class="col-12">
-                                                  <div class="county-box">
-                                                      <img src="{{asset('utmap/images/aquaculture.gif')}}" />
-                                                      Fish   
-                                                  </div>
-          
-                                              </div>
-                                          </div>
-                                      </div>
-             
-                                  </div>
-          
-          
-          
-          
-                                     
-                                  </div>
-          
-          
-          
-          
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+                        <div class="section-headline text-center">
+                            <h3>Select a county</h3>
+                        </div>
+                        <div style="text-align: center;margin: 10px;">
+                            <select id="CountySelect" style="font-size: large; width: 100%; border-radius: 5px; height: 45px;" onchange="CountyChange()">
+                                <option value="">Please select...</option>
+                                <optgroup label="LOCAL">
+                                    <option value="Baringo">Baringo</option>
+                                    <option value="Bomet">Bomet</option>
+                                    <option value="Homabay">Homabay</option>
+                                    <option value="Kiambu">Kiambu</option>
+                                    <option value="Kirinyaga">Kirinyaga</option>
+
+                                </optgroup>
+                            </select>
+                        </div>
 
 
+
+                        <div id="info-Baringo" class="county-item" style="display:none">
+                            <div class="county-head">Baringo</div>
+                            <p>Project: AgriFI CS AP Project</p>
+                            <div class="county-head">Partner (s)</div>
+                            <p>Caritas Catholic Dioceses of Nyahururu , CARITAS Nyahururu</p>
+                            <div class="county-head">Project Value Chains</div>
+                            <div class="county-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="county-box">
+                                            <img src="{{asset('utmap/images/sorghum.gif')}}" />
+                                            Sorghum
+                                        </div>
+                                        <div class="county-box">
+                                            <img src="{{asset('utmap/images/beans.gif')}}" />
+                                            Beans
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+   
+                        </div>
+
+
+
+                        <div id="info-Bomet" class="county-item" style="display:none">
+                            <div class="county-head">Bomet</div>
+                            <p>Project: AgriFI CS AP Project</p>
+                            <div class="county-head">Partner (s)</div>
+                            <p>Farming Systems Kenya (FSK), Anglican Development Services (ADS) South Rift</p>
+                            <div class="county-head">Project Value Chains</div>
+                            <div class="county-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="county-box">
+                                            <img src="{{asset('utmap/images/chicken.gif')}}" />
+                                            Chicken
+                                        </div>
+                                        <div class="county-box">
+                                            <img src="{{asset('utmap/images/beans.gif')}}" />
+                                            Beans
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+   
+                        </div>
+
+
+
+                        <div id="info-Homabay" class="county-item" style="display:none">
+                            <div class="county-head">Homabay</div>
+                            <p>Project: AgriFI CS AP Project</p>
+                            <div class="county-head">Partner (s)</div>
+                            <p>Support for Tropical Initiative in poverty alleviation (STIPA) , Blue Cross Nyatike (BCN)</p>
+                            <div class="county-head">Project Value Chains</div>
+                            <div class="county-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="county-box">
+                                            <img src="{{asset('utmap/images/chicken.gif')}}" />
+                                            Chicken
+                                        </div>
+                                        <div class="county-box">
+                                            <img src="{{asset('utmap/images/beans.gif')}}" />
+                                            Sorghum
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+   
+                        </div>
+
+
+
+                        <div id="info-Kiambu" class="county-item" style="display:none">
+                            <div class="county-head">Kiambu</div>
+                            <p>Project: AgriFI CS AP Project</p>
+                            <div class="county-head">Partner (s)</div>
+                            <p>Anglican Development Services (ADS) - Mt. Kenya</p>
+                            <div class="county-head">Project Value Chains</div>
+                            <div class="county-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="county-box">
+                                            <img src="{{asset('utmap/images/chicken.gif')}}" />
+                                            Local Chicken    
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <div id="info-Kirinyaga" class="county-item" style="display:none">
+                            <div class="county-head">Kirinyaga</div>
+                            <p>Project: AgriFI CS AP Project</p>
+                            <div class="county-head">Partner (s)</div>
+                            <p>Catholic Diocese of Murang'a - Caritas</p>
+                            <div class="county-head">Project Value Chains</div>
+                            <div class="county-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="county-box">
+                                            <img src="{{asset('utmap/images/aquaculture.gif')}}" />
+                                            Fish   
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+   
+                        </div>
+
+
+
+                
+
+
+                           
+                        </div>
+
+
+
+
+                    </div>
+                </div>
             </div>
-           
-            <!-- /row -->
-
-
-
-     
-      
+        </div>
     </div>
 
-    </div>
-  </section><!-- End Services Section -->
-
-
-
-</main><!-- End #main -->
+</main>
 @endsection
 
 @section('name')
     <!-- Vendor JS Files -->
-    <script src="{{asset('utmap/js/jquery.min.js')}}"></script>
-    <script src="{{asset('utmap/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{asset('utmap/js/jquery.easing.min.js')}}"></script>
-    <script src="{{asset('utmap/js/validate.js')}}"></script>
-    <script src="{{asset('utmap/js/jquery.appear.js')}}"></script>
-    <script src="{{asset('utmap/js/jquery.knob.js')}}"></script>
-    <script src="{{asset('utmap/js/jquery.validate.min.js')}}"></script>
-    <script src="{{asset('utmap/js/parallax.js')}}"></script>
-    <script src="{{asset('utmap/js/wow.min.js')}}"></script>
-    <script src="{{asset('utmap/js/isotope.pkgd.min.js')}}"></script>
-    <script src="{{asset('utmap/js/jquery.nivo.slider.js')}}"></script>
-    <script src="{{asset('utmap/js/owl.carousel.min.js')}}"></script>
-    <script src="{{asset('utmap/js/venobox.min.js')}}"></script>
+   
   
     <!-- Template Main JS File -->
     <script src="{{asset('utmap/js/main.js')}}"></script>

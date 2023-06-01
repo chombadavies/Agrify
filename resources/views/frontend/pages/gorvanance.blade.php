@@ -24,7 +24,7 @@
     <div class="container">
 
       <div class="section-title">
-        <h2>AgriFI CS APP Kenya Organizational Structure</h2>
+        <h2>AgriFI CS APP Management Structure</h2>
       </div>
 
       <div class="container margin_60_35 add_bottom_30">
@@ -33,7 +33,7 @@
             <div class="col-lg-7">
                 <div class="box_about" style="text-align: justify;">
                     <h5>The project implementation is steered at the following levels:</h5>
-                    <p class="lead"> <b>a.	AgriFI Program Steering Committee </b></p>
+                    <p class="lead"> <b> <strong> a.	AgriFI Program Steering Committee </strong> </b></p>
                     <p>The CS APP reports to the overall Kenya AgriFI Steering Committee (AKSC). AKSC is chaired by the Cabinet Secretary Ministry of Agriculture and Livestock Development (MoALF) with membership drawn from MoALF, 
                         Kenya Plant Health Inspectorate Service (KEPHIS), Kenya Private Sector Alliance (KEPSA); Ministry of Forestry and Environment; Kenya National Farmers Federation (KENAFF) and Ministry of Industry and Trade. </p>
                         <p> All the four AgriFI components implementing organizations (Danish Embassy, Self Help Africa, KALRO and German Corporation for International Cooperation (GIZ)). The Delegation of the European Union to Kenya has observer status to the AKSC.
@@ -52,7 +52,7 @@
             </div>
             <div class="col-lg-5">
                 <div class="box_about" style="text-align: justify;">
-                    <p class="lead"> <b> b.	Project Implementation Committee (PIC)</b></p>
+                    <p class="lead"> <b> <strong>b.	Project Implementation Committee (PIC)</strong></b></p>
                     <p>A PIC chaired by the Director- General KALRO is made up of the PCU, one Deputy Director General, a representative of implementing partners (on rotating basis), 
                         representative of relevant local University, MoALF, AgriFI Focal Point (Coordinator), 
                         and Private sector representative.  The EC Delegation and the National Treasury have representative(s) as observers.
@@ -66,7 +66,7 @@
             <div class="col-lg-5">
                 <div class="box_about" style="text-align: justify;">
                   
-                    <p class="lead">c.	Project Coordination Unit.</p>
+                    <p class="lead"><b><strong>c.Project Coordination Unit</strong></b></p>
                     <p>CS APP has a project coordination unit, which is responsible for the day to day operation of the project. The unit is lean with the following full time dedicated staff; 
                         i.	National Project Coordinator
                         ii.	Agribusiness Officer
@@ -93,8 +93,7 @@
                 <div class="col-lg-7">
                     <div class="box_about" style="text-align: justify;">
                         <br>
-                        <h5><u> Oversight, Monitoring, Management Information and Reporting </u></h5>
-                        <p class="lead"> <b> Implementation:For a period of five years.</b></p>
+                        <h5><b><strong>Oversight, Monitoring, Management Information and Reporting</strong></b></h5>
                         <p><b>Implementation:</b> All project activities are planned, coordinated, overseen and monitored by the Project Coordination Unit (PCU) under Director-General KALRO
                              and the guidance of the Steering committee. A detailed work plan, is prepared by the PCU and updated annually and follow the time 
                              frame outlined in the Project Work plan and Budget.</p> <p>
@@ -115,7 +114,7 @@
                     <p><b>Audits and reviews</b></p>
                     <p><b> Financial Verification:</b> Is carried out by the identified audit firm according to EU Financial Regulations, Rules and Directives and Grant Contract Guidelines. </p>
                     <p><b> Mid- term Review: </b>A mid-term review of the CS APP was undertaken after 2 years of implementation. </p>
-                    <p><b> A Final Project Review will :</b> will be carried out by an external review team after completion of the CS APP. </p>
+                    <p><b> A Final Project Review :</b> Will be carried out by an external review team after completion of the CS APP. </p>
                     <p><b> Reportig schedule :</b> The Project Coordinator prepares narrative progress reports every six months, and at an end of project. These are submitted to the 
                         EU by the Director General, KALRO. Each of the report consist 
                         of a narrative section and a financial section and conforms to the format for reporting on grants from the EU. Each report provides a full account of all aspects of 

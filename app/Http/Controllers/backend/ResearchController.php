@@ -8,6 +8,12 @@ use App\Models\Research;
 use App\Models\Category;
 use App\Models\ImpactArea;
 
+use Intervention\Image\Facades\Image;
+use Yajra\Datatables\Datatables;
+use Illuminate\Support\Str;
+use Session;
+use DB;
+
 
 class ResearchController extends Controller
 {
@@ -18,7 +24,9 @@ class ResearchController extends Controller
      */
     public function index()
     {
-        return "we landed on the Research Index";
+        $research_activities =Research::all();
+        $data['page_title']='Research Activities';
+        return view('admin.research.index',$data)->with(compact('research_activities'));
     }
 
     /**
@@ -46,6 +54,42 @@ class ResearchController extends Controller
         $data=$request->all();
         $question=Research::create($data);
         return redirect()->route('research.index')->with('success','research added successfully');
+
+
+
+        $data =$request->all();
+
+        if ($request->hasFile('image')) {
+
+            $image_tmp = $request->file('image');
+            if ($image_tmp->isValid()) {
+                // Get Image Extension
+                $extension = $image_tmp->getClientOriginalExtension();
+                // Generate New Image Name
+                $image = rand(111, 99999) . '.' . $extension;
+                $ImagePath = 'backend/uploads/'.$image;
+                // Upload the Image
+                Image::make($image_tmp)->resize(300,280)->save($ImagePath);
+               
+            }
+        } else {
+            $image = "";
+            $ImagePath= "";
+            
+        }
+
+        $data=$request->all();
+        $data['image']=$image;
+      
+    //    dd($data);
+        $status=Research::create($data);
+
+        if($status){
+         
+            return redirect()->route('research.index')->with('success','research added successfully');
+        }else{
+            return back()->with('error','failed try again');
+        }
     }
 
     /**
@@ -67,7 +111,11 @@ class ResearchController extends Controller
      */
     public function edit($id)
     {
-        //
+     
+        $research_activity=Research::findOrFail($id);
+        $categories=Category::all();
+        $data['page_title']='Edit Research Activity';
+     return view('admin.research.edit',$data)->with(compact('research_activity','categories'));
     }
 
     /**
@@ -79,7 +127,36 @@ class ResearchController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data=$request->all();
+   
+        if ($request->hasFile('image')) {
+
+            $image_tmp = $request->file('image');
+            if ($image_tmp->isValid()) {
+                // Get Image Extension
+                $extension = $image_tmp->getClientOriginalExtension();
+                // Generate New Image Name
+                $image = rand(111, 99999) . '.' . $extension;
+                $ImagePath = 'backend/uploads/'.$image;
+                // Upload the Image
+                Image::make($image_tmp)->resize(300,280)->save($ImagePath);
+               
+            }
+        } else {
+            $image= "";
+            $ImagePath = "";
+            
+        }
+      $data['image']=$image;
+      $valuechain = Research::findOrFail($id);
+      $status=$valuechain->fill($data)->save();
+
+     if($status){
+        Session::flash('success_message', 'Research Activity updated successfully');
+        return redirect()->route('research.index');
+     }else{
+        return back()->with('error','operation failed,lease try again.');
+     }
     }
 
     /**
@@ -103,4 +180,41 @@ class ResearchController extends Controller
         $question=ImpactArea::create($data);
         return redirect()->route('research.index')->with('success','research added successfully');
     }
+
+
+    public function fetchResearch()
+    {
+        $models = DB::table('research')
+        ->join('categories', 'research.category_id', '=', 'categories.id')
+        ->select('research.id', 'categories.title', 'research.alias as meme','research.description','research.image as photo','research.status')
+        ->get();
+
+        return Datatables::of($models)
+        ->rawColumns(['action','image','description'])
+        ->editColumn('image',function($model){
+         $name=$model->photo;
+         $path=asset('backend/uploads/'.$name);
+        return '<img src="'.$path.'" width="70px;" height="70px;"  alt="category image" >';
+        })
+        ->editColumn('description',function($model){
+            $text=$model->description;
+            $description=str_limit(strip_tags($text),$limit=50,$end='...');
+             return $description;
+           })
+            ->addColumn('action', function ($model) {
+                $edit_url = route('research.edit',$model->id);
+                
+             return '<div class="dropdown ">
+        <button class="btn btn-pink btn btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Action
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+        <li><a style="cursor:pointer;" data-title="Edit" href="' . $edit_url . '">Edit Research Actitvity</a></li>
+        </ul>
+        </div> ';
+
+            })
+            ->make(true);
+    }
+
+  
 }

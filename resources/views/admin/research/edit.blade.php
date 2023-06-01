@@ -36,23 +36,22 @@
               <!-- form start -->
              
               
-              <form action="{{route('research.store')}}" method="post" enctype="multipart/form-data">@csrf
-    
+              <form action="{{route('research.update',$research_activity->id)}}" method="post" enctype="multipart/form-data">@csrf
+    @method('put')
                 <div class="card-body">
                     <div class="row">
                   <div class="form-group col-md-4">
                     <label for="exampleInputEmail1">Research Title</label>
-                    <input type="text" name="title" class="form-control" id="" @error('title') is-invalid @enderror placeholder="Enter Category Name" required value="{{old('title')}}">
+                    <input type="text" name="title" class="form-control" id="" @error('title') is-invalid @enderror placeholder="Enter Research Title" required value="{{$research_activity->title}}">
                     <span style="color: red" >{{$errors->first('title')}}</span>
-                  
-                
                   </div>
 
                   <div class="form-group col-md-4">
-                    <label for="exampleInputEmail1">Image</label>
-                   <input type="file" class="form-control" name="image" required>
+                    <label for="exampleInputEmail1">Research Alias</label>
+                    <input type="text" name="alias" class="form-control" id="" @error('alias') is-invalid @enderror placeholder="Enter Research Alias" required value="{{$research_activity->alias}}">
+                    <span style="color: red" >{{$errors->first('alias')}}</span>
                   </div>
-                 
+
                   <div class="form-group col-md-4">
                     <label for=""> Research Activity Category</label>
                   <select name="category_id" class="form-control">
@@ -62,19 +61,47 @@
                    @endforeach
 
                   </select>
-                  </div>
+              </div>
+                 
                 </div>
+
+
+                <div class="row">
+
+                    <div class="form-group col-md-4">
+                        <label for="exampleInputEmail1">Image</label>
+                       <input type="file" class="form-control" name="image" required>
+                      </div>
+
+                      <div class="form-group col-md-4">
+                        <label for="exampleInputEmail1">Research Centre</label>
+                       <input type="text" class="form-control" name="center" required>
+                      </div>
+
+                      <div class="form-group col-md-4">
+                        <label for="exampleInputEmail1">Principal Researcher</label>
+                       <input type="text" class="form-control" name="principal_reseacher" required>
+                      </div>
+
+                  </div>
                
 <br>
                 <div class="row">
                     <div class="col-md-12" class="form-control">
                         <label for="">Research Description</label>
-                        <textarea id="meme" name="description" required></textarea>
+                        <textarea id="meme" name="description" required>{{$research_activity->description}}</textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12" class="form-control">
+                        <label for="">Research Objectives</label>
+                        <textarea id="mama" name="objectives" required>{{$research_activity->objectives}}</textarea>
                     </div>
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-info">Submit</button>
+                  <button type="submit" class="btn btn-info">Update</button>
                 </div>
               </form>
             </div>
@@ -100,6 +127,13 @@
     $(document).ready(function() {
   $('#summernote').summernote();
   $('#meme').summernote();
+});
+</script>
+
+<script>
+    $(document).ready(function() {
+  $('#summernote').summernote();
+  $('#mama').summernote();
 });
 </script>
 @endpush

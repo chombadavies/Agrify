@@ -233,7 +233,7 @@ return view('frontend.pages.contactus');
     }
 
     public function technologyModel(){
-        $data['page_title']='Technology and commercialization Models';
+        $data['page_title']='Technology Transfer and Commercialization Models';
 return view('frontend.pages.technology_model',$data);
     }
 
