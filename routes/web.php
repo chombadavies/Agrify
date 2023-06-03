@@ -32,6 +32,7 @@ Route::any('/impactarea_store',[App\Http\Controllers\backend\ResearchController:
 Route::resource('materials',App\Http\Controllers\backend\MaterialsController::class);
 Route::resource('research',App\Http\Controllers\backend\ResearchController::class);
 Route::any('/fetch_research',[App\Http\Controllers\backend\ResearchController::class, 'fetchResearch']);
+Route::resource('research_achievements',App\Http\Controllers\backend\AchiementsController::class);
 Route::resource('coapplicants',App\Http\Controllers\backend\CoapplicantsController::class);
 Route::any('/fetch_coapplicants',[App\Http\Controllers\backend\CoapplicantsController::class, 'fetchCoapplicants']);
 Route::any('/Dashboard','App\Http\Controllers\HomeController@Dashboard');

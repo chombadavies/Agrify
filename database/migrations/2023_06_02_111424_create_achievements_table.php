@@ -15,6 +15,9 @@ class CreateAchievementsTable extends Migration
     {
         Schema::create('achievements', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('research_id');
+            $table->text('description');
+            $table->enum('status',['ONgoing','Completed'])->default('Ongoing');
             $table->timestamps();
         });
     }

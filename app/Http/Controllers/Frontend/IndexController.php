@@ -227,9 +227,11 @@ return view('frontend.pages.contactus');
     public function research_Details($id){
 
         $research_activity=Research::findOrFail($id);
+        $achievements=$research_activity->achievements;
+
         $related=Research::where('category_id',$research_activity->category_id)->get();
        
-     return view("frontend.pages.research_details")->with(compact('research_activity','related'));
+     return view("frontend.pages.research_details")->with(compact('research_activity','related','achievements'));
     }
 
     public function technologyModel(){

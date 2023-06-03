@@ -53,53 +53,21 @@
                       </div>
                       <div class="container">
                         <p><strong><b>Achievements:</b></strong></p>
-                        
-                        {{-- <div class="row">
-                            <figure class="effect-sarah" style="border-radius: 12px;height:182px!important">
-                          
-                                <img alt="logo" src="{{asset('frontend/img/cashew.jpg')}}" style="border-radius: 12px;"/>
-                             
-                                    <figcaption>
-                                        <h2>Inovation Name<span></span></h2>
-                                        @php
-                                            $limit=str_limit($valuechain->introduction,$limit=110,$end='...');
-                                        @endphp
-      
-                                        <p>{!!$limit!!}</p>
-                                         
-                                    </figcaption>
-                                </figure>
-                                <figure class="effect-sarah" style="border-radius: 12px;height:182px!important">
-                          
-                                    <img alt="logo" src="{{asset('frontend/img/cashew.jpg')}}" style="border-radius: 12px;"/>
-                                 
-                                        <figcaption>
-                                            <h2>Inovation Name<span></span></h2>
-                                            @php
-                                                $limit=str_limit($valuechain->introduction,$limit=110,$end='...');
-                                            @endphp
-          
-                                            <p>{!!$limit!!}</p>
-                                             
-                                        </figcaption>
-                                    </figure>
-
-                                    <figure class="effect-sarah" style="border-radius: 12px;height:182px!important">
-                          
-                                        <img alt="logo" src="{{asset('frontend/img/cashew.jpg')}}" style="border-radius: 12px;"/>
-                                     
-                                            <figcaption>
-                                                <h2>innovation Name<span></span></h2>
-                                                @php
-                                                    $limit=str_limit($valuechain->introduction,$limit=110,$end='...');
-                                                @endphp
-              
-                                                <p>{!!$limit!!}</p>
-                                                 
-                                            </figcaption>
-                                        </figure>
-
-                        </div> --}}
+                        <div>
+                         @foreach ($research_activity->achievements as $achievement)
+                         <p>{!!$achievement->description !!}</p>
+                         <div>
+                          @if ($achievement->status == "Completed")
+                          <button class="btn btn-success">{!!$achievement->status!!}</button>
+                          @else
+                          <button class="btn btn-warning">{!!$achievement->status!!}</button>
+                          @endif
+                         
+                         </div>
+                         @endforeach
+                         
+                        </div>
+                  
                       </div>
 
 

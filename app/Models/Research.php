@@ -12,4 +12,7 @@ class Research extends Model
     public function Category(){
         return $this->belongsTo('App\Models\Category');
     }
+    public function achievements(){
+        return $this->hasMany('App\Models\Achievement');
+      }
 }

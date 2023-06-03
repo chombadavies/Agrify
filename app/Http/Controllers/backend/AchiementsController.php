@@ -4,6 +4,9 @@ namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Research; 
+use App\Models\Achievement;
+use Session;
 
 class AchiementsController extends Controller
 {
@@ -24,7 +27,9 @@ class AchiementsController extends Controller
      */
     public function create()
     {
-        //
+        $data['page_title']='create Research Achievement';
+        $research_activities=Research::all();
+        return view('admin.research.achievements',$data)->with(compact('research_activities'));
     }
 
     /**
@@ -35,7 +40,17 @@ class AchiementsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data=$request->all();
+     
+     $Achievement=Achievement::create($data);
+// dd($data);
+     if($Achievement){
+        Session::flash('success_message', ' added successfully');
+        return redirect()->route('research_achievements.create');
+     }else{
+        return back()->with('error','operation failed,lease try again.');
+     }
+
     }
 
     /**

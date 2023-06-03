@@ -186,6 +186,24 @@
                   </p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="{{route('research_achievements.create')}}" class="nav-link">
+                  <i class="fas fa-table nav-icon"></i>
+                  <p> Add Research Achievement
+
+                    <span class="right badge badge-info"></span>
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('research_achievements.index')}}" class="nav-link">
+                  <i class="fas fa-table nav-icon"></i>
+                  <p> Research Achievement
+
+                    <span class="right badge badge-info"></span>
+                  </p>
+                </a>
+              </li>
             
             </ul>
           </li>
