@@ -10,9 +10,9 @@
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
-      <h1>About AgriF CS APP</h1>
+      {{-- <h1>About AgriFI CS APP</h1> --}}
         <ol>
-          <li><a href="{{route('home')}}">Home</a></li>
+          <li style="margin-right:90%"><a href="{{route('home')}}">Home</a></li>
          
         </ol>
       </div>
@@ -31,9 +31,11 @@
         <div class="row justify-content-center align-items-center" style="background-color: #f1f7fd;border-radius:14pt">
             <div class="col-lg-5 pr-lg-5 text-center d-none d-lg-block">
                     <img src="{{asset('frontend/img/lounch.jpg')}}" alt="" class="img-fluid" width="400" height="350" style="border-radius:14px">
+                    <div> <span ><i>insert caption here</i> </span></div>
             </div>
             <div class="col-lg-7">
-                <div class="box_about" style="text-align: justify;">
+                <div class="box_about" style="text-align: justify;padding-top:10px">
+                
                     <p class="lead"> <b> <strong> About Kenya Agricultural and Livestock Research Organization (KALRO) </strong></b></p>
                  <p> <a href="https://www.kalro.org/" target="blank"> The Kenya Agricultural and Livestock Research Organization (KALRO), </a> is the premier research organization,
                      charged with the mandate of promoting, streamlining, coordinating, and regulating research in crops, 
@@ -47,7 +49,7 @@
             </div>
         </div>
         <br>
-        <div class="row justify-content-center align-items-center" style="text-align: justify;background-color: #f1f7fd;border-radius:14pt" >
+        <div class="row justify-content-center align-items-center" style="text-align: justify;background-color: #f1f7fd;border-radius:14pt;padding-top:10px" >
           <p class="lead"> <b><strong> About AgriFI Kenya Climate Smart Agricultural Productivity Project (AgriFI Kenya CS APP)</strong></b></p>
        <p>  The AgriFI Kenya support to KALRO for Climate Smart Agricultural Productivity Project (AgriFI Kenya CS APP),
            is a five-year project under the AgriFI Development Programme implemented by KALRO. This project is co-funded by 

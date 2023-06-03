@@ -9,10 +9,10 @@
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
-      <h1>Valuechains</h1>
+      <h1>Value Chains</h1>
         <ol>
           <li><a href="index.php">Home</a></li>
-          <li>valuechains</li>
+          <li>value Chains</li>
         </ol>
       </div>
 
@@ -31,7 +31,7 @@
                           <img alt="logo" src="{{asset('backend/uploads/'.$valuechain->image)}}" style="border-radius: 12px;"/>
                        
                               <figcaption>
-                                  <h2>{{$valuechain->title}}<span></span></h2>
+                                  <h5>{{$valuechain->title}}<span></span></h5>
                                   {{-- @php
                                       $limit=str_limit($valuechain->introduction,$limit=110,$end='...');
                                   @endphp

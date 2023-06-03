@@ -7,7 +7,7 @@
 	
     <div class="container margin_60">
         <div class="main_title">
-            <h2>Contact AgriFi Kenya</h2>
+            <h2>Contact AgriFi CS APP</h2>
             <p>Euismod phasellus ac lectus fusce parturient cubilia a nisi blandit sem cras nec tempor adipiscing rcu ullamcorper ligula.</p>
         </div>
         <div class="row justify-content-center">

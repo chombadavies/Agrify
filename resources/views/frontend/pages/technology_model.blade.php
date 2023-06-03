@@ -30,17 +30,18 @@
       <div class="container margin_60_35 add_bottom_30">
         <div class="row justify-content-center align-items-center" style="background-color: #f1f7fd;border-radius:14pt">
             <div class="col-lg-5 pr-lg-5 text-center d-none d-lg-block">
-                    <img src="{{asset('frontend/img/Technology Transfer Model_page-0001.jpg')}}" alt="" class="img-fluid" width="400" height="450" style="border-radius:14px">
+              <br>
+                    <img src="{{asset('frontend/img/Technology Transfer Model_page-0001.jpg')}}" alt="" class="img-fluid" width="400" height="500" style="border-radius:14px">
+                    <br>
             </div>
-            <div class="col-lg-7">
+            <div class="col-lg-6">
                 <div class="box_about">
-                    <p class="lead"> <b>Technology Model:</b></p>
+                    <p class="lead"> <b>Technology Transfter Model</b></p>
                    
-                   <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                     text ever since the 1500s, 
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              <p>The Technology Transfer Model was developed to support partners to effectively plan a pathway for disseminating technologies. The model demonstrates how KALRO technologies are disseminated and upscaled to the farmers through demonstration farms, Pastoral field schools, and Farmer field schools.</p> <p> The model helps to plan, identifying project sites, defining number of farmers that will be reached directly and indirectly, their location, and the strategies for mobilizing the farmers.</p>
                 </div>
             </div>
+            <br>
         </div>
         <br>
     
@@ -49,10 +50,9 @@
             <div class="col-lg-7">
                 <div class="box_about">
 
-                    <p class="lead"> <b>Commercialization Model:</b></p>
+                    <p class="lead"> <b>Commercialization Model</b></p>
                  
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-                         took a galley of type and scrambled it to make a type specimen book.</p>
+                      <p>The Commercialization Model was developed to support partners to develop a business plan for upscaling the technologies. The model outlines the value chain approach that include; the chain actors, and their functions.</p> <p> It shows how KALRO technologies are being commercialized through commercial multipliers of seed inputs, organization of the farmer to produce, aggregate, and participate in the commodity market. It also shows the extension and financial support services required.</p>
                     <img src="" alt="" h  class="">
                 </div>
             </div>

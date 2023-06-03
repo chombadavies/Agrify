@@ -5,9 +5,9 @@
       <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
     <div class="container">
-      <h1>AgriFi Kenya Climate Smart Agricutural Productivity Project</h1>
+      <h1 style="text-transform: none">AgriFI Climate Smart Agricutural Productivity Project</h1>
       <h2>Welcome to the Unified Technology Transfer Platform  </h2>
-      <a href="#about" class="btn-get-started scrollto">Get Started</a>
+      <a href="{{route('project_profile')}}" class="btn-get-started scrollto">Get Started</a>
     </div>
   </section><!-- End Hero -->
 
@@ -24,48 +24,54 @@
               <div class="row">
                 <div class="col-xl-2 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
+                    <a href="{{route('about')}}">
                     <i class="bx bx-store-alt"></i>
-                   <a href="{{route('about')}}"><h4>About us</h4></a>
+                   <h4>About Us</h4></a>
                     
                   </div>
                 </div>
                 <div class="col-xl-2 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
+                    <a href="">
                     <i class="bx bx-briefcase"></i>
       
-                    <a href=""><h4>Project Components</h4></a>
+                    <h4>Project Components</h4></a>
                   
                   </div>
                 </div>
 
                 <div class="col-xl-2 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
+                    <a href="{{route('valuechains')}}">
                     <i class="bx bx-leaf"></i>
-                    <a href="{{route('valuechains')}}"><h4>Valuechains</h4></a>
+                    <h4>Value Chains</h4></a>
                     
                   </div>
                 </div>
 
                 <div class="col-xl-2 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
+                    <a href="{{route('resources')}}">
                     <i class="bx bx-info-circle"></i>
-                    <a href="{{route('resources')}}"><h4>Resources</h4></a>
+                 <h4>Resources</h4></a>
                     
                   </div>
                 </div>
 
                 <div class="col-xl-2 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
+                    <a href="{{route('media')}}">
                     <i class="bx bx-video-recording"></i>
-                    <a href="{{route('media')}}"><h4>Media</h4></a>
+                    <h4>Media</h4></a>
                  
                   </div>
                 </div>
 
                 <div class="col-xl-2 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
+                    <a href="">
                     <i class="bx bx-phone-call"></i>
-                    <a href=""><h4>Contact us</h4></a>
+                    <h4>Contact Us</h4></a>
                   </div>
                 </div>
               </div>
@@ -112,7 +118,7 @@
             </div>
           <p>At the institutional level, the National Project Coordinator  reports to the KALRO Director General. The project draws support from the technical domain managers at KALRO. CS APP hired officers with agribusiness and M & E expertise to support the project.</p> --}}
       <br>
-      <div><a href="{{route('about')}}"><input type="button" value="Read More" class="btn btn-block btn-success"></a></div>
+      <div><a href="{{route('project_profile')}}"><input type="button" value="Read More" class="btn btn-block btn-success"></a></div>
           </div>
         </div>
 
@@ -138,7 +144,7 @@
             <div class="count-box meme">
               <i class="bx bx-leaf"></i>
               <span data-purecounter-start="0" data-purecounter-end="{{App\Models\ValueChain::count()}}" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong> Valuechains</strong> </p>
+              <p><strong> Value Chains</strong> </p>
             </div>
           </div>
 
@@ -176,16 +182,18 @@
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
             <div class="icon-box">
+              <a href="{{route('valuechains')}}">
               <div class="icon"><i class="bx bx-leaf"></i></div>
-              <h4><a href="{{route('valuechains')}}">Valuechains</a></h4>
+              <h4>Value Chains</a></h4>
               <p>Get understanding in optimizing agricultural valuechins and improving productivity, efficiency, and sustainability.</p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
             <div class="icon-box">
+              <a href="https://www.kaop.co.ke/" target="blank">
               <div class="icon"><i class="fas fa-cloud-sun-rain"></i></div>
-              <h4><a href="https://www.kaop.co.ke/" target="blank">Climate Information Advisories</a></h4>
+              <h4>Climate Information Advisories</a></h4>
               <p></p>
               <p style="text-align: justify">Proper planning using up to date climate information could minimize negative impact of climate change on people's livelihoods and economy. Accurate & decision-relevant climate
                  information is critical to plan & minimize negative impact of climate variability.</p>
@@ -194,9 +202,10 @@
           </div>
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
             <div class="icon-box">
+              <a href="https://amis.co.ke/" target="blank">
               <div class="icon"><i class="bi bi-cart"></i></div>
 
-              <h4><a href="https://amis.co.ke/" target="blank">Market place</a></h4>
+              <h4>Market Place</a></h4>
               <p style="text-align: justify">Access a wide range of multimedia content, including images, videos, and press releases,
                  showcasing our KALRO's latest news, updates, and events.  </p>
 
@@ -204,16 +213,18 @@
           </div>
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" >
             <div class="icon-box">
+              <a href="">
               <div class="icon"><i class="fas fa-book"></i></div>
-              <h4><a href="">Project publications </a></h4>
+              <h4>Project Publications </a></h4>
               <p> Here you can explore the  projects dissemination materials.</p>
             </div>
           </div> 
   
            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
+              <a href="{{route('media')}}">
               <div class="icon"> <i class="bx bx-video-recording"></i></div>
-              <h4><a href="{{route('media')}}">Media </a></h4>
+              <h4>Media </a></h4>
               <p style="text-align: justify"> Access a wide range of multimedia content, 
                 including images, videos, and press releases, showcasing our KALRO's latest news, updates, and events.</p>
             </div>
@@ -221,8 +232,9 @@
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
+              <a href="{{route('map')}}">
               <div class="icon"> <i class="bx bx-video-recording"></i></div>
-              <h4><a href="{{route('map')}}">Analytics Map </a></h4>
+              <h4>Analytics Map </a></h4>
               <p style="text-align: justify"> The map provides an overview of the results achieved.Data contained in the map has been quality assesed and aligns with project objectives.</p>
             </div>
           </div>

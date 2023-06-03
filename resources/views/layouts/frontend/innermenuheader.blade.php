@@ -80,7 +80,7 @@
           <ul>
             {{-- <li><a class="nav-link scrollto active" href="{{route('home')}}">Home</a></li> --}}
             {{-- <li><a class="" href="{{route('about')}}">About</a></li> --}}
-            <li class="dropdown"><a href="{{route('about')}}"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+            <li class="dropdown"><a href="{{route('project_profile')}}"><span>About</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
                
                
@@ -115,12 +115,12 @@
                 <li><a class="nav-link" href="{{route('partners')}}">Partner Profiles</a></li>
                 <li><a class="nav-link" href="{{route('technology_models')}}">Technology and Commercialization</a></li>
                 <li><a class="nav-link" href="{{route('achievements')}}">Achievement</a></li>
-                <li><a class="nav-link" href="#">Impact Stories </a></li>
+                {{-- <li><a class="nav-link" href="#">Impact Stories </a></li> --}}
                  </ul>
            </li>
             
            <li><a class="nav-link" href="{{route('resources')}}">Resources</a></li>
-            <li class="dropdown"><a href="{{route('valuechains')}}"><span>Valuechains</span> <i class="bi bi-chevron-down"></i></a>
+            <li class="dropdown"><a href="{{route('valuechains')}}"><span>Value Chains</span> <i class="bi bi-chevron-down"></i></a>
                <ul>
   
                @php

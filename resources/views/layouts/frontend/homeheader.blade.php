@@ -59,7 +59,7 @@
         <ul>
           {{-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li> --}}
           {{-- <li><a class="nav-link scrollto" href="#about">About</a></li> --}}
-          <li class="dropdown"><a href="{{route('about')}}"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="{{route('project_profile')}}"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
              
              
@@ -106,13 +106,13 @@
               <li><a class="nav-link" href="{{route('technology_models')}}">Technology and Commercialization</a></li>
             <li><a class="nav-link" href="{{route('achievements')}}">Achievement</a></li>
 
-            <li><a class="nav-link" href="{{route('impact.areas')}}">Impact Stories </a></li>
+            {{-- <li><a class="nav-link" href="{{route('impact.areas')}}">Impact Stories </a></li> --}}
              </ul>
        </li>
 
           
          <li><a class="nav-link" href="#resources">Resources</a></li>
-         <li class="dropdown"><a href="{{route('valuechains')}}"><span>Valuechains</span> <i class="bi bi-chevron-down"></i></a>
+         <li class="dropdown"><a href="{{route('valuechains')}}"><span>Value Chains</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
 
           @php
@@ -145,7 +145,7 @@
      
         
 
-      <a href="{{route('contact_us')}}" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span> Contact Us</a>
+      {{-- <a href="{{route('contact_us')}}" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span> Contact Us</a> --}}
 
     </div>
   </header><!-- End Header -->

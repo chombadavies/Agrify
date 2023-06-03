@@ -33,9 +33,11 @@
                      <div class="col-md-8">
                       <div style="display: flex;justify-content:center;border-radius: 12px;">
                         <img src="{{asset('backend/uploads/'.$valuechain->image)}}" alt="" height="350" width="100%" style="border-radius: 12px;">
+                        {{-- <div><i>{{$valuechain->title}}</i></div> --}}
                       </div>
                       <br>
                       <div class="container">
+                          <div><i>{{$valuechain->title}}</i></div> <br>
                         <p><b> Introduction : </b>{!!$valuechain->introduction!!}</p>
                         
                       </div>

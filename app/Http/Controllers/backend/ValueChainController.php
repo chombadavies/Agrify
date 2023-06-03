@@ -138,7 +138,7 @@ class ValueChainController extends Controller
       $status=$valuechain->fill($data)->save();
 
      if($status){
-        Session::flash('success_message', 'ValueChain updated successfully');
+        Session::flash('success_message', 'Value Chain updated successfully');
         return redirect()->route('valuechains.index');
      }else{
         return back()->with('error','operation failed,lease try again.');
@@ -179,7 +179,7 @@ public function fetchValuechains()
              return $description;
            })
             ->addColumn('action', function ($model) {
-                $edit_url = route('valuechains.edit',$model->id);
+                $edit_url = route('value chains.edit',$model->id);
                 
              return '<div class="dropdown ">
         <button class="btn btn-pink btn btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Action

@@ -35,11 +35,14 @@
                       
                       <div style="display: flex;justify-content:center;border-radius: 12px;">
                         <img src="{{asset('backend/uploads/'.$research_activity->image)}}" alt="" height="350" width="100%" style="border-radius: 12px;">
+                        
                       </div>
+                      <span> <i>{{$research_activity->alias}} Research Activity </i> </span>
                       <br>
                       <div class="container">
+                        <br>
                         <p><b>Research Centre: </b>{!!$research_activity->center!!}</p>
-                        <p><b> principal Researcher : </b>{!!$research_activity->principal_researcher!!}</p> <br>
+                        <p><b>Principal Researcher: </b>{!!$research_activity->principal_researcher!!}</p> 
                         <p><b>Research Background: </b>{!!$research_activity->description!!}</p>
                         
                       </div>
@@ -51,18 +54,18 @@
                       <div class="container">
                         <p><strong><b>Achievements:</b></strong></p>
                         
-                        <div class="row">
+                        {{-- <div class="row">
                             <figure class="effect-sarah" style="border-radius: 12px;height:182px!important">
                           
                                 <img alt="logo" src="{{asset('frontend/img/cashew.jpg')}}" style="border-radius: 12px;"/>
                              
                                     <figcaption>
                                         <h2>Inovation Name<span></span></h2>
-                                        {{-- @php
+                                        @php
                                             $limit=str_limit($valuechain->introduction,$limit=110,$end='...');
                                         @endphp
       
-                                        <p>{!!$limit!!}</p> --}}
+                                        <p>{!!$limit!!}</p>
                                          
                                     </figcaption>
                                 </figure>
@@ -72,11 +75,11 @@
                                  
                                         <figcaption>
                                             <h2>Inovation Name<span></span></h2>
-                                            {{-- @php
+                                            @php
                                                 $limit=str_limit($valuechain->introduction,$limit=110,$end='...');
                                             @endphp
           
-                                            <p>{!!$limit!!}</p> --}}
+                                            <p>{!!$limit!!}</p>
                                              
                                         </figcaption>
                                     </figure>
@@ -87,16 +90,16 @@
                                      
                                             <figcaption>
                                                 <h2>innovation Name<span></span></h2>
-                                                {{-- @php
+                                                @php
                                                     $limit=str_limit($valuechain->introduction,$limit=110,$end='...');
                                                 @endphp
               
-                                                <p>{!!$limit!!}</p> --}}
+                                                <p>{!!$limit!!}</p>
                                                  
                                             </figcaption>
                                         </figure>
 
-                        </div>
+                        </div> --}}
                       </div>
 
 

@@ -10,7 +10,7 @@
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
-      <h1> AgrFi CS APP Co-aplicants</h1>
+      {{-- <h1> AgriFI CS APP Co-aplicants</h1> --}}
         <ol>
           <li><a href="{{route('home')}}">Home</a></li>
          
@@ -22,7 +22,9 @@
 
   <section id="resources" class="services">
     <div class="container">
-
+      <div class="section-title">
+        <h3>AgriFI CS APP Co-Applicants</h3>
+      </div>
       <div class="container margin_60_35 add_bottom_30">
 
               <div class="row justify-content-center align-items-center" >
@@ -36,9 +38,9 @@
                         are coapplicants in this Action and KALRO is the lead Applicant. These institutions have a  De jure or de facto monopoly in the specific research mandates. </p> 
 <ol>
   <li>
-   <p> KEVEVAPI a Kenyan registered parastatal is the only institution mandated to undertake development and commercialisation of animal vaccines in Kenya.</p>
+   <p> KEVEVAPI is a Kenyan registered parastatal is the only institution mandated to undertake development and commercialisation of animal vaccines in Kenya.</p>
   </li>
-  <li> <p> KMFRI a Kenyan registered parastatal is the only institution mandated to undertake aquaculture research in Kenya.</p></li>
+  <li> <p> KMFRI is a Kenyan registered parastatal is the only institution mandated to undertake aquaculture research in Kenya.</p></li>
   <li> <p> icipe is an internationally registered organisation; and it's the only international institution in Africa working primarily on arthropods including bees and through EU support has the only Bee health facility in Africa for both research and quality control. </p>  </li>
 </ol>
                        

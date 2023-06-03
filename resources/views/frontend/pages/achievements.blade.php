@@ -24,7 +24,7 @@
     <div class="container">
 
       <div class="section-title">
-        <h2>Project Achievements,Technology and commercialization Models</h2>
+        <h2> AgriFI CS APP Project Achievements</h2>
       </div>
 
       <div class="container margin_60_35 add_bottom_30">
