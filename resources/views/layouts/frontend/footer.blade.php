@@ -4,53 +4,40 @@
       <div class="container">
         <div class="row">
     
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>KALRO</h3>
-            Kaptagat Road, Loresho,<br>
-            P.O. Box 57811-00200, Nairobi Kenya<br>
-            Safaricom: +254 722206986/722206988<br>
-            Airtel: +254 733-333-223<br>
-            Fibre Lines:  0709 104000-60 (Safaricom)<br>
-            0730 707000-60 (Airtel)<br>
-            <strong>Email:</strong> KALROCSAPP@kalro.org<br>
+          <div class="col-lg-4 col-md-6 footer-contact">
+            <h3> <i class="ti-home"></i> Contacts</h3>
+            Kaptagat Road,Loresho, Nairobi Kenya<br>
+            P.O. Box 57811-00200, Nairobi<br>
+            <strong> <i class="ti-email"></i>Email:</strong> KALROCSAPP@kalro.org<br>
             <strong> web:</strong> http://www.kalro.org/csapp<br>
             <p>
+
           </div>
     
        
 
-          <div class="col-lg-3 col-md-6 footer-contact">
+          <div class="col-lg-4 col-md-6 footer-contact">
             <h3>Useful Links</h3>
             <ul style="text-decoration: none">
-              <li style="text-decoration:none"><a href="#" style="color:white">Home</a></li>
-              <li> <a href="{{route('about_us')}}" style="color:white">About us</a></li>
+              <li> <a href="{{route('project_profile')}}" style="color:white">About us</a></li>
               <li><a href="{{route('contact_us')}}" style="color:white">Contact Us</a></li>
+              <li> <a href="{{route('partners')}}" style="color:white">Partners</a></li>
+              <li><a href="{{route('coapplicants')}}" style="color:white">Co-Applicants</a></li>
     
             </ul>
           </div>
     
          
-          <div class="col-lg-3 col-md-6 footer-contact">
+          <div class="col-lg-4 col-md-6 footer-contact">
             <h3>Our Resources</h3>
             <ul>
               <li> <a href="{{route('valuechains')}}" style="color:white">Valuechains</a></li>
-              <li> <a href="{{route('resources')}}" style="color:white">Resources</a></li>
+              <li> <a href="{{route('map')}}" style="color:white">Analytics Map</a></li>
+              <li> <a href="#" style="color:white">Project Publications</a></li>
               <li> <a href="{{route('media')}}" style="color:white">Media</a></li>
             </ul>
           </div>
-    
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>KALRO</h3>
-            Kaptagat Road, Loresho,<br>
-            P.O. Box 57811-00200, Nairobi Kenya<br>
-            Safaricom: +254 722206986/722206988<br>
-            Airtel: +254 733-333-223<br>
-            Fibre Lines:  0709 104000-60 (Safaricom)<br>
-            0730 707000-60 (Airtel)<br>
-            <strong>Email:</strong> KALROCSAPP@kalro.org<br>
-            <strong> web:</strong> http://www.kalro.org/csapp<br>
-            <p>
-          </div>
+
     
         </div>
       </div>
@@ -124,7 +111,7 @@
 
   {{-- utmap --}}
 
- <script src="{{asset('utmap/js/jquery.min.js')}}"></script>
+ {{-- <script src="{{asset('utmap/js/jquery.min.js')}}"></script>
   <script src="{{asset('utmap/js/bootstrap.bundle.min.js')}}"></script>
   <script src="{{asset('utmap/js/jquery.easing.min.js')}}"></script>
   <script src="{{asset('utmap/js/validate.js')}}"></script>
@@ -140,5 +127,6 @@
 
   <!-- Template Main JS File -->
   <script src="{{asset('utmap/js/main.js')}}"></script>
-  <script src="../../cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+  <script src="../../cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script> --}}
+
   <script>

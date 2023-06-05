@@ -135,15 +135,15 @@
                   </ul>
             </li>
             <li><a class="nav-link" href="{{route('media')}}">Media</a></li>
-            {{-- <li><a class="nav-link" href="{{route('dashboard')}}">Dashboard</a></li> --}}
-            <li class="dropdown"><a href="{{route('dashboard')}}"><span>Dashboard</span> <i class="bi bi-chevron-down"></i></a>
+            <li><a class="nav-link" href="{{route('dashboard')}}">Dashboard</a></li>
+            {{-- <li class="dropdown"><a href="{{route('dashboard')}}"><span>Dashboard</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
                 <li><a class="nav-link" href="">Results Dashboard</a></li>
                   <li><a class="nav-link" href="">Financial Dashboards</a></li>
                   <li><a class="nav-link" href="">Gender,Diversity Inclusion Dashboard</a></li>
                   
                  </ul>
-           </li>
+           </li> --}}
   
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>

@@ -11,7 +11,7 @@
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
-      <h4>{{$research_activity->title}}</h4>
+      {{-- <h4>{{$research_activity->title}}</h4> --}}
         <ol>
           <li><a href="{{route('home')}}">Home</a></li>
          
@@ -23,7 +23,9 @@
 
   <section class="inner-page">
     <div class="container">
-
+      <div class="section-title">
+        <h2>{{$research_activity->title}}</h2>
+      </div>
 
     <div class="grid">
     <div class="container">

@@ -233,7 +233,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
               <a href="{{route('map')}}">
-              <div class="icon"> <i class="bx bx-video-recording"></i></div>
+              <div class="icon"> <i class="bx bx-chart"></i></div>
               <h4>Analytics Map </a></h4>
               <p style="text-align: justify"> The map provides an overview of the results achieved.Data contained in the map has been quality assesed and aligns with project objectives.</p>
             </div>

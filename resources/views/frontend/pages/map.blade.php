@@ -888,13 +888,25 @@
 </main>
 @endsection
 
-@section('name')
-    <!-- Vendor JS Files -->
-
-
-    <!-- Vendor JS Files -->
+@section('scripts') 
  
+<script src="{{asset('utmap/js/jquery.min.js')}}"></script>
+  <script src="{{asset('utmap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{asset('utmap/js/jquery.easing.min.js')}}"></script>
+  <script src="{{asset('utmap/js/validate.js')}}"></script>
+  <script src="{{asset('utmap/js/jquery.appear.js')}}"></script>
+  <script src="{{asset('utmap/js/jquery.knob.js')}}"></script>
+  <script src="{{asset('utmap/js/jquery.validate.min.js')}}"></script>
+  <script src="{{asset('utmap/js/parallax.js')}}"></script>
+  <script src="{{asset('utmap/js/wow.min.js')}}"></script>
+  <script src="{{asset('utmap/js/isotope.pkgd.min.js')}}"></script>
+  <script src="{{asset('utmap/js/jquery.nivo.slider.js')}}"></script>
+  <script src="{{asset('utmap/js/owl.carousel.min.js')}}"></script>
+  <script src="{{asset('utmap/js/venobox.min.js')}}"></script>
 
+  <!-- Template Main JS File -->
+  <script src="{{asset('utmap/js/main.js')}}"></script>
+  <script src="../../cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
   <!-- Template Main JS File -->
   <script src="{{asset('utmap/js/main.js')}}"></script>
   <script src="../../cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
