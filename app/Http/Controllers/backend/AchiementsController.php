@@ -17,7 +17,7 @@ class AchiementsController extends Controller
      */
     public function index()
     {
-        //
+        return "on research achievements index";
     }
 
     /**
@@ -29,7 +29,7 @@ class AchiementsController extends Controller
     {
         $data['page_title']='create Research Achievement';
         $research_activities=Research::all();
-        return view('admin.research.achievements',$data)->with(compact('research_activities'));
+        return view('admin.achievements.research_achievements_create',$data)->with(compact('research_activities'));
     }
 
     /**
@@ -97,4 +97,5 @@ class AchiementsController extends Controller
     {
         //
     }
+  
 }

@@ -13,6 +13,7 @@ use App\Models\Category;
 use App\Models\Media;
 use App\Models\ImpactArea;
 use App\Models\Coapplicant;
+use App\Models\AllAchievement;
 use Illuminate\Support\Facades\DB;
 
 class IndexController extends Controller
@@ -88,7 +89,8 @@ return view('frontend.pages.contactus');
     }
     public function achievements(){
         $data['page_title']='Achievements';
-        return view('frontend.pages.achievements',$data);
+        $all_achievements=AllAchievement::all();
+        return view('frontend.pages.achievements',$data)->with(compact('all_achievements'));
     }
 
     public function dashboard(){

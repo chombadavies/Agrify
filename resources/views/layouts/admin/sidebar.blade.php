@@ -186,9 +186,40 @@
                   </p>
                 </a>
               </li>
+             
+            
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="" class="nav-link">
+              <i class="nav-icon fas fa-bars"></i>
+              <p>
+               Achievements
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('impactarea.create')}}" class="nav-link">
+                  <i class="fas fa-edit nav-icon"></i>
+                  <p>Add Upscalling Achievement
+
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="fas fa-table nav-icon"></i>
+                  <p>Upscalling achievements
+
+                    <span class="right badge badge-info"></span>
+                  </p>
+                </a>
+              </li>
               <li class="nav-item">
                 <a href="{{route('research_achievements.create')}}" class="nav-link">
-                  <i class="fas fa-table nav-icon"></i>
+                  <i class="fas fa-edit nav-icon"></i>
                   <p> Add Research Achievement
 
                     <span class="right badge badge-info"></span>
@@ -204,31 +235,10 @@
                   </p>
                 </a>
               </li>
-            
-            </ul>
-          </li>
-
-          <li class="nav-item has-treeview">
-            <a href="" class="nav-link">
-              <i class="nav-icon fas fa-bars"></i>
-              <p>
-               Impact Areas
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('impactarea.create')}}" class="nav-link">
+                <a href="{{route('all_achievements.create')}}" class="nav-link">
                   <i class="fas fa-edit nav-icon"></i>
-                  <p>Add Impact Story
-
-                  </p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="" class="nav-link">
-                  <i class="fas fa-table nav-icon"></i>
-                  <p>Impact Stories
+                  <p>add overall Achievements
 
                     <span class="right badge badge-info"></span>
                   </p>
