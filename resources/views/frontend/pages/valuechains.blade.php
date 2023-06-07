@@ -26,9 +26,9 @@
                       <div class="grid">
                         @foreach ($valuechains as $valuechain)
                      <a href="{{route('valuechain.details',$valuechain->id)}}">  
-                        <figure class="effect-sarah" style="border-radius: 12px;">
+                        <figure class="effect-sarah" >
                           
-                          <img alt="logo" src="{{asset('backend/uploads/'.$valuechain->image)}}" style="border-radius: 12px;"/>
+                          <img alt="logo" src="{{asset('backend/uploads/'.$valuechain->image)}}" />
                        
                               <figcaption>
                                   <h5>{{$valuechain->title}}<span></span></h5>

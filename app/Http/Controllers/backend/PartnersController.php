@@ -56,7 +56,7 @@ class PartnersController extends Controller
                 $image = rand(111, 99999) . '.' . $extension;
                 $ImagePath = 'backend/uploads/'.$image;
                 // Upload the Image
-                Image::make($image_tmp)->resize(300,280)->save($ImagePath);
+                Image::make($image_tmp)->save($ImagePath);
                
             }
         } else {

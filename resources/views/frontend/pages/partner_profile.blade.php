@@ -53,7 +53,7 @@
         
                          <div class="col-md-4">
                       <div class="card">
-                        <input type="button" value="Scalling Projects" class="btn btn-block" style="background-color: #85AE46;color:whitesmoke">
+                        <input type="button" value=" Projects" class="btn btn-block" style="background-color: #85AE46;color:whitesmoke">
 
                         <div class="card-body">
 

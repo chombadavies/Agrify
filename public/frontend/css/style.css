@@ -13,7 +13,7 @@ a {
 }
 
 a:hover {
-    color: #3291e6;
+    color: #f4a460;
     text-decoration: none;
 }
 
@@ -102,7 +102,7 @@ h6 {
   color: #fff;
   font-size: 28px;
   text-align: center;
-  background: #adc983;
+  background: #6B8B3A;
   transition: 0.3s;
   width: 50%;
 }
@@ -112,7 +112,7 @@ h6 {
 }
 
 .portfolio .portfolio-wrap .portfolio-links a+a {
-  border-left: 1px solid #37b3ed;
+  border-left: 1px solid #D57B28;
 }
 
 .portfolio .portfolio-wrap:hover::before {
@@ -286,7 +286,7 @@ h6 {
 }
 
 #topbar {
-    background: #85AE46;
+    background: #6B8B3A;
     height: 40px;
     font-size: 14px;
     transition: all 0.5s;
@@ -690,7 +690,7 @@ h6 {
 }
 
 #hero .btn-get-started:hover {
-    background: #3291e6;
+    background: #6B8B3A;
 }
 
 @media (min-width: 1024px) {
@@ -831,6 +831,7 @@ section {
 @media (max-width: 768px) {
     .breadcrumbs .d-flex {
         display: block !important;
+       
     }
     .breadcrumbs ol {
         display: block;
@@ -838,6 +839,9 @@ section {
     .breadcrumbs ol li {
         display: inline-block;
     }
+}
+.dada{
+    padding-top: 12px !important;
 }
 
 
@@ -892,7 +896,12 @@ section {
 
 .why-us .icon-boxes .icon-box i {
     font-size: 40px;
-    color: #85AE46;
+    color: #6B8B3A;
+    margin-bottom: 30px;
+}
+.why-us .icon-boxes .icon-box i:hover{
+    font-size: 40px;
+    color: #f4a460;
     margin-bottom: 30px;
 }
 
@@ -2102,7 +2111,7 @@ p{
 
 #footer .footer-top {
     padding: 60px 0 30px 0;
-    background: #85AE46;
+    background: #6B8B3A;
     box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
 }
 

@@ -91,12 +91,15 @@
           </div>
 
           <div class="col-xl-6 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
-            <h3>Project Implementation</h3>
+            <h3>Project Profile and Project Governance</h3>
+            <h4>Project Profile</h4>
             <p> The Kenya Agricultural and Livestock Research Organization (KALRO) is the premier research organization, charged with the main mandate of promoting, streamlining, coordinating, and regulating research in crops, livestock, genetic resources, and biotechnology in Kenya. </p>
             <p>KALRO received a funding grant from the European Union (EUR 5m) and Government of Kenya (EUR 1.5m) to implement the AgriFI Kenya support to KALRO for Climate Smart Agricultural Productivity Project (AgriFI Kenya CS APP) at a tune of EUR 6.5m, a five-year project under the AgriFI Development Programme. </p>
-            <h3>AgriFi Program Steering Committee</h3>
+            <h3>Project Governance</h3>
+            <h4>AgriFi Program Steering Committee</h4>
             <p> The CS-APP reports to  the overall Kenya AgriFI Steering Committee. The KALRO Director-General and the Coordinator will attend on behalf of the CS-APP. CS-APP  periodically reports to the AKSC</p>
-            <h3>Project Implementation Committee</h3>
+            
+            <h4> Project Implementation Committee</h4>
             <p>A PIC chaired by the Director- General KALRO is made up of the PCU, one Deputy Director General, a representative of implementing partners (on rotating basis), representative of relevant
                local University, MOAI AgriFI Focal Point (Coordinator), and Private sector representative.  
             The EC Delegation and the National Treasury will have representative(s) as observers. PIC  provide oversight and guidance to the PCU in implementing the project. PIC meet once a year. </p>
@@ -118,7 +121,7 @@
             </div>
           <p>At the institutional level, the National Project Coordinator  reports to the KALRO Director General. The project draws support from the technical domain managers at KALRO. CS APP hired officers with agribusiness and M & E expertise to support the project.</p> --}}
       <br>
-      <div><a href="{{route('project_profile')}}"><input type="button" value="Read More" class="btn btn-block btn-success"></a></div>
+      <div><a href="{{route('project_profile')}}"><input type="button" value="Read More" class="btn btn-block "  style="background-color: #6B8B3A;color:aliceblue"></a></div>
           </div>
         </div>
 
@@ -296,7 +299,7 @@
 <style>
  .meme{
   box-shadow: 
-   5px 5px 10px 5px rgba(126,126,126),
+   1px 1px 10px 0px rgba(158,158,158),
    -5px 0px  rgb(158, 158, 158);
       border-radius: 12px; 
      }

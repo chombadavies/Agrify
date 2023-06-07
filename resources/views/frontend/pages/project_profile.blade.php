@@ -12,7 +12,8 @@
       <div class="d-flex justify-content-between align-items-center">
       {{-- <h1>About AgriFI CS APP</h1> --}}
         <ol>
-          <li style="margin-right:90%"><a href="{{route('home')}}">Home</a></li>
+          <li><a href="{{route('home')}}">Home</a></li>
+          <li ><a href="{{route('project_profile')}}">Project Profile</a></li>
          
         </ol>
       </div>
@@ -67,12 +68,7 @@
            </div>
         </div>
         <br>
-       
-       
-       
-             
-         
-            
+ 
     </div>
 
     </div>

@@ -61,7 +61,7 @@
           {{-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a> --}}
   
           <div><a href="https://www.kaop.co.ke/" target="blank"><i class="fas fa-sun"></i> Climate Advisories</a></div>
-        <div><a href="https://amis.co.ke/" target="blank"><i class="bi bi-cart"></i> Market Place</a></div>
+          <div style="padding-left: 12px"><a href="https://amis.co.ke/" target="blank"><i class="bi bi-cart"></i> Market Place</a></div>
        
         </div>
       </div>

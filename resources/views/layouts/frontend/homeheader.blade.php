@@ -40,7 +40,7 @@
         {{-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a> --}}
 
         <div><a href="https://www.kaop.co.ke/" target="blank"><i class="fas fa-sun"></i> Climate Advisories</a></div>
-      <div><a href="https://amis.co.ke/" target="blank"><i class="bi bi-cart"></i> Market Place</a></div>
+      <div style="padding-left: 12px"><a href="https://amis.co.ke/" target="blank"><i class="bi bi-cart"></i> Market Place</a></div>
      
       </div>
     </div>
@@ -57,8 +57,6 @@
     
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          {{-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li> --}}
-          {{-- <li><a class="nav-link scrollto" href="#about">About</a></li> --}}
           <li class="dropdown"><a href="{{route('project_profile')}}"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
              
@@ -68,18 +66,6 @@
               <li><a class="nav-link" href="{{route('coapplicants')}}" >Co-Applicants </a></li>
             </ul>
          </li>
-          
-          {{-- <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              @php
-                  $categories=App\Models\Category::all();
-              @endphp
-              @foreach($categories as $category)
-              <li><a class="nav-link" href="{{route('research',$category->id)}}" >{{ ucfirst($category->title) }} </a></li>
-            @endforeach
-            
-            </ul>
-         </li> --}}
 
          <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
