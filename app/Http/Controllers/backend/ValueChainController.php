@@ -8,6 +8,7 @@ use App\Models\ValueChain;
 use Intervention\Image\Facades\Image;
 use Yajra\Datatables\Datatables;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File;
 use Session;
 
 class ValueChainController extends Controller
@@ -114,9 +115,15 @@ class ValueChainController extends Controller
     public function update(Request $request, $id)
     {
         $data=$request->all();
+      
+        $valuechain = ValueChain::findOrFail($id);
    
         if ($request->hasFile('image')) {
-
+            $destination='backend/uploads/'.$valuechain->image;
+            if(File::exists($destination))
+            {
+                File::delete($destination);
+            }
             $image_tmp = $request->file('image');
             if ($image_tmp->isValid()) {
                 // Get Image Extension
@@ -129,12 +136,35 @@ class ValueChainController extends Controller
                
             }
         } else {
-            $image= "";
-            $ImagePath = "";
+            $image= $valuechain->image;
             
         }
-      $data['image']=$image;
-      $valuechain = ValueChain::findOrFail($id);
+
+
+        if ($request->hasFile('details_image')) {
+            $destination='backend/uploads/'.$valuechain->details_image;
+            if(File::exists($destination))
+            {
+                File::delete($destination);
+            }
+            $image_tmp = $request->file('details_image');
+            if ($image_tmp->isValid()) {
+                // Get Image Extension
+                $extension = $image_tmp->getClientOriginalExtension();
+                // Generate New Image Name
+                $details_image = rand(111, 99999) . '.' . $extension;
+                $ImagePath = 'backend/uploads/'.$details_image;
+                // Upload the Image
+                Image::make($image_tmp)->save($ImagePath);
+               
+            }
+        } else {
+            $details_image= $valuechain->details_image;
+            
+        }
+        $data['image']=$image;
+      $data['details_image']=$details_image;
+    // dd($data);
       $status=$valuechain->fill($data)->save();
 
      if($status){
@@ -179,7 +209,7 @@ public function fetchValuechains()
              return $description;
            })
             ->addColumn('action', function ($model) {
-                $edit_url = route('value chains.edit',$model->id);
+                $edit_url = route('valuechains.edit',$model->id);
                 
              return '<div class="dropdown ">
         <button class="btn btn-pink btn btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Action

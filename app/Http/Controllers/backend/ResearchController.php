@@ -9,6 +9,7 @@ use App\Models\Category;
 use App\Models\ImpactArea;
 
 use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\File;
 use Yajra\Datatables\Datatables;
 use Illuminate\Support\Str;
 use Session;
@@ -81,6 +82,7 @@ class ResearchController extends Controller
         $data=$request->all();
         $data['image']=$image;
       
+      
     //    dd($data);
         $status=Research::create($data);
 
@@ -128,9 +130,14 @@ class ResearchController extends Controller
     public function update(Request $request, $id)
     {
         $data=$request->all();
+        $valuechain = Research::findOrFail($id);
    
         if ($request->hasFile('image')) {
-
+            $destination='backend/uploads/'.$valuechain->image;
+            if(File::exists($destination))
+            {
+                File::delete($destination);
+            }
             $image_tmp = $request->file('image');
             if ($image_tmp->isValid()) {
                 // Get Image Extension
@@ -143,12 +150,36 @@ class ResearchController extends Controller
                
             }
         } else {
-            $image= "";
+            $image= $valuechain->image;
             $ImagePath = "";
             
         }
+
+        if ($request->hasFile('details_image')) {
+            $destination='backend/uploads/'.$valuechain->details_image;
+            if(File::exists($destination))
+            {
+                File::delete($destination);
+            }
+            $image_tmp = $request->file('details_image');
+            if ($image_tmp->isValid()) {
+                // Get Image Extension
+                $extension = $image_tmp->getClientOriginalExtension();
+                // Generate New Image Name
+                $details_image = rand(111, 99999) . '.' . $extension;
+                $ImagePath = 'backend/uploads/'.$details_image;
+                // Upload the Image
+                Image::make($image_tmp)->save($ImagePath);
+               
+            }
+        } else {
+            $details_image = $valuechain->details_image;
+           
+            
+        }
       $data['image']=$image;
-      $valuechain = Research::findOrFail($id);
+      $data['details_image']=$details_image;
+     
       $status=$valuechain->fill($data)->save();
 
      if($status){

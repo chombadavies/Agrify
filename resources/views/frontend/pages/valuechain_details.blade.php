@@ -31,8 +31,8 @@
                       <div class="row">
                      
                      <div class="col-md-8">
-                      <div style="display: flex;justify-content:center;border-radius: 12px;">
-                        <img src="{{asset('backend/uploads/'.$valuechain->image)}}" alt="" height="350" width="100%" style="border-radius: 12px;">
+                      <div style="display: flex;justify-content:center;border-radius: 12px;overflow:hidden;height:350px;width:800px">
+                        <img src="{{asset('backend/uploads/'.$valuechain->details_image)}}" alt="" height="100%" width="100%"  style="border-radius: 12px;object-fit:fill">
                         {{-- <div><i>{{$valuechain->title}}</i></div> --}}
                       </div>
                       <br>
@@ -60,7 +60,8 @@
                              @foreach ($valuechain->materials as $material)
                               <div class="row">
                             <div class="col-md-6">
-                              <img src="{{asset('frontend/img/Untitled.png')}}" alt="" height="60">
+                              <a href ="{{asset('file uploads/'.$material->title)}}" download = "{{$material->title}}">
+                              <img src="{{asset('frontend/img/Untitled.png')}}" alt="" height="60"></a>
                             </div>
                             <div class="col-md-6">
                               <a href ="{{asset('file uploads/'.$material->title)}}" download = "{{$material->title}}"> {{$material->title}} </a> 

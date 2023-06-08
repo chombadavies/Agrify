@@ -36,7 +36,7 @@
 
                       
                       <div style="display: flex;justify-content:center;border-radius: 12px;">
-                        <img src="{{asset('backend/uploads/'.$research_activity->image)}}" alt="" height="350" width="100%" style="border-radius: 12px;">
+                        <img src="{{asset('backend/uploads/'.$research_activity->details_image)}}" alt="" height="350" width="100%" style="border-radius: 12px;">
                         
                       </div>
                       <span> <i>{{$research_activity->alias}} Research Activity </i> </span>
@@ -60,7 +60,7 @@
                          <p>{!!$achievement->description !!}</p>
                          <div>
                           @if ($achievement->status == "Completed")
-                          <button class="btn btn-success">{!!$achievement->status!!}</button>
+                          <button class="btn" style="background-color: #6B8B3A;color:white" >{!!$achievement->status!!}</button>
                           @else
                           <button class="btn btn-warning">{!!$achievement->status!!}</button>
                           @endif

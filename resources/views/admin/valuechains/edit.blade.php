@@ -41,18 +41,24 @@
     
                 <div class="card-body">
                     <div class="row">
-                  <div class="form-group col-md-4">
+                  <div class="form-group col-md-3">
                     <label for="exampleInputEmail1">ValueChain Title</label>
                     <input type="text" name="title" class="form-control" id="" @error('title') is-invalid @enderror placeholder="Enter Category Name" required value="{{$valuechain->title}}">
                     <span style="color: red" >{{$errors->first('title')}}</span>
                   
                 
                   </div>
-                  <div class="form-group col-md-4">
-                    <label for="exampleInputEmail1">Image</label>
-                   <input type="file" class="form-control" name="image" required>
+                  <div class="form-group col-md-3">
+                    <label for="exampleInputEmail1">Value Chain Image</label>
+                   <input type="file" class="form-control" name="image">
+                   <img src="{{asset('backend/uploads/'.$valuechain->image)}}" height="50px" width="50px" alt="">
                   </div>
-                  <div class="form-group col-md-4">
+                  <div class="form-group col-md-3">
+                    <label for="exampleInputEmail1">Details Image</label>
+                   <input type="file" class="form-control" name="details_image">
+                   <img src="{{asset('backend/uploads/'.$valuechain->details_image)}}" height="50px" width="50px"  alt="">
+                  </div>
+                  <div class="form-group col-md-3">
                     <label for="">Value Chain Category</label>
                   <select name="category" class="form-control">
                     <option selected disabled>Select Category</option>

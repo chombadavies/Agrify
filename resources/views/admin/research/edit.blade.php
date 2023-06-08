@@ -68,17 +68,21 @@
 
                 <div class="row">
 
-                    <div class="form-group col-md-4">
-                        <label for="exampleInputEmail1">Image</label>
+                    <div class="form-group col-md-3">
+                        <label for="exampleInputEmail1">Research Image</label>
                        <input type="file" class="form-control" name="image" required>
                       </div>
+                      <div class="form-group col-md-3">
+                        <label for="exampleInputEmail1">Details Image</label>
+                       <input type="file" class="form-control" name="details_image" required>
+                      </div>
 
-                      <div class="form-group col-md-4">
+                      <div class="form-group col-md-3">
                         <label for="exampleInputEmail1">Research Centre</label>
                        <input type="text" class="form-control" name="center" required value="{{$research_activity->center}}">
                       </div>
 
-                      <div class="form-group col-md-4">
+                      <div class="form-group col-md-3">
                         <label for="exampleInputEmail1">Principal Researcher</label>
                        <input type="text" class="form-control" name="principal_researcher" required value="{{$research_activity->principal_researcher}}">
                       </div>
