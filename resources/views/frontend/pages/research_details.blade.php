@@ -36,7 +36,7 @@
 
                       
                       <div style="display: flex;justify-content:center;border-radius: 12px;">
-                        <img src="{{asset('backend/uploads/'.$research_activity->details_image)}}" alt="" height="350" width="100%" style="border-radius: 12px;">
+                        <img src="{{asset('backend/uploads/'.$research_activity->details_image)}}" alt="" height="100%" width="100%" style="border-radius: 12px;">
                         
                       </div>
                       <span> <i>{{$research_activity->alias}} Research Activity </i> </span>
@@ -92,7 +92,7 @@
                               @if( $related->count()>0)
                               @foreach ($related as $item)
                                   <a href="{{route('reseach_details',$item->id)}}">
-                              <figure class="effect-sarah" style="border-radius: 12px;height:182px!important">
+                              <figure class="effect-sarah" style="border-radius: 12px;height:100%!important">
                           
                                 <img alt="logo" src="{{asset('backend/uploads/'.$item->image)}}" style="border-radius: 12px;"/>
                              

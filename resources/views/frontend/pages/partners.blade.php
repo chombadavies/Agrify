@@ -35,17 +35,14 @@
                       <p >Technologies for upscaling were identified by KALRO and other NARS institutions. The upscaling component is implemented through a competitive call for proposals.  
                         The Call for Proposals (CfP) for Sub-Grants Guidelines provided the manner in which KALRO selected 21 organizations  competitively for 38 subgrants. Part of the 38 Sub-grantees work plans target capacity building of the beneficiaries, 
                         linkage to markets, financial service providers, and input suppliers. Each subgrants successful subgrant was awarded Euros 60,000.00 (KES 6,813,000). </p>
-                        <div  style="margin-left: 40% ">
-                          <input type="button" value="List Of AgriFI CS APP Kenya Partners" style="cursor:ew-resize;margin-right:50%" >
-                        </div>
          
                     </div>
                   
                  
-                  <div class="row justify-content-center align-items-center ">
+                  <div class="row justify-content-center align-items-center " style="grid:fluid !important">
                 @foreach ($partners as $partner)
               
-                <div class="col-lg-4 pl-lg-5 text-center d-none d-lg-block">
+                <div class="col-lg-4 pl-lg-5 text-center  d-lg-block">
                   <a href="{{route('partner',$partner->id)}}">
                   <img src="{{asset('backend/uploads/'.$partner->image)}}" alt="" class="img-fluid"  >
                   <div>

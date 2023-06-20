@@ -243,6 +243,7 @@ return view('frontend.pages.technology_model',$data);
 
     public function impactAreas(){
         $impactareas=ImpactArea::all();
+        dd($impactareas);
         $data['page_title']='Impact Stories';
         return view('frontend.pages.impact_areas',$data)->with(compact('impactareas'));
     }

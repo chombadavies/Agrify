@@ -36,7 +36,7 @@
               <!-- form start -->
              
               
-              <form action="{{route('impactarea.store')}}" method="post" enctype="multipart/form-data">@csrf
+              <form action="{{route('impactareas.store')}}" method="post" enctype="multipart/form-data">@csrf
     
                 <div class="card-body">
                     <div class="row">
@@ -44,18 +44,35 @@
                     <label for="exampleInputEmail1">Research Title</label>
                     <input type="text" name="title" class="form-control" id="" @error('title') is-invalid @enderror placeholder="Enter Category Name" required value="{{old('title')}}">
                     <span style="color: red" >{{$errors->first('title')}}</span>
-                  
                 
                   </div>
-                 
-                 
+                  <div class="form-group col-md-6">
+                    <label for="exampleInputEmail1">Impact Area Images</label>
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                          <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
+                            <i class="fa fa-picture-o"></i> Choose
+                          </a>
+                        </span>
+                        <input id="thumbnail" class="form-control" type="text" name="images">
+                      </div>
+                      <div id="holder" style="margin-top:15px;max-height:100px;"></div>
+
+                  </div>
+
                 </div>
                
-<br>
+                 <br>
                 <div class="row">
                     <div class="col-md-12" class="form-control">
-                        <label for="">Research Description</label>
-                        <textarea id="meme" name="description" required></textarea>
+                        <label for="">Impact Story Introduction</label>
+                        <textarea id="meme" name="introduction" required></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12" class="form-control">
+                        <label for="">Impact Story Description</label>
+                        <textarea id="dada" name="description" required></textarea>
                     </div>
                 </div>
                 <!-- /.card-body -->
@@ -88,4 +105,18 @@
   $('#meme').summernote();
 });
 </script>
+<script>
+    $(document).ready(function() {
+  $('#summernote').summernote();
+  $('#dada').summernote();
+});
+</script>
+{{-- <script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script> --}}
+<script src="{{asset('vendor/laravel-filemanager/js/stand-alone-button.js')}}"></script>
+<script>
+ $('#lfm').filemanager('image');
+
+ </script>
+
+ 
 @endpush

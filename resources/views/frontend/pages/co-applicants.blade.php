@@ -55,7 +55,7 @@
              
                 @foreach ($coapplicants as $coapplicant)
               
-                <div class="col-lg-4 pl-lg-5 text-center d-none d-lg-block">
+                <div class="col-lg-4 pl-lg-5 text-center  d-lg-block">
                   <a href="{{route('coapplicant',$coapplicant->id)}}">
                   <img src="{{asset('backend/uploads/'.$coapplicant->image)}}" alt="" class="img-fluid"  height="30">
                   <div> <span>{{$coapplicant->title}}</span></div>

@@ -58,11 +58,13 @@
                         <div class="card-body">
 
                           @foreach ($partner->projects as $project)
+                          <a href="{{route('project.details',$project->id)}}">
                           <div>
+                            <a href="{{route('project.details',$project->id)}}">
                        <img src="{{asset('backend/uploads/'.$project->image)}}" alt="" height="120">
                      </div>
                      <div>
-                         <a href="{{route('project.details',$project->id)}}"><span>{{$project->title}}</span></a>
+                        <span>{{$project->title}}</span></a>
             
                        
                      </div>

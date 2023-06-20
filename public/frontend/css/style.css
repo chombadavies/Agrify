@@ -559,7 +559,7 @@ h6 {
     right: 0;
     left: 0;
     bottom: 0;
-    background: rgba(28, 47, 65, 0.9);
+    background: #6B8B3A;
     transition: 0.3s;
     z-index: 999;
 }

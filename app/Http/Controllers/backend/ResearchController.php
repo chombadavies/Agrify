@@ -201,18 +201,7 @@ class ResearchController extends Controller
         //
     }
 
-    public function impactArea(){
-        $data['page_title']='Research Models';
-        return view('admin.research.impactarea',$data);
-    }
-    public function impactAreaStore(Request $request){
-        $data=$request->all();
-        // dd($data);
-        $question=ImpactArea::create($data);
-        return redirect()->route('research.index')->with('success','research added successfully');
-    }
-
-
+ 
     public function fetchResearch()
     {
         $models = DB::table('research')

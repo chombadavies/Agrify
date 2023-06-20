@@ -31,12 +31,12 @@
         
 @foreach ($all_achievements as $item)
 <p>{!!$item->introduction!!}</p>
-<div style="margin-left: 150px">
-  <img src="{{asset('backend/uploads/'.$item->first_image)}}" alt=""  >
+<div >
+  <img src="{{asset('backend/uploads/'.$item->first_image)}}" alt="" width="100%" height="80%">
 </div>
 <p>{!!$item->description!!}</p>
-<div style="margin-left: 150px">
-  <img src="{{asset('backend/uploads/'.$item->second_image)}}" alt=""  >
+<div >
+  <img src="{{asset('backend/uploads/'.$item->second_image)}}" alt="" width="100%" height="80%" >
 </div>
 @endforeach
 

@@ -201,7 +201,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('impactarea.create')}}" class="nav-link">
+                <a href="" class="nav-link">
                   <i class="fas fa-edit nav-icon"></i>
                   <p>Add Upscalling Achievement
 
@@ -258,7 +258,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('impactarea.create')}}" class="nav-link">
+                <a href="{{route('impactareas.create')}}" class="nav-link">
                   <i class="fas fa-edit nav-icon"></i>
                   <p>Add Impact Story
 

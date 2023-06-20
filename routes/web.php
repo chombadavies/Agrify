@@ -27,9 +27,8 @@ Route::resource('projects',App\Http\Controllers\backend\ProjectsController::clas
 Route::any('/fetchpartners',[App\Http\Controllers\backend\PartnersController::class, 'fetchPartners']);
 
 Route::any('/fetchprojects',[App\Http\Controllers\backend\ProjectsController::class, 'fetchProjects']);
-Route::any('/impact-area',[App\Http\Controllers\backend\ResearchController::class, 'impactArea'])->name('impactarea.create');
-Route::any('/impactarea_store',[App\Http\Controllers\backend\ResearchController::class, 'impactAreaStore'])->name('impactarea.store');
 Route::resource('materials',App\Http\Controllers\backend\MaterialsController::class);
+Route::resource('impactareas',App\Http\Controllers\backend\ImpactAreasController::class);
 Route::resource('research',App\Http\Controllers\backend\ResearchController::class);
 Route::any('/fetch_research',[App\Http\Controllers\backend\ResearchController::class, 'fetchResearch']);
 Route::resource('research_achievements',App\Http\Controllers\backend\AchiementsController::class);
@@ -42,7 +41,6 @@ Route::any('/departments','App\Http\Controllers\HomeController@Departments');
 
 
 });
-
 
 
 
