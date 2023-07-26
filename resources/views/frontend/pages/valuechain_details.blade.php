@@ -50,7 +50,7 @@
                         {{-- <span class="vl"></span> --}}
                          <div class="col-md-4">
                           <div class="container">
-                            <input type="button" value="{{$valuechain->title }} dissemination materials" class="btn btn-block" style="background-color: #85AE46;color:whitesmoke">
+                            <input type="button" value="{{$valuechain->title }} dissemination materials" class="btn btn-block" style="background-color: #20b15e;color:whitesmoke">
                           
                             <br> <br>
                             @if ($valuechain->title=="Mangoes-IPM" 

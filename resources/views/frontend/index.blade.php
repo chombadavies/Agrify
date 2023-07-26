@@ -121,7 +121,7 @@
             </div>
           <p>At the institutional level, the National Project Coordinator  reports to the KALRO Director General. The project draws support from the technical domain managers at KALRO. CS APP hired officers with agribusiness and M & E expertise to support the project.</p> --}}
       <br>
-      <div><a href="{{route('project_profile')}}"><input type="button" value="Read More" class="btn btn-block "  style="background-color: #6B8B3A;color:aliceblue"></a></div>
+      <div><a href="{{route('project_profile')}}"><input type="button" value="Read More" class="btn btn-block "  style="background-color: #20b15e;color:aliceblue"></a></div>
           </div>
         </div>
 
