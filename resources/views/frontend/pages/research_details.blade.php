@@ -60,7 +60,7 @@
                          <p>{!!$achievement->description !!}</p>
                          <div>
                           @if ($achievement->status == "Completed")
-                          <button class="btn" style="background-color: #6B8B3A;color:white" >{!!$achievement->status!!}</button>
+                          <button class="btn" style="background-color: #20b15e;color:white" >{!!$achievement->status!!}</button>
                           @else
                           <button class="btn btn-warning">{!!$achievement->status!!}</button>
                           @endif
