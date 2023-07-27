@@ -19,4 +19,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::any('valuechains',[\App\Http\Controllers\Frontend\IndexController::class,'valuechainsapi']);
+Route::any('valuechains',[\App\Http\Controllers\APISController::class,'valuechains']);
+Route::any('valuechains/{id}',[\App\Http\Controllers\APISController::class,'valuechainsparams']);
+
+Route::any('partners',[\App\Http\Controllers\APISController::class,'partners']);
+Route::any('partners/{id}',[\App\Http\Controllers\APISController::class,'partnersparams']);

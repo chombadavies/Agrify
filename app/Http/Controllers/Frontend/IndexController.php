@@ -215,13 +215,8 @@ return view('frontend.pages.contactus');
     
     }
 
-    public function valuechainsapi(){
-        $valuechains=ValueChain::all();
-        return response()->json( [
-            'status'=>200,
-            'valuechains'=>$valuechains
-            ] );
-    }
+   
+
     public function map(){
         return view('frontend.pages.map');
     }
