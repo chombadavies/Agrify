@@ -10,21 +10,21 @@ use Illuminate\Http\Request;
 class APISController extends Controller
 {
     public function valuechains(Request $request){
-      $rule=array(
-        'memebr_id'=>'required',
-      );
+    //   $rules=array(
+    //     'memebr_id'=>'required',
+    //   );
 
-      $validator=Validator::make($request->all(),$rules);
-      if($validator->fails()){
-        return $validator->errors();
-      }else{
-        //save data as result
-        if($result){
-            return ['result'=>'data has been saved'];
-        }else{
-            return ['result'=>'operation failed'];
-        }
-      }
+    //   $validator=Validator::make($request->all(),$rules);
+    //   if($validator->fails()){
+    //     return $validator->errors();
+    //   }else{
+    //     //save data as result
+    //     if($result){
+    //         return ['result'=>'data has been saved'];
+    //     }else{
+    //         return ['result'=>'operation failed'];
+    //     }
+    //   }
 
 
         $valuechains=ValueChain::all();
