@@ -34,7 +34,7 @@
 
                       <div class="" style="display:flex;justify-content:center">
                         <a href="{{$partner->url}}" target="blank"> 
-                         <img src="{{asset('backend/uploads/'.$partner->image)}}" class="img-fluid" alt="" height="80"><br></div>
+                         <img src="{{asset($partner->image)}}" class="img-fluid" alt="" height="80"><br></div>
                          <div >
                              <span>{{$partner->title}}</span></a>
                              
@@ -61,7 +61,7 @@
                           <a href="{{route('project.details',$project->id)}}">
                           <div>
                             <a href="{{route('project.details',$project->id)}}">
-                       <img src="{{asset('backend/uploads/'.$project->image)}}" alt="" height="120">
+                       <img src="{{asset($project->image)}}" alt="" height="120">
                      </div>
                      <div>
                         <span>{{$project->title}}</span></a>

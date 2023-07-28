@@ -68,7 +68,7 @@ class ValueChainController extends Controller
         }
 
         $data=$request->all();
-        $data['image']=$image;
+        $data['image']=$ImagePath;
       
     //    dd($data);
         $status=ValueChain::create($data);
@@ -162,7 +162,7 @@ class ValueChainController extends Controller
             $details_image= $valuechain->details_image;
             
         }
-        $data['image']=$image;
+        $data['image']=$ImagePath;
       $data['details_image']=$details_image;
     // dd($data);
       $status=$valuechain->fill($data)->save();
@@ -195,7 +195,7 @@ public function fetchValuechains()
         ->rawColumns(['action','image','introduction','description'])
         ->editColumn('image',function($model){
          $name=$model->image;
-         $path=asset('backend/uploads/'.$name);
+         $path=asset($name);
         return '<img src="'.$path.'" width="70px;" height="70px;"  alt="category image" >';
         })
         ->editColumn('introduction',function($model){

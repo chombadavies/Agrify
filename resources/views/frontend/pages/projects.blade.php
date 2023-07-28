@@ -76,7 +76,7 @@
                    
                     <figure>
                         <a href="{{route('project.details',$project->id)}}">
-                            <img class="img-fluid lazy" src="{{asset('backend/uploads/'.$project->image)}}" data-src="{{asset('backend/uploads/'.$project->image)}}" alt="">
+                            <img class="img-fluid lazy" src="{{asset($project->image)}}" data-src="{{asset($project->image)}}" alt="">
                         </a>
                     </figure>
                     <a href="product-detail-1.html">

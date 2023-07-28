@@ -26,8 +26,9 @@ class APISController extends Controller
     //     }
     //   }
 
-
+    with('brand:id,keyword,name,description');
         $valuechains=ValueChain::all();
+        // $valuechains=ValueChain::with('id,description,project_overview,url,image,title');
         return response()->json( [
             'status'=>200,
             'valuechains'=>$valuechains
@@ -37,12 +38,16 @@ class APISController extends Controller
     public function valuechainsparams($id){
       
         $valuechain=ValueChain::findOrFail($id);
+        
         return response()->json( [
             'status'=>200,
-            'valuechain'=>$valuechain
+            'valuechain'=>$valuechain,
+            'materials'=>$valuechain->materials
             ] );
     }
     public function partners(){
+        // with('id,description,project_overview,url,image,title');
+
         $partners=Partner::all();
         return response()->json([
             'status'=>200,
@@ -51,10 +56,10 @@ class APISController extends Controller
     }
     public function partnersparams($id){
         $partner=Partner::findOrFail($id);
-
         return response()->json([
             'status'=>200,
-            'partner'=>$partner
+            'partner'=>$partner,
+            'projects'=>$partner->projects
         ]);
     }
 }

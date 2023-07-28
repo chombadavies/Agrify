@@ -64,7 +64,7 @@ class ProjectsController extends Controller
             $ImagePath = "";
             
         }
-      $data['image']=$image;
+      $data['image']=$ImagePath;
      $partner=Project::create($data);
 
       Session::flash('success_message', 'project added successfully');
@@ -125,7 +125,7 @@ class ProjectsController extends Controller
             $ImagePath = "";
             
         }
-      $data['image']=$image;
+      $data['image']=$ImagePath;
       $partner = Project::findOrFail($id);
       $status=$partner->fill($data)->save();
 
@@ -162,7 +162,7 @@ class ProjectsController extends Controller
         
            ->editColumn('photo',function($model){
                $name=$model->photo;
-               $path=asset('backend/uploads/'.$name);
+               $path=asset($name);
                return '<img src="'.$path.'" width="70px;" height="70px;"  alt="Project image" >';
            })
 

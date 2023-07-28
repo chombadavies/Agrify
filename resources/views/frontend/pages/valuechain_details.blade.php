@@ -32,7 +32,7 @@
                      
                      <div class="col-md-8">
                       <div style="display: flex;justify-content:center;border-radius: 12px;overflow:hidden">
-                        <img src="{{asset('backend/uploads/'.$valuechain->details_image)}}" alt="" height="100%" width="100%"  style="border-radius: 12px;object-fit:fill">
+                        <img src="{{asset($valuechain->details_image)}}" alt="" height="100%" width="100%"  style="border-radius: 12px;object-fit:fill">
                         {{-- <div><i>{{$valuechain->title}}</i></div> --}}
                       </div>
                       <br>

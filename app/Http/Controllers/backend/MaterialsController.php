@@ -65,7 +65,7 @@ class MaterialsController extends Controller
               
                 $material->title = $name;
                 $material->value_chain_id = $data['valuechain_id'];
-                $material->pdf = $name;
+                $material->pdf = $filePath;
                $material->save();
             
         }

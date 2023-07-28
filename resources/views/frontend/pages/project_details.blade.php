@@ -32,7 +32,7 @@
                      
                      <div class="col-md-6">
                       <div style="display: flex;justify-content:center;border-radius: 12px;">
-                        <img src="{{asset('backend/uploads/'.$project->image)}}" alt="" height="350" width="100%" style="border-radius: 12px;">
+                        <img src="{{asset( $project->image)}}" alt="" height="350" width="100%" style="border-radius: 12px;">
                       </div>
                       <br>
                       

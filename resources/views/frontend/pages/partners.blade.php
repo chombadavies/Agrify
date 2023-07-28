@@ -44,7 +44,7 @@
               
                 <div class="col-lg-4 pl-lg-5 text-center  d-lg-block">
                   <a href="{{route('partner',$partner->id)}}">
-                  <img src="{{asset('backend/uploads/'.$partner->image)}}" alt="" class="img-fluid"  >
+                  <img src="{{asset($partner->image)}}" alt="" class="img-fluid"  >
                   <div>
                     <span>{{$partner->title}}</span></a>
                   </div>

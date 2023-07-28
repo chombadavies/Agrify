@@ -71,10 +71,11 @@
                 <iframe width="560" height="315" src="{{$video->video_link}}" title="YouTube video player" frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <div class="portfolio-links">
-                  <a href="{{$video->video_link}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="{{$video->video_link}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a>
                   <a href="{{$video->video_link}}" title="More Details" target="blank"><i class="bx bx-link"></i></a>
                 </div>
               </div>
+              <p>{{$video->video_title}}</p>
             </div>
             @endforeach
   
@@ -97,7 +98,7 @@
                 <div class="portfolio-wrap">
                   <img src="{{asset('backend/uploads/'.$image->image)}}" class="img-fluid" alt="">
                   <div class="portfolio-links">
-                    <a href="{{asset('backend/uploads/'.$image->image)}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                    <a href="{{asset('backend/uploads/'.$image->image)}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="memmmmeememem"><i class="bx bx-plus"></i></a>
                     <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                   </div>
                 </div>

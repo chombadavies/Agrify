@@ -49,15 +49,25 @@
                   </select>
                 
                   </div>
-                  <div class="form-group col-md-6" id="video">
+                  <div class="form-group col-md-6 video">
                     <label for="exampleInputEmail1">Video Link</label>
                   <input type="text" class="form-control" name="video_link" placeholder="video link">
                   </div>
+                  <div class="form-group col-md-6 video" >
+                    <label for="exampleInputEmail1">Video title</label>
+                  <input type="text" class="form-control" name="video_title" placeholder="video link">
+                  </div>
 
-                  <div class="form-group col-md-6" id="image">
+                  <div class="form-group col-md-6 image" >
                     <label for="exampleInputEmail1">Image</label>
                    <input type="file" class="form-control" name="image" >
                   </div>
+                  <div class="form-group col-md-6 image">
+                    <label for="exampleInputEmail1">Image Caption</label>
+                   <input type="text" class="form-control" name="image_caption" >
+                  </div>
+                  
+
                 </div>
 
 
@@ -102,8 +112,8 @@
 </script>
 <script>
     $(document).ready(function(){
-    $("#image").hide();
-    $("#video").hide();
+    $(".image").hide();
+    $(".video").hide();
 
 
 
@@ -111,11 +121,11 @@
     e.preventDefault();
     var type=$(this).val();
 if(type=="image"){
-    $("#image").show(); 
-    $("#video").hide();
+    $(".image").show(); 
+    $(".video").hide();
 }else{
-    $("#video").show();
-    $("#image").hide();
+    $(".video").show();
+    $(".image").hide();
 }
     
         })

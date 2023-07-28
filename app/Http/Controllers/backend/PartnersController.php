@@ -169,8 +169,9 @@ class PartnersController extends Controller
            ->rawColumns(['action','photo'])
            ->editColumn('photo',function($model){
                $name=$model->image;
-               $path=asset('backend/uploads/'.$name);
-               return '<img src="'.$path.'" width="70px;" height="70px;"  alt="Service image" >';
+               $path=asset($name);
+            //    $path=asset('backend/uploads/'.$name);
+               return '<img src="'.$path.'" width="70px;" height="70px;"  alt="Partner image" >';
            })
 
            ->editColumn('description',function($model){
