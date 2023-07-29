@@ -38,11 +38,14 @@ class APISController extends Controller
     public function valuechainsparams($id){
       
         $valuechain=ValueChain::findOrFail($id);
+        $materials=$valuechain->materials;
+
+        unset($valuechain['materials']);
         
         return response()->json( [
             'status'=>200,
             'valuechain'=>$valuechain,
-            'materials'=>$valuechain->materials
+            'materials'=>$materials
             ] );
     }
     public function partners(){
@@ -56,10 +59,16 @@ class APISController extends Controller
     }
     public function partnersparams($id){
         $partner=Partner::findOrFail($id);
+    
+            $projects=$partner->projects;
+
+
+            unset($partner->projects);
+
         return response()->json([
             'status'=>200,
             'partner'=>$partner,
-            'projects'=>$partner->projects
+            'projects'=>$projects
         ]);
     }
 }
