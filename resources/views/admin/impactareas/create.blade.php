@@ -46,7 +46,7 @@
                     <span style="color: red" >{{$errors->first('title')}}</span>
                 
                   </div>
-                  <div class="form-group col-md-6">
+                  {{-- <div class="form-group col-md-6">
                     <label for="exampleInputEmail1">Impact Area Images</label>
                     <div class="input-group">
                         <span class="input-group-btn">
@@ -58,7 +58,7 @@
                       </div>
                       <div id="holder" style="margin-top:15px;max-height:100px;"></div>
 
-                  </div>
+                  </div> --}}
 
                 </div>
                

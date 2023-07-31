@@ -34,7 +34,7 @@
             <div class="col-lg-7">
                 <div class="box_about" style="text-align: justify;">
                     {{-- <h5>The project implementation is steered at the following levels:</h5> --}}
-                    <p class="lead"> <b> <strong> a.	AgriFI Program Steering Committee </strong> </b></p>
+                    <p class="lead"> <b> <strong> a.AgriFI Program Steering Committee </strong> </b></p>
                     <p>The CS APP reports to the overall Kenya AgriFI Steering Committee (AKSC). AKSC is chaired by the Cabinet Secretary Ministry of Agriculture and Livestock Development (MoALF) with membership drawn from MoALF, 
                         Kenya Plant Health Inspectorate Service (KEPHIS), Kenya Private Sector Alliance (KEPSA); Ministry of Forestry and Environment; Kenya National Farmers Federation (KENAFF) and Ministry of Industry and Trade. </p>
                         <p> All the four AgriFI components implementing organizations (Danish Embassy, Self Help Africa, KALRO and German Corporation for International Cooperation (GIZ)). The Delegation of the European Union to Kenya has observer status to the AKSC.
@@ -44,7 +44,7 @@
             </div>
             <div class="col-lg-5 pl-lg-5 text-center d-none d-lg-block">
                     <img src="{{asset('frontend/img/meme.jpg')}}" alt="" class="img-fluid" width="400" height="350" style="border-radius:14px">
-                   <div> <span ><i>members of Program Steering Committee</i> </span></div>
+                   <div> <span ><i>Members of Program Steering Committee</i> </span></div>
             </div>
         </div>
         <br>
@@ -52,13 +52,13 @@
         <div class="row justify-content-center ">
             <div class="col-lg-5 pr-lg-5 text-center d-none d-lg-block">
                     <img src="{{asset('frontend/img/20221206_093848.jpg')}}" alt="" class="img-fluid" width="380" height="100"  style="border-radius:14px; margin-left:0">
-                    <div> <span ><i>members of Program Steering Committee</i> </span></div>
+                    <div> <span ><i>Members of Program Steering Committee</i> </span></div>
                     
             </div>
             <div class="col-lg-7">
                 <div class="box_about" style="text-align: justify;">
                     <p class="lead"> <b> <strong>b.	Project Implementation Committee (PIC)</strong></b></p>
-                    <p>A PIC chaired by the Director- General KALRO is made up of the PCU, one Deputy Director General, a representative of implementing partners (on rotating basis), 
+                    <p>The Project Implementation Committee (PIC) is chaired by the Director- General KALRO is made up of the PCU, one Deputy Director General, a representative of implementing partners (on rotating basis), 
                         representative of relevant local University, MoALF, AgriFI Focal Point (Coordinator), 
                         and Private sector representative.  The EC Delegation and the National Treasury have representative(s) as observers.
                          PIC provide oversight and guidance to the PCU in implementing the project. PIC meet once a year. </p>
@@ -73,7 +73,7 @@
             <div class="col-lg-7">
                 <div class="box_about" style="text-align: justify;">
                     <p class="lead"><b><strong>c.Project Coordination Unit</strong></b></p>
-                    <p>CS APP has a project coordination unit, which is responsible for the day to day operation of the project. The unit is lean with the following full time dedicated staff; 
+                    <p>AgriFI CS APP has a project coordination unit, which is responsible for the day to day operation of the project. The unit is lean with the following full time dedicated staff; 
                         i.	National Project Coordinator
                         ii.	Agribusiness Officer
                         iii.	M & E Officer 

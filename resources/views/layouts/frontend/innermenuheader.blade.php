@@ -55,7 +55,7 @@
     <div id="topbar" class="d-flex align-items-center fixed-top">
       <div class="container d-flex justify-content-between">
         <div class="contact-info d-flex align-items-center">
-          <strong><i class="bi bi-envelope"></i> <a href="mailto:uttp@kalro.org">uttp@kalro.org</a></strong> <i class="bi bi-phone"></i> <a href="+254722206986">+254 722 206986</a> </strong>
+          <strong><i class="bi bi-envelope"></i> <a href="mailto:agrificsapp@kalro.org">agrificsapp@kalro.org</a></strong> <i class="bi bi-phone"></i> <a href="">+254 722 206986</a> </strong>
         </div>
         <div class="d-none d-lg-flex contact-info align-items-center ">
           {{-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a> --}}
@@ -115,7 +115,7 @@
                 <li><a class="nav-link" href="{{route('partners')}}">Partner Profiles</a></li>
                 <li><a class="nav-link" href="{{route('technology_models')}}">Technology and Commercialization</a></li>
                 <li><a class="nav-link" href="{{route('achievements')}}">Achievements</a></li>
-                {{-- <li><a class="nav-link" href="#">Impact Stories </a></li> --}}
+                <li><a class="nav-link" href="#">Impact Stories </a></li>
                  </ul>
            </li>
             

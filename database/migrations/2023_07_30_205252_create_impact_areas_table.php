@@ -16,9 +16,9 @@ class CreateImpactAreasTable extends Migration
         Schema::create('impact_areas', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->text('introduction');
-            $table->text('description');
-            $table->string('images');
+            $table->longText('introduction');
+            $table->longText('description');
+            $table->string('images')->nullable();
             $table->enum('status',['active','inactive'])->default('active');
             $table->timestamps();
         });

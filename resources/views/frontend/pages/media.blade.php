@@ -42,7 +42,7 @@
                 <li data-filter="*" class="filter-active">All</li>
                 <li data-filter=".filter-card" >Photo Gallery</li>
                 <li data-filter=".filter-web">Videos</li>
-                <li data-filter=".filter-app">Latest Wews</li>
+                {{-- <li data-filter=".filter-app">Latest Wews</li> --}}
               </ul>
             </div>
           </div>

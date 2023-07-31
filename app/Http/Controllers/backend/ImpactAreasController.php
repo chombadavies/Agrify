@@ -39,8 +39,8 @@ class ImpactAreasController extends Controller
     {
         $data=$request->all();
         // dd($data);
-        $question=ImpactArea::create($data);
-        return redirect()->route('research.index')->with('success','research added successfully');
+        $impactarea=ImpactArea::create($data);
+        return redirect()->route('impactareas.create')->with('success','Impact Area added successfully');
     }
 
     /**

@@ -3,9 +3,10 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Unified Technology Transfer Platform</title>
-  <meta content="" name="agrifi">
-  <meta content="" name="agrificsapp">
-  <meta content="" name="agrificsapp kalro">
+  <meta content="agrifi" name="agrifi">
+  <meta content="agrificsapp" name="agrificsapp">
+  <meta content="agrificsapp kalro" name="agrificsapp kalro">
+  <meta content="kalro" name="kalro">
 
   <!-- Favicons -->
   <link href="{{asset('frontend/img/agriFilogo.png')}}" rel="icon">
@@ -35,13 +36,13 @@
   <div id="topbar" class="d-flex align-items-center fixed-top">
     <div class="container d-flex justify-content-between">
       <div class="contact-info d-flex align-items-center">
-        <strong><i class="bi bi-envelope"></i> <a href="mailto:uttp@kalro.org">uttp@kalro.org</a></strong> <strong></strong><i class="bi bi-phone"></i> <a href="+254722206986">+254 722 206986</a> </strong>
+        <strong><i class="bi bi-envelope"></i> <a href="mailto:agrificsapp@kalro.org">agrificsapp@kalro.org</a></strong> <strong></strong><i class="bi bi-phone"></i> <a href="+254722206986">+254 722 206986</a> </strong>
       </div>
       <div class="d-none d-lg-flex contact-info align-items-center ">
         {{-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a> --}}
 
-        <div><a href="https://www.kaop.co.ke/" target="blank"><i class="fas fa-sun"></i> Climate Advisories</a></div>
-      <div style="padding-left: 12px"><a href="https://amis.co.ke/" target="blank"><i class="bi bi-cart"></i> Market Place</a></div>
+        <div><a href="https://www.kaop.co.ke/" target="blank"><i class="fas fa-sun"></i> Climate Information</a></div>
+      <div style="padding-left: 12px"><a href="https://amis.co.ke/" target="blank"><i class="bi bi-cart"></i> Market Information</a></div>
      
       </div>
     </div>
@@ -92,7 +93,7 @@
             <li><a class="nav-link" href="{{route('partners')}}">Partner Profiles</a></li>
               <li><a class="nav-link" href="{{route('technology_models')}}">Technology and Commercialization</a></li>
             <li><a class="nav-link" href="{{route('achievements')}}">Achievements</a></li>
-            <li><a class="nav-link" href="{{route('impact.areas')}}">Impact Stories </a></li>
+            {{-- <li><a class="nav-link" href="{{route('impact.areas')}}">Impact Stories </a></li> --}}
              </ul>
        </li>
 
