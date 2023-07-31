@@ -85,7 +85,6 @@
 
                     </p>
                 </div>
-
             </div>
             <br>
             <div class="col-lg-5 pl-lg-5 text-center d-none d-lg-block">
