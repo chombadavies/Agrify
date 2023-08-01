@@ -130,6 +130,7 @@ class ResearchController extends Controller
     public function update(Request $request, $id)
     {
         $data=$request->all();
+        // dd($data);
         $research = Research::findOrFail($id);
    
         if ($request->hasFile('image')) {

@@ -100,7 +100,7 @@
               <div class="row justify-content-center align-items-center">
                 <div class="col-lg-5 pr-lg-5 text-center d-none d-lg-block">
                         <img src="{{asset('frontend/img/mne.png')}}" alt="" class="img-fluid" width="400" height="350" style="border-radius:14px;padding-top:10px">
-                        <div> <span ><i>Monetary & Evaluation Flow-chart</i> </span></div>
+                        <div> <span ><i>Monitoring & Evaluation Flow-chart</i> </span></div>
                 </div>
                 <div class="col-lg-7">
                     <div class="box_about" style="text-align: justify;padding-top:10px">
@@ -118,7 +118,7 @@
             </div>
             <!-- /row -->
             <div class="row justify-content-center align-items-center" style="background-color: #f1f7fd;border-radius:14pt;text-align:justify;padding-top:10px">
-                <p><b>Monitoring and knowledge sharing:</b> Monitoring of project progress is carried out by the PCU and the KALRO management teams against indicators identified in the project logical framework.</p> 
+                <p><b>Monitoring and Knowledge Sharing:</b> Monitoring of project progress is carried out by the PCU and the KALRO management teams against indicators identified in the project logical framework.</p> 
                    <p> An Annual Project Planning and Review (APR) Meeting is held each year where work plans are agreed upon among project implementers and partners.
                      All implementing teams and partners submit quarterly progress reports to the PCU. The report includes a summary financial report. 
                       The EU Delegation staff in Kenya responsible for this project ensure adequate monitoring on the basis of key indicators established in the Logical Framework, 
@@ -127,7 +127,7 @@
                     <p><b> Financial Verification:</b> Is carried out by the identified audit firm according to EU Financial Regulations, Rules and Directives and Grant Contract Guidelines. </p>
                     <p><b> Mid-term Review: </b>A mid-term review of the CS APP was undertaken after 2 years of implementation. </p>
                     <p><b>Final Project Review:</b> Will be carried out by an external review team after completion of the CS APP. </p>
-                    <p><b> Reportig schedule:</b> The Project Coordinator prepares narrative progress reports every six months, and at an end of project. These are submitted to the 
+                    <p><b> Reporting Schedule:</b> The Project Coordinator prepares narrative progress reports every six months, and at an end of project. These are submitted to the 
                         EU by the Director General, KALRO. Each of the report consist 
                         of a narrative section and a financial section and conforms to the format for reporting on grants from the EU. Each report provides a full account of all aspects of 
                         implementation for the period.</p>

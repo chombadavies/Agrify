@@ -85,7 +85,7 @@
                
                
                 <li><a class="nav-link" href="{{route('project_profile')}}" >Project Profile</a></li>
-                <li><a class="nav-link" href="{{route('project_governance')}}" >Project Gorvernance </a></li>
+                <li><a class="nav-link" href="{{route('project_governance')}}" >Project Governance </a></li>
                 <li><a class="nav-link" href="{{route('coapplicants')}}" >Co-Applicants </a></li>
               </ul>
            </li>

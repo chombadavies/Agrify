@@ -36,7 +36,7 @@
 
                       
                       <div style="display: flex;justify-content:center;border-radius: 12px;">
-                        <img src="{{asset('backend/uploads/'.$research_activity->details_image)}}" alt="" height="100%" width="100%" style="border-radius: 12px;">
+                        <img src="{{asset($research_activity->details_image)}}" alt="" height="100%" width="100%" style="border-radius: 12px;">
                         
                       </div>
                       <span> <i>{{$research_activity->alias}} Research Activity </i> </span>

@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use App\Models\Research; 
 use App\Models\Achievement;
 use Session;
+use DB;
+use Yajra\Datatables\Datatables;
+
 
 class AchiementsController extends Controller
 {
@@ -17,7 +20,8 @@ class AchiementsController extends Controller
      */
     public function index()
     {
-        return "on research achievements index";
+        $data['page_title']='Research Achievements';
+        return view('admin.achievements.research_achievements_index',$data);
     }
 
     /**
@@ -61,7 +65,7 @@ class AchiementsController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
@@ -72,7 +76,7 @@ class AchiementsController extends Controller
      */
     public function edit($id)
     {
-        //
+       return  view('admin.achievements.research_achievements_edit');
     }
 
     /**
@@ -96,6 +100,38 @@ class AchiementsController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function fetchResearchAchievements(){
+
+        $models = DB::table('achievements')
+        ->join('research','achievements.research_id','=','research.id')
+        ->select('achievements.id','research.alias as title','achievements.description','achievements.status')
+        ->get();
+
+        return Datatables::of($models)
+           ->rawColumns(['action'])
+           ->editColumn('description',function($model){
+            $text=$model->description;
+            $description=str_limit(strip_tags($text),$limit=50,$end='...');
+             return $description;
+           })
+            ->addColumn('action', function ($model) {
+                $edit_url = route('research_achievements.edit',$model->id);
+              
+
+                return '<div class="dropdown ">
+        <button class="btn btn-pink btn btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Action
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+        <li><a style="cursor:pointer;" data-title="Edit Achievement" class="reject-modal"  data-url="' . $edit_url . '">Edit Achievement</a></li>
+        <li><div class="dropdown-divider"></div></li>
+       
+        </ul>
+        </div> ';
+
+            })
+            ->make(true);
     }
   
 }
