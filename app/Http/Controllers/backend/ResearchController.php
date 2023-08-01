@@ -130,10 +130,10 @@ class ResearchController extends Controller
     public function update(Request $request, $id)
     {
         $data=$request->all();
-        $valuechain = Research::findOrFail($id);
+        $research = Research::findOrFail($id);
    
         if ($request->hasFile('image')) {
-            $destination='backend/uploads/'.$valuechain->image;
+            $destination='backend/uploads/'.$research->image;
             if(File::exists($destination))
             {
                 File::delete($destination);
@@ -150,13 +150,13 @@ class ResearchController extends Controller
                
             }
         } else {
-            $image= $valuechain->image;
+            $image= $research->image;
             $ImagePath = "";
             
         }
 
         if ($request->hasFile('details_image')) {
-            $destination='backend/uploads/'.$valuechain->details_image;
+            $destination='backend/uploads/'.$research->details_image;
             if(File::exists($destination))
             {
                 File::delete($destination);
@@ -173,14 +173,14 @@ class ResearchController extends Controller
                
             }
         } else {
-            $details_image = $valuechain->details_image;
+            $details_image = $research->details_image;
            
             
         }
       $data['image']=$image;
       $data['details_image']=$details_image;
      
-      $status=$valuechain->fill($data)->save();
+      $status=$research->fill($data)->save();
 
      if($status){
         Session::flash('success_message', 'Research Activity updated successfully');
@@ -213,7 +213,7 @@ class ResearchController extends Controller
         ->rawColumns(['action','image','description'])
         ->editColumn('image',function($model){
          $name=$model->photo;
-         $path=asset('backend/uploads/'.$name);
+         $path=asset($name);
         return '<img src="'.$path.'" width="70px;" height="70px;"  alt="category image" >';
         })
         ->editColumn('description',function($model){

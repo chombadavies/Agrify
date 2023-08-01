@@ -6,10 +6,10 @@
     
           <div class="col-lg-4 col-md-6 footer-contact">
             <h3> <i class="ti-home"></i> Contacts</h3>
-            Kaptagat Road,Loresho, Nairobi Kenya<br>
+            Kaptagat Road, Loresho, Nairobi Kenya<br>
             P.O. Box 57811-00200, Nairobi<br>
             <strong> <i class="ti-email"></i>Email:</strong> agrificsapp@kalro.org<br>
-            <strong> web:</strong> http://www.kalro.org/csapp<br>
+            <strong> web:</strong> https://agrificsapp.kalro.org<br>
             <p>
 
           </div>
@@ -19,8 +19,8 @@
           <div class="col-lg-4 col-md-6 footer-contact">
             <h3>Useful Links</h3>
             <ul style="text-decoration: none">
-              <li> <a href="{{route('project_profile')}}" style="color:white">About us</a></li>
-              <li><a href="{{route('contact_us')}}" style="color:white">Contact us</a></li>
+              <li> <a href="{{route('project_profile')}}" style="color:white">About Us</a></li>
+              <li><a href="{{route('contact_us')}}" style="color:white">Contact Us</a></li>
               <li> <a href="{{route('partners')}}" style="color:white">Partners</a></li>
               <li><a href="{{route('coapplicants')}}" style="color:white">Co-Applicants</a></li>
     
@@ -31,7 +31,7 @@
           <div class="col-lg-4 col-md-6 footer-contact">
             <h3>Our Resources</h3>
             <ul>
-              <li> <a href="{{route('valuechains')}}" style="color:white">Valuechains</a></li>
+              <li> <a href="{{route('valuechains')}}" style="color:white">Value Chains</a></li>
               <li> <a href="{{route('map')}}" style="color:white">Analytics Map</a></li>
               <li> <a href="#" style="color:white">Project Publications</a></li>
               <li> <a href="{{route('media')}}" style="color:white">Media</a></li>

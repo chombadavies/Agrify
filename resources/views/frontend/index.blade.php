@@ -198,7 +198,7 @@
               <div class="icon"><i class="fas fa-cloud-sun-rain"></i></div>
               <h4>Climate Information Advisories</a></h4>
               <p></p>
-              <p style="text-align: justify">Proper planning using up to date climate information could minimize negative impact of climate change on people's livelihoods and economy. Accurate & decision-relevant climate
+              <p ><!--Proper planning using up to date climate information could minimize negative impact of climate change on people's livelihoods and economy. -->Accurate & decision-relevant climate
                  information is critical to plan & minimize negative impact of climate variability.</p>
              
             </div>
@@ -209,7 +209,7 @@
               <div class="icon"><i class="bi bi-cart"></i></div>
 
               <h4>Market Information</a></h4>
-              <p style="text-align: justify">Daily market prices, for different markets in varous counties.  </p>
+              <p >Daily market prices, for different markets in varous counties.  </p>
 
             </div>
           </div>
@@ -231,7 +231,7 @@
               <a href="{{route('media')}}">
               <div class="icon"> <i class="bx bx-video-recording"></i></div>
               <h4>Media </a></h4>
-              <p style="text-align: justify"> Access a wide range of multimedia content, 
+              <p > Access a wide range of multimedia content, 
                 including images, videos, and press releases, showcasing our KALRO's latest news, updates, and events.</p>
             </div>
           </div>
@@ -241,7 +241,7 @@
               <a href="{{route('map')}}">
               <div class="icon"> <i class="bx bx-chart"></i></div>
               <h4>Analytics Map </a></h4>
-              <p style="text-align: justify"> The map provides an overview of the results achieved.Data contained in the map has been quality assesed and aligns with project objectives.</p>
+              <p > The map provides an overview of the results achieved. Data contained in the map has been quality assesed and aligns with project objectives.</p>
             </div>
           </div>
         </div>

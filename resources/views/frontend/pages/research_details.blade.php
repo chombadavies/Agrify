@@ -60,9 +60,9 @@
                          <p>{!!$achievement->description !!}</p>
                          <div>
                           @if ($achievement->status == "Completed")
-                          <button class="btn" style="background-color: #20b15e;color:white" >{!!$achievement->status!!}</button>
+                          <button class="btn" style="background-color: #20b15e;color:white" >The project is completed</button>
                           @else
-                          <button class="btn btn-warning">{!!$achievement->status!!}</button>
+                          <button class="btn btn-warning">The project is on-going</button>
                           @endif
                          
                          </div>
@@ -94,7 +94,7 @@
                                   <a href="{{route('reseach_details',$item->id)}}">
                               <figure class="effect-sarah" style="border-radius: 12px;height:100%!important">
                           
-                                <img alt="logo" src="{{asset('backend/uploads/'.$item->image)}}" style="border-radius: 12px;"/>
+                                <img alt="logo" src="{{asset($item->image)}}" style="border-radius: 12px;"/>
                              
                                     <figcaption>
                                         

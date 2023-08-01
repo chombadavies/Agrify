@@ -34,7 +34,7 @@
             <div class="col-lg-7">
                 <div class="box_about" style="text-align: justify;">
                     {{-- <h5>The project implementation is steered at the following levels:</h5> --}}
-                    <p class="lead"> <b> <strong> a.AgriFI Program Steering Committee </strong> </b></p>
+                    <p class="lead"> <b> <strong> AgriFI Program Steering Committee </strong> </b></p>
                     <p>The CS APP reports to the overall Kenya AgriFI Steering Committee (AKSC). AKSC is chaired by the Cabinet Secretary Ministry of Agriculture and Livestock Development (MoALF) with membership drawn from MoALF, 
                         Kenya Plant Health Inspectorate Service (KEPHIS), Kenya Private Sector Alliance (KEPSA); Ministry of Forestry and Environment; Kenya National Farmers Federation (KENAFF) and Ministry of Industry and Trade. </p>
                         <p> All the four AgriFI components implementing organizations (Danish Embassy, Self Help Africa, KALRO and German Corporation for International Cooperation (GIZ)). The Delegation of the European Union to Kenya has observer status to the AKSC.
@@ -57,7 +57,7 @@
             </div>
             <div class="col-lg-7">
                 <div class="box_about" style="text-align: justify;">
-                    <p class="lead"> <b> <strong>b.	Project Implementation Committee (PIC)</strong></b></p>
+                    <p class="lead"> <b> <strong>Project Implementation Committee (PIC)</strong></b></p>
                     <p>The Project Implementation Committee (PIC) is chaired by the Director- General KALRO is made up of the PCU, one Deputy Director General, a representative of implementing partners (on rotating basis), 
                         representative of relevant local University, MoALF, AgriFI Focal Point (Coordinator), 
                         and Private sector representative.  The EC Delegation and the National Treasury have representative(s) as observers.
@@ -72,16 +72,19 @@
           <br>
             <div class="col-lg-7">
                 <div class="box_about" style="text-align: justify;">
-                    <p class="lead"><b><strong>c.Project Coordination Unit</strong></b></p>
+                    <p class="lead"><b><strong>Project Coordination Unit</strong></b></p>
                     <p>AgriFI CS APP has a project coordination unit, which is responsible for the day to day operation of the project. The unit is lean with the following full time dedicated staff; 
-                        i.	National Project Coordinator
-                        ii.	Agribusiness Officer
-                        iii.	M & E Officer 
-                        iv.	Programme Accounts Manager
-                        v.	Office manager/secretary
-                        vi.	Driver 
-                        At the institutional level, the National Project Coordinator reports to the KALRO Director General. The project draws support from the technical domain managers at KALRO. CS APP has hired officers with agribusiness and M
-                         & E expertise to support the project.
+                      <ul>
+                        <li>National Project Coordinator</li>
+                        <li>Agribusiness Officer</li>
+                        <li>M & E Officer </li>
+                        <li>Programme Accounts Manager</li>
+                        <li>Office manager/secretary</li>
+                        <li>Driver </li>
+                       
+                      </ul>
+                      At the institutional level, the National Project Coordinator reports to the KALRO Director General. The project draws support from the technical domain managers at KALRO. CS APP has hired officers with agribusiness 
+                      and M&E expertise to support the project.
 
                     </p>
                 </div>
