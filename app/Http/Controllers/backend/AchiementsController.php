@@ -100,7 +100,7 @@ class AchiementsController extends Controller
 // dd($data);
      if($achievement){
         Session::flash('success_message', ' added successfully');
-        return redirect()->route('research_achievements.create');
+        return redirect()->route('research_achievements.index');
      }else{
         return back()->with('error','operation failed,lease try again.');
      }
