@@ -208,12 +208,15 @@
               <a href="https://amis.co.ke/" target="blank">
               <div class="icon"><i class="bi bi-cart"></i></div>
 
-              <h4>Market Place</a></h4>
-              <p style="text-align: justify">Access a wide range of multimedia content, including images, videos, and press releases,
-                 showcasing our KALRO's latest news, updates, and events.  </p>
+              <h4>Market Information</a></h4>
+              <p style="text-align: justify">Daily market prices, for different markets in varous counties.  </p>
 
             </div>
           </div>
+
+
+         
+
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" >
             <div class="icon-box">
               <a href="">

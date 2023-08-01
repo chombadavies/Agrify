@@ -106,6 +106,7 @@ class ProjectsController extends Controller
     public function update(Request $request, $id)
     {
         $data=$request->all();
+        $project = Project::findOrFail($id);
    
         if ($request->hasFile('image')) {
 
@@ -121,13 +122,13 @@ class ProjectsController extends Controller
                
             }
         } else {
-            $image= "";
-            $ImagePath = "";
+            $image= $project->image;
+            $ImagePath = $project->image;
             
         }
       $data['image']=$ImagePath;
-      $partner = Project::findOrFail($id);
-      $status=$partner->fill($data)->save();
+      
+      $status=$project->fill($data)->save();
 
      if($status){
         Session::flash('success_message', 'Project updated successfully');
@@ -166,11 +167,17 @@ class ProjectsController extends Controller
                return '<img src="'.$path.'" width="70px;" height="70px;"  alt="Project image" >';
            })
 
+        //    ->editColumn('introduction',function($model){
+        //     $text=$model->introduction;
+        //     $introduction=str_limit(strip_tags($text), $limit = 50, $end = '...');
+        //      return $introduction;
+        //    })
            ->editColumn('description',function($model){
-            $description=strip_tags($model->description);
-            
-            return $description;
-        })
+               $text=$model->description;
+               $description=str_limit(strip_tags($text),$limit=50,$end='...');
+                return $description;
+              })
+
             ->addColumn('action', function ($model) {
                 $edit_url = route('projects.edit',$model->id);
                 $view_url = route('projects.show',$model->id);

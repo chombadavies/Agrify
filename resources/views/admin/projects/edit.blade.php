@@ -70,7 +70,7 @@
                 <div class="row">
                     <div class="form-group col-md-6">
                         <label for="">Project Image</label>
-                       <input type="file" class="form-control" name="image" required>
+                       <input type="file" class="form-control" name="image">
                       </div>
                 </div>
                 <!-- /.card-body -->

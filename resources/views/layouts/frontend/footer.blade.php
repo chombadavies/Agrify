@@ -8,7 +8,7 @@
             <h3> <i class="ti-home"></i> Contacts</h3>
             Kaptagat Road,Loresho, Nairobi Kenya<br>
             P.O. Box 57811-00200, Nairobi<br>
-            <strong> <i class="ti-email"></i>Email:</strong> KALROCSAPP@kalro.org<br>
+            <strong> <i class="ti-email"></i>Email:</strong> agrificsapp@kalro.org<br>
             <strong> web:</strong> http://www.kalro.org/csapp<br>
             <p>
 
@@ -20,7 +20,7 @@
             <h3>Useful Links</h3>
             <ul style="text-decoration: none">
               <li> <a href="{{route('project_profile')}}" style="color:white">About us</a></li>
-              <li><a href="{{route('contact_us')}}" style="color:white">Contact Us</a></li>
+              <li><a href="{{route('contact_us')}}" style="color:white">Contact us</a></li>
               <li> <a href="{{route('partners')}}" style="color:white">Partners</a></li>
               <li><a href="{{route('coapplicants')}}" style="color:white">Co-Applicants</a></li>
     
@@ -47,7 +47,8 @@
     
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>KALRO AgriFI</span></strong>. All Rights Reserved . Designed by <a href="https://www.kalro.org/">KALRO ICT</a>
+          {{-- ©  --}}
+          &copy;<script>document.write(new Date().getFullYear())</script>  <strong><span>KALRO AgriFI</span></strong>. All Rights Reserved . Designed by <a href="https://www.kalro.org/">KALRO ICT</a>
         </div>
     
     

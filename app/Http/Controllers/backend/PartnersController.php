@@ -111,8 +111,8 @@ class PartnersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
         $data=$request->all();
+        $partner = Partner::findOrFail($id);
    
         if ($request->hasFile('image')) {
 
@@ -128,8 +128,8 @@ class PartnersController extends Controller
                
             }
         } else {
-            $image= "";
-            $ImagePath = "";
+            $image= $partner->image;
+            $ImagePath =  $image= $partner->image;
             
         }
       $data['image']=$image;

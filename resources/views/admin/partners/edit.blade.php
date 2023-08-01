@@ -49,7 +49,7 @@
                   </div>
                   <div class="form-group col-md-4">
                     <label for="">Logo</label>
-                   <input type="file" class="form-control" name="image" required>
+                   <input type="file" class="form-control" name="image">
                   </div>
                   <div class="form-group col-md-4">
                     <label for="">website Url</label>
