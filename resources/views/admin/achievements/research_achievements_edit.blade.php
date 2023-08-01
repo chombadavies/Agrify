@@ -1,4 +1,4 @@
-
+@extends('layouts.admin.main')
 
 @section('content')
  <div class="content-wrapper">
@@ -7,7 +7,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <a href="<?=route('research.index')?>" class="btn btn-sm btn-info"><span class="fa fa-bars">View List </span></a>
+            <a href="<?=route('research_achievements.index')?>" class="btn btn-sm btn-info"><span class="fa fa-bars">View List </span></a>
             <a href="" class="btn btn-sm btn-danger"><span class="fa fa-download"><span>Upload Data</a>
           </div>
           <div class="col-sm-6">
@@ -47,7 +47,7 @@
                   <select name="research_id" class="form-control">
                     <option selected disabled>Select Category</option>
                    @foreach ($research_activities as $activity)
-                   <option value="{{$activity->id}}">{{$activity->title}}</option> 
+                   <option value="{{$activity->id}}"{{$achievement->research_id==$activity->id ? 'selected': ''}} >{{$activity->title}}</option> 
                    @endforeach
 
                   </select>
@@ -56,8 +56,8 @@
                     <label >Research Status</label>
                   <select name="status" class="form-control">
                     <option slected disabled>Select Status</option>
-                    <option value="Ongoing">On-Going</option>
-                    <option value="Completed">Completed</option>
+                    <option value="Ongoing" {{$achievement->status=='Ongoing'?'selected': ''}}>On-Going</option>
+                    <option value="Completed" {{$achievement->status=='Completed'?'selected': ''}}>Completed</option>
                   </select>
                   </div>
                 </div>
@@ -66,12 +66,12 @@
                 <div class="row">
                     <div class="col-md-12" class="form-control">
                         <label for="">Achievement Description</label>
-                        <textarea id="meme" name="description" required></textarea>
+                        <textarea id="meme" name="description" required>{{$achievement->description}}</textarea>
                     </div>
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-info">Submit</button>
+                  <button type="submit" class="btn btn-info">Update</button>
                 </div>
               </form>
             </div>

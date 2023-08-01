@@ -76,7 +76,12 @@ class AchiementsController extends Controller
      */
     public function edit($id)
     {
-       return  view('admin.achievements.research_achievements_edit');
+       
+        $data['page_title']='Edit Research Achievement';
+        $research_activities=Research::all();
+       $achievement=Achievement::findOrFail($id);
+     
+        return view('admin.achievements.research_achievements_edit',$data)->with(compact('research_activities','achievement'));
     }
 
     /**
@@ -88,7 +93,17 @@ class AchiementsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data=$request->all();
+     
+     $achievement=Achievement::findOrFail($id);
+     $status=$achievement->fill($data)->save();
+// dd($data);
+     if($achievement){
+        Session::flash('success_message', ' added successfully');
+        return redirect()->route('research_achievements.create');
+     }else{
+        return back()->with('error','operation failed,lease try again.');
+     }
     }
 
     /**
@@ -124,7 +139,7 @@ class AchiementsController extends Controller
         <button class="btn btn-pink btn btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Action
         <span class="caret"></span></button>
         <ul class="dropdown-menu">
-        <li><a style="cursor:pointer;" data-title="Edit Achievement" class="reject-modal"  data-url="' . $edit_url . '">Edit Achievement</a></li>
+        <li><a style="cursor:pointer;" data-title="Edit Achievement" href="' . $edit_url . '">Edit Achievement</a></li>
         <li><div class="dropdown-divider"></div></li>
        
         </ul>

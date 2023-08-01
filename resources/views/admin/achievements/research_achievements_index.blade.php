@@ -33,7 +33,7 @@
         <div class="row">
          
           <div class="col-12">
-            <a style="cursor:pointer;color:white" href="{{route('valuechains.create')}}" class="btn btn-sm btn-info"><span class="fa fa-plus"><span>Create ValueChain</a>                                
+            <a style="cursor:pointer;color:white" href="{{route('research_achievements.create')}}" class="btn btn-sm btn-info"><span class="fa fa-plus"><span>Create ValueChain</a>                                
  </div>
 
           <div class="col-12">

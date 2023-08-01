@@ -7,7 +7,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <a href="<?=route('research.index')?>" class="btn btn-sm btn-info"><span class="fa fa-bars">View List </span></a>
+            <a href="<?=route('research_achievements.index')?>" class="btn btn-sm btn-info"><span class="fa fa-bars">View List </span></a>
             <a href="" class="btn btn-sm btn-danger"><span class="fa fa-download"><span>Upload Data</a>
           </div>
           <div class="col-sm-6">
