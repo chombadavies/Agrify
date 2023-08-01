@@ -85,15 +85,16 @@ class APISController extends Controller
     }
     public function researchActitityparams($id){
         $research_activity =Research::findOrFail($id);
-       
+        $related=Research::where('category_id',$research_activity->category_id)->get();
       $archievements=$research_activity->achievements;
+
       unset($research_activity->achievements);
 
         return response()->json([
             'status'=>200,
             'research_activity'=>$research_activity,
-            'archievements'=>$archievements
-          
+            'archievements'=>$archievements,
+            'related'=>$related
         ]);
 
     }
