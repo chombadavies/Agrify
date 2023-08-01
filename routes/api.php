@@ -24,3 +24,6 @@ Route::any('valuechains/{id}',[\App\Http\Controllers\APISController::class,'valu
 
 Route::any('partners',[\App\Http\Controllers\APISController::class,'partners']);
 Route::any('partners/{id}',[\App\Http\Controllers\APISController::class,'partnersparams']);
+
+Route::any('research_activities',[\App\Http\Controllers\APISController::class,'researchActitity']);
+Route::any('research_activities/{id}',[\App\Http\Controllers\APISController::class,'researchActitityparams']);

@@ -114,7 +114,7 @@ class AchiementsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        dd($id);
     }
 
     public function fetchResearchAchievements(){
@@ -133,6 +133,7 @@ class AchiementsController extends Controller
            })
             ->addColumn('action', function ($model) {
                 $edit_url = route('research_achievements.edit',$model->id);
+                $delete_url = route('research_achievements.destroy',$model->id);
               
 
                 return '<div class="dropdown ">
@@ -140,8 +141,9 @@ class AchiementsController extends Controller
         <span class="caret"></span></button>
         <ul class="dropdown-menu">
         <li><a style="cursor:pointer;" data-title="Edit Achievement" href="' . $edit_url . '">Edit Achievement</a></li>
+
         <li><div class="dropdown-divider"></div></li>
-       
+        <li><a style="cursor:pointer;"  href="' . $delete_url . '">Delete Achievement</a></li>
         </ul>
         </div> ';
 

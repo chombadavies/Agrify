@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 use App\Models\ValueChain;
 use App\Models\Partner;
+use App\Models\Research;
 use Validator;
+use DB;
 
 use Illuminate\Http\Request;
 
@@ -71,4 +73,30 @@ class APISController extends Controller
             'projects'=>$projects
         ]);
     }
+
+    public function researchActitity(){
+        $research_activities =Research::all();
+        return response()->json([
+            'status'=>200,
+            'research_activities'=>$research_activities,
+          
+        ]);
+
+    }
+    public function researchActitityparams($id){
+        $research_activity =Research::findOrFail($id);
+       
+      $archievements=$research_activity->achievements;
+      unset($research_activity->achievements);
+
+        return response()->json([
+            'status'=>200,
+            'research_activity'=>$research_activity,
+            'archievements'=>$archievements
+          
+        ]);
+
+    }
+
+
 }
