@@ -131,4 +131,30 @@ class AllAchievementsController extends Controller
     {
         //
     }
+
+    public function fetchAllAchievements(){
+        $models = AllAchievement::all();
+
+        return Datatables::of($models)
+        ->rawColumns(['action','description'])
+      
+        ->editColumn('description',function($model){
+            $text=$model->description;
+            $description=str_limit(strip_tags($text),$limit=50,$end='...');
+             return $description;
+           })
+            ->addColumn('action', function ($model) {
+                $edit_url = route('all_achievements.edit',$model->id);
+                
+             return '<div class="dropdown ">
+        <button class="btn btn-pink btn btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Action
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+        <li><a style="cursor:pointer;" data-title="Edit" href="' . $edit_url . '">Edit Research Actitvity</a></li>
+        </ul>
+        </div> ';
+    
+            })
+            ->make(true);
+    }
 }

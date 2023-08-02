@@ -79,22 +79,22 @@
      
         <div>
           <label for="">Name</label>
-          <input type="text" name="name" class="form-control" placeholder="Name">
+          <input type="text" name="name" class="form-control" placeholder="Name" required>
         </div>
        <br>
        <div>
         <label for="">Phone Number</label>
-        <input type="number" name="phone" class="form-control" placeholder="Phone Number">
+        <input type="number" name="phone" class="form-control" placeholder="Phone Number" required>
       </div>
       <br>
         <div>
           <label for="">Email</label>
-          <input type="email" class="form-control" name="email" placeholder="Email">
+          <input type="email" class="form-control" name="email" placeholder="Email" required>
         </div>
       <br>
       <div>
         {{-- <label for="">Message</label> --}}
-       <textarea name="message" id="" cols="53"  rows="5" placeholder="Message"></textarea>
+       <textarea name="message" id="" cols="53"  rows="5" placeholder="Message" required></textarea>
       </div>
     <br>
       <div class="row">
