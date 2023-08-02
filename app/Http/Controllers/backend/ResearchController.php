@@ -134,11 +134,11 @@ class ResearchController extends Controller
         $research = Research::findOrFail($id);
    
         if ($request->hasFile('image')) {
-            $destination='backend/uploads/'.$research->image;
-            if(File::exists($destination))
-            {
-                File::delete($destination);
-            }
+            // $destination='backend/uploads/'.$research->image;
+            // if(File::exists($destination))
+            // {
+            //     File::delete($destination);
+            // }
             $image_tmp = $request->file('image');
             if ($image_tmp->isValid()) {
                 // Get Image Extension
@@ -152,34 +152,34 @@ class ResearchController extends Controller
             }
         } else {
             $image= $research->image;
-            $ImagePath = "";
+            $ImagePath = $research->image;
             
         }
-
+        
         if ($request->hasFile('details_image')) {
-            $destination='backend/uploads/'.$research->details_image;
-            if(File::exists($destination))
-            {
-                File::delete($destination);
-            }
+            // $destination='backend/uploads/'.$research->details_image;
+            // if(File::exists($destination))
+            // {
+            //     File::delete($destination);
+            // }
             $image_tmp = $request->file('details_image');
             if ($image_tmp->isValid()) {
                 // Get Image Extension
                 $extension = $image_tmp->getClientOriginalExtension();
                 // Generate New Image Name
                 $details_image = rand(111, 99999) . '.' . $extension;
-                $ImagePath = 'backend/uploads/'.$details_image;
+                $detailsImagePath = 'backend/uploads/'.$details_image;
                 // Upload the Image
-                Image::make($image_tmp)->save($ImagePath);
+                Image::make($image_tmp)->save($detailsImagePath);
                
             }
         } else {
-            $details_image = $research->details_image;
-           
+            $details_image =$research->details_image;
+            $detailsImagePath=$research->details_image;
             
         }
-      $data['image']=$image;
-      $data['details_image']=$details_image;
+      $data['image']=$ImagePath;
+      $data['details_image']=$detailsImagePath;
      
       $status=$research->fill($data)->save();
 

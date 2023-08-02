@@ -137,7 +137,7 @@ class ValueChainController extends Controller
             }
         } else {
             $image= $valuechain->image;
-            
+            $ImagePath=$valuechain->image;
         }
 
 
@@ -153,17 +153,17 @@ class ValueChainController extends Controller
                 $extension = $image_tmp->getClientOriginalExtension();
                 // Generate New Image Name
                 $details_image = rand(111, 99999) . '.' . $extension;
-                $ImagePath = 'backend/uploads/'.$details_image;
+                $dImagePath = 'backend/uploads/'.$details_image;
                 // Upload the Image
                 Image::make($image_tmp)->save($ImagePath);
                
             }
         } else {
             $details_image= $valuechain->details_image;
-            
+            $dImagePath=$valuechain->details_image;
         }
-        $data['image']=$image;
-      $data['details_image']=$details_image;
+        $data['image']=$ImagePath;
+      $data['details_image']=$dImagePath;
     // dd($data);
       $status=$valuechain->fill($data)->save();
 
