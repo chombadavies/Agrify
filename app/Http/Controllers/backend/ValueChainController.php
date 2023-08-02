@@ -162,7 +162,7 @@ class ValueChainController extends Controller
             $details_image= $valuechain->details_image;
             
         }
-        $data['image']=$ImagePath;
+        $data['image']=$image;
       $data['details_image']=$details_image;
     // dd($data);
       $status=$valuechain->fill($data)->save();

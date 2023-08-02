@@ -42,41 +42,41 @@ class AllAchievementsController extends Controller
     {
         $data=$request->all();
 
-        if ($request->hasFile('first_image')) {
+    //     if ($request->hasFile('first_image')) {
 
-            $image_tmp = $request->file('first_image');
-            if ($image_tmp->isValid()) {
-                // Get Image Extension
-                $extension = $image_tmp->getClientOriginalExtension();
-                // Generate New Image Name
-                $first_image = rand(111, 99999) . '.' . $extension;
-                $ImagePath = 'backend/uploads/'.$first_image;
-                // Upload the Image
-                Image::make($image_tmp)->save($ImagePath);
+    //         $image_tmp = $request->file('first_image');
+    //         if ($image_tmp->isValid()) {
+    //             // Get Image Extension
+    //             $extension = $image_tmp->getClientOriginalExtension();
+    //             // Generate New Image Name
+    //             $first_image = rand(111, 99999) . '.' . $extension;
+    //             $ImagePath = 'backend/uploads/'.$first_image;
+    //             // Upload the Image
+    //             Image::make($image_tmp)->save($ImagePath);
                
-            }
-        } else {
-            $first_image= "";           
-        }
+    //         }
+    //     } else {
+    //         $first_image= "";           
+    //     }
 
-        if ($request->hasFile('second_image')) {
+    //     if ($request->hasFile('second_image')) {
 
-            $image_tmp = $request->file('second_image');
-            if ($image_tmp->isValid()) {
-                // Get Image Extension
-                $extension = $image_tmp->getClientOriginalExtension();
-                // Generate New Image Name
-                $second_image = rand(111, 99999) . '.' . $extension;
-                $ImagePath = 'backend/uploads/'.$second_image;
-                // Upload the Image
-                Image::make($image_tmp)->save($ImagePath);
+    //         $image_tmp = $request->file('second_image');
+    //         if ($image_tmp->isValid()) {
+    //             // Get Image Extension
+    //             $extension = $image_tmp->getClientOriginalExtension();
+    //             // Generate New Image Name
+    //             $second_image = rand(111, 99999) . '.' . $extension;
+    //             $ImagePath = 'backend/uploads/'.$second_image;
+    //             // Upload the Image
+    //             Image::make($image_tmp)->save($ImagePath);
                
-            }
-        } else {
-            $second_image= "";           
-        }
-      $data['first_image']=$first_image;
-      $data['second_image']=$second_image;
+    //         }
+    //     } else {
+    //         $second_image= "";           
+    //     }
+    //   $data['first_image']=$first_image;
+    //   $data['second_image']=$second_image;
      $allachievement=AllAchievement::create($data);
 // dd($data);
      if($allachievement){

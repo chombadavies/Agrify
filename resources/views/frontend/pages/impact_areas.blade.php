@@ -37,12 +37,7 @@
           <div id="flush-{{$model->id}}" class="accordion-collapse collapse" aria-labelledby="flush-h-{{$model->id}}" data-bs-parent="#accordionFlushExample">
             <div class="card-body">{!!$model->introduction!!}</div>
           </div>
-          @php
-             $photo=explode(',',$model->mages)
-          @endphp
-          <div id="flush-{{$model->id}}" class="accordion-collapse collapse" aria-labelledby="flush-h-{{$model->id}}" data-bs-parent="#accordionFlushExample">
-            <div class="card-body">  <img src="{{$photo[0]}}"  class="img-fluid lazy" alt="" data-src="{{$photo[0]}}"></div>
-          </div>
+      
           <div id="flush-{{$model->id}}" class="accordion-collapse collapse" aria-labelledby="flush-h-{{$model->id}}" data-bs-parent="#accordionFlushExample">
             <div class="card-body">{!!$model->description!!}</div>
           </div>

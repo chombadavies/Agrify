@@ -87,4 +87,35 @@ class ImpactAreasController extends Controller
     {
         //
     }
+
+    public function fetchImapctAreas()
+{
+    $models = ImapctAreas::all();
+
+    return Datatables::of($models)
+    ->rawColumns(['action','image','description'])
+    ->editColumn('image',function($model){
+     $name=$model->photo;
+     $path=asset($name);
+    return '<img src="'.$path.'" width="70px;" height="70px;"  alt="category image" >';
+    })
+    ->editColumn('description',function($model){
+        $text=$model->description;
+        $description=str_limit(strip_tags($text),$limit=50,$end='...');
+         return $description;
+       })
+        ->addColumn('action', function ($model) {
+            $edit_url = route('research.edit',$model->id);
+            
+         return '<div class="dropdown ">
+    <button class="btn btn-pink btn btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Action
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+    <li><a style="cursor:pointer;" data-title="Edit" href="' . $edit_url . '">Edit Research Actitvity</a></li>
+    </ul>
+    </div> ';
+
+        })
+        ->make(true);
+}
 }

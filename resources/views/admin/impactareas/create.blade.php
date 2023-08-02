@@ -41,8 +41,8 @@
                 <div class="card-body">
                     <div class="row">
                   <div class="form-group col-md-6">
-                    <label for="exampleInputEmail1">Research Title</label>
-                    <input type="text" name="title" class="form-control" id="" @error('title') is-invalid @enderror placeholder="Enter Category Name" required value="{{old('title')}}">
+                    <label for="exampleInputEmail1">Impact Area Title</label>
+                    <input type="text" name="title" class="form-control" id="" @error('title') is-invalid @enderror placeholder="Impact Area Title" required value="{{old('title')}}">
                     <span style="color: red" >{{$errors->first('title')}}</span>
                 
                   </div>

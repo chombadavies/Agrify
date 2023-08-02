@@ -15,10 +15,8 @@ class CreateAllAchievementsTable extends Migration
     {
         Schema::create('all_achievements', function (Blueprint $table) {
             $table->id();
-            $table->text('introduction');
-            $table->text('description');
-            $table->string('first_image');
-            $table->string('second_image');
+            $table->longText('introduction');
+            $table->longText('description');
             $table->timestamps();
         });
     }
