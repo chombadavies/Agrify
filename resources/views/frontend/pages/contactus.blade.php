@@ -20,12 +20,12 @@
 
     </div>
   </section><!-- End Breadcrumbs Section -->
-
+  @include('layouts.notifications')
   <section id="resources" class="services">
     <div class="container">
-      <div class="section-title">
-      
-      </div>
+        <div class="section-title">
+          <h2>Contact us</h2>
+        </div>
       <div class="row" >
 
               <div class="row justify-content-center align-items-center" style="background-color:#f1f7fd;border-radius:24px" >
@@ -33,14 +33,14 @@
                 
                 <div class="col-md-6">
                   <div class="row"> 
-                        <h1>How can we help you?</h1>
+                        <h3 style="color: #20b15e">How can we help you?</h3>
 
                         <div class="info-author clearfix">
                           <div class="featured-author float-left">
                               <i class="fas fa-phone"></i>
                           </div>
                           <div class="contact-author">
-                              <h3>Call center</h3>
+                              <h5 style="color:#20b15e">Call center</h5>
                               <ul style="text-decoration-style: none">
                                   <li>Customer Support</li>
                                   <li>+254 722 206986</li>
@@ -59,7 +59,7 @@
                           <i class="fas fa-phone"></i>
                       </div>
                       <div class="contact-author">
-                          <h3>Call center</h3>
+                          <h5 style="color: #20b15e"> Toll Free Number</h5>
                           <ul style="text-decoration-style: none">
                               <li>Customer Support</li>
                               <li>+254 722 206986</li>
@@ -75,33 +75,43 @@
                        <div class="col-md-6">
                         <div class="row">
                       
-                    <form action="" method="">@csrf
+                    <form action="{{route('feedback')}}" method="post">@csrf
      
         <div>
           <label for="">Name</label>
-          <input type="text" class="form-control">
+          <input type="text" name="name" class="form-control" placeholder="Name">
         </div>
        <br>
+       <div>
+        <label for="">Phone Number</label>
+        <input type="number" name="phone" class="form-control" placeholder="Phone Number">
+      </div>
+      <br>
         <div>
-          <label for="">Name</label>
-          <input type="text" class="form-control">
+          <label for="">Email</label>
+          <input type="email" class="form-control" name="email" placeholder="Email">
         </div>
       <br>
+      <div>
+        {{-- <label for="">Message</label> --}}
+       <textarea name="message" id="" cols="53"  rows="5" placeholder="Message"></textarea>
+      </div>
+    <br>
       <div class="row">
-        
-          <input type="button" type="submit" value="Send a Message" class="btn btn-block btn-sm" style="background-color:#a37153;color:aliceblue">
-      
+
+        <button class="btn btn-block" style="background-color:#a37153;color:aliceblue">Send a Message</button>
+         
         
       </div>
-
                     </form>
-                          
-                             
-                             
-                      
                        </div>
               </div>
+              <br><br>
+           
+
               </div>
+              <br>
+              <div></div>
         
             </div>
        

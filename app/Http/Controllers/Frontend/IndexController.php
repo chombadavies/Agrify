@@ -12,6 +12,7 @@ use App\Models\Research;
 use App\Models\Category;
 use App\Models\Media;
 use App\Models\ImpactArea;
+use App\Models\FeedBack;
 use App\Models\Coapplicant;
 use App\Models\AllAchievement;
 use Illuminate\Support\Facades\DB;
@@ -241,5 +242,12 @@ return view('frontend.pages.technology_model',$data);
         // dd($impactareas);
         $data['page_title']='Impact Stories';
         return view('frontend.pages.impact_areas',$data)->with(compact('impactareas'));
+    }
+
+    public function feedBack(Request $request){
+        $data=$request->all();
+        // dd($data);
+     $feedback=Feedback::create($data);
+     return redirect()->route('contact_us')->with('success','Value chain Added successfully');
     }
 }

@@ -31,8 +31,8 @@
       <div class="container margin_60_35 add_bottom_30">
         <div class="row justify-content-center align-items-center" style="background-color: #f1f7fd;border-radius:14pt">
             <div class="col-lg-5 pr-lg-5 text-center d-none d-lg-block">
-                    <img src="{{asset('frontend/img/lounch.jpg')}}" alt="" class="img-fluid" width="400" height="350" style="border-radius:14px">
-                    <div> <span ><i>insert caption here</i> </span></div>
+                    <img src="{{asset('frontend/img/P3310004.jpg')}}" alt="" class="img-fluid" width="400" height="350" style="border-radius:14px" style=" background-size: cover;">
+                    <div> <span ><i>KALRO Headquarters</i> </span></div>
             </div>
             <div class="col-lg-7">
                 <div class="box_about" style="text-align: justify;padding-top:10px">

@@ -92,6 +92,6 @@ Route::any('/project_profile',[\App\Http\Controllers\Frontend\IndexController::c
 Route::any('/project_governance',[\App\Http\Controllers\Frontend\IndexController::class,'projectGovernance'])->name('project_governance');
 Route::any('/map',[\App\Http\Controllers\Frontend\IndexController::class,'map'])->name('map');
 Route::any('/impact-areas',[\App\Http\Controllers\Frontend\IndexController::class,'impactAreas'])->name('impact.areas');
-
+Route::any('/feedback',[\App\Http\Controllers\Frontend\IndexController::class,'feedBack'])->name('feedback');
 
 

@@ -98,8 +98,8 @@
                 <div class="portfolio-wrap">
                   <img src="{{asset('backend/uploads/'.$image->image)}}" class="img-fluid" alt="">
                   <div class="portfolio-links">
-                    <a href="{{asset('backend/uploads/'.$image->image)}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="memmmmeememem"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                    <a href="{{asset('backend/uploads/'.$image->image)}}" data-gallery="portfolioGallery" class="portfolio-lightbox" ><i class="bx bx-plus"></i></a>
+                   
                   </div>
                 </div>
               </div>

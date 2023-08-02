@@ -1177,7 +1177,7 @@ figure.effect-sarah:hover p {
     border-radius: 20px;
 }
 
-.about .play-btn {
+.about .play    -btn {
     width: 94px;
     height: 94px;
     background: radial-gradient(#20b15e 50%, rgba(25, 119, 204, 0.4) 52%);
