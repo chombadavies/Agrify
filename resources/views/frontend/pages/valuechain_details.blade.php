@@ -38,11 +38,11 @@
                       <br>
                       <div class="container">
                           <div><i>{{$valuechain->title}}</i></div> <br>
-                        <p><b> Introduction : </b>{!!$valuechain->introduction!!}</p>
+                        <p><b> Introduction: </b>{!!$valuechain->introduction!!}</p>
                         
                       </div>
                       <div class="container">
-                        <p><b>  Implemetation Details : </b>{!!$valuechain->description!!}</p>
+                        <p><b>  Implemetation Details: </b>{!!$valuechain->description!!}</p>
                       </div> 
                       
                         </div>

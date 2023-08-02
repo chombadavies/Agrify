@@ -43,7 +43,7 @@
                         {{-- <span class="vl"></span> --}}
                          <div class="col-md-6">
                           <div class="container">
-                            <p><b>Upscalling $ Implemetation Details : </b>{!!$project->description!!}</p>
+                            <p><b>Upscalling & Implemetation Details: </b>{!!$project->description!!}</p>
                           </div> 
 
                           {{-- <div class="container">

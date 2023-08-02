@@ -26,15 +26,18 @@
       <div class="section-title">
       
       </div>
-      <div class="" >
+      <div class="row" >
 
               <div class="row justify-content-center align-items-center" style="background-color:#f1f7fd;border-radius:24px" >
-                        <div class="col-md-6"> 
+                        
+                
+                <div class="col-md-6">
+                  <div class="row"> 
                         <h1>How can we help you?</h1>
 
                         <div class="info-author clearfix">
                           <div class="featured-author float-left">
-                              <img src="images/team/c2.jpg" alt="image">
+                              <i class="fas fa-phone"></i>
                           </div>
                           <div class="contact-author">
                               <h3>Call center</h3>
@@ -45,25 +48,44 @@
                               </ul>
                           </div>
                       </div>
-                       </div>
+                  </div>
 
+
+                  <div class="row"> 
+                    
+
+                    <div class="info-author clearfix">
+                      <div class="featured-author float-left">
+                          <i class="fas fa-phone"></i>
+                      </div>
+                      <div class="contact-author">
+                          <h3>Call center</h3>
+                          <ul style="text-decoration-style: none">
+                              <li>Customer Support</li>
+                              <li>+254 722 206986</li>
+                              <li>agrificsapp@kalro.org</li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+                       </div>
+              
+
+             
                        <div class="col-md-6">
+                        <div class="row">
                       
                     <form action="" method="">@csrf
-      <div class="row">
-        <div class="col-md-12">
-        <input type="text" name="" placeholder="name">
+     
+        <div>
+          <label for="">Name</label>
+          <input type="text" class="form-control">
         </div>
-       
-      </div>
-<br><br>
-      <div class="row">
-        <div class="col-md-12">
-        <input type="text" name="" placeholder="email">
+       <br>
+        <div>
+          <label for="">Name</label>
+          <input type="text" class="form-control">
         </div>
-      
-      </div>
-
       <br>
       <div class="row">
         
@@ -78,6 +100,8 @@
                              
                       
                        </div>
+              </div>
+              </div>
         
             </div>
        

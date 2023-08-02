@@ -45,7 +45,7 @@
                         
                       </div>
                       <div class="container">
-                        <p><b>  Projects Implemetation Overview : </b>{!!$partner->project_overview!!}</p>
+                        <p><b> Projects Implemetation Overview: </b>{!!$partner->project_overview!!}</p>
                       </div> 
                       
                         </div>
