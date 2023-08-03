@@ -5,6 +5,8 @@ namespace App\Http\Controllers\backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\AllAchievement;
+use Yajra\Datatables\Datatables;
+use Illuminate\Support\Str;
 use Intervention\Image\Facades\Image;
 use Session;
 
@@ -17,7 +19,8 @@ class AllAchievementsController extends Controller
      */
     public function index()
     {
-        //
+        $data['page_title']='Project Overall Achievements';
+        return view('admin.achievements.all_achievements_index',$data);
     }
 
     /**
@@ -136,9 +139,15 @@ class AllAchievementsController extends Controller
         $models = AllAchievement::all();
 
         return Datatables::of($models)
-        ->rawColumns(['action','description'])
+        ->rawColumns(['action','description','introduction'])
       
-        ->editColumn('description',function($model){
+        ->editColumn('introduction',function($model){
+            $text=$model->introduction;
+            $introduction=str_limit(strip_tags($text),$limit=50,$end='...');
+             return $introduction;
+           })
+
+           ->editColumn('description',function($model){
             $text=$model->description;
             $description=str_limit(strip_tags($text),$limit=50,$end='...');
              return $description;

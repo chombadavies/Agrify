@@ -32,15 +32,20 @@ Route::any('/fetchprojects',[App\Http\Controllers\backend\ProjectsController::cl
 Route::resource('materials',App\Http\Controllers\backend\MaterialsController::class);
 Route::resource('impactareas',App\Http\Controllers\backend\ImpactAreasController::class);
 Route::resource('research',App\Http\Controllers\backend\ResearchController::class);
+
 Route::any('/fetch_research',[App\Http\Controllers\backend\ResearchController::class, 'fetchResearch']);
 Route::resource('research_achievements',App\Http\Controllers\backend\AchiementsController::class);
 Route::any('/fetch_research_achievements',[App\Http\Controllers\backend\AchiementsController::class, 'fetchResearchAchievements']);
 Route::any('/fetch_allachievements',[App\Http\Controllers\backend\AllAchievementsController::class, 'fetchAllAchievements']);
 Route::resource('all_achievements',App\Http\Controllers\backend\AllAchievementsController::class);
+
+
 Route::resource('coapplicants',App\Http\Controllers\backend\CoapplicantsController::class);
 Route::any('/fetch_coapplicants',[App\Http\Controllers\backend\CoapplicantsController::class, 'fetchCoapplicants']);
 Route::any('/Dashboard','App\Http\Controllers\HomeController@Dashboard');
 Route::any('/departments','App\Http\Controllers\HomeController@Departments');
+
+
 
 
 

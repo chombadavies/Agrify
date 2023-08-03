@@ -19,6 +19,7 @@ class CreateFeedBacksTable extends Migration
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
             $table->text('message')->nullable();
+            $table->enum('status',['active','responded'])->default('active');
             $table->timestamps();
         });
     }

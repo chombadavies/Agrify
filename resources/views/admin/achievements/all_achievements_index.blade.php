@@ -33,7 +33,7 @@
         <div class="row">
          
           <div class="col-12">
-            <a style="cursor:pointer;color:white" href="{{route('valuechains.create')}}" class="btn btn-sm btn-info"><span class="fa fa-plus"><span>Create ValueChain</a>                                
+            <a style="cursor:pointer;color:white" href="{{route('all_achievements.create')}}" class="btn btn-sm btn-info"><span class="fa fa-plus"><span>Create overall Achievements</a>                                
  </div>
 
           <div class="col-12">
@@ -103,11 +103,8 @@
            ajax:'<?=url("/admin/fetch_allachievements")?>',
             columns: [
             {data: 'action', name: 'action',searchable:false,orderable:false}, 
-           {data: 'title', name: 'title'},
-           {data: 'image', name: 'image'},
+            {data: 'introduction', name: 'introduction'},
            {data: 'description', name: 'description'},
-           {data: 'mandate', name: 'mandate'},
-           {data: 'relationship', name: 'relationship'},
                         ],
           
 
