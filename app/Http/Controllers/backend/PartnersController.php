@@ -5,6 +5,7 @@ namespace App\Http\Controllers\backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Project;
+use App\Models\FeedBack;
 use App\Models\Partner;
 use Session;
 use DB;
@@ -128,11 +129,11 @@ class PartnersController extends Controller
                
             }
         } else {
-            $image= $partner->image;
-            $ImagePath =  $image= $partner->image;
+         
+            $ImagePath=$image= $partner->image;
             
         }
-      $data['image']=$image;
+      $data['image']=$ImagePath;
       $partner = Partner::findOrFail($id);
       $status=$partner->fill($data)->save();
 
@@ -197,5 +198,39 @@ class PartnersController extends Controller
 
             })
             ->make(true);
+    }
+
+    public function fetchMessages(){
+
+        $models = FeedBack::where('status','active')->get();
+ 
+        
+        // $models = Service::whereNotNull('parent_id')->orderBy('id','asc')->get();
+      
+        return Datatables::of($models)
+           ->rawColumns(['action'])
+          ->editColumn('message',function($model){
+            $message=strip_tags($model->message);
+            
+            return $message;
+        })
+        ->addColumn('action', function ($model) {
+          
+            return '<input type="radio" name="message_id" value="'.$model->id.'">';    
+
+            })
+            ->make(true);
+    }
+
+    public function editMessage(Request $request){
+
+        $data=$request->all();
+        $id=$data['message_id'];
+       $message=FeedBack::findOrFail($id);
+
+           $message->status="responded";
+           $message->save();
+           
+           return redirect()->route('portal');
     }
 }

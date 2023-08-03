@@ -20,13 +20,13 @@
       <div class="row">
         <div class="col-12 col-sm-6 col-md-3">
           <div class="info-box">
-            <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
+            <span class="info-box-icon bg-info elevation-1"><i class="fas fa-partner"></i></span>
 
             <div class="info-box-content">
               <span class="info-box-text">Co-Applicants</span>
               <span class="info-box-number">
-                10
-                <small>%</small>
+                {{App\Models\Coapplicant::count()}}
+               
               </span>
             </div>
             <!-- /.info-box-content -->
@@ -36,11 +36,11 @@
         <!-- /.col -->
         <div class="col-12 col-sm-6 col-md-3">
           <div class="info-box mb-3">
-            <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
+            <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-leaf"></i></span>
 
             <div class="info-box-content">
               <span class="info-box-text">Value chains</span>
-              <span class="info-box-number">41,410</span>
+              <span class="info-box-number">{{App\Models\ValueChain::count()}}</span>
             </div>
             <!-- /.info-box-content -->
           </div>
@@ -53,11 +53,11 @@
 
         <div class="col-12 col-sm-6 col-md-3">
           <div class="info-box mb-3">
-            <span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
+            <span class="info-box-icon bg-success elevation-1"><i class="fi fi-ss-pipette"></i></span>
 
             <div class="info-box-content">
               <span class="info-box-text">Research Activities</span>
-              <span class="info-box-number">760</span>
+              <span class="info-box-number">{{App\Models\Research::count()}}</span>
             </div>
             <!-- /.info-box-content -->
           </div>
@@ -66,11 +66,11 @@
         <!-- /.col -->
         <div class="col-12 col-sm-6 col-md-3">
           <div class="info-box mb-3">
-            <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+            <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-l"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">New Members</span>
-              <span class="info-box-number">2,000</span>
+              <span class="info-box-text">Imapact Stories</span>
+              <span class="info-box-number">{{App\Models\ImpactArea::count()}}</span>
             </div>
             <!-- /.info-box-content -->
           </div>
@@ -90,7 +90,7 @@
           <!-- TABLE: LATEST ORDERS -->
           <div class="card">
             <div class="card-header border-transparent">
-              <h3 class="card-title">Lient Messages</h3>
+              <h3 class="card-title">Received  Messages</h3>
 
               <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -102,84 +102,49 @@
               </div>
             </div>
             <!-- /.card-header -->
-            <div class="card-body p-0">
-              <div class="table-responsive">
-                <table class="table m-0">
-                  <thead>
+            <div class="card card-info card-outline">
+           
+              <!-- /.card-header -->
+              <div class="card-body">
+                <form action="{{route('feedback.edit')}} " method="post"> @csrf 
+                <div class="table-responsive">
+                   <table id="SystemPermisions" class="table table-bordered table-striped"  style="width: 100%;">
+                  <thead class="table bg-info">
                   <tr>
-                    <th>Name</th>
-                    <th>Phone</th>
+                    <th>Action</th>
+                    <th>Client Name</th>
+                    <th>Email</th>
+                    <th>Contact Number</th>
+                    <th>Message</th>
                     <th>Status</th>
-                    <th>Popularity</th>
+                    <th>Message Date</th>
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td><a href="pages/examples/invoice.html">OR9842</a></td>
-                    <td>Call of Duty IV</td>
-                    <td><span class="badge badge-success">Shipped</span></td>
-                    <td>
-                      <div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="pages/examples/invoice.html">OR1848</a></td>
-                    <td>Samsung Smart TV</td>
-                    <td><span class="badge badge-warning">Pending</span></td>
-                    <td>
-                      <div class="sparkbar" data-color="#f39c12" data-height="20">90,80,-90,70,61,-83,68</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                    <td>iPhone 6 Plus</td>
-                    <td><span class="badge badge-danger">Delivered</span></td>
-                    <td>
-                      <div class="sparkbar" data-color="#f56954" data-height="20">90,-80,90,70,-61,83,63</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                    <td>Samsung Smart TV</td>
-                    <td><span class="badge badge-info">Processing</span></td>
-                    <td>
-                      <div class="sparkbar" data-color="#00c0ef" data-height="20">90,80,-90,70,-61,83,63</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="pages/examples/invoice.html">OR1848</a></td>
-                    <td>Samsung Smart TV</td>
-                    <td><span class="badge badge-warning">Pending</span></td>
-                    <td>
-                      <div class="sparkbar" data-color="#f39c12" data-height="20">90,80,-90,70,61,-83,68</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                    <td>iPhone 6 Plus</td>
-                    <td><span class="badge badge-danger">Delivered</span></td>
-                    <td>
-                      <div class="sparkbar" data-color="#f56954" data-height="20">90,-80,90,70,-61,83,63</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="pages/examples/invoice.html">OR9842</a></td>
-                    <td>Call of Duty IV</td>
-                    <td><span class="badge badge-success">Shipped</span></td>
-                    <td>
-                      <div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63</div>
-                    </td>
-                  </tr>
+                     
                   </tbody>
                 </table>
+                  
+                </div>
+             
+
+              
               </div>
-              <!-- /.table-responsive -->
+              <!-- /.card-body -->
             </div>
             <!-- /.card-body -->
             <div class="card-footer clearfix">
-              <a href="javascript:void(0)" class="btn btn-sm btn-info float-left">Place New Order</a>
-              <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Orders</a>
+
+              <div class="row">
+                <div class="col-md-3">
+                  <button class="btn btn-info btn-block" type="submit">Respond </button>
+                    </div>
+
+                <div class="col-md-3">  
+                </div>
+              </div>
             </div>
+          </form>
             <!-- /.card-footer -->
           </div>
           <!-- /.card -->
@@ -194,3 +159,41 @@
   <!-- /.content -->
 </div>
 @endsection
+<style>
+  .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+background-color: #96d6d6;
+}
+</style>
+@push('scripts')
+
+<script>
+   
+  $('#SystemPermisions').DataTable({
+   processing: true,
+   serverSide: true,
+    pageLength:25,
+    "lengthMenu": [[25, 50, 100, -1], [25, 50, 100, "All"]],
+   "order": [[1, "desc" ]],
+
+      ajax:'<?=url("/admin/fetchmessages")?>',
+       columns: [
+       {data: 'action', name: 'action',searchable:false,orderable:false}, 
+      {data: 'name', name: 'name'},
+      {data: 'email', name: 'enmail'},
+      {data: 'phone', name: 'phone'},
+      {data: 'message', name: 'message'},
+      {data: 'status', name: 'status'},
+      {data: 'created_at', name: 'created_at'},
+                   ],
+     
+
+
+       dom: 'Bfrtip',
+
+   buttons: [
+    'pageLength',
+   ],
+   });
+</script>
+    
+@endpush

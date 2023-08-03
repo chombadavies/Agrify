@@ -91,8 +91,7 @@
 </style>
 
 <script>
-        
-          
+   
        $('#SystemPermisions').DataTable({
         processing: true,
         serverSide: true,

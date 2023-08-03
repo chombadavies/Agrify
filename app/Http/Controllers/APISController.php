@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\ValueChain;
 use App\Models\Partner;
 use App\Models\Research;
+use App\Models\Project;
 use Validator;
 use DB;
 
@@ -98,6 +99,22 @@ class APISController extends Controller
         ]);
 
     }
+    public function projects(){
+        // with('id,description,project_overview,url,image,title');
 
+        $projects=Project::all();
+        return response()->json([
+            'status'=>200,
+            'projects'=> $projects
+        ]);
+    }
+    public function projectsparams($id){
+        $project=Project::findOrFail($id);
+           
+        return response()->json([
+            'status'=>200,
+            'project'=>$project
+        ]);
+    }
 
 }

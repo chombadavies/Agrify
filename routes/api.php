@@ -27,3 +27,6 @@ Route::any('partners/{id}',[\App\Http\Controllers\APISController::class,'partner
 
 Route::any('research_activities',[\App\Http\Controllers\APISController::class,'researchActitity']);
 Route::any('research_activities/{id}',[\App\Http\Controllers\APISController::class,'researchActitityparams']);
+
+Route::any('projects',[\App\Http\Controllers\APISController::class,'projects']);
+Route::any('projects/{id}',[\App\Http\Controllers\APISController::class,'projectsparams']);

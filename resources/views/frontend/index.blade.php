@@ -69,7 +69,7 @@
 
                 <div class="col-xl-2 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
-                    <a href="">
+                    <a href="{{route('contact_us')}}">
                     <i class="bx bx-phone-call"></i>
                     <h4>Contact Us</h4></a>
                   </div>
@@ -162,7 +162,7 @@
           <div class="col-lg-3 col-md-6 mt-5 mt-lg-0" >
             <div class="count-box meme">
               <i class="fas fa-award"></i>
-              <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="{{App\Models\ImpactArea::count()}}" data-purecounter-duration="1" class="purecounter"></span>
               <p><strong>Impact Areas</strong> </p>
             </div>
           </div>

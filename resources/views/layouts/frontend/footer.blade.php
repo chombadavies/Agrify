@@ -98,6 +98,11 @@
   <script src="{{asset('frontend/media/vendor/waypoints/noframework.waypoints.js')}}"></script>
   <script src="{{asset('frontend/media/vendor/php-email-form/validate.js')}}"></script>
 
+  <script>
+    setTimeout(function(){
+    $('#alert').slideUp();
+      },3000)
+     </script>
 
   {{-- charts --}}
 

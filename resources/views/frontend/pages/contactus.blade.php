@@ -41,8 +41,8 @@
                           </div>
                           <div class="contact-author">
                               <h5 style="color:#20b15e">Call center</h5>
-                              <ul style="text-decoration-style: none">
-                                  <li>Customer Support</li>
+                              <ul style="list-style: none">
+                                  <li>Help Support</li>
                                   <li>+254 722 206986</li>
                                   <li>agrificsapp@kalro.org</li>
                               </ul>
@@ -60,9 +60,9 @@
                       </div>
                       <div class="contact-author">
                           <h5 style="color: #20b15e"> Toll Free Number</h5>
-                          <ul style="text-decoration-style: none">
-                              <li>Customer Support</li>
-                              <li>+254 722 206986</li>
+                          <ul style="list-style: none">
+                              <li>Help Support</li>
+                              <li>+254-020-418 3301-20</li>
                               <li>agrificsapp@kalro.org</li>
                           </ul>
                       </div>

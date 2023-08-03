@@ -25,6 +25,8 @@ Route::resource('media',App\Http\Controllers\backend\MediaController::class);
 Route::resource('partners',App\Http\Controllers\backend\PartnersController::class);
 Route::resource('projects',App\Http\Controllers\backend\ProjectsController::class);
 Route::any('/fetchpartners',[App\Http\Controllers\backend\PartnersController::class, 'fetchPartners']);
+Route::any('/fetchmessages',[App\Http\Controllers\backend\PartnersController::class, 'fetchMessages']);
+Route::any('/hmessage_edit',[App\Http\Controllers\backend\PartnersController::class, 'editMessage'])->name('feedback.edit');
 
 Route::any('/fetchprojects',[App\Http\Controllers\backend\ProjectsController::class, 'fetchProjects']);
 Route::resource('materials',App\Http\Controllers\backend\MaterialsController::class);
