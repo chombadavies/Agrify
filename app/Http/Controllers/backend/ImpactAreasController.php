@@ -5,6 +5,8 @@ namespace App\Http\Controllers\backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\ImpactArea;
+use Yajra\Datatables\Datatables;
+use Illuminate\Support\Str;
 
 class ImpactAreasController extends Controller
 {
@@ -15,7 +17,8 @@ class ImpactAreasController extends Controller
      */
     public function index()
     {
-        //
+        $data['page_title']='Impact Areas';
+        return view('admin.impactareas.index',$data);
     }
 
     /**
@@ -62,7 +65,9 @@ class ImpactAreasController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data['page_title']='Edit Impact Areas';
+        $impactarea=ImpactArea::findOrFail($id);
+        return view('admin.impactareas.edit',$data)->with(compact('impactarea'));
     }
 
     /**
@@ -74,7 +79,11 @@ class ImpactAreasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data=$request->all();
+        // dd($data);
+        $impactarea=ImpactArea::findOrFail($id);
+        $impactarea->fill($data)->save();
+        return redirect()->route('impactareas.index')->with('success','Impact Area updated successfully');
     }
 
     /**
@@ -88,30 +97,30 @@ class ImpactAreasController extends Controller
         //
     }
 
-    public function fetchImapctAreas()
+    public function fetchImpactAreas()
 {
-    $models = ImapctAreas::all();
+    $models = ImpactArea::all();
 
     return Datatables::of($models)
-    ->rawColumns(['action','image','description'])
-    ->editColumn('image',function($model){
-     $name=$model->photo;
-     $path=asset($name);
-    return '<img src="'.$path.'" width="70px;" height="70px;"  alt="category image" >';
-    })
-    ->editColumn('description',function($model){
+    ->rawColumns(['action','introduction','description'])
+    ->editColumn('introduction',function($model){
+        $text=$model->introduction;
+        $introduction=str_limit(strip_tags($text),$limit=50,$end='...');
+         return $introduction;
+       })
+       ->editColumn('description',function($model){
         $text=$model->description;
         $description=str_limit(strip_tags($text),$limit=50,$end='...');
          return $description;
        })
         ->addColumn('action', function ($model) {
-            $edit_url = route('research.edit',$model->id);
+            $edit_url = route('impactareas.edit',$model->id);
             
          return '<div class="dropdown ">
     <button class="btn btn-pink btn btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Action
     <span class="caret"></span></button>
     <ul class="dropdown-menu">
-    <li><a style="cursor:pointer;" data-title="Edit" href="' . $edit_url . '">Edit Research Actitvity</a></li>
+    <li><a style="cursor:pointer;" data-title="Edit" href="' . $edit_url . '">Edit Impact Story</a></li>
     </ul>
     </div> ';
 

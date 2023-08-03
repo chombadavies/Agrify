@@ -248,6 +248,6 @@ return view('frontend.pages.technology_model',$data);
         $data=$request->all();
         // dd($data);
      $feedback=Feedback::create($data);
-     return redirect()->route('contact_us')->with('success','Value chain Added successfully');
+     return redirect()->route('contact_us')->with('success','Your message was recorded successfully');
     }
 }
