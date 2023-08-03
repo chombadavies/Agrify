@@ -20,7 +20,7 @@
       <div class="row">
         <div class="col-12 col-sm-6 col-md-3">
           <div class="info-box">
-            <span class="info-box-icon bg-info elevation-1"><i class="fas fa-partner"></i></span>
+            <span class="info-box-icon bg-info elevation-1"><i class="fas fa-handshake"></i></i></span>
 
             <div class="info-box-content">
               <span class="info-box-text">Co-Applicants</span>
@@ -53,7 +53,7 @@
 
         <div class="col-12 col-sm-6 col-md-3">
           <div class="info-box mb-3">
-            <span class="info-box-icon bg-success elevation-1"><i class="fi fi-ss-pipette"></i></span>
+            <span class="info-box-icon bg-success elevation-1"><i class="fas fa-book"></i></span>
 
             <div class="info-box-content">
               <span class="info-box-text">Research Activities</span>
@@ -66,7 +66,7 @@
         <!-- /.col -->
         <div class="col-12 col-sm-6 col-md-3">
           <div class="info-box mb-3">
-            <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-l"></i></span>
+            <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-award"></i></span>
 
             <div class="info-box-content">
               <span class="info-box-text">Imapact Stories</span>

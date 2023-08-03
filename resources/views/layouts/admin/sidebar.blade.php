@@ -1,9 +1,9 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-      <img src="dist/img/AdminLTELogo.png" alt="Agrify Logo" class="brand-image img-circle elevation-5"
-           style="opacity: .7">
-      <span class="brand-text font-weight-light"></span>
+    <a href="{{route('portal')}}" class="brand-link" style="background-color: whitesmoke" >
+      <img src="{{asset('frontend/img/agrifi-csapp-logo.png')}}" alt="Agrify Logo" class="brand-image" class="brand-image img-circle elevation"
+           style="">
+      {{-- <span class="brand-text font-weight-light"></span> --}}
     </a>
 
     <!-- Sidebar -->
@@ -200,14 +200,7 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="" class="nav-link">
-                  <i class="fas fa-edit nav-icon"></i>
-                  <p>Add Upscalling Achievement
-
-                  </p>
-                </a>
-              </li>
+          
               <li class="nav-item">
                 <a href="" class="nav-link">
                   <i class="fas fa-table nav-icon"></i>
@@ -217,15 +210,7 @@
                   </p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="{{route('research_achievements.create')}}" class="nav-link">
-                  <i class="fas fa-edit nav-icon"></i>
-                  <p> Add Research Achievement
-
-                    <span class="right badge badge-info"></span>
-                  </p>
-                </a>
-              </li>
+            
               <li class="nav-item">
                 <a href="{{route('research_achievements.index')}}" class="nav-link">
                   <i class="fas fa-table nav-icon"></i>
@@ -236,9 +221,9 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('all_achievements.create')}}" class="nav-link">
-                  <i class="fas fa-edit nav-icon"></i>
-                  <p>add overall Achievements
+                <a href="{{route('all_achievements.index')}}" class="nav-link">
+                  <i class="fas fa-table nav-icon"></i>
+                  <p>overall Achievements
 
                     <span class="right badge badge-info"></span>
                   </p>

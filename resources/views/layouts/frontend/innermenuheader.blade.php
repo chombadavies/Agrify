@@ -115,7 +115,7 @@
                 <li><a class="nav-link" href="{{route('partners')}}">Partner Profiles</a></li>
                 <li><a class="nav-link" href="{{route('technology_models')}}">Technology and Commercialization</a></li>
                 <li><a class="nav-link" href="{{route('achievements')}}">Achievements</a></li>
-                {{-- <li><a class="nav-link" href="{{route('impact.areas')}}">Impact Stories </a></li> --}}
+                <li><a class="nav-link" href="{{route('impact.areas')}}">Impact Stories </a></li>
                  </ul>
            </li>
             
