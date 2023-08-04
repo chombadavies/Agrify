@@ -195,6 +195,29 @@ return view('frontend.pages.contactus');
         return $data;
     }
 
+
+
+
+
+    public function technologyadoption(){
+        $models = DB::select("SELECT (total) AS Totalsc, valuechain  FROM demographics  GROUP BY valuechain ;");        
+
+        $data = array();
+
+        foreach ($models as $model) {
+            $data[] = array('name' => $model->valuechain, 'y' => intval($model->Totalsc));
+        }
+        return $data;
+    }
+
+
+
+
+
+
+
+
+
     public function projectProfile(){
         return view ("frontend.pages.project_profile");
     }

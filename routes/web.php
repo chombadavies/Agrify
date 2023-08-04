@@ -21,7 +21,9 @@ Route::resource('users',App\Http\Controllers\UserController::class);
 Route::resource('valuechains',App\Http\Controllers\backend\ValueChainController::class);
 Route::any('/fetch_valuechains',[\App\Http\Controllers\backend\ValueChainController::class,'fetchValuechains']);
 Route::resource('news',App\Http\Controllers\backend\NewsController::class);
+
 Route::resource('media',App\Http\Controllers\backend\MediaController::class);
+Route::any('/fethmedia',[App\Http\Controllers\backend\MediaController::class, 'fethMedia']);
 Route::resource('partners',App\Http\Controllers\backend\PartnersController::class);
 Route::resource('projects',App\Http\Controllers\backend\ProjectsController::class);
 Route::any('/fetchpartners',[App\Http\Controllers\backend\PartnersController::class, 'fetchPartners']);

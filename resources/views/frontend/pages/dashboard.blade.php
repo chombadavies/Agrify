@@ -211,13 +211,13 @@
 
 <style>
   .card-header{
-    background-color: #85AE46;
+    background-color: #20b15e;
     height: 50px
   }
 
   .meme{
   box-shadow: 
-   5px 5px 10px 5px rgba(126,126,126),
+   5px 5px 10px 5px rgb(43, 42, 42),
    -5px 0px  rgb(158, 158, 158);
       border-radius: 5px; 
      }

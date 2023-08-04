@@ -653,8 +653,19 @@ h6 {
     z-index: 2;
     margin-bottom: -200px;
     position: relative;
+    animation: mymove 10s infinite;
+    animation-delay: 2s;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
+
 }
 
+@keyframes mymove {
+    0% { background-image: url("../img/hero-bg.jpg");}
+    40% { background-image: url('../img/9439.jpg');}
+    70%  { background-image: url('../img/P3310004.jpg'); }
+  
+  }
 #hero .container {
     position: relative;
 }

@@ -52,8 +52,8 @@
                     <label for="">Partners Name</label>
                     <select name="partner_id" id="" class="form-control">
                         <option value="" selected disabled>select Partner</option>
-                        @foreach ($partners as $partner)
-                            <option value="{{$partner->id}}">{{$partner->title}}</option>
+                        @foreach ($partners as $partner) 
+                            <option value="{{$partner->id}}" {{$project->partner_id==$partner->id?'selected':''}}>{{$partner->title}}</option>
                         @endforeach
                     </select>
                  </div>

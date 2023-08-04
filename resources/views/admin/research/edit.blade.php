@@ -57,7 +57,7 @@
                   <select name="category_id" class="form-control">
                     <option selected disabled>Select Category</option>
                    @foreach ($categories as $category)
-                   <option value="{{$category->id}}">{{$category->title}}</option> 
+                   <option value="{{$category->id}}" {{$research_activity->category_id==$category->id ? "selected": ''}}>{{$category->title}}</option> 
                    @endforeach
 
                   </select>

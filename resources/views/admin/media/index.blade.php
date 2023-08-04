@@ -54,10 +54,10 @@
                   <tr>
                     
                                         <th>Action</th>
-                                        <th>Title</th>
-                                        <th>Photo</th>
-                                        <th>summery</th>
-                                        <th>Publish Date</th>
+                                        <th>category</th>
+                                        <th>Image</th>
+                                        <th>Image</th>
+                                        <th>Caption/Title</th>
                                         <th>Owner</th>
                                         <th>Status</th>
                                   
@@ -93,7 +93,7 @@
 }
 </style>
 
-{{-- <script>
+<script>
         
           
        $('#SystemPermisions').DataTable({
@@ -103,7 +103,7 @@
          "lengthMenu": [[25, 50, 100, -1], [25, 50, 100, "All"]],
         "order": [[1, "desc" ]],
      
-           ajax:'<?=url("/portal/fethblogs")?>',
+           ajax:'<?=url("/portal/fethmedia")?>',
             columns: [
             {data: 'action', name: 'action',searchable:false,orderable:false}, 
            {data: 'title', name: 'title'},
@@ -123,7 +123,7 @@
          'pageLength',
         ],
         });
-    </script> --}}
+    </script>
 
 @endpush
 {{-- /fetchpurchases --}}
