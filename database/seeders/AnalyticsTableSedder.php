@@ -16,6 +16,85 @@ class AnalyticsTableSedder extends Seeder
     {
         $analytics=[
             [
+                'param' => 'direct reach',
+                'target' => '160000',
+                'achieved' => '53634',
+                'description' => 'totals',
+            ],
+            [
+                'param' => 'direct reach',
+                'target' => '96000',
+                'achieved' => '21634',
+                'description' => 'women',
+            ],
+            [
+                'param' => 'direct reach',
+                'target' => '32000',
+                'achieved' => '24872',
+                'description' => 'men',
+            ],
+            [
+                'param' => 'direct reach',
+                'target' => '32000',
+                'achieved' => '1834',
+                'description' => 'youth',
+            ],
+
+//tech
+
+            [
+                'param' => 'Technology adoption',
+                'target' => '48000',
+                'achieved' => '41219',
+                'description' => 'totals',
+            ],
+            [
+                'param' => 'Technology adoption',
+                'target' => '9600',
+                'achieved' => '22727',
+                'description' => 'women',
+            ],
+            [
+                'param' => 'Technology adoption',
+                'target' => '3200',
+                'achieved' => '17744',
+                'description' => 'men',
+            ],
+            [
+                'param' => 'Technology adoption',
+                'target' => '3200',
+                'achieved' => '571',
+                'description' => 'youth',
+            ],
+
+            //finance
+            [
+                'param' => 'Finance Linkage',
+                'target' => '4800',
+                'achieved' => '23573',
+                'description' => 'totals',
+            ],
+            [
+                'param' => 'Finance Linkage',
+                'target' => '2880',
+                'achieved' => '13474',
+                'description' => 'women',
+            ],
+            [
+                'param' => 'Technology adoption',
+                'target' => '960',
+                'achieved' => '6037',
+                'description' => 'men',
+            ],
+            [
+                'param' => 'Technology adoption',
+                'target' => '960',
+                'achieved' => '2563',
+                'description' => 'youth',
+            ],
+
+            //value chain
+            [
                 'param' => 'Avocado',
                 'target' => '0',
                 'achieved' => '249005375',
@@ -95,9 +174,7 @@ class AnalyticsTableSedder extends Seeder
                 'achieved' => '15057640',
                 'description' => 'income',
             ],
-      
 
-            //market
                     ];
                     foreach ($analytics as $analytic) {
                         Analytics::create($analytic);
