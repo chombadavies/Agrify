@@ -3,9 +3,10 @@
 
 @section('content')
       <!-- ======= Hero Section ======= -->
+      <br>
   <section id="hero" class="d-flex align-items-center">
     <div class="container">
-      <h1 style="text-transform: none">AgriFI Climate Smart Agricutural Productivity Project</h1>
+      {{-- <h1 style="text-transform: none">AgriFI Climate Smart Agricutural Productivity Project</h1> --}}
       <h2>Welcome to the Unified Technology Transfer Platform  </h2>
       <a href="{{route('project_profile')}}" class="btn-get-started scrollto">Get Started</a>
     </div>

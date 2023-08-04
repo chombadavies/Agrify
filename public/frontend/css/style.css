@@ -647,22 +647,22 @@ h6 {
 
 #hero {
     width: 100%;
+   margin-top: 100px;
     height: 90vh;
-    background: url("../img/hero-bg.jpg") top center;
+    background: url("../img/20230615_100319.jpg") top center;
     background-size: cover;
     z-index: 2;
     margin-bottom: -200px;
     position: relative;
-    animation: mymove 10s infinite;
-    animation-delay: 2s;
+    animation: mymove 30s infinite;
+    animation-delay: 3s;
     animation-timing-function: ease-in-out;
     -webkit-animation-timing-function: ease-in-out;
-
 }
 
 @keyframes mymove {
-    0% { background-image: url("../img/hero-bg.jpg");}
-    40% { background-image: url('../img/9439.jpg');}
+    0% { background-image: url("../img/20230609_161541.jpg");}
+    40% { background-image: url('../img/9440.jpg');}
     70%  { background-image: url('../img/P3310004.jpg'); }
   
   }
@@ -671,7 +671,7 @@ h6 {
 }
 
 #hero h1 {
-    margin: 0;
+    margin: 10;
     font-size: 48px;
     font-weight: 700;
     line-height: 56px;
