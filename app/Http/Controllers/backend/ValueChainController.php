@@ -101,6 +101,7 @@ class ValueChainController extends Controller
     public function edit($id)
     {
         $valuechain=ValueChain::findOrFail($id);
+        // dd($valuechain);
         $data['page_title']='Edit Value Chain';
      return view('admin.valuechains.edit',$data)->with(compact('valuechain'));
     }
@@ -115,15 +116,15 @@ class ValueChainController extends Controller
     public function update(Request $request, $id)
     {
         $data=$request->all();
-      
+    
         $valuechain = ValueChain::findOrFail($id);
    
         if ($request->hasFile('image')) {
-            $destination='backend/uploads/'.$valuechain->image;
-            if(File::exists($destination))
-            {
-                File::delete($destination);
-            }
+            // $destination='backend/uploads/'.$valuechain->image;
+            // if(File::exists($destination))
+            // {
+            //     File::delete($destination);
+            // }
             $image_tmp = $request->file('image');
             if ($image_tmp->isValid()) {
                 // Get Image Extension
@@ -132,6 +133,7 @@ class ValueChainController extends Controller
                 $image = rand(111, 99999) . '.' . $extension;
                 $ImagePath = 'backend/uploads/'.$image;
                 // Upload the Image
+                
                 Image::make($image_tmp)->resize(300,280)->save($ImagePath);
                
             }
@@ -143,10 +145,10 @@ class ValueChainController extends Controller
 
         if ($request->hasFile('details_image')) {
             $destination='backend/uploads/'.$valuechain->details_image;
-            if(File::exists($destination))
-            {
-                File::delete($destination);
-            }
+            // if(File::exists($destination))
+            // {
+            //     File::delete($destination);
+            // }
             $image_tmp = $request->file('details_image');
             if ($image_tmp->isValid()) {
                 // Get Image Extension

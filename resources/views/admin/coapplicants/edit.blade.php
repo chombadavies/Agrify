@@ -51,6 +51,7 @@
                   <div class="form-group col-md-4">
                     <label for="">Logo</label>
                    <input type="file" class="form-control" name="image" required>
+                   <img src="{{asset('backend/uploads/'.$coapplicant->image)}}" height="50px" width="50px" alt="">
                   </div>
                   <div class="form-group col-md-4">
                     <label for="">website Url</label>

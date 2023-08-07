@@ -51,12 +51,12 @@
                   <div class="form-group col-md-3">
                     <label for="exampleInputEmail1">Value Chain Image</label>
                    <input type="file" class="form-control" name="image">
-                   <img src="{{asset('backend/uploads/'.$valuechain->image)}}" height="50px" width="50px" alt="">
+                   <img src="{{asset($valuechain->image)}}" height="50px" width="50px" alt="">
                   </div>
                   <div class="form-group col-md-3">
                     <label for="exampleInputEmail1">Details Image</label>
                    <input type="file" class="form-control" name="details_image">
-                   <img src="{{asset('backend/uploads/'.$valuechain->details_image)}}" height="50px" width="50px"  alt="">
+                   <img src="{{asset($valuechain->details_image)}}" height="50px" width="50px"  alt="details image">
                   </div>
                   <div class="form-group col-md-3">
                     <label for="">Value Chain Category</label>

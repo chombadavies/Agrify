@@ -43,7 +43,7 @@
                 </div>
             </div>
             <div class="col-lg-5 pl-lg-5 text-center d-none d-lg-block">
-                    <img src="{{asset('frontend/img/meme.jpg')}}" alt="" class="img-fluid" width="400" height="350" style="border-radius:14px">
+                    <img src="{{asset('frontend/img/9440.jpg')}}" alt="" class="img-fluid" width="400" height="350" style="border-radius:14px">
                    <div> <span ><i>Members of Program Steering Committee</i> </span></div>
             </div>
         </div>

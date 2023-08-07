@@ -110,6 +110,7 @@ class CoapplicantsController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $coapplicant = Coapplicant::findOrFail($id);
         $data=$request->all();
 
         if ($request->hasFile('image')) {
@@ -126,13 +127,13 @@ class CoapplicantsController extends Controller
                
             }
         } else {
-            $image= "";
+            $image= $coapplicant->image;
             $ImagePath = "";
             
         }
       $data['image']=$image;
 
-     $coapplicant = Coapplicant::findOrFail($id);
+    
      $status=$coapplicant->fill($data)->save();
 // dd($data);
      if($coapplicant){

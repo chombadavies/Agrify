@@ -37,7 +37,7 @@
               <li> <a href="{{route('media')}}" style="color:white">Media</a></li>
             </ul>
           </div>
-
+     
     
         </div>
       </div>
@@ -64,7 +64,7 @@
     </div>
     </footer><!-- End Footer -->
     
-   
+    
     
     <div id="preloader"></div>
       {{-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> --}}
@@ -75,6 +75,42 @@
       <script src="{{asset('frontend/vendor/glightbox/js/glightbox.min.js')}}"></script>
       <script src="{{asset('frontend/vendor/swiper/swiper-bundle.min.js')}}"></script>
       <script src="{{asset('frontend/vendor/php-email-form/validate.js')}}"></script>
+
+      {{-- <iframe 
+      onLoad={() => closeIndicator()}
+     src="https://go.arena.im/embed/chat/kalro/zyrVwp8" 
+     style="height:500,width:20%">
+
+    
+    </iframe> --}}
+
+
+
+      {{-- <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/60dd7af665b7290ac638da15/1f9gigl8v';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+        </script> --}}
+
+        <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/64d0adbb94cf5d49dc68e38a/1h77id97j';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
 	 
       @yield('scripts')
       <!-- Template Main JS File -->
