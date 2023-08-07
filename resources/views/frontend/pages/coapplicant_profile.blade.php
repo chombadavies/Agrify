@@ -67,7 +67,7 @@
                    <div class="col-md-6">
                       <div class="container meme card-success card-outline" >
                         <br>
-                        <p><b> <input type="button" value="Mandate"> </b>{!!$coapplicant->relationship!!}</p>
+                        <p><b> <input type="button" value="Mandate to AgriFI CS APP Project"> </b>{!!$coapplicant->relationship!!}</p>
                       </div> 
                     </div>
                     </div>

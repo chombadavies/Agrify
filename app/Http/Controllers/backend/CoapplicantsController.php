@@ -131,7 +131,7 @@ class CoapplicantsController extends Controller
             $ImagePath = "";
             
         }
-      $data['image']=$image;
+      $data['image']=$ImagePath;
 
     
      $status=$coapplicant->fill($data)->save();
