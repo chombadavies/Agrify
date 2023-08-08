@@ -5,7 +5,10 @@ namespace App\Http\Controllers\backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Media;
+use DB;
 use Intervention\Image\Facades\Image;
+use Yajra\Datatables\Datatables;
+use Illuminate\Support\Facades\File;
 class MediaController extends Controller
 {
     /**
@@ -60,11 +63,10 @@ class MediaController extends Controller
             // $videolink =$request->video_link ;          
         }
 
-        $data=$request->all();
+      
         $data['image']=$image;
         $data['type']=$request->type;
-        // $data['publish_date']=new DateTime('now');
-    //  dd($data);
+    
         $status=Media::create($data);
 
         if($status){
@@ -94,7 +96,9 @@ class MediaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data['page_title']="Edit Media";
+        $media=Media::findOrFail($id);
+        return view('admin.media.edit',$data)->with(compact('media'));
     }
 
     /**
@@ -106,7 +110,39 @@ class MediaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data =$request->all();
+        $media=Media::findOrFail($id);
+        if ($request->hasFile('image')) {
+
+            $image_tmp = $request->file('image');
+            if ($image_tmp->isValid()) {
+                // Get Image Extension
+                $extension = $image_tmp->getClientOriginalExtension();
+                // Generate New Image Name
+                $image = rand(111, 99999) . '.' . $extension;
+                $ImagePath = 'backend/uploads/'.$image;
+                // Upload the Image
+                Image::make($image_tmp)->save($ImagePath);
+            }
+        }
+        
+        else {
+            $image = $media->image;
+            // $videolink =$request->video_link ;          
+        }
+
+        $data=$request->all();
+        $data['image']=$image;
+        $data['type']=$request->type;
+    
+        $status=$media->fill($data)->save();
+
+        if($status){
+         
+            return redirect()->route('media.index')->with('success','media saved Successfully');
+        }else{
+            return back()->with('error','failed try again');
+        }
     }
 
     /**
@@ -118,5 +154,30 @@ class MediaController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function fetchMedia(){
+
+        $models = DB::select('SELECT * FROM `media`');
+        return Datatables::of($models)
+           ->rawColumns(['action','image'])
+           ->editColumn('image',function($model){
+               $name=$model->image;
+               $path=asset('backend/uploads/'.$name);
+               return '<img src="'.$path.'" width="70px;" height="70px;"  alt="Image" >';
+           })
+
+            ->addColumn('action', function ($model) {
+                $edit_url = route('media.edit',$model->id);
+             return '<div class="dropdown ">
+        <button class="btn btn-pink btn btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Action
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+        <li><a style="cursor:pointer;" data-title="Edit" href="' . $edit_url . '">Edit Media</a></li>
+      
+        </div> ';
+
+            })
+            ->make(true);
     }
 }

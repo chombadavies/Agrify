@@ -54,11 +54,11 @@
                   <tr>
                     
                                         <th>Action</th>
-                                        <th>category</th>
+                                        <th>Media Type</th>
                                         <th>Image</th>
-                                        <th>Image</th>
-                                        <th>Caption/Title</th>
-                                        <th>Owner</th>
+                                        <th>Caption</th>
+                                        <th>Video Link</th>
+                                        <th>Video Title</th>
                                         <th>Status</th>
                                   
                    
@@ -103,14 +103,14 @@
          "lengthMenu": [[25, 50, 100, -1], [25, 50, 100, "All"]],
         "order": [[1, "desc" ]],
      
-           ajax:'<?=url("/portal/fethmedia")?>',
+           ajax:'<?=url("/admin/fethmedia")?>',
             columns: [
             {data: 'action', name: 'action',searchable:false,orderable:false}, 
-           {data: 'title', name: 'title'},
+            {data: 'type', name: 'type'},
            {data: 'image', name: 'image'},
-           {data: 'summery', name: 'sumery'},
-           {data: 'publish_date', name: 'publish_date'},
-            {data: 'owner', name: 'owner'},
+           {data: 'image_caption', name: 'image_caption'},
+           {data: 'video_link', name: 'video_link'},
+           {data: 'video_title', name: 'video_title'},
            {data: 'status', name: 'status'},
               
             ],

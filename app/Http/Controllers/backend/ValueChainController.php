@@ -67,8 +67,31 @@ class ValueChainController extends Controller
             
         }
 
+        if ($request->hasFile('details_image')) {
+            // $destination='backend/uploads/'.$valuechain->details_image;
+            // if(File::exists($destination))
+            // {
+            //     File::delete($destination);
+            // }
+            $image_tmp = $request->file('details_image');
+            if ($image_tmp->isValid()) {
+                // Get Image Extension
+                $extension = $image_tmp->getClientOriginalExtension();
+                // Generate New Image Name
+                $details_image = rand(111, 99999) . '.' . $extension;
+                $dImagePath = 'backend/uploads/'.$details_image;
+                // Upload the Image
+                Image::make($image_tmp)->save($ImagePath);
+               
+            }
+        } else {
+            $details_image= "";
+            $dImagePath="";
+        }
+
         $data=$request->all();
         $data['image']=$ImagePath;
+        $data['details_image']=$dImagePath;
       
     //    dd($data);
         $status=ValueChain::create($data);

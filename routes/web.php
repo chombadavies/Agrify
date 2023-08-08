@@ -23,7 +23,7 @@ Route::any('/fetch_valuechains',[\App\Http\Controllers\backend\ValueChainControl
 Route::resource('news',App\Http\Controllers\backend\NewsController::class);
 
 Route::resource('media',App\Http\Controllers\backend\MediaController::class);
-Route::any('/fethmedia',[App\Http\Controllers\backend\MediaController::class, 'fethMedia']);
+Route::any('/fethmedia',[App\Http\Controllers\backend\MediaController::class, 'fetchMedia']);
 Route::resource('partners',App\Http\Controllers\backend\PartnersController::class);
 Route::resource('projects',App\Http\Controllers\backend\ProjectsController::class);
 Route::any('/fetchpartners',[App\Http\Controllers\backend\PartnersController::class, 'fetchPartners']);
