@@ -80,21 +80,25 @@
         <div>
           <label for="">Name</label>
           <input type="text" name="name" class="form-control" placeholder="Name" required>
+          <span class="text-danger">{{ $errors->first('name') }}</span>
         </div>
        <br>
        <div>
         <label for="">Phone Number</label>
         <input type="number" name="phone" class="form-control" placeholder="Phone Number" required>
+        <span class="text-danger">{{ $errors->first('phone') }}</span>
       </div>
       <br>
         <div>
           <label for="">Email</label>
           <input type="email" class="form-control" name="email" placeholder="Email" required>
+          <span class="text-danger">{{ $errors->first('email') }}</span>
         </div>
       <br>
       <div>
         {{-- <label for="">Message</label> --}}
-       <textarea name="message" id="" cols="53"  rows="5" placeholder="Message" required></textarea>
+       <textarea name="message" id="" cols="53"  rows="5" placeholder="Message" required></textarea> 
+       <span class="text-danger">{{ $errors->first('message') }}</span>
       </div>
     <br>
       <div class="row">

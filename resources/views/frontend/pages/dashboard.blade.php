@@ -25,7 +25,7 @@
   </section><!-- End Breadcrumbs Section -->
 
  <div class="container">
-  <div class="row">
+  {{-- <div class="row">
     <!-- Left col -->
     <section class="col-lg-7 connectedSortable">
       <!-- Custom tabs (Charts with tabs)-->
@@ -70,90 +70,9 @@
     
     </section>
   
-  </div>
-
-
- 
-{{--   
-  <div class="row">
-    <!-- Left col -->
-    <section class="col-lg-12 connectedSortable">
-      <!-- Custom tabs (Charts with tabs)-->
-      <div class="meme card-success card-outline">
-        <div class="card-header">
-          <h4 class="card-title">
-            <i class="fas fa-chart-pie mr-1"></i>
-            Farmer numbers by group_activities
-          </h4>
-        
-        </div>
-        <!-- /.card-header -->
-        <div class="card-body">
-          <div class="tab-content p-0">
-            <!-- Morris chart - Sales -->
-            <div class="chart tab-pane active" id="saleschart">
-
-              <div id="container5"></div>
-                                    
-          </div>  
-            
-          </div>
-        </div><!-- /.card-body -->
-      </div>
-      <!-- /.card -->
-    </section>
-  
   </div> --}}
 
-  <div class="row">
-    <!-- Left col -->
-    <section class="col-lg-7 connectedSortable">
-      <!-- Custom tabs (Charts with tabs)-->
-      <div class="meme card-success card-outline">
-        <div class="card-header">
-          <h4 class="card-title">
-            <i class="fas fa-chart-pie mr-1"></i>
-           Distance To Market
-          </h4>
-        
-        </div><!-- /.card-header -->
-        <div class="card-body">
-          <div class="tab-content p-0">
-            <!-- Morris chart - Sales -->
-            <div class="chart tab-pane active" id="saleschart">
 
-              <div id="container3"></div>
-                                    
-          </div>  
-            
-          </div>
-        </div><!-- /.card-body -->
-      </div>
-      <!-- /.card -->
-    </section>
-
-
-
-      <section class="col-lg-5 connectedSortable">
-        <!-- Custom tabs (Charts with tabs)-->
-        <div class="meme card-success card-outline">
-          <div class="card-header">
-            <h3 class="card-title">
-              <i class="fas fa-users"></i>
-              Farmers Regisration Status
-            </h3>
-          
-          </div><!-- /.card-header -->
-          <div class="card-body">
-            <div class="tab-content p-0">
-              <div id="container6"></div>
-            </div>
-          </div><!-- /.card-body -->
-        </div>
-    
-    </section>
-  
-  </div>
 
   <div class="row">
     <!-- Left col -->
@@ -163,7 +82,7 @@
         <div class="card-header" >
           <h4 class="card-title">
             <i class="fas fa-chart-pie mr-1"></i>
-            Farmer numbers by Wards
+            Farmer Linked to Finance services
           </h4>
         
         </div><!-- /.card-header -->
@@ -187,7 +106,7 @@
           <div class="card-header">
             <h3 class="card-title">
               <i class="fas fa-users"></i>
-              Farmers by Value Chains
+             Farmers Linked to Market
             </h3>
           
           </div><!-- /.card-header -->
@@ -201,6 +120,99 @@
     </section>
   
   </div>
+
+  <div class="row">
+    <section class="col-lg-12 connectedSortable">
+      <!-- Custom tabs (Charts with tabs)-->
+      <div class="meme card-success card-outline">
+        <div class="card-header">
+          <h3 class="card-title">
+            <i class="fas fa-users"></i>
+            Income Generated per Value Chain
+          </h3>
+        
+        </div><!-- /.card-header -->
+        <div class="card-body">
+          <div class="tab-content p-0">
+            <div id="container6"></div>
+          </div>
+        </div><!-- /.card-body -->
+      </div>
+  
+  </section>
+
+</div>
+
+  <div class="row">
+    <!-- Left col -->
+    <section class="col-lg-7 connectedSortable">
+      <!-- Custom tabs (Charts with tabs)-->
+      <div class="meme card-success card-outline">
+        <div class="card-header" >
+          <h4 class="card-title">
+            <i class="fas fa-chart-pie mr-1"></i>
+            Technology Adoption
+          </h4>
+        
+        </div><!-- /.card-header -->
+        <div class="card-body">
+          <div class="tab-content p-0">
+            <!-- Morris chart - Sales -->
+            <div class="chart tab-pane active" id="saleschart">
+
+              <div id="container9"></div>
+                                    
+          </div>  
+            
+          </div>
+        </div><!-- /.card-body -->
+      </div>
+      <!-- /.card -->
+    </section>
+ <section class="col-lg-5 connectedSortable">
+        <!-- Custom tabs (Charts with tabs)-->
+        <div class="meme card-success card-outline">
+          <div class="card-header">
+            <h3 class="card-title">
+              <i class="fas fa-users"></i>
+              Farmers Reached Directly
+            </h3>
+          
+          </div><!-- /.card-header -->
+          <div class="card-body">
+            <div class="tab-content p-0">
+              <div id="container10"></div>
+            </div>
+          </div><!-- /.card-body -->
+        </div>
+    
+    </section>
+  
+  </div>
+
+
+<div class="row">
+
+  <section class="col-lg-12 connectedSortable">
+    <!-- Custom tabs (Charts with tabs)-->
+    <div class="meme card-success card-outline">
+      <div class="card-header">
+        <h3 class="card-title">
+          <i class="fas fa-users"></i>
+         Value Chain Up-scalling and Research
+        </h3>
+      
+      </div><!-- /.card-header -->
+      <div class="card-body">
+        <div class="tab-content p-0">
+          <div id="container5"></div>
+        </div>
+      </div><!-- /.card-body -->
+    </div>
+
+</section>
+
+</div>
  </div>
 
 </main><!-- End #main -->
@@ -233,6 +245,7 @@
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
 
 
 
@@ -524,110 +537,81 @@
 
 
               </script>
-            <script>
-                           
+           
 
-              var url="<?=url('/groupactivities')?>";
-              $.get(url,function(data){
+           <script>
+            var data = @json($incomeperValuechain);
+          
+            Highcharts.chart('container5', {
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: 'Up-scalling partners & Research Activities'
+                },
+                xAxis: {
+                    categories: data.map(item => item.valuechain)
+                },
+                yAxis: {
+                    title: {
+                        text: 'Count'
+                    }
+                },
+                credits:{
+                      // text: ' AgriFi CS APP'
+                      enabled:false
+                    },
+          
+                    plotOptions: {
+                  series: {
+                  borderWidth: 0,
+                  dataLabels: {
+                  enabled: true,
+                  format: '{point.y}'
+                  }
+                  }
+                },
+          
+                series: [{
+                    name: 'Up-Scalling',
+                    color: "#20b15e",
+                    data: data.map(item => item.upscalling)
+                }
+                , {
+                    name: 'Research',
+                    color: "#a37153",
+                    data: data.map(item => item.research)
+                }
+              
+              ]
+            });
+          </script>
+          
+        
+<script>
+  var data = @json($incomeperValuechain);
 
+  Highcharts.chart('container6', {
+      chart: {
+          type: 'column'
+      },
+      title: {
+          text: 'Income,Up-scalling & Research'
+      },
+      xAxis: {
+          categories: data.map(item => item.valuechain)
+      },
+      yAxis: {
+          title: {
+              text: 'Count'
+          }
+      },
+      credits:{
+            // text: ' AgriFi CS APP'
+            enabled:false
+          },
 
-              Highcharts.chart('container5', {
-              chart: {
-              type: 'column'
-              },
-              title: {
-              text: ' Farmer numbers by group_activities'
-              },
-
-              accessibility: {
-              announceNewData: {
-              enabled: true
-              }
-              },
-              xAxis: {
-              type: 'category'
-              },
-              yAxis: {
-              title: {
-              text: 'group_activities (numbers)'
-              }
-
-              },
-              credits:{
-                // text: ' AgriFi CS APP'
-                enabled:false
-              },
-              legend: {
-              enabled: false
-              },
-              plotOptions: {
-              series: {
-              borderWidth: 0,
-              dataLabels: {
-              enabled: true,
-              format: '{point.y}'
-              }
-              }
-              },
-
-              tooltip: {
-              headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-              pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y}</b><br/>'
-              },
-
-              series: [
-              {
-              name: "Number",
-              colorByPoint: true,
-              data: data
-              }
-              ],
-
-              });
-
-
-
-              });
-
-
-
-
-              </script>
-
-        <script> 
-
-        var url="<?=url('/farmersregistration')?>";
-        $.get(url,function(data){
-        Highcharts.chart('container6', {
-        chart: {
-        type: 'column'
-        },
-        title: {
-        text: ' Farmers Regisration Status '
-        },
-
-        accessibility: {
-        announceNewData: {
-        enabled: true
-        }
-        },
-        xAxis: {
-        type: 'category'
-        },
-        yAxis: {
-        title: {
-        text: 'registration_status(numbers)'
-        }
-
-        },
-        credits:{
-                // text: ' AgriFi CS APP'
-                enabled:false
-              },
-        legend: {
-        enabled: false
-        },
-        plotOptions: {
+          plotOptions: {
         series: {
         borderWidth: 0,
         dataLabels: {
@@ -635,144 +619,211 @@
         format: '{point.y}'
         }
         }
-        },
+      },
 
-        tooltip: {
-        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y}</b><br/>'
-        },
-
-        series: [
-        {
-        name: "Number",
-        colorByPoint: true,
-        data: data
-        }
-        ],
-        });
-        });
-        </script>
-         <script> 
-
-          var url="<?=url('/farmersbyward')?>";
-          $.get(url,function(data){
+      series: [{
+          name: 'Income',
+          color: "#20b15e",
+          data: data.map(item => item.income)
+      }
+      
+    ]
+  });
+</script>
+        
+        <script>
+          var data = @json($financeLinkage);
+  
           Highcharts.chart('container7', {
-          chart: {
-          type: 'column'
-          },
-          title: {
-          text: 'Farmer numbers by Wards'
-          },
-  
-          accessibility: {
-          announceNewData: {
-          enabled: true
-          }
-          },
-          xAxis: {
-          type: 'category'
-          },
-          yAxis: {
-          title: {
-          text: 'Farmer numbers by Wards'
-          }
-  
-          },
-          credits:{
-                // text: ' AgriFi CS APP'
-                enabled:false
+              chart: {
+                  type: 'column'
               },
-          legend: {
-          enabled: false
-          },
-          plotOptions: {
-          series: {
-          borderWidth: 0,
-          dataLabels: {
-          enabled: true,
-          format: '{point.y}'
-          }
-          }
-          },
+              title: {
+                  text: 'Finance Linkage'
+              },
+              xAxis: {
+                  categories: data.map(item => item.description)
+              },
+              yAxis: {
+                  title: {
+                      text: 'Count'
+                  }
+              },
+              credits:{
+                    // text: ' AgriFi CS APP'
+                    enabled:false
+                  },
   
-          tooltip: {
-          headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-          pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y}</b><br/>'
-          },
-  
-          series: [
-          {
-          name: "Number",
-          colorByPoint: true,
-          data: data
-          }
-          ],
-          });
-          });
-          </script>
-          <script> 
+                  plotOptions: {
+                series: {
+                borderWidth: 0,
+                dataLabels: {
+                enabled: true,
+                format: '{point.y}'
+                }
+                }
+              },
 
-            var url="<?=url('/farmersbyvaluechain')?>";
-            $.get(url,function(data){
-            Highcharts.chart('container8', {
+              series: [{
+                  name: 'Target',
+                  color: "#20b15e",
+                  data: data.map(item => item.target)
+              }, {
+                  name: 'Achieved',
+                  color: "#a37153",
+                  data: data.map(item => item.achieved)
+              }
+            
+            ]
+          });
+      </script>
+  
+
+        <script>
+          var data = @json($marketLinkage);
+  
+          Highcharts.chart('container8', {
+              chart: {
+                  type: 'column'
+              },
+              title: {
+                  text: 'Market Linkage'
+              },
+              xAxis: {
+                  categories: data.map(item => item.description)
+              },
+              yAxis: {
+                  title: {
+                      text: 'Count'
+                  }
+              },
+              credits:{
+                    // text: ' AgriFi CS APP'
+                    enabled:false
+                  },
+  
+                  plotOptions: {
+                series: {
+                borderWidth: 0,
+                dataLabels: {
+                enabled: true,
+                format: '{point.y}'
+                }
+                }
+              },
+  
+              series: [{
+                  name: 'Target',
+                  color: "#20b15e",
+                  data: data.map(item => item.target)
+              }, {
+                  name: 'Achieved',
+                  color: "#a37153",
+                  data: data.map(item => item.achieved)
+              }
+            
+            ]
+          });
+      </script>
+  
+
+                  
+
+    <script>
+        var data = @json($adoptionData);
+
+        Highcharts.chart('container9', {
             chart: {
-            type: 'bar'
+                type: 'column'
             },
             title: {
-            text: 'Farmer numbers by Valuechain'
-            },
-    
-            accessibility: {
-            announceNewData: {
-            enabled: true
-            }
+                text: 'Technology Adoption'
             },
             xAxis: {
-            type: 'category'
+                categories: data.map(item => item.description)
             },
             yAxis: {
-            title: {
-            text: 'Farmer numbers by valuechain'
-            }
-    
+                title: {
+                    text: 'Count'
+                }
             },
-
             credits:{
-                // text: ' AgriFi CS APP'
-                enabled:false
-              },
-            legend: {
-            enabled: false
+                  // text: ' AgriFi CS APP'
+                  enabled:false
+                },
+
+                plotOptions: {
+              series: {
+              borderWidth: 0,
+              dataLabels: {
+              enabled: true,
+              format: '{point.y}'
+              }
+              }
             },
-            plotOptions: {
-            series: {
-            borderWidth: 0,
-            dataLabels: {
-            enabled: true,
-            format: '{point.y}'
+
+            series: [{
+                name: 'Target',
+                color: "#20b15e",
+                data: data.map(item => item.target)
+            }, {
+                name: 'Achieved',
+                color: "#a37153",
+                data: data.map(item => item.achieved)
             }
-            }
-            },
+          
+          ]
+        });
+    </script>
+
+<script>
+  var data = @json($directReach);
+
+  Highcharts.chart('container10', {
+      chart: {
+          type: 'column'
+      },
+      title: {
+          text: 'Direct Reach'
+      },
+      xAxis: {
+          categories: data.map(item => item.description)
+      },
+      yAxis: {
+          title: {
+              text: 'Count'
+          }
+      },
+      credits:{
+            // text: ' AgriFi CS APP'
+            enabled:false
+          },
+
+          plotOptions: {
+        series: {
+        borderWidth: 0,
+        dataLabels: {
+        enabled: true,
+        format: '{point.y}'
+        }
+        }
+      },
+      
+      series: [{
+          name: 'Target',
+          color: "#20b15e",
+          data: data.map(item => item.target)
+      }, {
+          name: 'Achieved',
+          color: "#a37153",
+          data: data.map(item => item.achieved)
+      }
     
-            tooltip: {
-            headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-            pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y}</b><br/>'
-            },
-    
-            series: [
-            {
-            name: "Number",
-            colorByPoint: true,
-            data: data
-            }
-            ],
-            });
-            });
-            </script>
+    ]
+  });
+</script>
 
-
-
-  
+            
 
 
 @endsection

@@ -51,7 +51,7 @@
                   <div class="form-group col-md-3">
                     <label for="exampleInputEmail1">Value Chain Image</label>
                    <input type="file" class="form-control" name="image">
-                   <img src="{{asset($valuechain->image)}}" height="50px" width="50px" alt="">
+                   <img src="{{asset($valuechain->image)}}" height="50px" width="50px" alt="image">
                   </div>
                   <div class="form-group col-md-3">
                     <label for="exampleInputEmail1">Details Image</label>

@@ -44,6 +44,8 @@ class MediaController extends Controller
     {
 
         $data =$request->all();
+    
+
         if ($request->hasFile('image')) {
 
             $image_tmp = $request->file('image');
@@ -66,7 +68,7 @@ class MediaController extends Controller
       
         $data['image']=$image;
         $data['type']=$request->type;
-    
+        // dd($data);
         $status=Media::create($data);
 
         if($status){

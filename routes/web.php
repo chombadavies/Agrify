@@ -93,6 +93,7 @@ Route::any('/dashboard',[\App\Http\Controllers\Frontend\IndexController::class,'
 Route::any('/result_dashboard',[\App\Http\Controllers\Frontend\IndexController::class,'resultDashboard'])->name('results.dashboard');
 Route::any('/farmersingroups',[\App\Http\Controllers\Frontend\IndexController::class,'FarmerGroups'])->name('farmers.groups');
 Route::any('/farmerspercounty',[\App\Http\Controllers\Frontend\IndexController::class,'FarmersCounty'])->name('farmers.county');
+Route::any('/technology_adoption',[\App\Http\Controllers\Frontend\IndexController::class,'technologyAdoption'])->name('technology.adoption');
 Route::any('/bydistance',[\App\Http\Controllers\Frontend\IndexController::class,'Distance'])->name('market.distance');
 Route::any('/bygender',[\App\Http\Controllers\Frontend\IndexController::class,'Gender'])->name('farmers.gender');
 Route::any('/groupactivities',[\App\Http\Controllers\Frontend\IndexController::class,'groupActivity']);

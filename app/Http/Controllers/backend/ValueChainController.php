@@ -165,9 +165,10 @@ class ValueChainController extends Controller
             $ImagePath=$valuechain->image;
         }
 
+        $data['image']=$ImagePath;
 
         if ($request->hasFile('details_image')) {
-            $destination='backend/uploads/'.$valuechain->details_image;
+            // $destination='backend/uploads/'.$valuechain->details_image;
             // if(File::exists($destination))
             // {
             //     File::delete($destination);
@@ -187,17 +188,20 @@ class ValueChainController extends Controller
             $details_image= $valuechain->details_image;
             $dImagePath=$valuechain->details_image;
         }
-        $data['image']=$ImagePath;
+       
       $data['details_image']=$dImagePath;
-    // dd($data);
-      $status=$valuechain->fill($data)->save();
 
-     if($status){
+      $valuechain->title= $request->title;
+      $valuechain->image= $data['image'];
+      $valuechain->details_image= $data['details_image'];
+      $valuechain->category= $request->category;
+      $valuechain->introduction= $request->introduction;
+      $valuechain->description= $request->description;
+      $valuechain->save();
+
         Session::flash('success_message', 'Value Chain updated successfully');
         return redirect()->route('valuechains.index');
-     }else{
-        return back()->with('error','operation failed,lease try again.');
-     }
+    
 
     }
 
