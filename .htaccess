@@ -1,0 +1,7 @@
+Options +FollowSymLinks
+
+RewriteEngine On
+
+# Forces http to https. Also forces directly linked resources (images, css, etc.) to use https
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
