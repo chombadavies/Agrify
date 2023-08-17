@@ -61,11 +61,11 @@ class PartnersController extends Controller
                
             }
         } else {
-            $image= "";
+           
             $ImagePath = "";
             
         }
-      $data['image']=$image;
+      $data['image']=$ImagePath;
      $partner=Partner::create($data);
 
      if($partner){
@@ -117,6 +117,12 @@ class PartnersController extends Controller
    
         if ($request->hasFile('image')) {
 
+    //  $destination='backend/uploads/'.$partner->image;
+    //         if(File::exists($destination))
+    //         {
+    //             File::delete($destination);
+    //         }
+
             $image_tmp = $request->file('image');
             if ($image_tmp->isValid()) {
                 // Get Image Extension
@@ -130,11 +136,10 @@ class PartnersController extends Controller
             }
         } else {
          
-            $ImagePath=$image= $partner->image;
+            $ImagePath=$partner->image;
             
         }
       $data['image']=$ImagePath;
-      $partner = Partner::findOrFail($id);
       $status=$partner->fill($data)->save();
 
      if($status){
