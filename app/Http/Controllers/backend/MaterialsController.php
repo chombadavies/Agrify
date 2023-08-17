@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\ValueChain;
 use App\Models\Material;
+use Yajra\Datatables\Datatables;
+use DB;
 use Intervention\Image\Facades\Image;
 
 
@@ -18,7 +20,8 @@ class MaterialsController extends Controller
      */
     public function index()
     {
-        return "we are at the Materials index file";
+        $data['page_title']='Dissemination Materials';
+        return view('admin.materials.index',$data);
     }
 
     /**
@@ -50,16 +53,17 @@ class MaterialsController extends Controller
             $pdf = $files[$key];
         
             $file_tmp = $pdf;
-               
                 
                     // Get Image Extension
-                    $name = $file_tmp->getClientOriginalName();
+                    $file_name = $file_tmp->getClientOriginalName();
                     // Generate New Image Name
-                   
+
+                  $name = pathinfo($file_name, PATHINFO_FILENAME);  
+                  
                     $filePath = 'backend/uploads/'.$name;
                     // Upload the Image
                     $file_tmp->move(public_path('file uploads'), $name);
-                    // Image::make($image_tmp)->save()
+                   
 
                 $material = new Material();
               
@@ -92,7 +96,10 @@ return redirect()->route('materials.index')->with('succuss','pdf uploadded succe
      */
     public function edit($id)
     {
-        //
+        $material=Material::findOrFail($id);
+        $valuechains=ValueChain::all();
+      return view('admin.materials.edit')->with(compact('material','valuechains'));
+       
     }
 
     /**
@@ -104,7 +111,13 @@ return redirect()->route('materials.index')->with('succuss','pdf uploadded succe
      */
     public function update(Request $request, $id)
     {
-        //
+        $data =$request->all();
+        $material=Material::findOrFail($id);
+                   
+       $material->fill($data)->save();
+    
+        
+   return redirect()->route('materials.index')->with('succuss','file edited successfully');
     }
 
     /**
@@ -116,5 +129,32 @@ return redirect()->route('materials.index')->with('succuss','pdf uploadded succe
     public function destroy($id)
     {
         //
+    }
+
+
+    public function fetchMaterials(){
+
+        $models = DB::table('materials')
+        ->join('value_chains','materials.value_chain_id','=','value_chains.id')
+        ->select('materials.id', 'value_chains.title as valuechain', 'materials.title','materials.status')
+        ->get();
+
+
+        return Datatables::of($models)
+           ->rawColumns(['action'])
+         
+
+            ->addColumn('action', function ($model) {
+                $edit_url = route('materials.edit',$model->id);
+             return '<div class="dropdown ">
+        <button class="btn btn-pink btn btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Action
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+        <li><a  style="cursor:pointer;" class="reject-modal" data-title="Edit Marial" data-url="' . $edit_url . '">Edit Material</a></li>
+      
+        </div> ';
+
+            })
+            ->make(true);
     }
 }

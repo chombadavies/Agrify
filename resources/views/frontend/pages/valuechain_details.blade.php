@@ -60,11 +60,11 @@
                              @foreach ($valuechain->materials as $material)
                               <div class="row">
                             <div class="col-md-6">
-                              <a href ="{{asset($material->title)}}" download = "{{$material->title}}">
+                              <a href ="{{asset($material->pdf)}}" download = "{{$material->title}}">
                               <img src="{{asset('frontend/img/Untitled.png')}}" alt="" height="60"></a>
                             </div>
                             <div class="col-md-6">
-                              <a href ="{{asset($material->title)}}" download = "{{$material->title}}"> {{$material->title}} </a> 
+                              <a href ="{{asset($material->pdf)}}" download = "{{$material->title}}"> {{$material->title}} </a> 
                               
                             </div>
                            
@@ -79,7 +79,7 @@
                               <img src="{{asset('frontend/img/Untitled.png')}}" alt="" height="80">
                             </div>
                             <div>
-                              <a href ="{{asset('file uploads/'.$material->title)}}" download = "{{$material->title}}"> {{$material->title}} </a> 
+                              <a href ="{{asset($material->pdf)}}" download = "{{$material->title}}"> {{$material->title}} </a> 
                               
                             </div>
                             <hr>

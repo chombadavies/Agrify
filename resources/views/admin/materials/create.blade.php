@@ -7,8 +7,8 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <a href="<?=route('valuechains.index')?>" class="btn btn-sm btn-info"><span class="fa fa-bars">View List </span></a>
-            <a href="" class="btn btn-sm btn-danger"><span class="fa fa-download"><span>Upload Data</a>
+            <a href="<?=route('materials.index')?>" class="btn btn-sm btn-info"><span class="fa fa-bars">View List </span></a>
+          
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">

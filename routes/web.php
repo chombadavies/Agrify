@@ -32,6 +32,7 @@ Route::any('/hmessage_edit',[App\Http\Controllers\backend\PartnersController::cl
 
 Route::any('/fetchprojects',[App\Http\Controllers\backend\ProjectsController::class, 'fetchProjects']);
 Route::resource('materials',App\Http\Controllers\backend\MaterialsController::class);
+Route::any('/fetch_materials',[App\Http\Controllers\backend\MaterialsController::class, 'fetchMaterials']);
 Route::resource('impactareas',App\Http\Controllers\backend\ImpactAreasController::class);
 Route::any('/fetch_impactareas',[App\Http\Controllers\backend\ImpactAreasController::class, 'fetchImpactAreas']);
 Route::resource('research',App\Http\Controllers\backend\ResearchController::class);

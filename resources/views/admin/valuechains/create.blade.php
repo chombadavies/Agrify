@@ -49,11 +49,11 @@
                   </div>
                   <div class="form-group col-md-3">
                     <label for="exampleInputEmail1">Value Chain Image</label>
-                   <input type="file" class="form-control" name="image" required>
+                   <input type="file" class="form-control" name="image">
                   </div>
                   <div class="form-group col-md-3">
                     <label for="exampleInputEmail1">Details Image</label>
-                   <input type="file" class="form-control" name="details_image" required>
+                   <input type="file" class="form-control" name="details_image" >
                   </div>
                   <div class="form-group col-md-3">
                     <label for="">Value Chain Category</label>
