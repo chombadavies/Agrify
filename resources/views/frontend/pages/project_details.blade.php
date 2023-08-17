@@ -45,47 +45,10 @@
                           <div class="container">
                             <p><b>Upscalling & Implemetation Details: </b>{!!$project->description!!}</p>
                           </div> 
-
-                          {{-- <div class="container">
-                            <input type="button" value="{{$valuechain->title }} dissemination materials" class="btn btn-block" style="background-color: #85AE46;color:whitesmoke">
-                          
-                            <br> <br>
-                            @if ($valuechain->title=="Mangoes-IPM" 
-                             || $valuechain->title=="KALRO improved indigenous chicken (KIIC)"
-                             || $valuechain->title=="Sorghum" )
-
-                             @foreach ($valuechain->materials as $material)
-                              <div class="row">
-                            <div class="col-md-6">
-                              <img src="{{asset('frontend/img/Untitled.png')}}" alt="" height="60">
-                            </div>
-                            <div class="col-md-6">
-                              <a href ="{{asset('file uploads/'.$material->title)}}" download = "{{$material->title}}"> {{$material->title}} </a> 
-                              
-                            </div>
-                           
+                          <div>
+                            <a  style="cursor:pointer;cursor:pointer;background-color: #20b15e;color:whitesmoke" class="reject-modal btn" data-title="Edit Marial" data-url="''">Read More</a>
                           </div>
-                          <hr>
-                      
-                      @endforeach
-                          @else
-                              
-                            @foreach ($valuechain->materials as $material)
-                                 <div>
-                              <img src="{{asset('frontend/img/Untitled.png')}}" alt="" height="80">
-                            </div>
-                            <div>
-                              <a href ="{{asset('file uploads/'.$material->title)}}" download = "{{$material->title}}"> {{$material->title}} </a> 
-                              
-                            </div>
-                            <hr>
-                            <br>
-                            @endforeach
-                            @endif
-                         
-                           
-                          </div> --}}
-                
+                          <br>
                         </div>
                         </div>
                   </div>

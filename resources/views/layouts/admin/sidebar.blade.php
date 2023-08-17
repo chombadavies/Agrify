@@ -202,9 +202,9 @@
             <ul class="nav nav-treeview">
           
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="{{route('project_achievements.index')}}" class="nav-link">
                   <i class="fas fa-table nav-icon"></i>
-                  <p>Upscalling achievements
+                  <p>Projects' achievements
 
                     <span class="right badge badge-info"></span>
                   </p>

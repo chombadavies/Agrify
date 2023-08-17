@@ -134,6 +134,26 @@
   <script src="{{asset('frontend/media/vendor/waypoints/noframework.waypoints.js')}}"></script>
   <script src="{{asset('frontend/media/vendor/php-email-form/validate.js')}}"></script>
 
+  @include('layouts.admin.rejectmodal')
+  
+  <script type="text/javascript">
+   
+    $(document).on('click','.reject-modal',function(){
+  
+     var head=$(this).attr('data-title');
+            
+         var url=$(this).attr("data-url");
+          $("#load-category-details").html("");
+          $("#my-header").html(" ");
+          $("#my-header").html(head);
+          $("#category-modal").modal("show");
+      $("#load-category-details").load(url,function(data){
+      $("#category-modal").modal("show");
+       
+    });
+  });
+  </script>
+
   <script>
     setTimeout(function(){
     $('#alert').slideUp();

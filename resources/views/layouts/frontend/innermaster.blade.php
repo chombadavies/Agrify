@@ -11,6 +11,7 @@
   
  <!-- ======= Footer ======= -->
  @include('layouts.frontend.footer')
+
     
     </body>
     
