@@ -109,5 +109,6 @@ Route::any('/project_governance',[\App\Http\Controllers\Frontend\IndexController
 Route::any('/map',[\App\Http\Controllers\Frontend\IndexController::class,'map'])->name('map');
 Route::any('/impact-areas',[\App\Http\Controllers\Frontend\IndexController::class,'impactAreas'])->name('impact.areas');
 Route::any('/feedback',[\App\Http\Controllers\Frontend\IndexController::class,'feedBack'])->name('feedback');
+Route::any('/project_achievements/{id}',[\App\Http\Controllers\Frontend\IndexController::class,'projectAchievements'])->name('project.achievements');
 
 

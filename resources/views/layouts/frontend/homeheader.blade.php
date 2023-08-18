@@ -28,6 +28,8 @@
   <!-- Template Main CSS File -->
   <link href="{{asset('frontend/css/style.css')}}" rel="stylesheet">
 
+  
+
   {{-- <link href="{{asset('frontend/css/stylen.css')}}" rel="stylesheet"> --}}
   
 </head>

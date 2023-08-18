@@ -45,9 +45,13 @@
                           <div class="container">
                             <p><b>Upscalling & Implemetation Details: </b>{!!$project->description!!}</p>
                           </div> 
-                          <div>
-                            <a  style="cursor:pointer;cursor:pointer;background-color: #20b15e;color:whitesmoke" class="reject-modal btn" data-title="Edit Marial" data-url="''">Read More</a>
-                          </div>
+                          @if($project->projectachievement != null)
+                          <div>    
+                            <a  style="cursor:pointer;cursor:pointer;background-color: #20b15e;color:whitesmoke" class="reject-modal btn"  data-url="{{route('project.achievements',$project->id)}}">Read More</a>
+                          </div>    
+                          @else
+                              
+                          @endif
                           <br>
                         </div>
                         </div>
@@ -60,3 +64,13 @@
 
 </main><!-- End #main -->
 @endsection
+
+<style>
+
+th, td { white-space: nowrap; }
+
+  .modal .modal-dialog {
+  max-width: 750px;
+  }
+  
+  </style>

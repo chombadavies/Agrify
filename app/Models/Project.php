@@ -12,5 +12,9 @@ class Project extends Model
 
     public function partner(){
         return $this->belongsTo('App\Models\Partner');
+
+    }
+    public function projectachievement(){
+        return $this->hasOne('App\Models\ProjectAchievement');
     }
 }

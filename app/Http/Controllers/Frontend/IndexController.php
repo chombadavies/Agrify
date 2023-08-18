@@ -17,6 +17,7 @@ use App\Models\FeedBack;
 use  Mail;
 use App\Models\Coapplicant;
 use App\Models\AllAchievement;
+use App\Models\ProjectAchievement;
 use Illuminate\Support\Facades\DB;
 
 class IndexController extends Controller
@@ -56,6 +57,7 @@ return view('frontend.pages.contactus');
 
     public function projectDetails($id){
       $project=Project::findOrFail($id);
+     
         return view('frontend.pages.project_details',compact('project'));
     }
     public function Partner($id){
@@ -301,45 +303,13 @@ Mail::send('frontend.pages.email', [
      $feedback=Feedback::create($data);
      return back()->with('success','Your message was recorded successfully');
     }
+
+    public function projectAchievements(Request $request, $id){
+       
+    $achievement=projectAchievement::where('project_id',$id)->first();
+   
+    return view('frontend.pages.project_achievements')->with(compact('achievement'));
+    }
 }
 
 
-// $adoptionData = DB::table('adoption_data')
-//     ->select('gender', 'age_group', DB::raw('SUM(target) as target_total'), DB::raw('SUM(achieved) as achieved_total'))
-//     ->groupBy('gender', 'age_group')
-//     ->get();
-
-
-//     $chartData = $adoptionData->map(function ($item) {
-//         return [
-//             'category' => $item->gender . ' - ' . $item->age_group,
-//             'target_total' => $item->target_total,
-//             'achieved_total' => $item->achieved_total,
-//         ];
-//     });
-    // js
-    // Highcharts.chart('chart-container', {
-    //     chart: {
-    //         type: 'column'
-    //     },
-    //     title: {
-    //         text: 'Technology Adoption Targets and Achieved Totals'
-    //     },
-    //     xAxis: {
-    //         categories: {!! json_encode($chartData->pluck('category')) !!}
-    //     },
-    //     yAxis: {
-    //         title: {
-    //             text: 'Totals'
-    //         }
-    //     },
-    //     series: [{
-    //         name: 'Target Total',
-    //         data: {!! json_encode($chartData->pluck('target_total')) !!}
-    //     }, {
-    //         name: 'Achieved Total',
-    //         data: {!! json_encode($chartData->pluck('achieved_total')) !!}
-    //     }],
-    //     // Other Highcharts options...
-    // });
-    

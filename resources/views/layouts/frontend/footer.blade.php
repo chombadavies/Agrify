@@ -75,6 +75,7 @@
       <script src="{{asset('frontend/vendor/glightbox/js/glightbox.min.js')}}"></script>
       <script src="{{asset('frontend/vendor/swiper/swiper-bundle.min.js')}}"></script>
       <script src="{{asset('frontend/vendor/php-email-form/validate.js')}}"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 
       {{-- <iframe 
       onLoad={() => closeIndicator()}

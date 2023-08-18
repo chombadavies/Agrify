@@ -4,6 +4,7 @@
 
 @include('layouts.frontend.innermenuheader')
 
+
 <body>
 
   @yield('content')
