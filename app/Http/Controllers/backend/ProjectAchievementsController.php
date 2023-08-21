@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Partner;
 use App\Models\Project;
 use App\Models\ProjectAchievement;
+use Yajra\Datatables\Datatables;
 
 class ProjectAchievementsController extends Controller
 {
@@ -68,7 +69,10 @@ class ProjectAchievementsController extends Controller
      */
     public function edit($id)
     {
-        //
+       $achievement=ProjectAchievement::findOrFail($id);
+       $partners=Partner::all();
+       $data['page_title']='Edit';
+       return view('admin.achievements.project_achievements_edit',$data)->with(compact('achievement','partners'));
     }
 
     /**
@@ -80,7 +84,12 @@ class ProjectAchievementsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
+        $data=$request->all();
+        $achievement=ProjectAchievement::findOrFail($id);
+        $status=$achievement->fill($data)->save();
+       
+        return back()->with('success','achievement updated successfully');
     }
 
     /**
@@ -94,11 +103,11 @@ class ProjectAchievementsController extends Controller
         //
     }
 
-    public function fetchAllAchievements(){
-        $models = AllAchievement::all();
+    public function fetchProjectAchievements(){
+        $models = ProjectAchievement::all();
 
         return Datatables::of($models)
-        ->rawColumns(['action','description','introduction'])
+        ->rawColumns(['action','achievements','introduction'])
       
         ->editColumn('introduction',function($model){
             $text=$model->introduction;
@@ -106,13 +115,13 @@ class ProjectAchievementsController extends Controller
              return $introduction;
            })
 
-           ->editColumn('description',function($model){
-            $text=$model->description;
-            $description=str_limit(strip_tags($text),$limit=50,$end='...');
-             return $description;
+           ->editColumn('achievements',function($model){
+            $text=$model->achievements;
+            $achievements=str_limit(strip_tags($text),$limit=50,$end='...');
+             return $achievements;
            })
             ->addColumn('action', function ($model) {
-                $edit_url = route('all_achievements.edit',$model->id);
+                $edit_url = route('project_achievements.edit',$model->id);
                 
              return '<div class="dropdown ">
         <button class="btn btn-pink btn btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Action

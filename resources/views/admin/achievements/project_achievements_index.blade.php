@@ -53,11 +53,8 @@
                   <tr>
                     
                                         <th>Action</th>
-                                        <th>Title</th>
-                                        <th>Logo</th>
-                                        <th>description</th>
-                                        <th>mandate</th>
-                                        <th>relationship</th>            
+                                        <th>introduction</th>
+                                        <th>achievements</th>         
                    
                   </tr>
                   </thead>
@@ -104,7 +101,7 @@
             columns: [
             {data: 'action', name: 'action',searchable:false,orderable:false}, 
             {data: 'introduction', name: 'introduction'},
-           {data: 'description', name: 'description'},
+           {data: 'achievements', name: 'achievements'},
                         ],
           
 

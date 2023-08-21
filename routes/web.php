@@ -43,7 +43,7 @@ Route::any('/fetch_research_achievements',[App\Http\Controllers\backend\Achiemen
 Route::any('/fetch_allachievements',[App\Http\Controllers\backend\AllAchievementsController::class, 'fetchAllAchievements']);
 Route::resource('all_achievements',App\Http\Controllers\backend\AllAchievementsController::class);
 Route::resource('project_achievements',App\Http\Controllers\backend\ProjectAchievementsController::class);
-Route::any('/fetch_projectachievements',[App\Http\Controllers\backend\ProjectAchievementsController::class, 'fetchAllAchievements']);
+Route::any('/fetch_projectachievements',[App\Http\Controllers\backend\ProjectAchievementsController::class, 'fetchProjectAchievements']);
 Route::any('/cascade_projects/{id}',[App\Http\Controllers\backend\ProjectAchievementsController::class, 'cascadeProjects']);
 
 
