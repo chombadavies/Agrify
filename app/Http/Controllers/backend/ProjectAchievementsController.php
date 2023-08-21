@@ -85,7 +85,8 @@ class ProjectAchievementsController extends Controller
     public function update(Request $request, $id)
     {
         
-        $data=$request->all();
+        $data=$request->except('partner_id');
+      
         $achievement=ProjectAchievement::findOrFail($id);
         $status=$achievement->fill($data)->save();
        

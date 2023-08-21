@@ -37,8 +37,8 @@
               <!-- form start -->
              
               
-              <form action="{{route('project_achievements.store')}}" method="post" enctype="multipart/form-data">@csrf
-    
+              <form action="{{route('project_achievements.update',$achievement->id)}}" method="post" enctype="multipart/form-data">@csrf
+    @method('put')
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-6"> 
