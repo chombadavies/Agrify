@@ -1,8 +1,6 @@
 
 
 @extends('layouts.frontend.innermaster')
-
-
 @section('content')
 <main id="main">
 

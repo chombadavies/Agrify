@@ -250,52 +250,6 @@
       </div>
     </div><!-- End Services Section -->
 <br>
-  <!-- ======= Partners Section ======= -->
-
-
-  {{-- <div class="bg_gray">
-    <div class="container margin_30">
-      <div id="brands" class="owl-carousel owl-theme">
-        <div class="item">
-          <a href="#0"><img src="img/brands/placeholder_brands.png" data-src="{{asset('frontend/img/brands/logo_1.png')}}" alt="" class="owl-lazy"></a>
-        </div><!-- /item -->
-        <div class="item">
-          <a href="#0"><img src="img/brands/placeholder_brands.png" data-src="{{asset('frontend/img/brands/logo_2.png')}}" alt="" class="owl-lazy"></a>
-        </div><!-- /item -->
-        <div class="item">
-          <a href="#0"><img src="img/brands/placeholder_brands.png" data-src="img/brands/logo_3.png" alt="" class="owl-lazy"></a>
-        </div><!-- /item -->
-        <div class="item">
-          <a href="#0"><img src="img/brands/placeholder_brands.png" data-src="img/brands/logo_4.png" alt="" class="owl-lazy"></a>
-        </div><!-- /item -->
-        <div class="item">
-          <a href="#0"><img src="img/brands/placeholder_brands.png" data-src="img/brands/logo_5.png" alt="" class="owl-lazy"></a>
-        </div><!-- /item -->
-        <div class="item">
-          <a href="#0"><img src="img/brands/placeholder_brands.png" data-src="img/brands/logo_6.png" alt="" class="owl-lazy"></a>
-        </div><!-- /item --> 
-      </div><!-- /carousel -->
-    </div><!-- /container -->
-  </div> --}}
-  <!-- /bg_gray -->
-
-  {{-- <div id="partners" class="partners">    
-    <h2 style="display:flex;justify-content:center"><u> AgriFi CS APP Partners </u></h2>
-    <br>
-    <div class="container">
-
-      <div class="owl-carousel owl-theme" id="brands">
-        @foreach ($partners as $partner)
-        <div class="item">
-          <a href="{{route('partner',$partner->id)}}"><img src="{{asset('backend/uploads/'.$partner->image)}}" data-src="{{asset('backend/uploads/'.$partner->image)}}" alt="" class="owl-lazy" height="100" width="30"></a>
-        </div><!-- /item -->
-        @endforeach
-
-      </div>
-
-    </div>
-  </div> --}}
-  <!-- End partners Section -->
 
   </main><!-- End #main -->
 @endsection
