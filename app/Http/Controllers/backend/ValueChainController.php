@@ -202,8 +202,7 @@ class ValueChainController extends Controller
       $valuechain->description= $request->description;
       $valuechain->save();
 
-        Session::flash('success_message', 'Value Chain updated successfully');
-        return redirect()->route('valuechains.index');
+      return redirect()->route('valuechains.index')->with('success','Value chain updated successfully');
     
 
     }

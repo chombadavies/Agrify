@@ -68,8 +68,8 @@ class CoapplicantsController extends Controller
      $coapplicant=Coapplicant::create($data);
 // dd($data);
      if($coapplicant){
-        Session::flash('success_message', ' added successfully');
-        return redirect()->route('coapplicants.create');
+
+        return redirect()->route('coapplicants.index')->with('success','Coapplicant added successfully');
      }else{
         return back()->with('error','operation failed,lease try again.');
      }
@@ -127,18 +127,17 @@ class CoapplicantsController extends Controller
                
             }
         } else {
-            $image= $coapplicant->image;
-            $ImagePath = "";
+            $image=$coapplicant->image;
             
         }
-      $data['image']=$ImagePath;
+        $data['image']=$image;
 
     
      $status=$coapplicant->fill($data)->save();
 // dd($data);
      if($coapplicant){
-        Session::flash('success_message', 'coapplicant added successfully');
-        return redirect()->route('coapplicants.index');
+   
+        return redirect()->route('coapplicants.index')->with('success','Coapplicant updated successfully');
      }else{
         return back()->with('error','operation failed,lease try again.');
      }
@@ -188,8 +187,6 @@ class CoapplicantsController extends Controller
         <span class="caret"></span></button>
         <ul class="dropdown-menu">
         <li><a style="cursor:pointer;" data-title="Edit" href="' . $edit_url . '">Edit Co-applicant</a></li>
-        <li><div class="dropdown-divider"></div></li>
-        <li><a  style="cursor:pointer;" class="reject-modal" data-title="Show projects" data-url="' . $view_url . '">View Co-applicant</a></li>
         </ul>
         </div> ';
 
@@ -197,3 +194,7 @@ class CoapplicantsController extends Controller
             ->make(true);
     }
 }
+
+
+        // <li><div class="dropdown-divider"></div></li>
+        // <li><a  style="cursor:pointer;" class="reject-modal" data-title="Show projects" data-url="' . $view_url . '">View Co-applicant</a></li>

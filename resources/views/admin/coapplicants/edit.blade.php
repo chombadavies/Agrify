@@ -7,7 +7,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <a href="<?=route('valuechains.index')?>" class="btn btn-sm btn-info"><span class="fa fa-bars">View List </span></a>
+            <a href="<?=route('coapplicants.index')?>" class="btn btn-sm btn-info"><span class="fa fa-bars">View List </span></a>
             <a href="" class="btn btn-sm btn-danger"><span class="fa fa-download"><span>Upload Data</a>
           </div>
           <div class="col-sm-6">
@@ -50,7 +50,7 @@
                   </div>
                   <div class="form-group col-md-4">
                     <label for="">Logo</label>
-                   <input type="file" class="form-control" name="image" required>
+                   <input type="file" class="form-control" name="image" >
                    <img src="{{asset('backend/uploads/'.$coapplicant->image)}}" height="50px" width="50px" alt="">
                   </div>
                   <div class="form-group col-md-4">

@@ -7,7 +7,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <a href="<?=route('all_achievements.index')?>" class="btn btn-sm btn-info"><span class="fa fa-bars">View List </span></a>
+            <a href="<?=route('project_achievements.index')?>" class="btn btn-sm btn-info"><span class="fa fa-bars">View List </span></a>
             <a href="" class="btn btn-sm btn-danger"><span class="fa fa-download"><span>Upload Data</a>
           </div>
           <div class="col-sm-6">
@@ -42,7 +42,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-6"> 
-                            <select name="partner_id" id="partner_id" class="form-control">
+                            <select name="partner_id" id="partner_id" class="form-control" required>
                                 <option selected disabled>Select Partner</option>
                                 @foreach ($partners as $partner)
                                 <option value="{{$partner->id}}" {{$achievement->partner_id==$partner->id?'selected':''}}>{{$partner->title}}</option> 
@@ -51,7 +51,7 @@
                             </select>
                         </div>
                         <div class="col-md-6">
-                            <select name="project_id" id="project_id" class="form-control">
+                            <select name="project_id" id="project_id" class="form-control" required>
                                 <option selected disabled>Select Project</option>
                              
                             </select>

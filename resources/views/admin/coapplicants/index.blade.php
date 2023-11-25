@@ -10,9 +10,10 @@
           <div class="col-sm-6">
             <h1>
               <?=$page_title?>
-              @include('layouts.notifications')
+            
             </h1>
           </div>
+         
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
              
@@ -21,9 +22,7 @@
             </ol>
           </div>
         </div>
-        {{-- <div class="line">
-          <hr style="border: 4px solid green">
-          </div> --}}
+        <div class="col-md-8"> @include('layouts.notifications')</div>
       </div><!-- /.container-fluid -->
     </section>
 
@@ -103,7 +102,7 @@
             columns: [
             {data: 'action', name: 'action',searchable:false,orderable:false}, 
            {data: 'title', name: 'title'},
-           {data: 'image', name: 'image'},
+           {data: 'photo', name: 'photo'},
            {data: 'description', name: 'description'},
            {data: 'mandate', name: 'mandate'},
            {data: 'relationship', name: 'relationship'},

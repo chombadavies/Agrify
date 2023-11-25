@@ -83,10 +83,11 @@ class AllAchievementsController extends Controller
      $allachievement=AllAchievement::create($data);
 // dd($data);
      if($allachievement){
-        Session::flash('success_message', ' added successfully');
-        return redirect()->route('all_achievements.create');
+       
+        return redirect()->route('all_achievements.index')->with('success','Achievement added successfully');
      }else{
         return back()->with('error','operation failed,lease try again.');
+       
      }
     }
 
@@ -109,7 +110,9 @@ class AllAchievementsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data['page_title']='Edit All_Achievements';
+        $all_achievement=AllAchievement::findOrFail($id);
+        return view('admin.achievements.all_achievements_edit',$data)->with(compact('all_achievement'));
     }
 
     /**
@@ -121,7 +124,13 @@ class AllAchievementsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data=$request->all();
+
+        $all_achievement=AllAchievement::findOrFail($id);
+        $status=$all_achievement->fill($data)->save();
+       
+       
+        return redirect()->route('all_achievements.index')->with('success','Achievement Updated successfully');
     }
 
     /**
@@ -159,7 +168,7 @@ class AllAchievementsController extends Controller
         <button class="btn btn-pink btn btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Action
         <span class="caret"></span></button>
         <ul class="dropdown-menu">
-        <li><a style="cursor:pointer;" data-title="Edit" href="' . $edit_url . '">Edit Research Actitvity</a></li>
+        <li><a style="cursor:pointer;" data-title="Edit" href="' . $edit_url . '">Edit All Achievements</a></li>
         </ul>
         </div> ';
     

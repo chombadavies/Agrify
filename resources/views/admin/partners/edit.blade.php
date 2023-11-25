@@ -50,6 +50,7 @@
                   <div class="form-group col-md-4">
                     <label for="">Logo</label>
                    <input type="file" class="form-control" name="image">
+                   <img src="{{asset($partner->image)}}" height="50px" width="50px" alt="image">
                   </div>
                   <div class="form-group col-md-4">
                     <label for="">website Url</label>

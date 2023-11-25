@@ -10,7 +10,7 @@
           <div class="col-sm-6">
             <h1>
               <?=$page_title?>
-              @include('layouts.notifications')
+            
             </h1>
           </div>
           <div class="col-sm-6">
@@ -21,9 +21,7 @@
             </ol>
           </div>
         </div>
-        {{-- <div class="line">
-          <hr style="border: 4px solid green">
-          </div> --}}
+        <div class="col-md-8"> @include('layouts.notifications')</div>
       </div><!-- /.container-fluid -->
     </section>
 
@@ -33,7 +31,7 @@
         <div class="row">
          
           <div class="col-12">
-            <a style="cursor:pointer;color:white" href="{{route('research_achievements.create')}}" class="btn btn-sm btn-info"><span class="fa fa-plus"><span>Create ValueChain</a>                                
+            <a style="cursor:pointer;color:white" href="{{route('research_achievements.create')}}" class="btn btn-sm btn-info"><span class="fa fa-plus"><span> Create Research Archievement</a>                                
  </div>
 
           <div class="col-12">

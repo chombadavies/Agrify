@@ -8,6 +8,7 @@ use App\Models\Partner;
 use App\Models\Project;
 use App\Models\ProjectAchievement;
 use Yajra\Datatables\Datatables;
+use DB;
 
 class ProjectAchievementsController extends Controller
 {
@@ -71,7 +72,7 @@ class ProjectAchievementsController extends Controller
     {
        $achievement=ProjectAchievement::findOrFail($id);
        $partners=Partner::all();
-       $data['page_title']='Edit';
+       $data['page_title']='Edit Project Achievement';
        return view('admin.achievements.project_achievements_edit',$data)->with(compact('achievement','partners'));
     }
 
@@ -86,11 +87,12 @@ class ProjectAchievementsController extends Controller
     {
         
         $data=$request->except('partner_id');
+
       
         $achievement=ProjectAchievement::findOrFail($id);
         $status=$achievement->fill($data)->save();
        
-        return back()->with('success','achievement updated successfully');
+        return back()->with('success','Project Achievement Updated Successfully');
     }
 
     /**
@@ -105,15 +107,25 @@ class ProjectAchievementsController extends Controller
     }
 
     public function fetchProjectAchievements(){
-        $models = ProjectAchievement::all();
+        // $models = ProjectAchievement::all();
+
+        $models = DB::table('project_achievements')
+        ->join('projects','project_achievements.project_id','=','projects.id')
+        ->select('project_achievements.id', 'project_achievements.introduction', 'project_achievements.achievements','projects.title as project')
+        ->get();
 
         return Datatables::of($models)
-        ->rawColumns(['action','achievements','introduction'])
+        ->rawColumns(['action','achievements','introduction','project'])
       
         ->editColumn('introduction',function($model){
             $text=$model->introduction;
             $introduction=str_limit(strip_tags($text),$limit=50,$end='...');
              return $introduction;
+           })
+           ->editColumn('project',function($model){
+            $text=$model->project;
+            $project=str_limit(strip_tags($text),$limit=50,$end='...');
+             return $project;
            })
 
            ->editColumn('achievements',function($model){
@@ -130,9 +142,9 @@ class ProjectAchievementsController extends Controller
         <button class="btn btn-pink btn btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Action
         <span class="caret"></span></button>
         <ul class="dropdown-menu">
-        <li><a style="cursor:pointer;" data-title="Edit" href="' . $edit_url . '">Edit Research Actitvity</a></li>
+        <li><a style="cursor:pointer;" data-title="Edit" href="' . $edit_url . '">Edit Project Achievement</a></li>
         <li><div class="dropdown-divider"></div></
-        <li><a style="cursor:pointer;" data-title="Edit" href="' . $delete_url . '">Edit Research Actitvity</a></li>
+        <li><a style="cursor:pointer;" data-title="Edit" href="' . $delete_url . '">Edit Project Achievement</a></li>
         </ul>
         </div> ';
     

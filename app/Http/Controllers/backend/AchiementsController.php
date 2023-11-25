@@ -49,8 +49,8 @@ class AchiementsController extends Controller
      $Achievement=Achievement::create($data);
 // dd($data);
      if($Achievement){
-        Session::flash('success_message', ' added successfully');
-        return redirect()->route('research_achievements.create');
+        
+        return redirect()->route('research_achievements.create')->with('success','Achievement added successfully');
      }else{
         return back()->with('error','operation failed,lease try again.');
      }
@@ -99,8 +99,7 @@ class AchiementsController extends Controller
      $status=$achievement->fill($data)->save();
 // dd($data);
      if($achievement){
-        Session::flash('success_message', ' added successfully');
-        return redirect()->route('research_achievements.index');
+        return redirect()->route('research_achievements.index')->with('success','Achievement Updated successfully');
      }else{
         return back()->with('error','operation failed,lease try again.');
      }
@@ -114,7 +113,7 @@ class AchiementsController extends Controller
      */
     public function destroy($id)
     {
-        dd($id);
+        return ($id);
     }
 
     public function fetchResearchAchievements(){
@@ -140,10 +139,10 @@ class AchiementsController extends Controller
         <button class="btn btn-pink btn btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Action
         <span class="caret"></span></button>
         <ul class="dropdown-menu">
-        <li><a style="cursor:pointer;" data-title="Edit Achievement" href="' . $edit_url . '">Edit Achievement</a></li>
+        <li><a style="cursor:pointer;" data-title="Edit Achievement" href="' . $edit_url . '">Edit Research Achievement</a></li>
 
         <li><div class="dropdown-divider"></div></li>
-        <li><a style="cursor:pointer;"  href="' . $delete_url . '">Delete Achievement</a></li>
+        <li><a style="cursor:pointer;"  href="' . $delete_url . '">Delete Research Achievement</a></li>
         </ul>
         </div> ';
 

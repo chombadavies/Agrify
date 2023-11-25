@@ -69,8 +69,8 @@ class PartnersController extends Controller
      $partner=Partner::create($data);
 
      if($partner){
-        Session::flash('success_message', 'service added successfully');
-        return redirect()->route('partners.index');
+    
+        return redirect()->route('partners.index')->with('success','Partner added Successfully');
      }else{
         return back()->with('error','operation failed,lease try again.');
      }
@@ -143,8 +143,8 @@ class PartnersController extends Controller
       $status=$partner->fill($data)->save();
 
      if($status){
-        Session::flash('success_message', 'Partner updated successfully');
-        return redirect()->route('partners.index');
+      
+        return redirect()->route('partners.index')->with('success','Partner Updated Successsfully');
      }else{
         return back()->with('error','operation failed,lease try again.');
      }
