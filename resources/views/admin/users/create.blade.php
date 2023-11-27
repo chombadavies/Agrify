@@ -51,7 +51,6 @@
                     <label for="email">Email</label>
                     <input type="email" name="email" class="form-control" id="" @error('email') is-invalid @enderror placeholder="Enter email Address" required value="{{old('email')}}">
                     <span style="color: red" >{{$errors->first('email')}}</span>
-                  
                 
                   </div>
                 </div>
@@ -78,10 +77,14 @@
                   <div class="mb-2">
                       @foreach ($roles as $role)
                           <div class="form-radio">
-                             <input type="radio" name="role_id" value="{{$role->id}}">  
+                             <input type="radio" name="role_id" value="{{$role->id}}" @error('role_id')
+                                 is-valid
+                             @enderror>  
+                            
                              <label for="{{$role->name}}">{{$role->name}}</label>
                           </div>
                       @endforeach
+                      <span style="color: red" >{{$errors->first('role_id')}}</span>
                       </div>
               </div>
                 </div>
