@@ -31,10 +31,8 @@
         <div class="row">
          
           <div class="col-12">
-<a style="cursor:pointer;color:white" class="reject-modal btn btn-sm btn-info"  data-title="" data-url="{{route('users.create')}}" > <span class="fa fa-plus"><span>Create user</a>
-{{-- 
-                                        <a href="<?=route('purchases.index')?>" class="btn btn-sm btn-success"><span class="fa fa-bars"><span>List of Purchases</a>
-                                          <a href="<?=route('upload.index')?>" class="btn btn-sm btn-success"><span class="fa fa-bars"><span>View Uploads</a> --}}
+<a href="{{route('users.create')}}" style="cursor:pointer;color:white" class="btn btn-sm btn-info"  > <span class="fa fa-plus"><span>Create User</a>
+
  </div>
 
           <div class="col-12">
@@ -56,9 +54,8 @@
                                         <th>Action</th>
                                         <th>Name</th>
                                         <th>Email</th>
-                                        <th>Branch</th>
                                         <th>Role</th>
-                                     
+                                        <th>status</th>
                                   
                    
                   </tr>
@@ -102,13 +99,13 @@ background-color: #96d6d6;
          "lengthMenu": [[25, 50, 100, -1], [25, 50, 100, "All"]],
         "order": [[1, "desc" ]],
      
-           ajax:'<?=url("/portal/fetchusers")?>',
+           ajax:'<?=url("/admin/fetchusers")?>',
             columns: [
             {data: 'action', name: 'action',searchable:false,orderable:false}, 
            {data: 'name', name: 'name'},
            {data: 'email', name: 'email'},
-           {data: 'branchname', name: 'branchname'},
            {data: 'rolename', name: 'rolename'},
+           {data: 'status', name: 'status'},
            
               
             ],

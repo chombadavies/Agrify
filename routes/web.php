@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['prefix'=>'admin','middleware' => ['auth']],function(){
+Route::group(['prefix'=>'admin','middleware' => ['auth','password.change']],function(){
 
 Route::any('/',[App\Http\Controllers\AdminController::class, 'admin'])->name('portal');
 Route::any('/fetchusers',[\App\Http\Controllers\UserController::class,'fetchUsers']);
@@ -52,6 +52,8 @@ Route::any('/fetch_coapplicants',[App\Http\Controllers\backend\CoapplicantsContr
 Route::any('/Dashboard','App\Http\Controllers\HomeController@Dashboard');
 Route::any('/departments','App\Http\Controllers\HomeController@Departments');
 
+Route::any('/first_time_password',[\App\Http\Controllers\Auth\PasswordChangeController::class,'firstTmiemPasswordRequest'])->name('requestft.password');
+
 
 
 
@@ -60,7 +62,11 @@ Route::any('/departments','App\Http\Controllers\HomeController@Departments');
 
 
 
+
 Auth::routes(['register' => false]);
+Route::group(['prefix'=>'admin','middleware' => ['auth']],function(){
+    Route::any('/first_time_password_save',[\App\Http\Controllers\Auth\PasswordChangeController::class,'firstTmiemPasswordUpdate'])->name('fspassword.update');
+});
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

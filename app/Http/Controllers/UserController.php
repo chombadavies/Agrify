@@ -7,6 +7,7 @@ use App\Models\User;
 
 use Auth;
 use DB;
+use Hash;
 use App\Helpers\SystemAudit;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
@@ -36,7 +37,7 @@ class UserController extends Controller
     {
 
         $data['page_title']='users';
-    $roles=Role::all();
+         $roles=Role::all();
  
     // dd($branches);
         return view('admin.users.create',$data)->with(compact('roles'));
@@ -63,6 +64,9 @@ class UserController extends Controller
         ]);
 
         $data=$request->all();
+       
+       $password=Hash::make($data['password']);
+       $data['password']=$password;
        $roles = $data['role_id'];
         $user=User::create($data);
         $user->assignRole($roles);
@@ -102,11 +106,10 @@ class UserController extends Controller
     public function edit($id)
     {
         $user=User::find($id);
-   
+       $data['page_title']='Edit User';
         $roles=Role::all();
-        // dd($user->roles);
-        $branches=Branch::all();
-            return view('admin.users.edit',compact('roles','branches','user'));
+     
+            return view('admin.users.edit',$data)->with(compact('roles','user'));
     }
 
     /**
@@ -122,7 +125,7 @@ class UserController extends Controller
     //   return  $data;
         $user=User::find($id);
         $roles = $data['role_id'];
-        $user->update($data);
+        $status=$user->fill($data)->save();
         $user->syncRoles($roles);
 
         $usermodel = Auth::user();
@@ -155,8 +158,7 @@ class UserController extends Controller
         {
             $models = DB::table('users')
             ->join('roles', 'users.role_id', '=', 'roles.id')
-            ->join('branches', 'users.branch_id', '=', 'branches.id')
-            ->select('users.id', 'users.name', 'roles.name as rolename','branches.name as branchname', 'users.email')
+            ->select('users.id', 'users.name', 'roles.name as rolename','users.email','users.status')
             ->get();
             return Datatables::of($models)
                ->rawColumns(['action'])
@@ -167,7 +169,7 @@ class UserController extends Controller
             <button class="btn btn-pink btn btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Action
             <span class="caret"></span></button>
             <ul class="dropdown-menu">
-            <li><a style="cursor:pointer;" class="reject-modal"  data-title="Edit" data-url="' . $edit_url . '">Edit Details</a></li>
+            <li><a href="'.$edit_url .'" style="cursor:pointer;" data-title="Edit">Edit Details</a></li>
 
             </ul>
             </div> ';

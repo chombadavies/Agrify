@@ -31,7 +31,7 @@
 
           <div class="col-12">
 
-            <a href="<?=route('partners.create')?>" class="btn btn-sm btn-success" data-title="Add Item "><span class="fa fa-plus"><span> Add New Partner</a>
+            <a href="<?=route('impactareas.create')?>" class="btn btn-sm btn-info" data-title="Add Item "><span class="fa fa-plus"><span> Add Impact Story</a>
                                        
  </div>
 

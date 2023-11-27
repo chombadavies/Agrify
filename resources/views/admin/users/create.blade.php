@@ -65,7 +65,7 @@
                   </div>
                  
                       <div class="form-group col-md-4">
-                    <label for="password">Password </label>
+                    <label for="password">Default Password: <small>123456</small> </label>
                     <input type="password" name="password" class="form-control" id="" @error('password') is-invalid @enderror placeholder="Enter Password " required value="123456" readonly>
                     <span style="color: red" >{{$errors->first('password')}}</span>
                   

@@ -19,7 +19,7 @@ class UsersTableSeeder extends Seeder
             [
                 'name' => 'admin',
                 'role_id' => '1',
-                'branch_id' => '2',
+                'status' => 'draft',
                 'phone' => '0727474566',
                 'email' => 'admin@admin.com',
                 'email_verified_at' => now(),
@@ -30,7 +30,7 @@ class UsersTableSeeder extends Seeder
                 [
                     'name' => 'Supper Admin',
                     'role_id' => '4',
-                    'branch_id' => '2',
+                    'status' => 'draft',
                     'phone' => '0727444566',
                     'email' => 'agent@gent.com',
                     'email_verified_at' => now(),
@@ -40,7 +40,7 @@ class UsersTableSeeder extends Seeder
                     [
                         'name' => 'user',
                         'role_id' => '2',
-                        'branch_id' => '2',
+                        'status' => 'draft',
                         'phone' => '0728444566',
                         'email' => 'user@user.com',
                         'email_verified_at' => now(),

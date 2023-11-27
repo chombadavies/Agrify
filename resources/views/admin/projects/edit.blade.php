@@ -71,6 +71,8 @@
                     <div class="form-group col-md-6">
                         <label for="">Project Image</label>
                        <input type="file" class="form-control" name="image">
+                       <img src={{asset($project->image)}} alt="image" height="50px" width="50px">
+                       
                       </div>
                 </div>
                 <!-- /.card-body -->

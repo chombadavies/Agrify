@@ -189,8 +189,6 @@ class ProjectsController extends Controller
         <span class="caret"></span></button>
         <ul class="dropdown-menu">
         <li><a style="cursor:pointer;" data-title="Edit" href="' . $edit_url . '">Edit Project</a></li>
-        <li><div class="dropdown-divider"></div></li>
-        <li><a  style="cursor:pointer;" class="reject-modal" data-title="Show projects" data-url="' . $view_url . '">View Partner</a></li>
         </ul>
         </div> ';
 

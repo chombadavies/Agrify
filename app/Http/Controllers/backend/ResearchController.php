@@ -184,8 +184,8 @@ class ResearchController extends Controller
       $status=$research->fill($data)->save();
 
      if($status){
-        Session::flash('success_message', 'Research Activity updated successfully');
-        return redirect()->route('research.index');
+        
+        return redirect()->route('research.index')->with('success','Research Activity updated successfully');
      }else{
         return back()->with('error','operation failed,lease try again.');
      }

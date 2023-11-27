@@ -363,7 +363,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href={{route('users.create')}} class="nav-link">
                   <i class="fas fa-edit nav-icon"></i>
                   <p>Create User
 
@@ -371,7 +371,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href={{route('users.index')}} class="nav-link">
                   <i class="fas fa-table nav-icon"></i>
                   <p>Internal Users List  
 
