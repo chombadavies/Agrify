@@ -49,7 +49,7 @@
                     <label for="">Value Chain Category</label>
                   <select name="valuechain_id" class="form-control" required>
 
-                    <option selected disabled>Select Value Chain</option>
+                    <option disabled>Select Value Chain</option>
 
                     @foreach ($valuechains as $valuechain)
                     <option value="{{$valuechain->id}}">{{$valuechain->title}}</option> 
@@ -60,7 +60,7 @@
                 </div>
                
 
-                {{-- <div class="row">
+             <!-- <div class="row">
                     <div class="col-md-6" class="form-control">
                         <label for="">ValueChain Introduction</label>
                        <input type="text" value="" class="form-control">
@@ -73,7 +73,7 @@
                         <input type="text" value="" class="form-control">
                     </div>
 
-                </div> --}}
+                </div>  -->
                
                 <!-- /.card-body -->
                 <div class="card-footer">

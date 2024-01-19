@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\backend;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use App\Models\ValueChain;
 use App\Models\Material;
+use App\Models\ValueChain;
+use Illuminate\Http\Request;
 use Yajra\Datatables\Datatables;
-use DB;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 use Intervention\Image\Facades\Image;
 
 
