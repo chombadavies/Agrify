@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers\backend;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use Session;
+use App\Models\Partner;
 use App\Models\Project;
 use App\Models\FeedBack;
-use App\Models\Partner;
-use Session;
-use DB;
-use Intervention\Image\Facades\Image;
-use Yajra\Datatables\Datatables;
 use Illuminate\Support\Str;
+use Illuminate\Http\Request;
+use Yajra\Datatables\Datatables;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
+use Intervention\Image\Facades\Image;
 
 class PartnersController extends Controller
 {
@@ -131,7 +131,7 @@ class PartnersController extends Controller
                 $image = rand(111, 99999) . '.' . $extension;
                 $ImagePath = 'backend/uploads/'.$image;
                 // Upload the Image
-                Image::make($image_tmp)->save($ImagePath);
+                Image::make($image_tmp)->resize(200,200)->save($ImagePath);
                
             }
         } else {
