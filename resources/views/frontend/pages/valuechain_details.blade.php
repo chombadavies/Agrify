@@ -73,13 +73,15 @@
                           @else
                               
                             @foreach ($valuechain->materials as $material)
+                            <a href ="{{asset($material->pdf)}}" download = "{{$material->title}}">
                                  <div>
                               <img src="{{asset('frontend/img/Untitled.png')}}" alt="" height="80">
                             </div>
                             <div>
-                              <a href ="{{asset($material->pdf)}}" download = "{{$material->title}}"> {{$material->title}} </a> 
+                               {{$material->title}}  
                               
                             </div>
+                          </a>
                             <hr>
                             <br>
                             @endforeach
