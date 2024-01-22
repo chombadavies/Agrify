@@ -42,7 +42,7 @@
                     <div class="row">
                   <div class="form-group col-md-6">
                     <label for="exampleInputEmail1">Media Type</label>
-                  <select id="type" name="type" class="form-control">
+                  <select id="type" name="type" class="form-control" disabled>
                     <option selected disabled>Select Media Type</option>
                     <option value="image"{{$media->type=="image"?'selected': ''}}>Image</option>
                     <option value="video" {{$media->type=='video'?'selected':''}}>Video</option>
@@ -62,7 +62,7 @@
 
                   <div class="form-group col-md-6 image" >
                     <label for="exampleInputEmail1">Image</label>
-                   <input type="file" class="form-control" name="image">
+                   <input type="file" class="form-control" name="image" readonly>
                    <img src="{{asset('backend/uploads/'.$media->image)}}" alt="" height="50" width="50">
                   </div>
                   <div class="form-group col-md-6 image">

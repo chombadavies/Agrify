@@ -42,6 +42,7 @@
               </p>
             </a>
           </li> --}}
+          @unless(Auth::user()->hasRole("editor"))
           
           <li class="nav-item has-treeview">
             <a href="" class="nav-link">
@@ -292,7 +293,8 @@
             
             </ul>
           </li>
-
+          @endunless
+          @if(Auth::user()->hasRole("editor") || Auth::user()->hasRole('admin') || Auth::user()->hasRole('supperAdmin') || Auth::user()->hasRole('user'))
           <li class="nav-item has-treeview">
             <a href="" class="nav-link">
               <i class="nav-icon fas fa-bars"></i>
@@ -322,8 +324,8 @@
             
             </ul>
           </li>
-
-
+          <?php endif;?>
+          @unless(Auth::user()->hasRole("editor"))
           <li class="nav-item has-treeview">
             <a href="" class="nav-link">
               <i class="nav-icon fas fa-bars"></i>
@@ -382,6 +384,7 @@
             
             </ul>
           </li>
+          @endunless
         
         </ul>
       </nav>
