@@ -53,10 +53,11 @@
   <section class="breadcrumbs">
     <div class="container">
 
-      <div class="d-flex justify-content-between align-items-center">
-      <h1>Map</h1>
+      <div class="d-flex justify-content-between align-items-center" style="margin-top: 12px">
+     
         <ol>
           <li><a href="{{route('home')}}">Home</a></li>
+          <li><a href="">Map</a></li>
          
         </ol>
       </div>
@@ -73,7 +74,7 @@
                 <h2>AgriFI CS APP Analytics map</h2>
               </div>
 
-              <div class="row justify-content-center align-items-center" >
+              <div class="row justify-content-center align-items-center" style="margin-top: 12px">
              
              
                 <div id="contact" class="contact-area">

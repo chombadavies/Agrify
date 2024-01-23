@@ -8,11 +8,11 @@
   <section class="breadcrumbs">
     <div class="container">
 
-      <div class="d-flex justify-content-between align-items-center">
-      <h1>Value Chains</h1>
+      <div class="d-flex justify-content-between align-items-center" style="margin-top: 12px">
+      
         <ol>
-          <li><a href="index.php">Home</a></li>
-          <li>value Chains</li>
+          <li><a href="{{route('home')}}">Home</a></li>
+          <li><a href="#">value Chains</a></li>
         </ol>
       </div>
 
@@ -22,11 +22,15 @@
   <section class="" style="margin-top:0">
 
     <div class="container">
+
+      <div class="section-title">
+        <h2>value Chains</h2>
+      </div>
                   <div class="content">
                       <div class="grid">
                         @foreach ($valuechains as $valuechain)
                      <a href="{{route('valuechain.details',$valuechain->id)}}">  
-                        <figure class="effect-sarah" >
+                        <figure class="effect-sarah" style="border-radius: 20px">
                           
                           <img alt="logo" src="{{asset($valuechain->image)}}" style="object-fit: cover"/>
                        

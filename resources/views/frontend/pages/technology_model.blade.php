@@ -9,11 +9,11 @@
   <section class="breadcrumbs">
     <div class="container">
 
-      <div class="d-flex justify-content-between align-items-center">
-      <h1><?=$page_title?></h1>
+      <div class="d-flex justify-content-between align-items-center" style="margin-top: 12px">
+   
         <ol>
           <li><a href="{{route('home')}}">Home</a></li>
-         
+          <li><a href="#">Upscalling Models</a></li>
         </ol>
       </div>
 
@@ -23,9 +23,9 @@
   <section id="resources" class="services">
     <div class="container">
 
-      {{-- <div class="section-title">
-        <h2>Technology Transfer and Commercialization Models</h2>
-      </div> --}}
+      <div class="section-title">
+        <h2><?=$page_title?></h2>
+      </div>
 
       <div class="container margin_60_35 add_bottom_30">
         <div class="row justify-content-center align-items-center" style="background-color: #f1f7fd;border-radius:14pt">

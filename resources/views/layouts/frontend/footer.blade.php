@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row">
     
-          <div class="col-lg-4 col-md-6 footer-contact">
+          <div class="col-lg-3 col-md-6 footer-contact">
             <h3> <i class="ti-home"></i> Contacts</h3>
             Kaptagat Road, Loresho, Nairobi Kenya<br>
             P.O. Box 57811-00200, Nairobi<br>
@@ -16,7 +16,7 @@
     
        
 
-          <div class="col-lg-4 col-md-6 footer-contact">
+          <div class="col-lg-3 col-md-6 footer-contact">
             <h3>Useful Links</h3>
             <ul style="text-decoration: none">
               <li> <a href="{{route('project_profile')}}" style="color:white">About Us</a></li>
@@ -28,7 +28,7 @@
           </div>
     
          
-          <div class="col-lg-4 col-md-6 footer-contact">
+          <div class="col-lg-3 col-md-6 footer-contact">
             <h3>Our Resources</h3>
             <ul>
               <li> <a href="{{route('valuechains')}}" style="color:white">Value Chains</a></li>
@@ -36,6 +36,11 @@
               <li> <a href="#" style="color:white">Project Publications</a></li>
               <li> <a href="{{route('media')}}" style="color:white">Media</a></li>
             </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Funded By</h3>
+           <img src="{{asset('backend/uploads/Eu_logo.gif')}}" alt="" height="80" width="110">
+           <img src="{{asset('backend/uploads/gok_logo.png')}}" alt="" height="80" width="110" style="padding-left: 12px">
           </div>
      
     

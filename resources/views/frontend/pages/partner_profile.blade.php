@@ -10,8 +10,8 @@
   <section class="breadcrumbs">
     <div class="container">
 
-      <div class="d-flex justify-content-between align-items-center">
-      <h4>{{$partner->title}}</h4>
+      <div class="d-flex justify-content-between align-items-center" style="margin-top: 12px">
+     
         <ol>
           <li><a href="{{route('home')}}">Home</a></li>
           <li><a href="{{route('partners')}}">Partners</a></li>
@@ -23,7 +23,9 @@
 
  
     <div class="container">
-
+      <div class="section-title">
+        <h2>{{$partner->title}}</h2>
+      </div>
 
     <div class="grid">
     <div class="container">

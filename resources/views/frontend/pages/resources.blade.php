@@ -10,12 +10,12 @@
   <section class="breadcrumbs">
     <div class="container">
 
-      <div class="d-flex justify-content-between align-items-center">
-        <h1><?=$page_title?></h1>
+      <div class="d-flex justify-content-between align-items-center" style="padding-top: 12px">
+      
         <ol>
           <li><a href="{{route('home')}}">Home</a></li>
-          
-         
+          <li><a href=""><?=$page_title?></a></li>
+
         </ol>
       </div>
 

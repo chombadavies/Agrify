@@ -8,8 +8,8 @@
   <section class="breadcrumbs">
     <div class="container">
 
-      <div class="d-flex justify-content-between align-items-center">
-      <h1>{{$valuechain->title}}</h1>
+      <div class="d-flex justify-content-between align-items-center" style="margin-top: 12px">
+     
         <ol>
           <li><a href="{{route('home')}}">Home</a></li>
           <li><a href="{{route('valuechains')}}">valuechains</a></li>
@@ -22,7 +22,9 @@
   <section class="inner-page">
     <div class="container">
 
-
+      <div class="section-title">
+        <h2>{{$valuechain->title}}</h2>
+      </div>
     <div class="grid">
     <div class="container">
                   <div class="content">

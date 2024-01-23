@@ -9,8 +9,8 @@
   <section class="breadcrumbs">
     <div class="container">
 
-      <div class="d-flex justify-content-between align-items-center">
-      <h1>Media</h1>
+      <div class="d-flex justify-content-between align-items-center" style="margin-top: 12px">
+     
         <ol>
           <li><a href="index.php">Home</a></li>
           <li>Media</li>
@@ -23,9 +23,6 @@
 
   <section id="resources" class="services">
     <div class="container">
-
-      <div class="section-title">
-       {{-- <input type="button" value=""> --}}
 
        <section id="portfolio" class="portfolio section-bg">
         <div class="container">

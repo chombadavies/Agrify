@@ -10,10 +10,11 @@
   <section class="breadcrumbs">
     <div class="container">
 
-      <div class="d-flex justify-content-between align-items-center">
-         <?=$page_title?></h1> 
+      <div class="d-flex justify-content-between align-items-center" style="padding-top: 12px">
+        
         <ol>
           <li><a href="{{route('home')}}">Home</a></li>
+          <li><a href=""><?=$page_title?></a></li>
           
          
         </ol>
@@ -24,7 +25,9 @@
 
   <section id="resources" class="services">
     <div class="container">
-   
+      <div class="section-title">
+        <h2> <?=$page_title?></h2>
+      </div>
       <div class="accordion accordion-flush" id="accordionFlushExample">
         @foreach($impactareas as $model)
         <div class="accordion-item">

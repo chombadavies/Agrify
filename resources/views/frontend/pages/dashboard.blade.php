@@ -12,10 +12,12 @@
   <section class="breadcrumbs">
     <div class="container">
 
-      <div class="d-flex justify-content-between align-items-center">
-        <h1><?=$page_title?></h1>
-        <ol>
-          <li><a href="{{route('home')}}">Home</a></li>
+      <div class="d-flex justify-content-between align-items-center" style="margin-top: 12px">
+       
+        <ol >
+          <li style="color: #20b15e"><a href="{{route('home')}}">Home</a></li>
+          <li><a href="#"><?=$page_title?></a></li>
+
           
          
         </ol>
@@ -25,6 +27,9 @@
   </section><!-- End Breadcrumbs Section -->
 
  <div class="container">
+  <div class="section-title">
+    <h2><?=$page_title?></h2>
+  </div>
   {{-- <div class="row">
     <!-- Left col -->
     <section class="col-lg-7 connectedSortable">
