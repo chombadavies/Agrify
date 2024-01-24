@@ -12,7 +12,8 @@
       
         <ol>
           <li><a href="{{route('home')}}">Home</a></li>
-          <li><a href="#">value Chains</a></li>
+          <li><a href="{{route('resources')}}">resources</a></li>
+          <li><a href="#">Value Chains</a></li>
         </ol>
       </div>
 
@@ -24,7 +25,7 @@
     <div class="container">
 
       <div class="section-title">
-        <h2>value Chains</h2>
+        <h2>Value Chains</h2>
       </div>
                   <div class="content">
                       <div class="grid">

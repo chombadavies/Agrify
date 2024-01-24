@@ -12,7 +12,9 @@
      
         <ol>
           <li><a href="{{route('home')}}">Home</a></li>
-          <li><a href="{{route('valuechains')}}">valuechains</a></li>
+          <li><a href="{{route('resources')}}">resources</a></li>
+          <li><a href="{{route('valuechains')}}">value chains</a></li>
+          <li><a href="">{{$valuechain->title}}</a></li>
         </ol>
       </div>
 

@@ -11,8 +11,6 @@
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center" style="margin-top: 12px">
-        <br>
-      <h3>{{$coapplicant->title}}</h3>
         <ol>
           <li><a href="{{route('home')}}">Home</a></li>
           <li><a href="{{route('coapplicants')}}">Co-Applicants</a></li>
@@ -25,7 +23,9 @@
 
  
     <div class="container">
-
+      <div class="section-title">
+        <h2>{{$coapplicant->title}}</h2>
+      </div>
 
     <div class="grid">
     <div class="container">
