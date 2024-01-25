@@ -55,7 +55,7 @@
                   </div>
                   <div class="form-group col-md-6 video" >
                     <label for="exampleInputEmail1">Video title</label>
-                  <input type="text" class="form-control" name="video_title" placeholder="video link">
+                  <input type="text" class="form-control" name="video_title" placeholder="video title">
                   </div>
 
                   <div class="form-group col-md-6 image" >

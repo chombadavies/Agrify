@@ -38,7 +38,7 @@
             </ul>
           </div>
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Funded By</h3>
+            <h3>Funded By:</h3>
            <img src="{{asset('backend/uploads/Eu_logo.gif')}}" alt="" height="80" width="110">
            <img src="{{asset('backend/uploads/gok_logo.png')}}" alt="" height="80" width="110" style="padding-left: 12px">
           </div>
