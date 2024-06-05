@@ -91,7 +91,34 @@
         "order": [[1, "desc" ]],
        
            ajax:'<?=url("/admin/fetchpartners")?>',
-            columns: [
+            columns: [      $models = DB::select('SELECT * FROM `partners`');
+        
+        return Datatables::of($models)
+           ->rawColumns(['action','photo'])
+           ->editColumn('photo',function($model){
+               $name=$model->image;
+               $path=asset($name);
+            //    $path=asset('backend/uploads/'.$name);
+               return '<img src="'.$path.'" width="70px;" height="70px;"  alt="Partner image" >';
+           })
+
+            ->addColumn('action', function ($model) {
+                $edit_url = route('partners.edit',$model->id);
+                $view_url = route('partners.show',$model->id);
+             
+              
+
+                return '<div class="dropdown ">
+        <button class="btn btn-pink btn btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Action
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+        <li><a style="cursor:pointer;" data-title="Edit" href="' . $edit_url . '">Edit Partner</a></li>
+
+        </ul>
+        </div> ';
+
+            })
+            ->make(true);
             {data: 'action', name: 'action',searchable:false,orderable:false},
            {data: 'title', name: 'title'},
            {data: 'photo', name: 'photo'},
@@ -99,7 +126,6 @@
           
          
             ],
-
 
             dom: 'Bfrtip',
 

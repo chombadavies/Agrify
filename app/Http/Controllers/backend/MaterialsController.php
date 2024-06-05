@@ -150,7 +150,7 @@ return redirect()->route('materials.index')->with('succuss','pdf uploadded succe
         <button class="btn btn-pink btn btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Action
         <span class="caret"></span></button>
         <ul class="dropdown-menu">
-        <li><a  style="cursor:pointer;" class="reject-modal" data-title="Edit Marial" data-url="' . $edit_url . '">Edit Material</a></li>
+        <li><a  style="cursor:pointer;" class="reject-modal" data-title="Edit Material" data-url="' . $edit_url . '">Edit Material</a></li>
       
         </div> ';
 

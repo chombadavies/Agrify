@@ -3,22 +3,22 @@
 namespace App\Http\Controllers\Frontend;
 ini_set('max_execution_time', '300');
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use App\Models\ValueChain;
+use App\Models\Media;
 use App\Models\Partner;
 use App\Models\Project;
-use App\Models\Research;
 use App\Models\Category;
-use App\Models\Media;
-use App\Models\ImpactArea;
-use App\Models\Analytics;
 use App\Models\FeedBack;
-use  Mail;
+use App\Models\Research;
+use App\Models\Analytics;
+use App\Models\ImpactArea;
+use App\Models\ValueChain;
 use App\Models\Coapplicant;
+use Illuminate\Http\Request;
 use App\Models\AllAchievement;
 use App\Models\ProjectAchievement;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Mail;
 
 class IndexController extends Controller
 {
@@ -278,8 +278,8 @@ return view('frontend.pages.technology_model',$data);
         return view('frontend.pages.impact_areas',$data)->with(compact('impactareas'));
     }
  public function feedBack(Request $request){
-        // $data=$request->all();
-        // dd($data);
+        $data=$request->all();
+        dd($data);
         $this->validate($request, [
             'name' => 'required',
             'email' => 'required|email',
